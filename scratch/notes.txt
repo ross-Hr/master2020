@@ -1,0 +1,7 @@
+#R tutorial (contains the hint for binomial and logit)
+http://www.sumsar.net/blog/2013/11/easy-laplace-approximation/
+
+#hessian of array:
+https://stackoverflow.com/questions/31206443/numpy-second-derivative-of-a-ndimensional-array
+
+#
