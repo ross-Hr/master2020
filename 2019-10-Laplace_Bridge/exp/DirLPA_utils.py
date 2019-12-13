@@ -99,7 +99,7 @@ def KFLP_second_order(model, batch_size, train_loader, var0 = 10, device='cpu'):
         for batch_idx, (x, y) in enumerate(train_loader):
 
             if device == 'cuda':
-                x, y = torch.from_numpy(x).float().cuda(), torch.from_numpy(y).long().cuda()
+                x, y = x.cuda(), y.cuda()
 
             model.zero_grad()
             lossfunc(model(x), y).backward()
@@ -162,7 +162,7 @@ def Diag_second_order(model, batch_size, train_loader, var0 = 10, device='cpu'):
         for batch_idx, (x, y) in enumerate(train_loader):
 
             if device == 'cuda':
-                x, y = torch.from_numpy(x).float().cuda(), torch.from_numpy(y).long().cuda()
+                x, y = x.cuda(), y.cuda()
 
             model.zero_grad()
             lossfunc(model(x), y).backward()
@@ -199,12 +199,14 @@ def Diag_second_order(model, batch_size, train_loader, var0 = 10, device='cpu'):
 
 
 @torch.no_grad()
-def predict_MAP(model, test_loader, num_samples=1):
+def predict_MAP(model, test_loader, num_samples=1, cuda=False):
     py = []
 
     max_len = int(np.ceil(len(test_loader.dataset)/len(test_loader)))
     for batch_idx, (x, y) in enumerate(test_loader):
 
+        if cuda:
+            x, y = x.cuda(), y.cuda()
 
         py_ = 0
         for _ in range(num_samples):
@@ -216,12 +218,15 @@ def predict_MAP(model, test_loader, num_samples=1):
 
 
 @torch.no_grad()
-def predict_laplace(model, test_loader, M_W_post, M_b_post, U_post, V_post, B_post, n_samples, verbose=False):
+@torch.no_grad()
+def predict_KFAC_sampling(model, test_loader, M_W_post, M_b_post, U_post, V_post, B_post, n_samples, verbose=False, cuda=False):
     py = []
+    max_len = int(np.ceil(len(test_loader.dataset)/len(test_loader)))
 
     for batch_idx, (x, y) in enumerate(test_loader):
-        max_len = int(np.ceil(len(test_loader.dataset)/len(test_loader)))
 
+        if cuda:
+            x, y = x.cuda(), y.cuda()
 
         phi = model.phi(x)
 
@@ -250,11 +255,14 @@ def predict_laplace(model, test_loader, M_W_post, M_b_post, U_post, V_post, B_po
 
 
 @torch.no_grad()
-def predict_diagonal_sampling(model, test_loader, M_W_post, M_b_post, C_W_post, C_b_post, n_samples, verbose=False):
+def predict_diagonal_sampling(model, test_loader, M_W_post, M_b_post, C_W_post, C_b_post, n_samples, verbose=False, cuda=False):
     py = []
+    max_len = int(np.ceil(len(test_loader.dataset)/len(test_loader)))
 
     for batch_idx, (x, y) in enumerate(test_loader):
-        max_len = int(np.ceil(len(test_loader.dataset)/len(test_loader)))
+
+        if cuda:
+            x, y = x.cuda(), y.cuda()
 
         phi = model.phi(x)
 
@@ -281,13 +289,15 @@ def predict_diagonal_sampling(model, test_loader, M_W_post, M_b_post, C_W_post, 
 
 
 @torch.no_grad()
-def predict_DIR_LPA(model, test_loader, M_W_post, M_b_post, U_post, V_post, B_post, verbose=False):
-    #num_classes = M_b_post.size(0)
-    #alphas = torch.zeros(10000, num_classes) #i need to automate the 10000
+def predict_DIR_LPA(model, test_loader, M_W_post, M_b_post, U_post, V_post, B_post, verbose=False, cuda=False):
     alphas = []
 
+    max_len = int(np.ceil(len(test_loader.dataset)/len(test_loader)))
+
     for batch_idx, (x, y) in enumerate(test_loader):
-        max_len = int(np.ceil(len(test_loader.dataset)/len(test_loader)))
+        
+        if cuda:
+            x, y = x.cuda(), y.cuda()
 
         phi = model.phi(x)
 
@@ -341,7 +351,6 @@ def predict_DIR_LPA_diag(model, test_loader, M_W_post, M_b_post, C_W_post, C_b_p
             print("Batch: {}/{}".format(batch_idx, max_len))
 
     return(torch.cat(alphas, dim = 0))
-
 
 
 """############ Functions related to calculating and printing the results ############"""

@@ -1,6 +1,3 @@
-scratch/cifar100
-scratch/cifar10
-scratch/mnist
-scratch/fmnist
-scratch/data
-scratch/models
+2019-10-Laplace_Bridge/exp/weights/*
+2019-10-Laplace_Bridge/exp/weights/
+*.pth
