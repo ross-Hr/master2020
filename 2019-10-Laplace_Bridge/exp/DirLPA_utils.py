@@ -50,7 +50,7 @@ def get_alpha_from_Normal(mu, Sigma):
     return(torch.Tensor(alpha))
 
 
-def get_Gaussian_output(x, mu_w, mu_b, sigma_w, sigma_b):
+def get_Gaussian_output_old(x, mu_w, mu_b, sigma_w, sigma_b):
     #get the distributions per class
     batch_size = x.size(0)
     num_classes = len(mu_b)
@@ -72,6 +72,32 @@ def get_Gaussian_output(x, mu_w, mu_b, sigma_w, sigma_b):
         sigma_batch[i] = torch.diag(per_class_sigmas)
 
     return(mu_batch, sigma_batch)
+
+def get_Gaussian_output(x, mu_w, mu_b, sigma_w, sigma_b):
+    #get the distributions per class
+    batch_size = x.size(0)
+    num_classes = mu_b.size(0)
+    
+    # get mu batch
+    mu_w_batch = mu_w.repeat(batch_size, 1, 1)
+    mu_b_batch = mu_b.repeat(batch_size, 1)
+    mu_batch = torch.bmm(x.view(batch_size, 1, -1), mu_w_batch).view(batch_size, -1) + mu_b_batch
+    
+    #get sigma batch
+    sigma_w_batch = sigma_w.repeat(batch_size, 1, 1)
+    sigma_b_batch = sigma_b.repeat(batch_size, 1)
+    sigmas_diag = torch.zeros(batch_size, num_classes, device='cuda')
+    for j in range(num_classes):
+        h1 = x * sigma_w_batch[:, j]
+        helper = torch.matmul(h1.view(batch_size, 1, -1), x.view(batch_size, -1, 1))
+        helper = helper.view(-1) + sigma_b_batch[:,j]
+        sigmas_diag[:,j] = helper
+        
+    sigma_batch = torch.stack([torch.diag(x) for x in sigmas_diag])
+
+    
+    return(mu_batch, sigma_batch)
+
 
 
 """########## Functions related to the acquisition of second order information ###########"""
@@ -172,6 +198,10 @@ def Diag_second_order(model, batch_size, train_loader, var0 = 10, device='cpu'):
                 W_ = W.diag_h
                 b_ = b.diag_h
 
+                #add_prior: since it will be flattened later we can just add the prior like that
+                W_ += tau * torch.ones(W_.size(), device=device)
+                b_ += tau * torch.ones(b_.size(), device=device)
+
 
             weights_cov[batch_idx] = W_
             biases_cov[batch_idx] = b_
@@ -218,7 +248,6 @@ def predict_MAP(model, test_loader, num_samples=1, cuda=False):
 
 
 @torch.no_grad()
-@torch.no_grad()
 def predict_KFAC_sampling(model, test_loader, M_W_post, M_b_post, U_post, V_post, B_post, n_samples, verbose=False, cuda=False):
     py = []
     max_len = int(np.ceil(len(test_loader.dataset)/len(test_loader)))
@@ -257,7 +286,7 @@ def predict_KFAC_sampling(model, test_loader, M_W_post, M_b_post, U_post, V_post
 @torch.no_grad()
 def predict_diagonal_sampling(model, test_loader, M_W_post, M_b_post, C_W_post, C_b_post, n_samples, verbose=False, cuda=False):
     py = []
-    max_len = int(np.ceil(len(test_loader.dataset)/len(test_loader)))
+    max_len = len(test_loader)
 
     for batch_idx, (x, y) in enumerate(test_loader):
 
@@ -292,7 +321,7 @@ def predict_diagonal_sampling(model, test_loader, M_W_post, M_b_post, C_W_post, 
 def predict_DIR_LPA(model, test_loader, M_W_post, M_b_post, U_post, V_post, B_post, verbose=False, cuda=False):
     alphas = []
 
-    max_len = int(np.ceil(len(test_loader.dataset)/len(test_loader)))
+    max_len = len(test_loader)
 
     for batch_idx, (x, y) in enumerate(test_loader):
         
