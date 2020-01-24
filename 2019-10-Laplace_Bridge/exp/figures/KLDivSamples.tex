@@ -1,0 +1,141 @@
+% This file was created by tikzplotlib v0.8.2.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{1,0.647058823529412,0}
+\definecolor{color1}{rgb}{0.501960784313725,0,0.501960784313725}
+\definecolor{color2}{rgb}{0.647058823529412,0.164705882352941,0.164705882352941}
+
+\begin{axis}[
+height=\figheight,
+legend cell align={left},
+legend pos=north east,
+legend style={draw=white!80.0!black},
+log basis x={10},
+tick pos=both,
+width=\figwidth,
+x grid style={white!69.01960784313725!black},
+xlabel={number of samples},
+xmin=0.562341325190349, xmax=177827.941003892,
+xmode=log,
+xtick align=inside,
+xtick pos=left,
+xtick style={color=black},
+xtick={0.01,0.1,1,10,100,1000,10000,100000,1000000,10000000},
+xticklabels={\(\displaystyle {10^{-2}}\),\(\displaystyle {10^{-1}}\),\(\displaystyle {10^{0}}\),\(\displaystyle {10^{1}}\),\(\displaystyle {10^{2}}\),\(\displaystyle {10^{3}}\),\(\displaystyle {10^{4}}\),\(\displaystyle {10^{5}}\),\(\displaystyle {10^{6}}\),\(\displaystyle {10^{7}}\)},
+y grid style={white!69.01960784313725!black},
+ylabel={KL Divergence},
+ymin=-2.15182824953863, ymax=45.1883932403112,
+ytick align=inside,
+ytick pos=left,
+ytick style={color=black}
+]
+\path [draw=blue, draw opacity=0.7, semithick]
+(axis cs:10000,0)
+--(axis cs:10000,7);
+
+\path [draw=color0, draw opacity=0.7, semithick]
+(axis cs:5000,0)
+--(axis cs:5000,7);
+
+\path [draw=green!50.19607843137255!black, draw opacity=0.7, semithick]
+(axis cs:500,0)
+--(axis cs:500,7);
+
+\addplot [very thick, blue]
+table {%
+1 41.3982701206161
+5 38.9624693333144
+10 36.098938694514
+25 30.3709478160731
+50 22.6612468303579
+75 17.1199693336892
+100 13.8668642061692
+250 5.94246199434052
+500 2.71661691140936
+750 1.79277196934452
+1000 1.15093019136693
+2500 0.409743314063057
+5000 0.243365651301265
+7500 0.146408180313731
+10000 0.0906313967534098
+25000 0.0330076856868002
+50000 0.0179978132998781
+75000 0.0121746742174372
+100000 0.00917335384308824
+};
+\addlegendentry{Monte Carlo}
+\addplot [very thick, color0, forget plot]
+table {%
+1 43.0365649907725
+5 35.778868459366
+10 31.9374001604635
+25 20.9615341238122
+50 15.5129195542914
+75 11.7096510380792
+100 10.0474891261953
+250 6.36061523456518
+500 4.13775614023949
+750 3.01330849019595
+1000 2.3818569276893
+2500 1.19336289552251
+5000 0.53354261735285
+7500 0.363784232161817
+10000 0.258880137968029
+25000 0.092800558531169
+50000 0.0378025057474026
+75000 0.0219012652709528
+100000 0.0157628920295878
+};
+\addplot [very thick, green!50.19607843137255!black, forget plot]
+table {%
+1 42.9305846157211
+5 37.7530518446098
+10 35.1282112836683
+25 25.48491132979
+50 19.2347783647943
+75 12.7594147262507
+100 8.65641350862704
+250 3.63967670156919
+500 1.05009639096405
+750 0.729392889452668
+1000 0.425636637331702
+2500 0.197308825628134
+5000 0.0983563817599838
+7500 0.049354628019151
+10000 0.0472115404012271
+25000 0.0165591501988106
+50000 0.00649331329870158
+75000 0.00627246666181476
+100000 0.00441013105729754
+};
+\addplot [semithick, red, mark=*, mark size=3, mark options={solid}, only marks]
+table {%
+1 0.0907225415781931
+};
+\addlegendentry{Laplace Bridge}
+\addplot [semithick, color1, mark=*, mark size=3, mark options={solid}, only marks, forget plot]
+table {%
+1 0.704045819785254
+};
+\addplot [semithick, color2, mark=*, mark size=3, mark options={solid}, only marks, forget plot]
+table {%
+1 1.76507413738839
+};
+\addplot [very thick, red, opacity=0.5, dash pattern=on 1pt off 3pt on 3pt off 3pt, forget plot]
+table {%
+1 0.0907225415781931
+10000 0.0907225415781931
+};
+\addplot [very thick, color1, opacity=0.5, dash pattern=on 1pt off 3pt on 3pt off 3pt, forget plot]
+table {%
+1 0.704045819785254
+5000 0.704045819785254
+};
+\addplot [very thick, color2, opacity=0.5, dash pattern=on 1pt off 3pt on 3pt off 3pt, forget plot]
+table {%
+1 1.76507413738839
+500 1.76507413738839
+};
+\end{axis}
+
+\end{tikzpicture}
