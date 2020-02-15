@@ -1,0 +1,161 @@
+\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2018
+
+% ready for submission
+% \usepackage{neurips_2018}
+
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+%     \usepackage[preprint]{neurips_2018}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+     \usepackage[final]{nips_2018}
+
+% to avoid loading the natbib package, add option nonatbib:
+%     \usepackage[nonatbib]{neurips_2018}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{mathtools,amsthm,amssymb,amsfonts}
+
+\usepackage{arydshln} %for dashed lines
+
+%change caption styles
+\usepackage{caption} 
+\captionsetup{labelfont=bf, font={small,sf}}
+
+%change margins for the tables in the appendix
+\usepackage{chngpage}
+
+\title{Changing the Basis of distributions within the exponential family}
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+\author{%
+  Marius Hobbhahn \\
+  Department of Computer Science\\
+  University of Tübingen\\
+  Tübingen, Germany \\
+  \texttt{marius.hobbhahn@gmail.com} \\
+  % examples of more authors
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \AND
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+normal distributions are the best, lets transform everything to normal
+
+\section{General Information}
+
+\subsection{Change of Variable for Probability Density Function}
+\label{subsec:variable_change_pdf}
+
+This is also referred to as change of basis. Let $X$ be a continuous random variable with PDF $f_X(x)$ over $c_1 < x < c_2$. And let $Y = g(x)$ be a monotonic differentiable function with Inverse $X = g^{-1}(Y)$. Then the PDF of $Y$ is
+$$f_Y(y) = f_X(g^{-1}(y)) \cdot \left | \frac{d g^{-1}(y)}{dy} \right| 
+= f_X(g^{-1}(y)) \cdot \left | \frac{d g(y)}{dy} \right|^{-1} $$
+
+\subsection{Laplace Approximation}
+
+The Laplace approximation (LPA) is a tool to fit a normal distribution to the PDF of a given other distribution. The only constraints for the other distribution are: one peak (mode/ point of maximum) and twice differentiable. Laplace proposed a simple 2-term Taylor expansion on the log pdf. If $\hat{\theta}$ denotes the mode of a pdf $h(\theta)$, then it is also the mode of the log-pdf $q(\theta) = \log h(\theta)$. The 2-term Taylor expansion of $q(\theta)$ therefore is:
+
+\begin{align}
+	q(\theta) &\approx q(\hat{\theta}) + q'(\hat{\theta})(\theta - \hat{\theta}) + \frac{1}{2}(\theta- \hat{\theta})q''(\hat{\theta}) (\theta - \hat{\theta})\\
+	&= 	q(\hat{\theta}) + 0 +  \frac{1}{2}(\theta- \hat{\theta})q''(\hat{\theta}) (\theta - \hat{\theta}) \qquad \text{[since } q'(\theta) = 0]\\
+	&= c - \frac{(\theta - \mu)^2}{2\sigma^2}
+\end{align}
+where $c$ is a constant, $\mu = \hat{\theta}$ and $\sigma^2 = \{-q''(\hat{\theta})\}^{-1}$. The right hand side of the last line matches the log-pdf of a normal distribution $N(\mu, \sigma^2)$. Therefore the pdf $h(\theta)$ is approximated by the pdf of the normal distribution $N(\mu, \sigma^2)$ where $\mu = \hat{\theta}$ and $\sigma^2 = \{-q''(\hat{\theta})\}^{-1}$. Note, that even though this derivation is done for the one dimensional case only, it is also true for the multidimensional case. The second derivative just becomes the Hessian of the pdf at the mode.
+
+\subsection{Exponential Family}
+
+exponential family form
+
+\begin{equation}
+ f(x|\theta) = h(x)\exp[\eta(\theta) t(x) - A(\theta)]
+ \label{eq:exp_family}
+\end{equation}
+
+for sufficient statistics $t:X \rightarrow \mathbb{R}$, natural parameters $\eta: \Theta \rightarrow \mathbb{R}$, and functions $A: \Theta \rightarrow \mathbb{R}$ and $h: X \rightarrow \mathbb{R}_+$
+
+\section{General overview}
+
+\begin{table}[htb]
+	\centering
+	\caption{Overview}
+	\begin{tabular}{lcccc}
+		\toprule
+		\textbf{Distribution}	&\textbf{$g(x)$} &\textbf{$g^{-1}(x)$} &\textbf{$T$} & \text{$T$'}	\\
+		\midrule
+		Exponential	& log & exp & $x$ & $(x,\exp(x))$ \\
+		Gamma		& log & exp & $(\log(x), x)$ & $(x,\exp(x))$ \\
+		Gamma		& log & exp & $(\log(x), x)$ & $(\log(x),x^2)$ \\
+		Inverse Gamma & log & exp& $(\log(x), x)$ & $(x,\exp(x))$ \\
+		Inverse Gamma & log & exp& $(\log(x), x)$ & $(\log(x),x^2)$ \\
+		Chi2        & log & exp &  $(\log(x), x)$ & $(x,\exp(x))$ \\
+		Chi2        & log & exp &  $(\log(x), x)$ & $(\log(x),x^2)$ \\
+		Beta		& logit & logistic&  $(\log(x),\log(1-x))$ & ? \\
+		Dirichlet 	& - & softmax &  ? & ? \\
+		Wishart	    & mlog & mexp & $(\log(X), X)$ & $(X, \exp(X))$ \\
+		Wishart	    & msqrt & msqr & $(\log(X), X)$ & $(\log(X), X^2)$ \\
+		Inverse Wishart & mlog & mexp & ? & ? \\		
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+NOTE:MOST DISTRIBUTIONS ACTUALLY HAVE TWO VALID TRANSFORMS. ONE FOR $X$ AND ONE FOR $X^2$ AS SUFFICIENT STATISTICS
+
+
+\input{content/exponential}
+
+\input{content/gamma}
+
+\input{content/inverse_gamma}
+
+\input{content/chi2}
+
+\input{content/beta}
+
+\input{content/dirichlet}
+
+\input{content/wishart}
+
+\input{content/inverse_wishart}
