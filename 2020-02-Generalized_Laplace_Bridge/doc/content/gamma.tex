@@ -9,12 +9,13 @@
 
 where $\Gamma(\alpha)$ is the Gamma function. This can be written as
 
-\begin{equation}
-	f(x, \alpha, \lambda) = \exp \left[(\alpha -1)\log(x) - \lambda x + \alpha \log(\lambda) - \log(\Gamma(\alpha))\right]
+\begin{align}
+	f(x, \alpha, \lambda) &= \exp \left[(\alpha -1)\log(x) - \lambda x + \alpha \log(\lambda) - \log(\Gamma(\alpha))\right] \\
+	&= \frac{1}{x} \exp\left[\alpha\log(x) - \lambda x + \alpha \log(\lambda) - \log(\Gamma(\alpha))\right]
 	\label{eq:gamma_exp_family}
-\end{equation}
+\end{align}
 
-with $T=(\log x, x), \eta=(\alpha, -\lambda)$ and $A(\alpha, \lambda) = \log(\Gamma(\alpha)) - \alpha  \log(\lambda)$. 
+with $h(x) = \frac{1}{x}, T=(\log x, x), \eta=(\alpha, -\lambda)$ and $A(\alpha, \lambda) = \log(\Gamma(\alpha)) - \alpha  \log(\lambda)$. 
 
 \subsubsection{Laplace Approximation of the Gamma Distribution}
 
@@ -35,21 +36,21 @@ The LPA of the Gamma distribution is therefore approximately distributed accordi
 
 \subsubsection{Sqrt-Transformation}
 
-We transform the Gamma Distribution with the Log-Transformation, i.e. $Y = \sqrt(X), g(x) = \sqrt(x), g^{-1}(x) = x^2$. The transformed pdf is
+We transform the Gamma Distribution with the sqrt-transformation, i.e. $Y = \sqrt{X}, g(x) = \sqrt{x}, g_1^{-1}(y) = -y^2, g_2^{-1}(y) = y^2$ and $\left\vert\frac{\partial g_i^{-1}(y)}{\partial y} \right\vert = \vert 2x \vert$. We use the same 'trick' as in Subsection \ref{subsec:chi2-normal} to split up the transformation in two parts. 
 
 \begin{align}
-f_t(x, \alpha, \lambda) &= \frac{\lambda^\alpha}{\Gamma(\alpha)} \cdot x^{2(\alpha - 1)} \cdot e^{(-\lambda x^2)} \cdot 2x \\ \nonumber
-&=\frac{\lambda^\alpha}{\Gamma(\alpha)} \cdot x^{2\alpha} \cdot e^{(-\lambda x^2)}
+f_t(y, \alpha, \lambda) &= \frac{1}{x} \exp\left[\alpha\log(x) - \lambda x + \alpha \log(\lambda) - \log(\Gamma(\alpha))\right]
 \end{align}
 
-which can be rewritten as
+\begin{align}
+f_Y(y) &= f_X(g_1^{-1}(y)) \left\vert\frac{\partial g_1^{-1}(y)}{\partial y} \right\vert \mathbf{1}_\wedge(y) + f_X(g_2^{-1}(y)) \left\vert\frac{\partial g_2^{-1}(y)}{\partial y} \right\vert \mathbf{1}_\wedge(y) \nonumber \\
+&= \frac{1}{2y} \exp[\alpha \log(y) - \lambda y - A(\alpha, \lambda)] |2y| \mathbf{1}_{(-\infty, 0)}(y) + \frac{1}{2y} \exp[\alpha \log(y) - \lambda y - A(\alpha, \lambda)] |2y| \mathbf{1}_{[0, \infty)}(y) \nonumber\\
+&= \exp[\alpha \log(y) - \lambda y - A(\alpha, \lambda)] \mathbf{1}_{(-\infty, +\infty)}(y) \\
+&= \exp[\alpha \log(y) - \lambda y - A(\alpha, \lambda)]\nonumber
+\end{align}
 
-\begin{equation}
-f_t(x, \alpha, \lambda) = \exp \left[2\alpha \log(x) - \lambda 2x + \alpha \log(\lambda) - \log(\Gamma(\alpha))\right]	
-\label{eq:square_gamma_trans}
-\end{equation}
+which is defined on the entirety of $\mathbb{R}$ and is an exponential family with $h(y) = 1, T=(\log y, y), \eta=(\alpha, -\lambda)$ and $A(\alpha, \lambda) = \log(\Gamma(\alpha)) - \alpha \log(\lambda)$.
 
-with $T = (\log(x), x^2), \eta = (2\alpha, -\lambda)$ and $A(\alpha, \lambda) = \log(\Gamma(\alpha)) - \alpha  \log(\lambda)$. 
 
 
 \subsubsection{Laplace Approximation of the sqrt-transformed Gamma Distribution}

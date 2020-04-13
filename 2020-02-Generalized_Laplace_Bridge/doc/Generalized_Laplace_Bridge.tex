@@ -85,36 +85,9 @@
 
 normal distributions are the best, lets transform everything to normal
 
-\section{General Information}
+\input{content/background}
 
-\subsection{Change of Variable for Probability Density Function}
-\label{subsec:variable_change_pdf}
-
-This is also referred to as change of basis. Let $X$ be a continuous random variable with PDF $f_X(x)$ over $c_1 < x < c_2$. And let $Y = g(x)$ be a monotonic differentiable function with Inverse $X = g^{-1}(Y)$. Then the PDF of $Y$ is
-$$f_Y(y) = f_X(g^{-1}(y)) \cdot \left | \frac{d g^{-1}(y)}{dy} \right| 
-= f_X(g^{-1}(y)) \cdot \left | \frac{d g(y)}{dy} \right|^{-1} $$
-
-\subsection{Laplace Approximation}
-
-The Laplace approximation (LPA) is a tool to fit a normal distribution to the PDF of a given other distribution. The only constraints for the other distribution are: one peak (mode/ point of maximum) and twice differentiable. Laplace proposed a simple 2-term Taylor expansion on the log pdf. If $\hat{\theta}$ denotes the mode of a pdf $h(\theta)$, then it is also the mode of the log-pdf $q(\theta) = \log h(\theta)$. The 2-term Taylor expansion of $q(\theta)$ therefore is:
-
-\begin{align}
-	q(\theta) &\approx q(\hat{\theta}) + q'(\hat{\theta})(\theta - \hat{\theta}) + \frac{1}{2}(\theta- \hat{\theta})q''(\hat{\theta}) (\theta - \hat{\theta})\\
-	&= 	q(\hat{\theta}) + 0 +  \frac{1}{2}(\theta- \hat{\theta})q''(\hat{\theta}) (\theta - \hat{\theta}) \qquad \text{[since } q'(\theta) = 0]\\
-	&= c - \frac{(\theta - \mu)^2}{2\sigma^2}
-\end{align}
-where $c$ is a constant, $\mu = \hat{\theta}$ and $\sigma^2 = \{-q''(\hat{\theta})\}^{-1}$. The right hand side of the last line matches the log-pdf of a normal distribution $N(\mu, \sigma^2)$. Therefore the pdf $h(\theta)$ is approximated by the pdf of the normal distribution $N(\mu, \sigma^2)$ where $\mu = \hat{\theta}$ and $\sigma^2 = \{-q''(\hat{\theta})\}^{-1}$. Note, that even though this derivation is done for the one dimensional case only, it is also true for the multidimensional case. The second derivative just becomes the Hessian of the pdf at the mode.
-
-\subsection{Exponential Family}
-
-exponential family form
-
-\begin{equation}
- f(x|\theta) = h(x)\exp[\eta(\theta) t(x) - A(\theta)]
- \label{eq:exp_family}
-\end{equation}
-
-for sufficient statistics $t:X \rightarrow \mathbb{R}$, natural parameters $\eta: \Theta \rightarrow \mathbb{R}$, and functions $A: \Theta \rightarrow \mathbb{R}$ and $h: X \rightarrow \mathbb{R}_+$
+\input{content/GLB}
 
 \section{General overview}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.6)  14 FEB 2020 09:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.6)  1 APR 2020 10:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -942,13 +942,19 @@ Package microtype Info: Loading generic settings for font family
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 84.
 
-Underfull \vbox (badness 1033) has occurred while \output is active []
-
- [1
+(./content/background.tex [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+phv on input line 123.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./content/GLB.tex [2]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 7.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
+)
+LaTeX Font Info:    Try loading font information for T1+phv on input line 96.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
@@ -958,10 +964,10 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 123.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 96.
 
-(./content/exponential.tex [2]
-<figures/exponential_playground.pdf, id=242, pagebox=cropbox, 1879.02pt x 433.6
+(./content/exponential.tex [3]
+<figures/exponential_playground.pdf, id=261, pagebox=cropbox, 1879.02pt x 433.6
 2pt>
 File: figures/exponential_playground.pdf Graphic file (type pdf)
 <use figures/exponential_playground.pdf>
@@ -969,31 +975,35 @@ Package pdftex.def Info: figures/exponential_playground.pdf  used on input line
  74. on input line 74.
 Package pdftex.def Info: Requested size: 397.48499pt x 91.72453pt on input line
  74.
-) (./content/gamma.tex [3 <./figures/exponential_playground.pdf>]
-Underfull \vbox (badness 4713) has occurred while \output is active []
+) (./content/gamma.tex [4 <./figures/exponential_playground.pdf>]
+Overfull \hbox (43.19185pt too wide) in paragraph at lines 50--50
+[] 
+ []
 
- [4]
-<figures/gamma_playground_sqrt.pdf, id=295, pagebox=cropbox, 1662.21pt x 433.62
+[5]
+<figures/gamma_playground_sqrt.pdf, id=318, pagebox=cropbox, 1662.21pt x 433.62
 pt>
 File: figures/gamma_playground_sqrt.pdf Graphic file (type pdf)
 <use figures/gamma_playground_sqrt.pdf>
 Package pdftex.def Info: figures/gamma_playground_sqrt.pdf  used on input line 
-83. on input line 83.
+84. on input line 84.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
-e 83.
-
-[5 <./figures/gamma_playground_sqrt.pdf>]
-<figures/gamma_playground_log.pdf, id=339, pagebox=cropbox, 1662.21pt x 433.62p
+e 84.
+ [6 <./figures/gamma_playground_sqrt.pdf>]
+<figures/gamma_playground_log.pdf, id=361, pagebox=cropbox, 1662.21pt x 433.62p
 t>
 File: figures/gamma_playground_log.pdf Graphic file (type pdf)
 <use figures/gamma_playground_log.pdf>
 Package pdftex.def Info: figures/gamma_playground_log.pdf  used on input line 1
-38. on input line 138.
+39. on input line 139.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
-e 138.
+e 139.
 ) (./content/inverse_gamma.tex
-[6 <./figures/gamma_playground_log.pdf>] [7]
-<figures/inverse_gamma_playground.pdf, id=394, pagebox=cropbox, 1662.21pt x 433
+[7 <./figures/gamma_playground_log.pdf>]
+Underfull \vbox (badness 7344) has occurred while \output is active []
+
+ [8]
+<figures/inverse_gamma_playground.pdf, id=417, pagebox=cropbox, 1662.21pt x 433
 .62pt>
 File: figures/inverse_gamma_playground.pdf Graphic file (type pdf)
 <use figures/inverse_gamma_playground.pdf>
@@ -1001,8 +1011,9 @@ Package pdftex.def Info: figures/inverse_gamma_playground.pdf  used on input li
 ne 72. on input line 72.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
 e 72.
-) (./content/chi2.tex [8 <./figures/inverse_gamma_playground.pdf>]
-<figures/chi2_playground_log.pdf, id=442, pagebox=cropbox, 1662.21pt x 433.62pt
+)
+(./content/chi2.tex [9 <./figures/inverse_gamma_playground.pdf>]
+<figures/chi2_playground_log.pdf, id=465, pagebox=cropbox, 1662.21pt x 433.62pt
 >
 File: figures/chi2_playground_log.pdf Graphic file (type pdf)
 <use figures/chi2_playground_log.pdf>
@@ -1010,12 +1021,12 @@ Package pdftex.def Info: figures/chi2_playground_log.pdf  used on input line 72
 . on input line 72.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
 e 72.
- [9 <./figures/chi2_playground_log.pdf>]
+ [10]
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
-<figures/chi2_playground_sqrt.pdf, id=490, pagebox=cropbox, 1662.21pt x 433.62p
+<figures/chi2_playground_sqrt.pdf, id=475, pagebox=cropbox, 1662.21pt x 433.62p
 t>
 File: figures/chi2_playground_sqrt.pdf Graphic file (type pdf)
 <use figures/chi2_playground_sqrt.pdf>
@@ -1023,85 +1034,86 @@ Package pdftex.def Info: figures/chi2_playground_sqrt.pdf  used on input line 1
 19. on input line 119.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
 e 119.
-) (./content/beta.tex [10 <./figures/chi2_playground_sqrt.pdf>]
-Underfull \vbox (badness 1038) has occurred while \output is active []
+) (./content/beta.tex
+Underfull \vbox (badness 2435) has occurred while \output is active []
 
- [11]
-<figures/beta_playground.pdf, id=546, pagebox=cropbox, 1662.21pt x 433.62pt>
+ [11 <./figures/chi2_playground_log.pdf>] [12 <./figures/chi2_playground_sqrt.p
+df>]
+Overfull \hbox (24.74442pt too wide) in paragraph at lines 45--45
+[] 
+ []
+
+<figures/beta_playground.pdf, id=565, pagebox=cropbox, 1662.21pt x 433.62pt>
 File: figures/beta_playground.pdf Graphic file (type pdf)
 <use figures/beta_playground.pdf>
-Package pdftex.def Info: figures/beta_playground.pdf  used on input line 92. on
- input line 92.
+Package pdftex.def Info: figures/beta_playground.pdf  used on input line 71. on
+ input line 71.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
-e 92.
-)
-(./content/dirichlet.tex) (./content/wishart.tex [12 <./figures/beta_playground
-.pdf>]
+e 71.
+) (./content/dirichlet.tex) (./content/wishart.tex [13 <./figures/beta_playgrou
+nd.pdf>] [14]
 Overfull \hbox (14.83351pt too wide) detected at line 63
 \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ; \OML/c
 mm/m/it/10 n; p; V\OT1/cmr/m/n/10 ) = [] []
  []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
-
- []
-
-<figures/wishart_playground_sqrtm.pdf, id=613, pagebox=cropbox, 1662.21pt x 433
+[15]
+<figures/wishart_playground_sqrtm.pdf, id=635, pagebox=cropbox, 1662.21pt x 433
 .62pt>
 File: figures/wishart_playground_sqrtm.pdf Graphic file (type pdf)
 <use figures/wishart_playground_sqrtm.pdf>
 Package pdftex.def Info: figures/wishart_playground_sqrtm.pdf  used on input li
-ne 106. on input line 106.
+ne 115. on input line 115.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
-e 106.
+e 115.
 ) (./content/inverse_wishart.tex
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 13.
- [14] [15 <./figures/wishart_playground_sqrtm.pdf>]
+ [16 <./figures/wishart_playground_sqrtm.pdf>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 13.
  (./Generalized_Laplace_Bridge.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 13.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 13.
 Package rerunfilecheck Info: File `Generalized_Laplace_Bridge.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: 82E7ED5064C35C73B69F51934C127D5C;4687.
+(rerunfilecheck)             Checksum: 0706449C24EA8B283C1DDE1DE1D18AAF;4806.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 13.
  ) ) 
 Here is how much of TeX's memory you used:
- 11304 strings out of 492995
- 172616 string characters out of 6135074
- 300938 words of memory out of 5000000
- 14467 multiletter control sequences out of 15000+600000
- 34641 words of font info for 80 fonts, out of 8000000 for 9000
+ 11347 strings out of 492995
+ 173228 string characters out of 6135074
+ 302984 words of memory out of 5000000
+ 14486 multiletter control sequences out of 15000+600000
+ 34901 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,11n,42p,602b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,15n,42p,643b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texm
 f/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmbx5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb
-8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on Generalized_Laplace_Bridge.pdf (15 pages, 420890 bytes).
+cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
+ftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on Generalized_Laplace_Bridge.pdf (16 pages, 440716 bytes).
 PDF statistics:
- 747 PDF objects out of 1000 (max. 8388607)
- 463 compressed objects within 5 object streams
- 133 named destinations out of 1000 (max. 500000)
- 19913 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 772 PDF objects out of 1000 (max. 8388607)
+ 486 compressed objects within 5 object streams
+ 142 named destinations out of 1000 (max. 500000)
+ 19929 words of extra memory for PDF output out of 20736 (max. 10000000)
 

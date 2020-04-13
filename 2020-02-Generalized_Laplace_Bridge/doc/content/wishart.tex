@@ -77,29 +77,38 @@ Using $\frac{\partial \det(X)}{\partial X} = \det(X)(X^{-1})^\top$ and $\frac{\p
 \Leftrightarrow X &= \sqrt{(n-1)} V^\frac{1}{2}
 \end{align*}
 
-Using the fact that $\frac{\partial A^{-1}}{\partial A} = X^{-1} \otimes X^{-1}$ where $\otimes$ is the Kronecker product we compute the second derivative as
+Computing the second derivative entry-wise we get 
 
 \begin{align*}
-\frac{\partial^2 \log f_t(X; n,p,V)}{\partial^2 X} &= -(n-p) X^{-1} \otimes X^{-1} - V^{-1} \\
+\frac{\partial^2 \log f_t(X; n,p,V)_{kl}}{\partial^2 X_{ij}} &= \frac{\partial}{\partial X_{ij}} (n-p)X^{-1} - V^{-1}X \\
+&= - (n-p) \underbrace{(X^{-1})_{ki} (X^{-1})_{jl}}_{I} - \underbrace{\delta_{il}(V^{-1})_{kj}}_{II} \\
 \end{align*}
 
-TODO: SOMETHING IS WRONG HERE: THE DIMENSIONS DO NOT ADD UP.\\
+We realize that $I$ is the Kronecker product $X^{-1} \otimes X^{-1}$ and name $II$ $\tilde{V^{-1}}$. 
 
 Using $(\alpha A)^{-1} = \alpha^{-1}A^{-1}$, the linearity of the Kronecker product to pull out scalars and $X^{-1} \otimes X^{-1} = (X \otimes X)^{-1}$ to insert the mode and invert we get:
 
 \begin{align*}
--(n-p) X^{-1} \otimes X^{-1} - V^{-1} &= -(n-p) \frac{1}{n-p}V^{-\frac{1}{2}} \frac{1}{n-p}V^{-\frac{1}{2}} - V^{-1} \\
-&= -\frac{n-p}{n-p}(V \otimes V)^{-\frac{1}{2}} -V^{-1}\\
-\Rightarrow \Sigma &= [(V \otimes V)^{-\frac{1}{2}} -V^{-1}]^{-1}\\
+-(n-p) X^{-1} \otimes X^{-1} - V^{-1} &= -(n-p) \frac{1}{n-p}V^{-\frac{1}{2}} \frac{1}{n-p}V^{-\frac{1}{2}} - \tilde{V^{-1}} \\
+&= -\frac{n-p}{n-p}(V \otimes V)^{-\frac{1}{2}} - \tilde{V^{-1}}\\
+\Rightarrow \Sigma &= (V \otimes V)^{\frac{1}{2}} - \tilde{V^{-1}}\\
 \end{align*}
 
-TODO: SOMETHING IS WRONG HERE: THE DIMENSIONS DO NOT ADD UP.\\
+TODO: SOMETHING IS WRONG HERE: The last inversion is a bit weird but it works exactly as shown here in practice.\\
 
-In summary, the Laplace approximation of a Wishart distribution in the sqrtm-transformed basis is $\mathcal{N}\left(X; \sqrt{(n-p)}V^{\frac{1}{2}},? \right)$, where the representation of the symmetric positive definite matrices has been changed from $\mathbb{R}^{n\times n}$ to $\mathbb{R}^{n^2}$.
+In summary, the Laplace approximation of a Wishart distribution in the sqrtm-transformed basis is $\mathcal{N}\left(X; \sqrt{(n-p)}V^{\frac{1}{2}}, (V \otimes V)^{\frac{1}{2}} - \tilde{V^{-1}} \right)$, where the representation of the symmetric positive definite matrices has been changed from $\mathbb{R}^{n\times n}$ to $\mathbb{R}^{n^2}$.
 
 \subsubsection{The Bridge for sqrtm-tranform}
 
-TODO: COMPUTE THE ACTUAL BRIDGE
+we use $\mu =  ((n-p)V)^{\frac{1}{2}} \Leftrightarrow \mu^2 = (n-p)V \Leftrightarrow V = \frac{\mu^2}{(n-p)}$. Remember that $\mu$ is reshaped to be the same size as $V$ even though we usually think of it in vector-form. 
+
+\begin{align}
+	\mu &=  ((n-p)V)^{\frac{1}{2}} \\
+	\Sigma &= (V \otimes V)^{\frac{1}{2}} - \tilde{V^{-1}} \\
+	V &= \frac{\mu^2}{(n-p)}
+\end{align}
+
+QUESTION: DO WE ASSUME WE KNOW THE $n$? 
 
 \begin{figure}[!htb]
 	\centering
@@ -108,5 +117,4 @@ TODO: COMPUTE THE ACTUAL BRIDGE
 	\label{fig:wishart_comparison}
 \end{figure}
 
-TODO:SOMETHING LOOKS A BIT FISHY HERE!!
 

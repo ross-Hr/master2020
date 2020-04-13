@@ -8,32 +8,19 @@ The pdf of the Beta distribution in the standard basis is
 	f(x, \alpha, \beta) = \frac{x^{(\alpha - 1)} \cdot (1-x)^{(\beta-1)}}{B(\alpha, \beta)} \\
 \end{equation}
 
-where $B(\alpha, \beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha + \beta)}$ and $\Gamma(x)$ is the Gamma function.. This can be written as 
+where $B(\alpha, \beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha + \beta)}$ and $\Gamma(x)$ is the Gamma function. This can be written as 
 
-\begin{equation}
-	f(x, \alpha, \beta) =  \exp\left[(\alpha-1) \log(x) + (\beta-1)\log(1-x) - \log(B(\alpha,\beta)))\right]\\
-\end{equation}
+\begin{align}
+	f(x, \alpha, \beta) &=  \exp\left[(\alpha-1) \log(x) + (\beta-1)\log(1-x) - \log(B(\alpha,\beta)))\right]\\
+	&= \frac{1}{x(1-x)}\exp\left[\alpha\log(x) + \beta\log(1-x) - \log(B(\alpha,\beta)))\right]
+\end{align}
 
-With $T=(\log(x), \log(1-x), \eta = (\alpha, \beta)$ and $A(\alpha, \beta) = \log(B(\alpha,\beta)))$. 
+With $h(x) = \frac{1}{x(1-x)}, T=(\log(x), \log(1-x), \eta = (\alpha, \beta)$ and $A(\alpha, \beta) = \log(B(\alpha,\beta)))$. 
 
 
 \subsubsection{Laplace approximation of the standard Beta distribution}
 
 To get the Laplace approximation we need the mode and Hessian. To get the mode we use the first derivative of the log-pdf and set it to zero. To get the Covariance we use the Hessian at the mode, multiply it with -1 and invert it. 
-
-%The first derivative of the log-pdf is
-%
-%\begin{equation}
-%	\frac{\partial \log(f(x))}{\partial x} = \frac{(\alpha-1)}{x} - \frac{(\beta-1)}{1-x} 
-%\end{equation}
-%
-%To get the mode we set equal to zero and solve for $x$:
-%
-%\begin{align*}
-%	\frac{(\alpha-1)}{x} - \frac{(\beta-1)}{1-x} &= 0  \\
-%	\Leftrightarrow \frac{(\alpha-1)}{x} = \frac{(\beta-1)}{1-x}  \\
-%	
-%\end{align*}
 
 \begin{align*}
 \text{log-pdf: } &\log\left( \frac{x^{(\alpha - 1)} \cdot (1-x)^{(\beta-1)}}{B(\alpha, \beta)} \right) \\
@@ -52,20 +39,12 @@ The Beta distribution in standard basis is therefore approximated by $N(\mu = \f
 We transform the Beta distribution using $g(x) = \log(\frac{x}{1-x})$. Therefore $g^{-1}(x) = \sigma(x) = \frac{1}{1+ \exp(-x)}$. This yields the following pdf
 
 \begin{align}
-	f_t(x, \alpha, \beta) &= \frac{\sigma(x)^{(\alpha - 1)} \cdot (1 - \sigma(x)^{(\beta -1)})}{B(\alpha, \beta)} \cdot (\sigma(x)(1-\sigma(x)) \\
-	&=  \frac{\sigma(x)^{\alpha} \cdot (1 - \sigma(x)^{\beta})}{B(\alpha, \beta)} \nonumber
+	f_t(x, \alpha, \beta) &= \frac{1}{\sigma(x)(1-\sigma(x))}\exp\left[\alpha\log(\sigma(x))) + \beta\log(1-\sigma(x)) - \log(B(\alpha,\beta)))\right] \cdot (\sigma(x)(1-\sigma(x)) \\
+	&= \exp\left[\alpha\log(x) + \beta\log(1-x) - \log(B(\alpha,\beta)))\right] \nonumber
 	\label{eq:beta_logit_trans_pdf}
 \end{align}
 
-which can be rewritten to get
-
-\begin{align}
-	f_t(x, \alpha, \beta) &= \exp\left[\alpha \log(\sigma(x)) + \beta \log(1-\sigma(x)) - \log B(\alpha, \beta)\right] \\
-	&= \exp\left[\alpha \log(\sigma(x)) + \beta \log(\sigma(-x)) - \log B(\alpha, \beta)\right] \\
-	&= \exp\left[\alpha \log\left(\frac{1}{1 + \exp(-x)}\right) + \beta \log\left(\frac{1}{1+\exp(x)}\right) - \log B(\alpha, \beta)\right] \\
-\end{align}
-
-TODO: THIS FEELS LIKE IT COULD BE SIMPLIFIED BUT I CANNOT FIND THE SOLUTION
+Which has $h(x) = 1, T=(\log(\sigma(x)), \log(1-\sigma(x)), \eta = (\alpha, \beta)$ and $A(\alpha, \beta) = \log(B(\alpha, \beta))$.
 
 \subsubsection{Laplace approximation of the logit transformed Beta distribution}
 

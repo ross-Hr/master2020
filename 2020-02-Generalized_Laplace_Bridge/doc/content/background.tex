@@ -1,0 +1,69 @@
+\section{Background}
+\label{sec:background}
+
+\subsection{Change of Variable for Probability Density Function}
+\label{subsec:variable_change_pdf}
+
+%TODO reference to book
+\subsubsection*{1D}
+Let $X$ have a continuous density $f_X$. Let $g: \mathbb{R} \rightarrow \mathbb{R}$ be piece-wise strictly monotone and continuously differentiable, i.e. there exists intervals $I_1,I_2, ..., I_n$ which partition $\mathbb{R}$ such that $g$ is strictly monotone and continuously differentiable on the interior of each $I_i$. For each $i, g:I_i \rightarrow \mathbb{R}$ is invertible on $g(I_i)$ and let $g_i^{-1}$ be the inverse function. Let $Y = g(X)$ and $\wedge = \{y| y=g(x), x \in \mathbb{R}\}$ be the range $g$. Then the density function $f_Y$ of $Y$ exists and is given by 
+\begin{equation}
+\label{eq:1D_variable_transform}
+f_Y(y) = \sum_{i=1}^{n} f_X(g_i^{-1}(y)) \left\vert\frac{\partial g_i^{-1}(y)}{\partial y} \right\vert \mathbf{1}_\wedge(y) 
+\end{equation}
+
+\subsubsection*{Higher dim}
+TODO: Jacobian. But how do the intervals work?
+
+
+\subsection{Laplace Approximation}
+
+The Laplace approximation (LPA) is a tool to fit a normal distribution to the PDF of a given other distribution. The only constraints for the other distribution are: one peak (mode/ point of maximum) and twice differentiable. Laplace proposed a simple 2-term Taylor expansion on the log pdf. If $\hat{\theta}$ denotes the mode of a pdf $h(\theta)$, then it is also the mode of the log-pdf $q(\theta) = \log h(\theta)$. The 2-term Taylor expansion of $q(\theta)$ therefore is:
+
+\begin{align}
+	q(\theta) &\approx q(\hat{\theta}) + q'(\hat{\theta})(\theta - \hat{\theta}) + \frac{1}{2}(\theta- \hat{\theta})q''(\hat{\theta}) (\theta - \hat{\theta})\\
+	&= 	q(\hat{\theta}) + 0 +  \frac{1}{2}(\theta- \hat{\theta})q''(\hat{\theta}) (\theta - \hat{\theta}) \qquad \text{[since } q'(\theta) = 0]\\
+	&= c - \frac{(\theta - \mu)^2}{2\sigma^2}
+\end{align}
+where $c$ is a constant, $\mu = \hat{\theta}$ and $\sigma^2 = \{-q''(\hat{\theta})\}^{-1}$. The right hand side of the last line matches the log-pdf of a normal distribution $N(\mu, \sigma^2)$. Therefore the pdf $h(\theta)$ is approximated by the pdf of the normal distribution $N(\mu, \sigma^2)$ where $\mu = \hat{\theta}$ and $\sigma^2 = \{-q''(\hat{\theta})\}^{-1}$. Note, that even though this derivation is done for the one dimensional case only, it is also true for the multidimensional case. The second derivative just becomes the Hessian of the pdf at the mode.
+
+\subsection{Exponential Family}
+
+exponential family form
+
+\begin{equation}
+ f(x|\theta) = h(x)\exp[\eta(\theta) t(x) - A(\theta)]
+ \label{eq:exp_family}
+\end{equation}
+
+for sufficient statistics $t:X \rightarrow \mathbb{R}$, natural parameters $\eta: \Theta \rightarrow \mathbb{R}$, and functions $A: \Theta \rightarrow \mathbb{R}$ and $h: X \rightarrow \mathbb{R}_+$
+
+\subsection{Chi2 <-> Normal}
+\label{subsec:chi2-normal}
+
+%TODO reference the book where I took it from
+It is already well-known that the Chi-squared distribution describes the sum of independent, standard normal random variables. To introduce a certain 'trick' we show the forward and backward transformation between chi2 and normal.\\
+Let $X$ be normal with $\mu = 0, \sigma^2 = 1$. Let $Y = X^2$ and therefore $g(x) = x^2$, which is neither monotone nor injective. Take $I_1 = (-\infty, 0)$ and $I_2 = [0, +\infty)$. Then $g$ is monotone and injective on $I_1$ and $I_2$ and $I_1 \cup I_2 = \mathbb{R}$. $g(I_1) = (0, \infty)$ and $g(I_2) = [0, \infty)$. Then $g_1^{-1}: [0, \infty) \rightarrow \mathbb{R}$ by $g_1^{-1}(y) = -\sqrt{y}$ and $g_2^{-1}: [0, \infty) \rightarrow \mathbb{R}$ by $g_2^{-1}(y) = \sqrt{y}$. Then
+$$\left\vert \frac{\partial g_i^{-1}(y)}{\partial y} \right\vert = \left\vert \frac{1}{2 \sqrt{y}} \right\vert = \frac{1}{2 \sqrt{y}}$$
+
+Applying Equation \ref{eq:1D_variable_transform} we can transform a normal distribution to a chi-squared.
+
+\begin{align}
+	f_Y(y) &= f_X(g_1^{-1}(y))	\left\vert\frac{\partial g_1^{-1}(y)}{\partial y} \right\vert \mathbf{1}_\wedge(y) + f_X(g_2^{-1}(y))	\left\vert\frac{\partial g_2^{-1}(y)}{\partial y} \right\vert \mathbf{1}_\wedge(y) \nonumber\\
+	&= \frac{1}{\sqrt{2\pi}} \exp(-\frac{y}{2}) \frac{1}{2\sqrt{y}} + \frac{1}{\sqrt{2\pi}} \exp(-\frac{y}{2}) \frac{1}{2\sqrt{y}} \qquad(y > 0)\\
+	&= \frac{1}{\sqrt{2\pi}} \frac{1}{\sqrt{y}}\exp(-\frac{y}{2}) \nonumber
+\end{align}
+
+The 'trick' was to split up the variable transformation in two parts to adjust for the fact that the space of the chi-squared and the Normal are different. We can reverse the same procedure to get from a chi-squared to a normal distribution. We keep the variable names from before. Let $X = \sqrt{Y}$ and therefore $h(x) = \sqrt{x}$. Then $h_1^{-1}: \mathbb{R} \rightarrow (-\infty, 0)$ by $h_1^{-1}(x) = -x^2$ and $h_2^{-1}: \mathbb{R} \rightarrow [0, \infty)$ by $h_2^{-1}(x) = x^2$. Then
+
+$$\left\vert\frac{\partial h_i^{-1}(y)}{\partial y} \right\vert = \vert 2x \vert $$
+
+and
+ 
+\begin{align}
+	f_X(x) &= f_y(h_1^{-1}(x)) \left\vert\frac{\partial h_1^{-1}(y)}{\partial y} \right\vert \mathbf{1}_\wedge(y) + f_y(h_2^{-1}(x)) \left\vert\frac{\partial h_2^{-1}(y)}{\partial y} \right\vert \mathbf{1}_\wedge(y) \nonumber \\
+	&= \frac{1}{\sqrt{2\pi}} \frac{1}{2\sqrt{x^2}} \exp(-\frac{x^2}{2}) |2x| \mathbf{1}_{(-\infty, 0)}(x) + \frac{1}{\sqrt{2\pi}} \frac{1}{2\sqrt{x^2}} \exp(-\frac{x^2}{2}) |2x| \mathbf{1}_{[0, \infty)}(x) \\
+	&= \frac{1}{\sqrt{2\pi}} \exp(-\frac{x^2}{2}) \nonumber
+\end{align}
+
+which is defined on the entirety of $\mathbb{R}$.
