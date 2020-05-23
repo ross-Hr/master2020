@@ -1,0 +1,76 @@
+\section*{Appendix D: Experiments Details}
+\label{sec:expDetails}
+
+The exact experimental setups, i.e. network architectures, learning rates, random seeds, etc. can be found in the accompanying GitHub repository\footnote{\url{https://github.com/mariushobbhahn/master2020/tree/master/2019-10-Laplace_Bridge}}.
+This section is mostly used to justify some of the decisions we made during the process in more detail and highlight some miscellaneous interesting things. 
+
+\subsection*{Uncertainty estimates on MNIST}
+
+Most of the experimental setup is already explained in the main paper. The exact details can be found in the accompanying code. Every experiment has been conducted with 5 different seeds.
+
+\subsection*{OOD detection}
+
+Every experiment has been conducted with 5 different seeds. In the tables, the mean and standard deviations are presented. 
+The reason why the sampling procedure for the CIFAR-10 and CIFAR-100 case are similarly fast even though we draw from a 10- vs 100-dimensional Gaussian is because the sampling procedures were parallelized on a GPU. All prior uncertainties over the weights were chosen such that the MMC of the sampling averages was around 5\% lower than the MAP estimate. 
+In the following, we show the results including a KFAC approximation of the last layer. 
+
+%accuracies: 95.4% cifar10, 100% SVHN, 76.6% cifar100
+\begin{table*}[h!]
+	\scriptsize
+    \centering
+    \resizebox{\textwidth}{!}{% use resizebox with textwidth
+    \begin{tabular}{l  l || c c c c  c  c  c  c c c c}
+	     \toprule
+         & & \multicolumn{3}{c}{\textbf{Diag Sampling}} & \multicolumn{3}{c}{\textbf{KFAC Sampling}} &  \multicolumn{3}{c}{\textbf{Dirichlet mode}}\\
+         \textbf{Train} & \textbf{Test} & \textbf{MMC} & \textbf{AUROC} & \textbf{Time} & \textbf{MMC} & \textbf{AUROC} & \textbf{Time} & \textbf{MMC} & \textbf{AUROC} &  \textbf{Time}\\
+         \midrule
+         MNIST & MNIST & 0.932 $\pm$ 0.007 & - & 6.6 & - & - & - & \textbf{0.987} $\pm$ 0.001 & - & \textbf{0.016} \\
+         MNIST & FMNIST & 0.407 $\pm$ 0.010 & 0.989 $\pm$ 0.002 & 6.6 & - & - & -  & \textbf{0.377} $\pm$ 0.019 & \textbf{0.994} $\pm$ 0.002 &  \textbf{0.016}\\
+         MNIST & notMNIST & \textbf{0.535} $\pm$ 0.018 & 0.958 $\pm$ 0.006 & 12.3 & - & - & -  & 0.630 $\pm$ 0.018 & \textbf{0.962} $\pm$ 0.007 &  \textbf{0.029}\\
+         MNIST & KMNIST & \textbf{0.500} $\pm$ 0.014 & 0.974 $\pm$ 0.005 & 6.6 & - & - & -  & 0.630 $\pm$ 0.018 & \textbf{0.975} $\pm$ 0.004 & \textbf{0.016} \\
+         \midrule
+         CIFAR-10 & CIFAR-10  & 0.948 & -     & $13.6$ & $0.857 \pm 0.003$ & -       & 13.4 & \textbf{0.966} & -     & \textbf{0.031} \\
+         CIFAR-10 & CIFAR-100 & 0.708 & \textbf{0.889} & $13.6$ & \textbf{0.562} $\pm 0.003$ & $0.880 \pm 0.012$ & 13.5 & 0.742 & 0.866 & \textbf{0.027} \\
+         CIFAR-10 & SVHN      & 0.643 & 0.933 & $35.2$ & \textbf{0.484} $\pm 0.004$ & \textbf{0.939} $\pm 0.001$ & 35.2 & 0.647 & 0.934 & \textbf{0.070} \\
+         \midrule
+         SVHN & SVHN       & 0.986 &   -   & $34.5$ & $0.947 \pm 0.002$ & -                 & $34.6$ & \textbf{0.993} & -     & \textbf{0.073} \\
+         SVHN & CIFAR-100  & 0.595 & 0.984 & $13.3$ & \textbf{0.460} $\pm 0.004$ & $0.986 \pm 0.001$ & $13.4$ & 0.526 & 0.985 & \textbf{0.027} \\
+         SVHN & CIFAR-10   & 0.593 & 0.984 & $13.3$ & \textbf{0.458} $\pm 0.004$ & $0.986 \pm 0.001$ & $13.3$ & 0.520 & \textbf{0.987} & \textbf{0.028} \\
+         \midrule
+         CIFAR-100 & CIFAR-100 & \textbf{0.762} & -     & $24.5$ & 0.404            & -                 & $24.6$ & 0.590 & -     & \textbf{0.030} \\
+         CIFAR-100 & CIFAR-10  & 0.467 & 0.788 & $24.4$ & 0.213            & 0.788             & $24.6$ & \textbf{0.206} & \textbf{0.791} & \textbf{0.027} \\
+         CIFAR-100 & SVHN      & 0.461 & 0.795 & $63.4$ & $0.180 \pm0.001$ & \textbf{0.838} $\pm 0.001$ & $63.8$ & \textbf{0.170} & 0.815 & \textbf{0.069} \\
+         \bottomrule
+    \end{tabular}
+	}
+    \caption{Out-of-distribution detection results. A network has been trained on the data set in the \textbf{train} column and is tested on the \textbf{test} column. Optimally, the MMC for out of distribution data is low and the AUROC is high. There is no clear winner when it comes to discriminating in and OOD w.r.t. both metrics. However, the Laplace Bridge is around 400 times faster on average. Time is measured in seconds. Five runs with different seeds per experiment were conducted. 1000 samples were drawn from the Gaussian over the outputs. The (F-, K-, not-)MNIST experiments were done with a Laplace approximation of the entire network while the others only used the last layer.}
+    \label{tab:experiments_table_KFAC_1000}
+\end{table*}
+
+%experiments while sampling from all weights
+\begin{table*}[h!]
+	\scriptsize
+    \centering
+    \begin{tabular}{l  l || c  c  c  c  c c c c}
+	     \toprule
+         & & \multicolumn{3}{c}{\textbf{Sampling (100)}} &  \multicolumn{3}{c}{\textbf{Dirichlet mode}}\\
+         \textbf{Train} & \textbf{Test} & \textbf{MMC} & \textbf{AUROC} & \textbf{Time} & \textbf{MMC} & \textbf{AUROC} &  \textbf{Time}\\
+         \midrule
+         MNIST & MNIST    & $0.981 \pm 0.000$ &  -    & 109.3 &  \textbf{0.987} $\pm$ 0.001 & - & \textbf{0.016} \\
+         MNIST & FMNIST   & $0.482 \pm 0.002$ & $0.991 \pm 0.000$ & 109.3 &  \textbf{0.377} $\pm$ 0.019 & \textbf{0.994} $\pm$ 0.002 &  \textbf{0.016}\\
+         MNIST & notMNIST & $0.643 \pm 0.002$ & $0.960 \pm 0.001$ & 44.7  &  \textbf{0.630} $\pm$ 0.018 & \textbf{0.962} $\pm$ 0.007 &  \textbf{0.029}\\
+         MNIST & KMNIST   & $\textbf{0.617} \pm 0.003$ & $\textbf{0.976} \pm 0.001$ & 109.5 &  0.630 $\pm$ 0.018 & 0.975 $\pm$ 0.004 &  \textbf{0.016} \\
+         \bottomrule
+    \end{tabular}
+    \caption{Results for sampling from all weights instead of the last layer. Number of samples was 100. Time is measured in seconds.}
+    \label{tab:experiments_table_sample_full}
+\end{table*}
+
+\subsection*{Time comparison}
+
+Every experiment has been conducted with 5 different seeds. The presented curves are the averages over these 5 experiments with error bars. The reason why taking one sample is slower than two is because of the way random numbers are generated for the normal distribution. For further information read up on the Box-Mueller Transform. 
+
+\subsection*{Uncertainty-aware output ranking on ImageNet}
+
+The prior covariances for the Laplace approximation of the Hessian over the weights were chosen such that uncertainty estimate of the Laplace bridge MMC over the outputs was not more than 5\% lower than the MAP estimate. The length of the list generated by our uncertainty aware method was chosen such that it contained at least one and maximally ten samples. Originally we wanted to choose the maximal length according to the size of the largest category (e.g. fishes or dogs) but the class tree hierarchy of ImageNet does not answer this question meaningfully. We chose ten because there are no reasonable bins larger than ten when looking at a histogram. 
+

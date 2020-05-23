@@ -52,3 +52,8 @@
 \BOOKMARK [3][-]{subsubsection.11.2.1}{Laplace Approximation of the sqrtm-transformed Wishart distribution}{subsection.11.2}% 52
 \BOOKMARK [3][-]{subsubsection.11.2.2}{The Bridge for sqrtm-tranform}{subsection.11.2}% 53
 \BOOKMARK [1][-]{section.12}{Inverse Wishart Distribution}{}% 54
+\BOOKMARK [2][-]{subsection.12.1}{Standard Inverse Wishart distribution}{section.12}% 55
+\BOOKMARK [3][-]{subsubsection.12.1.1}{Laplace Approximation of the standard inverse Wishart distribution}{subsection.12.1}% 56
+\BOOKMARK [2][-]{subsection.12.2}{Sqrtm-Transformed inverse Wishart distribution}{section.12}% 57
+\BOOKMARK [2][-]{subsection.12.3}{Laplace Approximation of the sqrtm-transformed inverse Wishart distribution}{section.12}% 58
+\BOOKMARK [1][-]{section.13}{Math}{}% 59

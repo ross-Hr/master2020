@@ -1,0 +1,141 @@
+\section*{Appendix C: Inverting the Laplace Approximation of the Dirichlet}
+\label{sec:InversionLADirichlet}
+
+Note that the following section is a copy of \cite{Hennig2010} derivation. We don't claim any new contribution but merely want to give an overview of the content. 
+
+%soft identifiability constraint
+For a given $\rvy$, all $\rvy'$ satisfying $\rvy' = \rvy + c \mathbf{1}$ share the same value $\sigma(\rvy')$ for any $c \in \mathbb{R}$ with $\mathbf{1} = [1,1, ..., 1]^\top$. Since the Laplace Bridge is a map between a Gaussian and a Dirichlet distribution we must ensure that the Dirichlet is in fact a distribution, i.e. that multiple values don't map to the same result. To solve this ambiguity we introduce a soft constrain $r = \exp[-\frac{\tau}{2}(\mathbf{1}^\top \rvy)^2]$ which can be interpreted as a soft projection of the subspaces forming parallel lines to $\mathbf{1}$ onto their intersection with the hyperplane defined by $\mathbf{1}^\top \rvy = 0$. 
+
+When $r \rightarrow \infty$, where the constraint becomes a Dirac distribution, we can again use a reformulation of the parameter space, using $K-1$ parameters $\rva$ defined through
+
+\begin{equation}
+	y_k = \begin{cases}
+		a_k \qquad \qquad \text{if } k = 1,2, ..., K-1 \\
+		- \sum_{k=1}^{K-1} a_k \quad \text{if } k = K
+	\end{cases}
+\end{equation}
+
+Through the figures of the 1D Dirichlet approximation in the main thesis, we have already established that the mode of the Dirichlet lies at the mean of the Gaussian distribution and therefore $\vpi(\vy) = \frac{\mathbf{\alpha}}{\sum_i \alpha_i}$. Additionally, the elements of $\vy$ must sum to zero. These two constraints combined yield only one possible solution for $\vmu$.
+
+\begin{equation}
+	\mu_k = \log \alpha_k  - \frac{1}{K} \sum_{l=1}^{K} \log \alpha_l
+	\label{eq:mu_k}
+\end{equation}
+
+Calculating the covariance matrix $\vSigma$ is more complicated but layed out in the following. The logarithm of the Dirichlet is, up to additive constants
+
+\begin{equation}
+    \log p_y(y|\alpha) = \sum_k \alpha_k \pi_k - \frac{\tau}{2} \mathbf{1}^\top \rvy
+\end{equation}
+
+Using $\pi_k$ as the softmax of $\vy$ as shown in Equation \ref{eq:softmax} we can find the elements of the Hessian $\vL$
+
+\begin{equation}
+    L_{kl} = \hat{\alpha}(\delta_{kl}\hat{\pi_k} - \hat{\pi_k} \hat{\pi_l}) + \tau(\mathbf{1}\mathbf{1}^\top)_{kl}
+\end{equation}
+
+where $\hat{\valpha} := \sum_k \alpha_k$ and $\hat{\vpi} = \frac{\alpha_k}{\hat{\alpha}}$ for the value
+of $\vpi$ at the mode. The term $(\mathbf{1}\mathbf{1}^\top)_{kl}$ is a convoluted way of writing a one that makes the following math easier to parse. 
+
+To analytically invert $\vL$ we introduce a rectangular matrix $\mX \in \mathbb{R}^{K\times 2}$ with elements
+
+\begin{equation}
+	X_{ku} = \hat{\pi}_k\delta_{1u} + \mathbf{1}_k\delta_{2u} = \begin{pmatrix}
+		\hat{\pi}_1 & 1 \\
+		\vdots & \vdots \\
+		\hat{\pi}_K & 1 \\
+	\end{pmatrix}
+\end{equation}
+
+and the square matrices $\mA \in \mathbb{R}^{K\times K}$ and $\mB \in \mathbb{R}^{2 \times 2}$ with 
+
+\begin{align}
+	\mA &= \diag{\alpha}  \qquad\text{and}\qquad \mB = \begin{pmatrix}
+		\hat{\alpha} & 0 \\
+		0 & \tau
+	\end{pmatrix}
+\end{align}
+
+which allows us to write 
+
+\begin{equation}
+	\vL = \mA + \mX\mB\mX^\top
+\end{equation}
+
+Both $\mA$ and $\mB$ are diagonal with strictly positive diagonal elements and thus invertible. Therefore we can use the \textit{matrix inversion lemma}, which states
+
+\begin{equation}
+	(\mA + \mX\mB\mX^\top)^{-1} = \mA^{-1} - \mA^{-1} \mX (\mB^{-1} + \mX^\top \mA^{-1} \mX)^{-1} \mX^\top \mA^{-1}
+\end{equation}
+
+The $2 \times 2$ expression in brackets is known as the \textit{Schur complement} and we can compute it with
+
+\begin{align}
+	(\mB^{-1} + \mX^\top \mA^{-1} \mX)_{ij} &= \mB^{-1}_{ij} + \left(\frac{\alpha_k}{\hat{\alpha}}\delta_{i1} + n_k\delta_{i2}\right) \frac{1}{\alpha_k} \delta_{kl} \left(\frac{\alpha_l}{\hat{\alpha}}\delta_{j1} + n_l \delta_{j2} \right) \\
+	 &= \mB^{-1}_{ij} + \frac{1}{\hat{\alpha}}\delta_{i1} \delta_{j1} + \frac{D}{\hat{\alpha}}(\delta_{i1}\delta_{j2} + \delta_{i2}\delta_{j1}) + \delta_{i2} \delta_{j2} \sum_k \frac{1}{\alpha_k} \\
+	 \mB^{-1} + \mX^\top \mA^{-1} \mX &= \begin{pmatrix}
+		 0 & K/\hat{\alpha} \\
+		 K/\hat{\alpha} & \tau^{-1} + \sum_k \alpha_k^{-1}
+	 \end{pmatrix}
+\end{align}
+
+The inverse of a $2\times 2$ matrix is
+
+\begin{equation}
+	\begin{pmatrix}
+		a & b \\
+		c & d
+	\end{pmatrix}^{-1} = \frac{1}{ad - bc} \begin{pmatrix}
+		d & -b \\
+		-c & a
+	\end{pmatrix}
+\end{equation}
+
+so we get the inverse of the Schur compliment (which exists for $\alpha, \tau$ with $\alpha_k > 0$ and $\tau > 0$)
+
+\begin{equation}
+	(\mB^{-1} + \mX^\top \mA^{-1} \mX)^{-1} = \begin{pmatrix}
+		-\frac{\hat{\alpha}^2}{K}\left(\frac{1}{\tau} + \sum_k \frac{1}{\alpha_k} \right) & \frac{\hat{\alpha}}{K} \\
+		\frac{\hat{\alpha}}{K} & 0 
+	\end{pmatrix}
+\end{equation}
+
+we can now project this back to $\mathbb{R}^{K\times K}$ and get
+
+\begin{equation}
+    L_{kl}^{-1} = \delta_{kl} \frac{1}{\alpha_k} - \frac{1}{K} \left[\frac{1}{\alpha_k} + \frac{1}{\alpha_l} - \frac{1}{K}\left( \frac{1}{\tau} + \sum_u^K \frac{1}{\alpha_u}\right) \right]
+\end{equation}
+
+because the inverse is defined for all positive values of $\tau$, we can now safely take the limit of $\tau \rightarrow \infty$, which hardens the constraint on the subspace $\mathbf{1}^\top \rvy$.
+
+We are mostly interested in the diagonal elements since we desire a sparse encoding for computational reasons and we otherwise needed to map a $K \times K$ covariance matrix to a $K\times 1$ Dirichlet parameter vector which would be a very overdetermined mapping. Note that $K$ is a scalar, not a matrix. The diagonal elements of $\vSigma = \vL^{-1}$ can be calculated as
+
+\begin{equation}
+    \label{eq:Hessian_diag}
+    \Sigma_{kk} = \frac{1}{\alpha_k} \left(1 - \frac{2}{K}\right)  + \frac{1}{K^2} \sum_{l}^{k} \frac{1}{\alpha_l}.
+\end{equation}
+
+To invert this mapping we transform Equation \ref{eq:mu_k} to 
+
+\begin{equation}
+    \label{eq:reform_mu_k}
+    \alpha_k = e^{\mu_k} \prod_l^{K} \alpha_l^{1/K}
+\end{equation}
+
+by applying the logarithm and re-ordering some parts. Inserting this into Equation \ref{eq:Hessian_diag} and re-arranging yields
+
+\begin{equation}
+    \prod_l^K \alpha_l^{1/K} = \frac{1}{\vSigma_{kk}} \left[e^{-\mu}\left(1 - \frac{2}{K}\right)  + \frac{1}{K^2} \sum_u^K e^{-\mu_u} \right]
+\end{equation}
+
+which can be re-inserted into Equation \ref{eq:reform_mu_k} to give
+
+\begin{equation}
+    \label{eq:mapping_alpha}
+    \alpha_k = \frac{1}{\Sigma_kk} \left(1 - \frac{2}{K} + \frac{e^{-\mu_k}}{K^2} \sum_l^K e^{-\mu_k} \right)
+\end{equation}
+
+which is the final mapping. With Equations \ref{eq:mu_k} and \ref{eq:Hessian_diag} we are able to map from Dirichlet to Gaussian and with Equation \ref{eq:mapping_alpha} we are able to map the inverse direction. 
+
+
+

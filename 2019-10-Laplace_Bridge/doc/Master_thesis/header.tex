@@ -1,0 +1,133 @@
+% use to waste space:
+% \documentclass[12pt,a4paper]{article}
+
+% if you have this style and like it.
+%\documentclass{acmsiggraph}
+%\documentclass[review]{acmsiggraph}      % review
+%\documentclass[widereview]{acmsiggraph}  % wide-spaced review
+%\documentclass[preprint]{acmsiggraph}    % preprint
+
+% Recommended, but optional, packages for figures and better typesetting:
+\usepackage{microtype}
+\usepackage[pdftex]{graphicx}
+\usepackage[pdftex]{color}
+\definecolor{rot}{RGB}{165,30,55} %rote Farbe
+\graphicspath{{./figures/}}
+% \usepackage{subfigure}
+\usepackage{subfig}
+% \usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs} % for professional tables
+\usepackage{textcomp}
+\usepackage{todonotes}
+%\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{hyperref}
+
+\usepackage{cleveref}
+
+
+\usepackage{mathptmx}
+\usepackage{parskip}
+%\usepackage{amsmath}
+\usepackage{dsfont}
+\usepackage{pxfonts}
+
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+%\usepackage{float} %for nicer figure placement
+\usepackage[section]{placeins}
+
+%plots
+\usepackage{caption}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\newlength{\figwidth}
+\newlength{\figheight}
+
+\newlength{\tempheight}
+\newlength{\tempwidth}
+
+\newcommand{\rowname}[1]% #1 = text
+{\rotatebox{90}{\makebox[\tempheight][c]{\textbf{#1}}}}
+
+\setlength{\tempwidth}{.3\linewidth}
+
+\setlength{\figwidth}{0.8\textwidth}
+\setlength{\figheight}{0.3\textheight}
+
+\newtheorem{proposition}{Proposition}
+
+\usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{dateplot}
+
+
+% comment these two lines out if you don't want minion/myriad fonts.
+% \usepackage[minionint,mathlf]{MinionPro}
+% \renewcommand{\sfdefault}{Myriad-LF}
+%\usepackage{Myriad}
+
+\usepackage{geometry}
+\newcommand{\squeezeup}{\vspace{-20mm}}
+
+%\usepackage{apalike}
+%\let\bibhang\relax
+\usepackage{natbib}
+%\bibliographystyle{apa}
+
+\bibliographystyle{rusnat}
+
+%\usepackage{natbib}		% textual referencing
+%\usepackage[numbers,super]{natbib}	% nice superscripts
+%\bibliographystyle{chicago}	% shitty
+%\bibliographystyle{alpha}	% abbr names and year in \cite
+%\bibliographystyle{agsm}	% australian, need natbib
+%\bibliographystyle{kluwer}	% need natbib
+%\bibliographystyle{apalike}	% lengthly
+%\bibliographystyle{abbrv}	% minimal?
+%\bibliographystyle{icml2020}
+
+% use for german line breaking:
+%\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+
+% avoid us-style text color destruction:
+\frenchspacing
+\usepackage{microtype}
+\usepackage{setspace} 
+
+% have a nice framebox with border directly around the image:
+\fboxsep 0pt
+\newcommand{\fimg}[2]{\fbox{\includegraphics[width=#1]{#2}}}
+
+%\usepackage{theorem}
+%\theorembodyfont{\upshape}
+%\newtheorem{definition}{Definition}
+\usepackage{listings}
+%\usepackage[boxruled]{algorithm2e}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\renewcommand{\algorithmiccomment}[1]{\bgroup\hfill\scriptsize\it//~#1\egroup}
+\newcommand{\algorithmicbreak}{\textbf{break}}
+\newcommand{\BREAK}{\STATE \algorithmicbreak}
+
+\usepackage{url}
+\usepackage{subfig}
+\usepackage{arydshln} %for dashed lines
+\usepackage{fancyhdr} %for fancy head and foot design
+%captionbefehle einbingen
+\usepackage{caption} 
+\captionsetup{labelfont=bf, font={small,sf}}
+\def\code#1{{\tt{#1}}}
+

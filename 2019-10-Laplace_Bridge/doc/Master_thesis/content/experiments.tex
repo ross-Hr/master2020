@@ -1,0 +1,259 @@
+
+We conduct five experiments. In \Cref{subsec:exp1_MNIST}, we analyze the approximation quality of the Laplace Bridge applied to a BNN on the MNIST \cite{MNIST2010} dataset. Then, we compare the Laplace Bridge to the MC-integral in terms of the out-of-distribution (OOD) detection performance in \Cref{subsec:exp2_numbers}. Their computational costs are compared in \Cref{subsec:exp3_time}. In \Cref{subsec:exp4_toy_dataset} we visualize some properties of the Laplace Bridge and compare it to sampling-based methods. Finally, in \Cref{subsec:exp5_imagenet}, we present analysis on ImageNet \cite{ImageNet2015} to demonstrate the scalability of the Laplace Bridge and the advantage of having a full Dirichlet distribution over softmax outputs.
+
+
+\setlength{\figwidth}{0.8\textwidth}
+\setlength{\figheight}{0.3\textheight}
+\begin{figure}[t]
+    \centering
+    \scriptsize
+    \input{figures/MNIST3VarianceOOD.tex}
+    \captionsetup{skip=0pt}
+    \caption{Average variance of the Dirichlet distributions of each MNIST class. The in-distribution uncertainty (variance) is nearly nil, while out-of-distribution variance is high.}
+    \label{subfig:MNIST_uncertainty}
+\end{figure}
+
+\section{Uncertainty estimates on MNIST}
+\label{subsec:exp1_MNIST}
+
+We empirically investigate the approximation quality of the Laplace Bridge in a ``real-world'' BNN on the MNIST dataset. A convolutional network with 2 convolutional and 2 fully-connected layers is trained on the first three digits of MNIST (the digits $0$, $1$, and $2$).
+Adam optimizer with learning rate $1$e-$3$ and weight decay $5$e-$4$ is used. The batch size is 128.
+To obtain the posterior over the weights of this network, we perform a full (all-layer) Laplace approximation using BackPACK \citep{dangel2020backpack} to get the diagonal Hessian. The network is then evaluated on the full test set of MNIST (containing all ten classes).
+
+We present the results in \Cref{subfig:MNIST_uncertainty}. We show for each $k = 1, \dots, K$, the average variance $\frac{1}{D_k} \sum_{i=1}^{D_k} \mathrm{Var}(\pi_k(f_\vtheta(\vx_i)))$ of the resulting Dirichlet distribution over the softmax outputs, where $D_k$ is the number of test points predicted with label $k$. The results show that the variance of the Dirichlet distribution obtained via the Laplace Bridge is useful for uncertainty quantification: The mean variance of the first three classes is close to zero, while that of the other classes is higher. Therefore, these variances are informative for detecting OOD data.
+Samples of the in- and out-of-distribution sets reflect this difference in uncertainty, as shown in Figure \ref{fig:MNIST_ID_OOD}. While these results could also be obtained via sampling, the Laplace Bridge provides a computationally lightweight alternative for estimating predictive uncertainty.
+
+\begin{figure}[htb]
+    \centering
+    \scriptsize
+
+    \captionsetup[subfigure]{labelformat=empty}
+
+
+    % \setcounter{subfigure}{0}
+
+    \subfloat[In-distribution predictions]{
+        \subfloat{\includegraphics[width=0.3\textwidth]{figures/MNIST_cool/MNIST_3Classes_in_dist_coolwarm_0.png}}
+        \subfloat{\includegraphics[width=0.3\textwidth]{figures/MNIST_cool/MNIST_3Classes_in_dist_coolwarm_1.png}}
+        \subfloat{\includegraphics[width=0.3\textwidth]{figures/MNIST_cool/MNIST_3Classes_in_dist_coolwarm_2.png}}
+    }
+
+    \vspace{-1em}
+
+    \subfloat[Out-of-distribution predictions]{
+        \subfloat{\includegraphics[width=0.3\textwidth]{figures/MNIST_cool/MNIST_3Classes_out_dist_coolwarm_0.png}}
+        \subfloat{\includegraphics[width=0.3\textwidth]{figures/MNIST_cool/MNIST_3Classes_out_dist_coolwarm_1.png}}
+        \subfloat{\includegraphics[width=0.3\textwidth]{figures/MNIST_cool/MNIST_3Classes_out_dist_coolwarm_2.png}}
+    }
+
+    \caption{\textbf{Top:} In-distribution pdfs. All probability mass is concentrated in the corner of the respective correct class. \textbf{Bottom:} Out-of-distribution pdfs. The probability mass is distributed more equally since the networks' uncertainty about is higher.}
+    \label{fig:MNIST_ID_OOD}
+\end{figure}\
+
+
+\begin{table*}[h!]
+	\scriptsize
+    \centering
+    \begin{tabular}{l  l || c c  c | c  c  c}
+	     \toprule
+         & & \multicolumn{3}{c}{\textbf{Diag Sampling}} &  \multicolumn{3}{c}{\textbf{Laplace Bridge (mean)}}\\
+         \textbf{Train} & \textbf{Test} & \textbf{MMC} & \textbf{AUROC} & \textbf{Time} & \textbf{MMC} & \textbf{AUROC} &  \textbf{Time}\\
+         \midrule
+         MNIST & MNIST & 0.932 $\pm$ 0.007 & - & 6.6 & \textbf{0.987} $\pm$ 0.001 & - & \textbf{0.016} \\
+         MNIST & FMNIST & 0.407 $\pm$ 0.010 & 0.989 $\pm$ 0.002 & 6.6 & \textbf{0.377} $\pm$ 0.019 & \textbf{0.994} $\pm$ 0.002 &  \textbf{0.016}\\
+         MNIST & notMNIST & \textbf{0.535} $\pm$ 0.018 & 0.958 $\pm$ 0.006 & 12.3 & 0.630 $\pm$ 0.018 & \textbf{0.962} $\pm$ 0.007 &  \textbf{0.029}\\
+         MNIST & KMNIST & \textbf{0.500} $\pm$ 0.014 & 0.974 $\pm$ 0.005 & 6.6 & 0.630 $\pm$ 0.018 & \textbf{0.975} $\pm$ 0.004 & \textbf{0.016} \\
+         \midrule
+         CIFAR-10 & CIFAR-10 & 0.949 $\pm$ 0.001 & - & 6.6 & \textbf{0.969} $\pm$ 0.002 & - & \textbf{0.017} \\
+         CIFAR-10 & CIFAR-100 & \textbf{0.724} $\pm$ 0.002 & \textbf{0.884} $\pm$ 0.004 & 6.6 & 0.774 $\pm$ 0.003 & 0.858 $\pm$ 0.004 & \textbf{0.016} \\
+         CIFAR-10 & SVHN & \textbf{0.659} $\pm$ 0.028 & \textbf{0.931} $\pm$ 0.007 & 17.0 & 0.704 $\pm$ 0.036 & 0.923 $\pm$ 0.008 & \textbf{0.041} \\
+         \midrule
+         SVHN & SVHN & 0.986 $\pm$ 0.000 & - & 17.1 & \textbf{0.991} $\pm$ 0.000 & - & \textbf{0.040} \\
+         SVHN & CIFAR-10 & 0.537 $\pm$ 0.012 & 0.995 $\pm$ 0.000 & 6.61 & \textbf{0.392} $\pm$ 0.016 & \textbf{0.996} $\pm$ 0.000 & \textbf{0.169} \\
+         SVHN & CIFAR-100 & 0.543 $\pm$ 0.009 & 0.994 $\pm$ 0.000 & 6.61 & \textbf{0.400} $\pm$ 0.013 & \textbf{0.996} $\pm$ 0.000 & \textbf{0.016} \\
+         \midrule
+         CIFAR-100 & CIFAR-100 & \textbf{0.527}s $\pm$ 0.004 & - & 6.68 & 0.263 $\pm$ 0.003 & - & \textbf{0.017} \\
+         CIFAR-100 & CIFAR-10 & 0.276 $\pm$ 0.004 & \textbf{0.707} $\pm$ 0.004 & 6.67 & \textbf{0.068} $\pm$ 0.003 & 0.703 $\pm$ 0.003 & \textbf{0.018} \\
+         CIFAR-100 & SVHN  & 0.348 $\pm$ 0.014 & 0.647 $\pm$ 0.011 & 17.2 & \textbf{0.074} $\pm$ 0.012 & \textbf{0.661} $\pm$ 0.013 & \textbf{0.040} \\
+         \bottomrule
+    \end{tabular}
+    \caption{OOD detection results. Optimally, the MMC for OOD data is low and the AUROC is high. While there is arguable no clear winner when it comes to discriminating in- and out-distribution data w.r.t. both metrics, the Laplace Bridge is around 400 times faster on average. Time is measured in seconds. Five runs with different seeds per experiment were conducted. 1000 samples were drawn from the Gaussian over the outputs. The (F-, K-, not-)MNIST experiments were done with a Laplace approximation of the entire network while the others only used the last layer.}
+    \label{tab:experiments_table}
+\end{table*}
+
+\vspace{-0.5em}
+\section{OOD detection}
+\label{subsec:exp2_numbers}
+
+We compare the performance of the Laplace Bridge to the MC-integral on a standard OOD detection benchmark suite, to test whether the Laplace Bridge gives similar results to the MC sampling method and compare their computational overhead. Following prior literature, we use the standard mean-maximum-confidence (MMC) and area under the ROC-curve (AUROC) metrics \citep{HendycksOODBaseline}. For an in-distribution dataset, a higher MMC value is desirable while for the OOD dataset we want a lower MMC value (optimally, $1/K$ in $K$-class classification problems). For the AUROC metric, the higher the better, since it represents how good a method is for distinguishing in- and out-of-distribution datasets.
+
+
+The test scenarios are as follows: (i) The same convolutional network as in \Cref{subsec:exp1_MNIST} is trained on the MNIST dataset. To approximate the posterior over the parameter of this network, a full (all-layer) Laplace approximation with the exact Hessian is employed. The OOD datasets for this case are FMNIST \cite{FMNIST2017}, notMNIST \cite{notMNIST2011}, and KMNIST \cite{KMNIST2018}. (ii) For larger datasets, i.e.~CIFAR-10 \cite{CIFAR2009}, SVHN \cite{SVHN2011}, and CIFAR-100 \cite{CIFAR2009}, we use a ResNet-18 network \citep{2015_ResNet}. Since this network is large, \eqref{eq:logit_dist} in conjunction with a full Laplace approximation is too costly. We, therefore, use a last-layer Laplace approximation to obtain the approximate diagonal Gaussian posterior. The OOD datasets for CIFAR-10, SVHN, and CIFAR-100 are SVHN and CIFAR100; CIFAR-10 and CIFAR-100; and SVHN and CIFAR-10, respectively. In all scenarios, the networks are well-trained with $99\%$ accuracy on MNIST, $95.4\%$ on CIFAR-10, $76.6\%$ on CIFAR-100 and $100\%$ on SVHN. For the sampling baseline, we use $1000$ posterior samples to compute the predictive distribution. We use the mean of the Dirichlet to obtain a comparable approximation to the MC-integral. Experiments comparing the Laplace Bridge to a KFAC approximation of the last layer and sampling from all weights of the network can be found in the appendix.
+
+%accuracies: 95% cifar10, 100% SVHN, 59% cifar100
+% \begin{table*}[h!]
+% 	\scriptsize
+%     \centering
+%     \begin{tabular}{l  l || c c c c  c  c  c  c}
+% 	     \toprule
+%          & & \multicolumn{2}{c}{\textbf{MAP}} & \multicolumn{3}{c}{\textbf{Diag Sampling}} &  \multicolumn{3}{c}{\textbf{Dirichlet mode}}\\
+%          \textbf{Train} & \textbf{Test} & \textbf{MMC} & \textbf{AUROC} & \textbf{MMC} & \textbf{AUROC} & \textbf{Time} & \textbf{MMC} & \textbf{AUROC} &  \textbf{Time}\\
+%          \midrule
+%          MNIST & MNIST & \textbf{0.989} $\pm$ 0.001 & - & 0.932 $\pm$ 0.007 & - & 6.6 & 0.987 $\pm$ 0.001 & - & \textbf{0.016} \\
+%          MNIST & FMNIST & 0.538 $\pm$ 0.022 & 0.990 $\pm$ 0.001 & 0.407 $\pm$ 0.010 & 0.989 $\pm$ 0.002 & 6.6 & \textbf{0.377} $\pm$ 0.019 & \textbf{0.994} $\pm$ 0.002 &  \textbf{0.016}\\
+%          MNIST & notMNIST & 0.706 $\pm$ 0.014 & 0.954 $\pm$ 0.007 & \textbf{0.535} $\pm$ 0.018 & 0.958 $\pm$ 0.006 & 12.3 & 0.630 $\pm$ 0.018 & \textbf{0.962} $\pm$ 0.007 &  \textbf{0.029}\\
+%          MNIST & KMNIST & 0.684 $\pm$ 0.015 & 0.974 $\pm$ 0.005 & \textbf{0.500} $\pm$ 0.014 & 0.974 $\pm$ 0.005 & 6.6 & 0.630 $\pm$ 0.018 & \textbf{0.975} $\pm$ 0.004 & \textbf{0.016} \\
+%          \midrule
+%          CIFAR-10 & CIFAR-10 & \textbf{0.978} $\pm$ 0.001 & - & 0.949 $\pm$ 0.001 & - & 6.6 & 0.969 $\pm$ 0.002 & - & \textbf{0.017} \\
+%          CIFAR-10 & CIFAR-100 & 0.828 $\pm$ 0.001 & 0.872 $\pm$ 0.004 & \textbf{0.724} $\pm$ 0.002 & \textbf{0.884} $\pm$ 0.004 & 6.6 & 0.774 $\pm$ 0.003 & 0.858 $\pm$ 0.004 & \textbf{0.016} \\
+%          CIFAR-10 & SVHN & 0.777 $\pm$ 0.030 & 0.925 $\pm$ 0.008 & \textbf{0.659} $\pm$ 0.028 & \textbf{0.931} $\pm$ 0.007 & 17.0 & 0.704 $\pm$ 0.036 & 0.923 $\pm$ 0.008 & \textbf{0.041} \\
+%          \midrule
+%          SVHN & SVHN & \textbf{0.999} $\pm$ 0.000 & - & 0.986 $\pm$ 0.000 & - & 17.1 & 0.991 $\pm$ 0.000 & - & \textbf{0.040} \\
+%          SVHN & CIFAR-10 & 0.616 $\pm$ 0.013 & \textbf{0.996} $\pm$ 0.000 & 0.537 $\pm$ 0.012 & 0.995 $\pm$ 0.000 & 6.61 & \textbf{0.392} $\pm$ 0.016 & \textbf{0.996} $\pm$ 0.000 & \textbf{0.169} \\
+%          SVHN & CIFAR-100 & 0.621 $\pm$ 0.010 & \textbf{0.996} $\pm$ 0.000 & 0.543 $\pm$ 0.009 & 0.994 $\pm$ 0.000 & 6.61 & \textbf{0.400} $\pm$ 0.013 & \textbf{0.996} $\pm$ 0.000 & \textbf{0.016} \\
+%          \midrule
+%          CIFAR-100 & CIFAR-100 & \textbf{0.564} $\pm$ 0.018 & - & 0.527 $\pm$ 0.004 & - & 6.68 & 0.263 $\pm$ 0.003 & - & \textbf{0.017} \\
+%          CIFAR-100 & CIFAR-10 & 0.298 $\pm$ 0.004 & 0.706 $\pm$ 0.003 & 0.276 $\pm$ 0.004 & \textbf{0.707} $\pm$ 0.004 & 6.67 & \textbf{0.068} $\pm$ 0.003 & 0.703 $\pm$ 0.003 & \textbf{0.018} \\
+%          CIFAR-100 & SVHN & 0.372 $\pm$ 0.015 & 0.649 $\pm$ 0.012 & 0.348 $\pm$ 0.014 & 0.647 $\pm$ 0.011 & 17.2 & \textbf{0.074} $\pm$ 0.012 & \textbf{0.661} $\pm$ 0.013 & \textbf{0.040} \\
+%          \bottomrule
+%     \end{tabular}
+%     \caption{Out-of-distribution detection results. A network has been trained on the data set in the \textbf{train} column and is tested on the \textbf{test} column. Optimally, the MMC for out of distribution data is low and the AUROC is high. There is no clear winner when it comes to discriminating in and OOD w.r.t. both metrics. However, the Laplace Bridge is around 400 times faster on average. Time is measured in seconds. Five runs with different seeds per experiment were conducted.}
+%     \label{tab:experiments_table}
+% \end{table*}
+
+
+The results are presented in Table \ref{tab:experiments_table}. The Laplace Bridge is competitive to the baseline in terms of the MMC and AUROC metrics. In the case of MNIST and SVHN the Bridge is better than the MC-integral w.r.t. the AUROC metric. Moreover, the Laplace Bridge is also better than the sampling baseline in terms of the MMC metric in the SVHN and CIFAR-100 datasets. The key observation, however, is that the Bridge is on average around $400$ times faster than the sampling baseline, while returning at least competitive, if not even improved fidelity.
+
+
+\section{Time comparison}
+\label{subsec:exp3_time}
+
+
+We compare the computational cost of the density-estimated $p_\text{sample}$ distribution via sampling and the Dirichlet distribution obtained from the Laplace Bridge $p_\text{LB}$ for approximating the true distribution $p_\text{true}$ over softmax-Gaussian samples\footnote{I.e. samples are obtained by first sampling from a Gaussian and transforming it via the softmax function.}. Different amounts of samples are drawn from the Gaussian, the softmax is applied and the KL divergence between the histogram of the samples with the true distribution is computed. We use KL-divergences $D_\text{KL}(p_\text{true} \Vert p_\text{sample})$ and $D_\text{KL}(p_\text{true} \Vert p_\text{LB})$, respectively, to measure similarity between the approximations and ground truth while the number of samples for $p_\text{sample}$ is increased on a logarithmic scale. The true distribution $p_\text{true}$ is constructed via Monte Carlo with $100$k samples. The experiment is conducted for three different Gaussian distributions over $\R^3$. Since the softmax applied to a Gaussian does not have a closed-form analytic solution, the calculation of the approximation error is not possible and an empirical evaluation via sampling is the best option. The fact that there is no analytic solution is part of the justification for using the Laplace Bridge in the first place.
+
+\Cref{fig:KL_div_samples} suggests that the number of samples required such that the distribution $p_\text{sample}$ is approximating the true distribution $p_\text{true}$ as good as the Dirichlet distribution obtained via the Laplace Bridge is large, i.e. somewhere between $500$ and $10000$. This translates to a wall-clock time advantage of at least a factor of $100$ before sampling becomes competitive in quality with the Laplace Bridge.
+
+
+\setlength{\figwidth}{0.8\textwidth}
+\setlength{\figheight}{0.3\textheight}
+
+\begin{figure}[h!]
+    \scriptsize
+
+    \hspace{2em}
+    \input{figures/KLDivSamples}%
+
+    \vspace{2em}
+
+    \hspace{2em}
+    \input{figures/KLDivTime}%
+
+	\centering
+	\caption{KL-divergence plotted against the number of samples (top) and wall-clock time (bottom). Monte Carlo density estimation becomes as good as the Laplace Bridge after around $750$ to $10000$ samples and takes at least $100$ times longer. The three lines represent three different samples.}
+	\label{fig:KL_div_samples}
+\end{figure}
+
+
+\section{Toy dataset}
+\label{subsec:exp4_toy_dataset}
+
+To understand the properties of the Laplace Bridge we visualize its predictions on a toy dataset. The dataset is generated by drawing from four different 2D Gaussians and the task is for a neural network to classify them. The network is a simple four-layer network with ReLU activations and 100 units per layer. A visualization is created by using different methods for calculating predictive uncertainty for all points on a two-dimensional grid. There are four methods to predict uncertainty that are independent of the Laplace Bridge: the MAP estimate, a diagonal approximation of the Hessian, a Kronecker-factorized approximation of the Hessian and the exact Hessian. Their respective predictive entropy can be found on the left column of Figure \ref{fig:toy_data}. This is compared to the MAP prediction of the Laplace Bridge, its predictive entropy, the variance of the MAP estimate of the Dirichlet and a MAP estimate that is weighted by it's respective variance. This can be found in the right column of Figure \ref{fig:toy_data}. We conclude that the entropy and the variance of the Dirichlet are only marginally better than the original MAP estimate. Reweighing the estimate by the variance improves it slightly. However, the Laplace Bridge is not able to produce a similarly good estimate as a Kronecker-factorized or exact Hessian. 
+
+
+\newgeometry{top=20mm, bottom=20mm}
+
+\begin{figure}[htb]
+	\centering
+	\scriptsize
+	
+	\captionsetup[subfigure]{labelformat=empty}
+	
+	\subfloat{\includegraphics[width=0.4\textwidth]{figures/toy_data/ent_toy_2d_nn_multiclass_map.pdf}}
+	\subfloat{\includegraphics[width=0.4\textwidth]{figures/toy_data/ent_toy_2d_nn_multiclass_LPB_alpha_max.pdf}} \\ [-5ex]	
+	\subfloat{\includegraphics[width=0.4\textwidth]{figures/toy_data/ent_toy_2d_nn_multiclass_laplace_diag.pdf}}
+	\subfloat{\includegraphics[width=0.4\textwidth]{figures/toy_data/ent_toy_2d_nn_multiclass_LPB_entropy_mode.pdf}} \\ [-5ex]
+	\subfloat{\includegraphics[width=0.4\textwidth]{figures/toy_data/ent_toy_2d_nn_multiclass_laplace_kf.pdf}}
+	\subfloat{\includegraphics[width=0.4\textwidth]{figures/toy_data/ent_toy_2d_nn_multiclass_LPB_variance_norm_dir.pdf}} \\ [-5ex]	
+	\subfloat{\includegraphics[width=0.4\textwidth]{figures/toy_data/ent_toy_2d_nn_multiclass_laplace_exact.pdf}}
+	\subfloat{\includegraphics[width=0.4\textwidth]{figures/toy_data/ent_toy_2d_nn_multiclass_LPB_variance_alphas_norm_dir.pdf}} 
+
+	\caption{\textbf{Left:} Entropy of the MAP estimate, a diagonal approximation of the Hessian, a Kronecker-factorized approximation, and the exact Hessian.
+	\textbf{Right:} MAP prediction of the Dirichlet coming from the Laplace Bridge, its predictive entropy, the variance of the Dirichlet, and a MAP estimate weighed by its variance. We find that the Laplace Bridge entropy and variance are only marginally better than the MAP estimate but the reweighed version improves it.}
+	\label{fig:toy_data}
+\end{figure}
+
+\restoregeometry
+
+\section{Uncertainty-aware output ranking on ImageNet}
+\label{subsec:exp5_imagenet}
+
+\setlength{\figwidth}{1\textwidth}
+\setlength{\figheight}{0.18\textheight}
+
+\begin{figure*}[t]
+	\centering
+	\includegraphics[width=\figwidth,height=\figheight]{figures/imagenet_images.pdf}
+	\includegraphics[width=\figwidth,height=\figheight]{figures/imagenet_marginal_betas.pdf}
+	%\input{figures/imagenet_marginal_betas}
+	\caption{\textbf{Upper row:} images from the ``laptop'' class of ImageNet. \textbf{Bottom row:} Beta marginal distributions of the top-$k$ predictions for the respective image. In the first column, the overlap between the marginal of all classes is large, signifying high uncertainty, i.e. the prediction is ``I do not know''. In the column, ``notebook'' and ``laptop'' have confident, yet overlapping marginal densities and we, therefore, have a top-$2$ prediction: ``either a notebook or a laptop''. In the third column ``desktop computer'', ``screen'' and ``monitor'' have overlapping marginal densities, yielding a top-$3$ estimate. The last case shows a top-$1$ estimate: the network is confident that ``laptop'' is the only correct label.
+	}
+	\label{fig:imagenet_betas}
+\end{figure*}
+
+Classification tasks on large datasets with many classes, like ImageNet, are not often done in a Bayesian fashion since the posterior inference and sampling are expensive. The Laplace Bridge, in conjunction with the last-layer Bayesian approximations, can be used to alleviate this problem. Furthermore, having a full distribution over the softmax outputs of a BNN gives rise to new possibilities. For example, one could subsume all classes which have sufficiently overlapping marginal distributions into one if they are semantically similar as illustrated in \Cref{fig:imagenet_betas}.
+
+
+%experiment to introduce new top k.
+Another possibility is to improve the standard classification metrics. Large classification tasks like ImageNet are often compared along a top-$5$ metric, i.e.~it is tested whether the correct class is within the five most probable estimates of the network. Although widely accepted, this metric has some pathologies. Consider two examples: i) Assume the network has to classify a hypothetical image of ``raptor'' and it is confident that the label is either a ``hawk'' or an ``eagle''. Then all probability mass should be distributed between those two classes. The three other classes within the top-$5$ are not needed to inform the decision. ii) Assume the network has to classify an image of which it is confident that it is a ``fish'' but it is uncertain between ten different possible fish species. Which five of the ten fish classes is within the top-$5$ is nearly arbitrary and so is the thereby following classification.
+
+Leveraging the probabilistic output provided by the Laplace Bridge, we propose a simple decision rule that can handle both examples and is more fine-grained due to its awareness of uncertainty. One may call such a rule \emph{uncertainty-aware top-$k$}; it is shown in \Cref{alg:ua-top-k}. Instead of taking the top-$k$ as a decision threshold for an arbitrary $k$ we take the uncertainty/confidence of the model to inform the decision. This is more flexible and therefore able to handle situations in which different numbers of classes are plausible outcomes. The Dirichlet distribution obtained from the Laplace Bridge provides this capability. In particular, since the marginal distribution over each component of a Dirichlet distribution is a $\mathrm{Beta}(\alpha_i, \sum_{j\neq i} \alpha_j)$, this can be done analytically and efficiently. The proposed decision rule uses the area of overlap between the marginal distributions of the sorted outcomes. This is similar to hypotheses testing, i.e.~$t$-tests \cite{nickerson2000null} or its Bayesian alternatives \cite{BayesianAltTTest2011}. If, for example, two Beta densities overlap more than $5\%$, we cannot say that they are different distributions with high confidence. All distributions that have sufficient overlap should become the new top-$k$ estimate. Figure \ref{fig:imagenet_betas} shows four examples from the ``laptop'' class of ImageNet.
+
+We evaluate this decision rule on the test set of ImageNet. The overlap is calculated through the inverse CDF\footnote{Also known as the quantile function or percent point function} of the respective Beta marginals. The original top-$1$ accuracy of DenseNet on ImageNet is $0.744$. Meanwhile, the uncertainty-aware top-$k$ accuracy is $0.797$, where $k$ is on average $1.688$. A more detailed analysis is shown in \Cref{fig:imagenet_counts}. Most of the predictions given by the uncertainty-aware metric still yielded a top-$1$ prediction. %, thereby \textit{not} adding meaningless classes to the prediction.
+This shows that using uncertainty does not imply adding meaningless classes to the prediction.
+However, there are some non-negligible cases where $k$ equals to $2$, $3$, or $10$. This indicates that whenever there is ambiguity in the class labels, our method is able to detect it, and thus yields a significantly higher accuracy.
+
+
+\setlength{\figwidth}{0.8\textwidth}
+\setlength{\figheight}{0.3\textheight}
+
+\begin{figure}[h!]
+    \centering
+    \scriptsize
+
+    \hspace{-2em}
+    \input{figures/imagenet_counts.tex}
+
+    \caption{A histogram of ImageNet predictions' length using the proposed uncertainty-aware top-$k$. Most test images are a top-$1$ prediction, indicating high confidence. There are some top-$2$, top-$3$, and top-$10$ predictions, showing an increasing uncertainty.}
+    \label{fig:imagenet_counts}
+\end{figure}
+
+
+\begin{algorithm}[tb]
+   \caption{Uncertainty-aware top-$k$}
+   \label{alg:ua-top-k}
+    \begin{algorithmic}
+        \REQUIRE A Dirichlet parameter $\valpha \in \R^K$ obtained by applying the Laplace Bridge to the Gaussian over the logit of an input, a percentile threshold $T$ e.g. $0.05$, a function $\mathrm{class\_of}$ that returns the underlying class of a sorted index.
+        \STATE
+        \STATE $\tilde{\valpha} = \mathrm{sort\_descending}(\valpha)$ \COMMENT{start with the highest confidence}
+        \STATE $\alpha_0 = \sum_i \alpha_i$
+        \STATE $\mathcal{C} = \{ \mathrm{class\_of}(1) \}$ \COMMENT{initialize top-$k$, must include at least one class}
+
+        \FOR{$i = 2, \dots, K$}
+            \STATE $F_{i-1} = \mathrm{Beta}(\tilde{\alpha}_{i-1}, \alpha_0 - \tilde{\alpha}_{i-1})$ \COMMENT{the previous marginal CDF}
+            \STATE $F_{i} = \mathrm{Beta}(\tilde{\alpha}_i, \alpha_0 - \tilde{\alpha}_i)$ \COMMENT{the current marginal CDF}
+            \STATE $l_{i-1} = F_{i-1}^\inv(T/2)$  \COMMENT{left $\frac{T}{2}$ percentile of the previous marginal}
+            \STATE $r_{i} = F_i^\inv(1-T/2)$ \COMMENT{right $\frac{T}{2}$ percentile of the current marginal}
+
+            \IF{$r_i > l_{i-1}$}
+                \STATE $\mathcal{C} = \mathcal{C} \cup \{ \mathrm{class\_of}(i) \}$  \COMMENT{overlap detected, add the current class}
+            \ELSE
+                \BREAK \COMMENT{No more overlap, end the algorithm}
+            \ENDIF
+        \ENDFOR
+        \STATE
+        \ENSURE $\mathcal{C}$ \COMMENT{return the resulting top-$k$ prediction}
+    \end{algorithmic}
+\end{algorithm}
+
+
+

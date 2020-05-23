@@ -1,0 +1,80 @@
+\documentclass[a4paper,cleardoubleempty,BCOR1cm]{scrbook}
+
+\input{header}
+
+\title{Fast Predictive Uncertainty for Classification with Bayesian Deep Networks}
+\author{Marius Hobbhahn \thanks{e-mail: marius.hobbhahn@student.uni-tuebingen.de}}
+\date{\today}
+
+\input{math_commands}
+
+
+\begin{document}
+
+\newpage	
+\input{teaser}
+
+\onehalfspacing % zeilen abstand 1.5
+
+\pagestyle{fancy}
+\fancyhf{}
+%\fancyhead[LE,RO]{\leftmark}   %current chapter and section on the outer side header
+%\fancyhead[RE,LO]{\thechapter}
+%\fancyfoot[CE,CO]{\rightmark}  %next chapter and section in the center bot
+\fancyfoot[LE,RO]{\thepage}  %page number on the outer bottom side
+
+\input{content/abstract}
+
+
+\tableofcontents
+
+%%%%% show current chapter on the top, current section and page number on the bottom %%%%
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\leftmark}   %current chapter and section on the outer side header
+\fancyhead[RE,LO]{\thechapter}
+\fancyfoot[CE,CO]{\rightmark}  %next chapter and section in the center bot
+\fancyfoot[LE,RO]{\thepage}  %page number on the outer bottom side
+
+\chapter{Introduction}
+\label{chap:introduction}
+\input{content/introduction}
+
+\chapter{The Laplace Bridge}
+\label{chap:background}
+\input{content/background}
+
+\chapter{The Laplace Bridge for BNNs}
+\label{chap:method}
+\input{content/method}
+
+\vspace{0.5em}
+\section{Posterior inference}
+\label{sec:practicalities}
+\input{content/practicalities}
+
+\chapter{Related Work}
+\label{chap:related_work}
+\input{content/related_work}
+
+\chapter{Experiments}
+\label{chap:experiments}
+\input{content/experiments}
+
+\chapter{Discussion}
+\label{chap:discussion}
+\input{content/discussion}
+
+\chapter{Appendix}
+\label{chap:appendix}
+\input{content/appendix}
+\input{content/LaplaceApproximation}
+\input{content/Inversion}
+\input{content/experiments_details}
+
+%\bibliographystyle{alpha}
+%\bibliographystyle{apa}
+\bibliography{bibliography_LPB}
+
+\end{document}
+

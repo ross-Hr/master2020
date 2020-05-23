@@ -1,14 +1,132 @@
 
 \section{Inverse Wishart Distribution}
 
-TODO: see above
+\subsection{Standard Inverse Wishart distribution}
 
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=\textwidth]{inverse_wishart_playground.pdf}
-%	\caption{inverse wishart comparison}
-%	\label{fig:inverse_wishart_comparison}
-%\end{figure}
+the pdf of the Inverse Wishart is
 
-\end{document}
+\begin{equation}
+f_{\mathbf x}({\mathbf x}; {\mathbf \Psi}, \nu) = \frac{\left|{\mathbf\Psi}\right|^{\nu/2}}{2^{\nu p/2}\Gamma_p(\frac \nu 2)} \left|\mathbf{x}\right|^{-(\nu+p+1)/2} e^{-\frac{1}{2}\operatorname{tr}(\mathbf\Psi\mathbf{x}^{-1})}
+\label{eq:inverse_wishart_pdf}
+\end{equation}
 
+which can be written as
+
+\begin{equation}
+f_{\mathbf x}({\mathbf x}; {\mathbf \Psi}, \nu) = \exp \left[-(\nu + p + 1)/2 \log(|x|) - \frac{1}{2} \text{tr}(\Psi x^{-1}) + \log(\frac{\left|{\mathbf\Psi}\right|^{\nu/2}}{2^{\nu p/2}\Gamma_p(\frac \nu 2)}) \right]
+\end{equation}
+
+with $T=(\log(x), x^{-1}), \eta=(-(\nu+p+1)/2, \Psi)$ and $A(n,p,V)=- \log(\frac{\left|{\mathbf\Psi}\right|^{\nu/2}}{2^{\nu p/2}\Gamma_p(\frac \nu 2)})$
+
+\subsubsection{Laplace Approximation of the standard inverse Wishart distribution}
+
+Using ... we can calculate the mode by setting the first derivative of the log-pdf to zero:
+
+\begin{align*}
+	\frac{\partial \log f_{\mathbf X}({\mathbf X}; {\mathbf \Psi}, \nu)}{\partial X} &= \frac{-(\nu + p + 1) \det(X) X^{-\top}}{2\det(X)} + \frac{(X^{-1} \Psi X^{-1})^\top}{2} \\
+	&=\frac{-(\nu + p + 1) X^{-\top}}{2} + \frac{(X^{-1} \Psi X^{-1})^\top}{2} \\
+	\Rightarrow 0 &=\frac{-(\nu + p + 1) X^{-\top}}{2} + \frac{(X^{-1} \Psi X^{-1})^\top}{2} \\
+	\Leftrightarrow (\nu + p + 1) X^{-1} &= X^{-1} \Psi X^{-1} \\
+	\Leftrightarrow (\nu + p + 1) &= X^{-1} \Psi\\
+	\Leftrightarrow X &= \frac{1}{\nu + p + 1} \Psi
+\end{align*}
+
+Using 
+
+\begin{align}
+	\frac{\partial(XBX)_{kl}}{\partial X_{ij}} &= \delta_{ki}(BX)_{lj} + \delta_{lj}(XB)_{ki} \\
+	\frac{\partial X^{-1}}{\partial X} &= -(X^{-1} \otimes X^{-1}) \\
+	\frac{\partial (X^{-1}B X^{-1})}{\partial X} &= \frac{\partial (X^{-1}B X^{-1})}{\partial X^{-1}} \frac{\partial X^{-1}}{\partial X} = -[\delta_{ki}(BX^{-1})_{lj} + \delta_{lj}(X^{-1}B)_{ki}] (X^{-1} \otimes X^{-1})\\
+	(AB)^{-1} &= B^{-1} A^{-1}
+\end{align}
+
+we can get the covariance matrix by inverting the Hessian and multiplying with -1. 
+
+\begin{align*}
+		\frac{\partial^2 \log f_{\mathbf X}({\mathbf X}; {\mathbf \Psi}, \nu)}{\partial^2 X} &= \frac{(\nu + p + 1)}{2}(X^{-1} \otimes X^{-1})^\top - \frac{[\delta_{ki}(\Psi X^{-1})_{lj} + \delta_{lj}(X^{-1}\Psi)_{ki}]}{2} (X^{-1} \otimes X^{-1})^\top \\
+		&= \left\{\frac{(\nu + p + 1)}{2} I_{n^2}- \frac{[\delta_{ki}(\Psi X^{-1})_{lj} + \delta_{lj}(X^{-1}\Psi)_{ki}]}{2}\right\} (X^{-1} \otimes X^{-1})^\top \\
+		&\overset{\text{insert mode}}{=} \left\{\frac{(\nu + p + 1)}{2} I_{n^2}- \frac{[\delta_{ki}((\nu + p + 1)\Psi \Psi^{-1})_{lj} + \delta_{lj}((\nu + p + 1)\Psi^{-1}\Psi)_{ki}]}{2}\right\} (\nu + p + 1)^2(\psi \otimes \psi)^{-\top} \\
+		&= \left\{\frac{(\nu + p + 1)}{2} I_{n^2}- \underbrace{\frac{[\delta_{ki}((\nu + p + 1)I_n)_{lj} + \delta_{lj}((\nu + p + 1)I_n)_{ki}]}{2}}_{=(\nu + p + 1)I_{n^2}}\right\} (\nu + p + 1)^2(\psi \otimes \psi)^{-\top} \\
+		&= -\underbrace{\frac{1}{2}(\nu + p + 1) I_{n^2}}_{A} \underbrace{(\nu + p + 1)^2(\psi \otimes \psi)^{-\top}}_{B} \\
+		&\overset{\text{invert}}{\Rightarrow} -\frac{1}{(\nu + p + 1)^2}(\psi \otimes \psi)^{\top} \frac{2}{(\nu + p + 1)}I_{n^2} \\
+		&=\overset{\cdot -1}{\Rightarrow} \frac{2}{(\nu + p + 1)^3}(\Psi \otimes \Psi)^\top
+\end{align*}
+
+where $I_{n}$ and $I_n^2$ are the identity matrix of size $n$ and $n^2$ respectively. We can also ignore the transpose since we are dealing with symmetric positive definite matrices when it comes to the inverse Wishart distribution.
+
+\subsection{Sqrtm-Transformed inverse Wishart distribution}
+
+we transform the distribution with $g(X) = \text{sqrtm}(X) = X^{\frac{1}{2}}$, i.e. $g^{-1}(X) = X^2$, where $\text{sqrtm}(X)$ is the square root of the matrix. The new pdf becomes 
+
+\begin{align*}
+	f_{\mathbf x}({\mathbf x}; {\mathbf \Psi}, \nu) &= \frac{\left|{\mathbf\Psi}\right|^{\nu/2}}{2^{\nu p/2}\Gamma_p(\frac \nu 2)} \left|\mathbf{x^2}\right|^{-(\nu+p+1)/2} e^{-\frac{1}{2}\operatorname{tr}(\mathbf\Psi\mathbf{x}^{-2})} |2x| \\
+	&= \frac{\left|{\mathbf\Psi}\right|^{\nu/2}}{2^{\nu p/2}\Gamma_p(\frac \nu 2)} \left|\mathbf{x}\right|^{-(\nu+p+1)} e^{-\frac{1}{2}\operatorname{tr}(\mathbf\Psi\mathbf{x}^{-2})} 2^p|x| \\
+	&= \frac{\left|{\mathbf\Psi}\right|^{\nu/2}}{2^{\nu p/2}\Gamma_p(\frac \nu 2)} \left|\mathbf{x}\right|^{-(\nu+p)} e^{-\frac{1}{2}\operatorname{tr}(\mathbf\Psi\mathbf{x}^{-2})} 2^p \\
+	\label{eq:sqrtm_inverse_wishart_pdf}
+\end{align*}
+
+which can be rewritten as 
+
+\begin{align*}
+	\exp\left[-(\nu + p) \log(|X|) - \frac{1}{2}\text{tr}(\Psi X^{-2}) + \log(C)\right]
+\end{align*}
+
+with $T = (\log(|X|), X^{-2}), \nu = (-(\nu + p), \Psi)$ and $A = ...$. 
+
+\subsection{Laplace Approximation of the sqrtm-transformed inverse Wishart distribution}
+
+Using 
+
+\begin{align*}
+	d(XBX) &= (dX)BX + XB(dX) = BX + XB \\
+	d(X^{-1}) &= -X^{-1} dX X^{-1} \\
+	\frac{\partial X^{-1}BX^{-1}}{\partial X} &= \frac{\partial X^{-1}BX^{-1}}{\partial X^{-1}} \frac{\partial X^{-1}}{\partial X} = (BX^{-1} + X^{-1}B)(X^{-2}) = BX^{-3} + X^{-1}BX^{-2} \\
+	\frac{\partial \text{tr}(BX^{-2})}{\partial X} &= 	\frac{\partial \text{tr}(X^{-1}BX^{-1})}{\partial X} = -\text{tr}(BX^{-3} + X^{-1}BX^{-2}) \\
+	&= -\text{tr}(BX^{-3}) -\text{tr}(X^{-1}BX^{-2}) = -2\text{tr}(BX^{-3}) = -2(BX^{-3})^\top
+\end{align*}
+
+we can calculate the mode by setting the derivative of the log-pdf to zero:
+
+\begin{align*}
+	\frac{\partial \log f_t(X, \Psi, \nu)}{\partial X} &= \frac{-(\nu + p )\det(X) X^{-\top}}{\det(X)} + \frac{2(\Psi X^{-3})^\top}{2} \\
+	&= -(\nu + p)X^{-\top} + (\Psi X^{-3})^\top \\
+	\Rightarrow 0 &= -(\nu + p)X^{-\top} + (\Psi X^{-3})^\top \\
+	\Leftrightarrow (\nu + p)X^{-1} &= (\Psi X^{-3}) \\
+	\Leftrightarrow (\nu + p)I_n &= (\Psi X^{-2}) \\
+	\Leftrightarrow (\nu + p)\Psi^{-1} &= X^{-2} \\
+	\Leftrightarrow X &= \left(\frac{1}{(\nu + p)}\Psi\right)^{\frac{1}{2}} \\
+\end{align*}
+
+Using
+
+\begin{align*}
+	\frac{\partial (XA)_{kl}}{\partial X_{ij}} &= \delta_{ki}A_{jl} \rightarrow \frac{\partial XA}{\partial X} = I \otimes A\\
+	\frac{\partial X^3}{\partial X} &= X^2 \otimes I_{n} + X \otimes X + I_{n} \otimes X \\
+	\frac{\partial X^{-1}}{\partial X} &= - X^{-1} \otimes X^{-1} \\
+	(\Psi X^{-3})^\top &= (X^{-3})^\top \Psi^\top \overset{\text{symmetry}}{=} X^{-3} \Psi \\
+	\frac{\partial (\Psi X^{-3})^\top}{\partial X} &= \frac{\partial (\Psi X^{-3})^\top}{\partial X} = \frac{\partial \Psi X^{-3})^\top}{\partial X^{-3}} \frac{\partial (X^{-1})^3}{\partial X^{-1}} \frac{\partial X^{-1}}{\partial X} \\
+	&= (I\otimes \Psi) (X^{-2} \otimes I_n + X^{-1} \otimes X^{-1} + I_n \otimes X^{-2}) (-X^{-1} \otimes X^{-1})
+\end{align*}
+
+where $\hat{\Psi} \in \mathbb{R}^{n^2 \times n^2}$ is the matrix given by $\delta_{ki}A_{jl}$.
+
+we can calculate the covariance matrix by inverting the Hessian and multiplying it with -1.
+
+\begin{align*}
+	\frac{\partial^2 \log f_t(X, \Psi, \nu)}{\partial^2 X} &= \frac{\partial}{\partial X} -(\nu + p)X^{-\top} + (\Psi X^{-3})^\top \\
+	&\overset{\text{symmetry}}{=} (\nu + p) (X^{-1} \otimes X^{-1}) -  (I\otimes \Psi) (X^{-2} \otimes I_n + X^{-1} \otimes X^{-1} + I_n \otimes X^{-2}) (-X^{-1} \otimes X^{-1}) \\
+	&= (\nu + p) (X^{-1} \otimes X^{-1}) -  (I\otimes \Psi) (X^{-2} \otimes I_n + X^{-1} \otimes X^{-1} + I_n \otimes X^{-2}) (X^{-1} \otimes X^{-1}) \\
+	&= [(\nu + p) I_{n^2} - (X^{-2} \otimes \Psi + X^{-1} \otimes \Psi X^{-1} + I_n \otimes \Psi X^{-2})](X^{-1} \otimes X^{-1})\\
+	\overset{\text{insert mode}}{=} [(\nu + p) I_{n^2} - &((\nu + p)\Psi^{-1} \otimes \Psi + \sqrt{(\nu + p)}\Psi^{-\frac{1}{2}} \otimes \sqrt{(\nu + p)}\Psi \Psi^{-\frac{1}{2}} + I_n \otimes (\nu + p)\Psi \Psi^{-1})](\nu + p)(\Psi^{-\frac{1}{2}} \otimes \Psi^{-\frac{1}{2}})\\
+	&= (\nu + p)[(\nu + p) I_{n^2} - (\nu + p)(\Psi^{-1} \otimes \Psi + \Psi^{-\frac{1}{2}} \otimes \Psi^{\frac{1}{2}} + I_n \otimes I_n)](\Psi^{-\frac{1}{2}} \otimes \Psi^{-\frac{1}{2}})\\
+	&= -(\nu + p)^2[-I_{n^2} + \Psi^{-1} \otimes \Psi + \Psi^{-\frac{1}{2}} \otimes \Psi^{\frac{1}{2}} + I_{n^2}](\Psi^{-\frac{1}{2}} \otimes \Psi^{-\frac{1}{2}})\\
+	&= -(\nu + p)^2[\Psi^{-1} \otimes \Psi + \Psi^{-\frac{1}{2}} \otimes \Psi^{\frac{1}{2}}](\Psi^{-\frac{1}{2}} \otimes \Psi^{-\frac{1}{2}})\\
+	&= -(\nu + p)^2[\Psi^{-\frac{3}{2}} \otimes \Psi^{\frac{1}{2}} + \Psi^{-1} \otimes I_n] \\
+	&= -(\nu + p)^2[\Psi^{-\frac{1}{2}}\Psi^{-1} \otimes \Psi^{\frac{1}{2}}I_n + \Psi^{-1} \otimes I_n] \\
+	&= -(\nu + p)^2[(\Psi^{-\frac{1}{2}} \otimes \Psi^{\frac{1}{2}})(\Psi^{-1} \otimes I_n) + (\Psi^{-1} \otimes I_n)] \\
+	&= -(\nu + p)^2[(\Psi^{-\frac{1}{2}} \otimes \Psi^{\frac{1}{2}} + I_{n^2})(\Psi^{-1} \otimes I_n)] \\
+	&\overset{\text{invert}}{\Rightarrow} -\frac{1}{(\nu + p)^2}(\Psi^{1} \otimes I_n)(\Psi^{-\frac{1}{2}} \otimes \Psi^{\frac{1}{2}} + I_{n^2})^{-1}\\
+	&\overset{\cdot -1}{\Rightarrow} \frac{1}{(\nu + p)^2}(\Psi^{1} \otimes I_n)(\Psi^{-\frac{1}{2}} \otimes \Psi^{\frac{1}{2}} + I_{n^2})^{-1}\\
+\end{align*}
+
+TODO: add inversion for second part. 

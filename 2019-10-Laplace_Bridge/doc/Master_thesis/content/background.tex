@@ -1,0 +1,94 @@
+
+\setlength{\figwidth}{0.5\textwidth}
+\setlength{\figheight}{0.25\textheight}
+
+\begin{figure*}[htb]
+	\centering
+	\resizebox{\textwidth}{!}{% use resizebox with textwidth
+		\input{figures/BetaVizTransformation}
+	}
+	\caption{(Adapted from \citet{KernelTopicModels2012}). Visualization of the Laplace Bridge for the Beta distribution (special 1D case of the Dirichlet). \textbf{Left:} ``Generic'' Laplace approximations of standard Beta distributions by Gaussians. Note that the Beta Distribution (red curve) does not even have a valid approximation because the Hessian is not positive semi-definite. \textbf{Middle:} Laplace approximation to the same distributions after basis transformation through the softmax \eqref{eq:dirichlet_softmax}. The transformation makes the distributions ``more Gaussian'' (i.e.~uni-modal, bell-shaped, with support on the real line) compared to the standard basis, thus making the Laplace approximation more accurate. \textbf{Right:} The same Beta distributions, with the back-transformation of the Laplace approximations from the middle figure to the simplex, yielding a much improved approximate distribution. In particular, in contrast to the left-most image, the dashed lines now actually are probability distributions (they integrate to $1$ on the simplex).}
+	\label{fig:1D_Laplace_bridge}
+	\vspace{-0.75em}
+\end{figure*}
+
+
+Laplace approximations\footnote{For clarity: Laplace approximations are \emph{also} one out of several possible ways to construct a Gaussian approximation to the weight posterior of a neural network, by constructing a second-order Taylor approximation of the empirical risk at the trained weights. This is \emph{not} the way they are used in this section. The Laplace Bridge is agnostic to how the input Gaussian distribution is constructed. It could, e.g., also be constructed as a variational approximation, or the moments of Monte Carlo samples. See also \Cref{sec:practicalities}.} are a popular and light-weight method to approximate a general probability distribution $q(\vx)$ with a Gaussian $\N(\vx | \vmu, \mSigma)$. It sets $\vmu$ to a mode of $q$, and $\mSigma=-(\nabla^2 \log q(\vx) \vert_\vmu)^{-1}$, the inverse Hessian of $\log q$ at that mode. This scheme can work well if the true distribution is unimodal and defined on the real vector space.
+
+The Dirichlet distribution, which has the density function
+%
+\begin{equation}\label{eq:dirichlet}
+    \mathrm{Dir}(\vpi | \valpha) := \frac{\Gamma \left( \sum_{k=1}^K \alpha_k \right)}{\prod_{k=1}^K \Gamma(\alpha_k)} \prod_{k=1}^K \pi_k^{\alpha_k-1} \, ,
+\end{equation}
+%
+is defined on the probability simplex and can be multimodal in the sense that the maxima of the distribution lie at the boundary of the simplex when $\alpha_k < 1$, for all $k = 1, \dots, K$. Both issues preclude a Laplace approximation, at least in the na\"ive form described above. However, \citet{MacKay1998} noted that both can be fixed, elegantly, by a change of variable. Details of the following argument can be found in the supplements. Consider the $K$-dimensional variable $\vpi \sim \mathrm{Dir}(\vpi | \valpha)$ defined as the softmax of $\vz\in\mathbb{R}^K$:
+\begin{equation}
+    \pi_k(\vz) := \frac{\exp(z_k)}{\sum_{l=1}^K \exp(z_l)} \, ,
+\end{equation}
+%
+for all $k = 1, \dots, K$. We will call $\vz$ the logit of $\vpi$. When expressed as a function of $\vz$, the density of the Dirichlet in $\vpi$ has to be multiplied by the Jacobian determinant
+\begin{equation}
+    \det \frac{\partial \vpi}{\partial \vz}  = \prod_k \pi_k(z),
+\end{equation}
+thus removing the $-1$ terms in the exponent: %
+\begin{equation}\label{eq:dirichlet_softmax}
+    \mathrm{Dir}_{\vz}(\vpi(\vz) | \valpha) := \frac{\Gamma \left( \sum_{k=1}^K \alpha_k \right)}{\prod_{k=1}^K \Gamma(\alpha_k)} \prod_{k=1}^K \pi_k(\vz)^{\alpha_k} \, ,
+\end{equation}
+This density of $\vz$ (!), the Dirichlet distribution in the \emph{softmax basis}, can now be accurately approximated by a Gaussian through a Laplace approximation, yielding an analytic map from the parameter space $\valpha\in\mathbb{R}_+ ^K$ to the parameter space of the Gaussian ($\vmu \in\mathbb{R}^K$ and symmetric~positive~definite $\mSigma\in\mathbb{R}^{K\times K}$), given by
+\begin{align}
+\mu_k &= \log \alpha_k  - \frac{1}{K} \sum_{l=1}^{K} \log \alpha_l \label{eq:mubridge}\\
+\Sigma_{k\ell} &= \delta_{k\ell}\frac{1}{\alpha_k} - \frac{1}{K}\left[\frac{1}{\alpha_k} + \frac{1}{\alpha_\ell} - \frac{1}{K}\sum_{u=1} ^K \frac{1}{\alpha_u} \right]. \label{eq:Sigmabridge}
+\end{align}
+A visualization of the Laplace Bridge for the one-dimensional special case can be found in figure \ref{fig:1D_Laplace_bridge}.
+The corresponding derivations require care because the Gaussian parameter space is evidently larger than that of the Dirichlet and not fully identified by the transformation.
+A pseudo-inverse of this map was provided by \citet{KernelTopicModels2012}. It maps the Gaussian parameters to those of the Dirichlet as
+\begin{equation} \label{eq:alpha_transform}
+    \alpha_k = \frac{1}{\Sigma_{kk}}\left(1 - \frac{2}{K} + \frac{e^{\mu_k}}{K^2}\sum_{l=1}^K e^{-\mu_l} \right) \, ,
+\end{equation}
+(Note that this equation ignores off-diagonal elements of $\mSigma$, more discussion below). Together, Eqs.~\ref{eq:mubridge}, \ref{eq:Sigmabridge} and \ref{eq:alpha_transform} will here be used for Bayesian Deep Learning, and jointly called the \emph{Laplace Bridge}. Note that, even though the Laplace Bridge implies a reduction of the expressiveness of the distribution, we show in \Cref{chap:method} that this map is still sufficiently accurate.
+
+
+\begin{figure}[htb]
+    \centering
+    \scriptsize
+
+    \subfloat{\includegraphics[width=0.3\textwidth]{figures/3samples/3samples_Gaussian_coolwarm_0.png}}
+    \subfloat{\includegraphics[width=0.3\textwidth]{figures/3samples/3samples_Gaussian_coolwarm_1.png}}
+    \subfloat{\includegraphics[width=0.3\textwidth]{figures/3samples/3samples_Gaussian_coolwarm_2.png}}
+
+    \vspace{-0em}
+    \setcounter{subfigure}{0}
+
+    \subfloat[]{\includegraphics[width=0.3\textwidth]{figures/3samples/3samples_Dirichlet_coolwarm_0.png}}
+    \subfloat[]{\includegraphics[width=0.3\textwidth]{figures/3samples/3samples_Dirichlet_coolwarm_1.png}}
+    \subfloat[]{\includegraphics[width=0.3\textwidth]{figures/3samples/3samples_Dirichlet_coolwarm_2.png}} \\
+
+    \caption{As in Figure \ref{fig:LPbridge_sMAP}, more densities of the true distribution (top) arising from mapping a Gaussian random variable through the softmax, and the corresponding Dirichlet pdf produced by the Laplace Bridge (bottom). The Dirichlet approximation, with its reduced parameter-space, captures most of the features of the ground-truth distribution.}
+   \label{fig:LPbridge_3samples}
+\end{figure}
+
+\begin{figure}[htb]
+     \centering
+    %  \captionsetup[subfigure]{labelformat=empty}
+
+     \scriptsize
+
+     \subfloat{\includegraphics[width=0.3\textwidth]{figures/Uncertainty/Uncertainty_Gaussian_coolwarm_0.png}}
+     \subfloat{\includegraphics[width=0.3\textwidth]{figures/Uncertainty/Uncertainty_Gaussian_coolwarm_1.png}}
+     \subfloat{\includegraphics[width=0.3\textwidth]{figures/Uncertainty/Uncertainty_Gaussian_coolwarm_2.png}}
+
+     \vspace{-0em}
+     \setcounter{subfigure}{0}
+
+     \subfloat[High uncertainty]{\includegraphics[width=0.3\textwidth]{figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_0.png}}
+     \subfloat[Med. uncertainty]{\includegraphics[width=0.3\textwidth]{figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_1.png}}
+     \subfloat[Low uncertainty]{\includegraphics[width=0.3\textwidth]{figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_2.png}}
+
+     \caption{The densities (via histograms) of the true predictive distribution (top) arising from a Gaussian random variable and the corresponding densities approximated via the Laplace Bridge (bottom).
+     }
+    \label{fig:LPbridge_uncertainty}
+\end{figure}
+
+
+\Cref{fig:LPbridge_sMAP,fig:LPbridge_3samples,fig:LPbridge_uncertainty} show the quality of the resulting approximation. We consider multiple different $\vmu, \mSigma$ in three dimensions, i.e. simulating a classification task with three classes. We sample from the Gaussian and apply the softmax transform to all samples and compare the resulting histogram on the simplex to the probability density function of the corresponding Dirichlet. Figure \ref{fig:LPbridge_sMAP} emphasizes that a point estimate is insufficient. Since the mean for the Dirichlet is the normalized $\valpha$ parameter vector, the parameters that generate Figure \ref{fig:LPbridge_sMAP} ($\valpha_1 = [2,2,6]^\top$ and $\valpha_2 = [11,11,51]^\top$) yield the same point estimate even though their distributions are clearly different. The figures show that the Laplace Bridge is a sufficiently good approximation and that it maps a change of uncertainty as expected.
+
