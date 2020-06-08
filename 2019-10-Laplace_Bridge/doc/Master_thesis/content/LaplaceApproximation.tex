@@ -4,8 +4,8 @@
 %Notation
 % vector p: axis in the standard basis == z
 % vector a: axis in the transformed basis == \pi
-% vector q: == \xi
-% vector b: == \tau
+% vector q: == \varrho
+% vector b: == a
 
 
 Assume we have a Dirichlet in the standard basis with parameter vector $\valpha$ and probability density function:
@@ -28,26 +28,26 @@ Usually, to transform the basis we would need the inverse transformation $H^{-1}
 
 then we can show that the original distribution is the result of the basis transform by the softmax. 
 
-\textbf{The Dirichlet in the softmax basis: } We show that the density over $\vpi$ shown in Equation \ref{eq:dirichlet_softmax} transforms into the Dirichlet over $\vz$. First, we consider the special case where $\vpi$ is confined to a $I-1$ dimensional subspace satisfying $\sum_i \vpi_i = c$. In this subspace we can represent $\vpi$ by an $I - 1$ dimensional vector $\vtau$ such that 
+\textbf{The Dirichlet in the softmax basis: } We show that the density over $\vpi$ shown in Equation \ref{eq:dirichlet_softmax} transforms into the Dirichlet over $\vz$. First, we consider the special case where $\vpi$ is confined to a $I-1$ dimensional subspace satisfying $\sum_i \vpi_i = c$. In this subspace we can represent $\vpi$ by an $I - 1$ dimensional vector $\va$ such that 
 
 \begin{align}
-    \pi_i &= \tau_i \quad i,...,I-1 \\
+    \pi_i &= a_i \quad i,...,I-1 \\
     \pi_I &= c - \sum_i^{I-1} b_i
 \end{align}
 
-and similarly we can represent $\vz$ by an $I-1$ dimensional vector $\vxi$:
+and similarly we can represent $\vz$ by an $I-1$ dimensional vector $\vvarrho$:
 
 \begin{align}
-    x_i &= \xi_i \quad i,...,I-1 \\
-    x_I &= 1 - \sum_i^{I-1}\xi_i
+    x_i &= \varrho_i \quad i,...,I-1 \\
+    x_I &= 1 - \sum_i^{I-1}\varrho_i
 \end{align}
 
-then we can find the density over $\vxi$ (which is proportional to the required density over $\rz$)
+then we can find the density over $\vvarrho$ (which is proportional to the required density over $\rz$)
 from the density over $\vpi$ (which is proportional to the given density over $\vpi$) by finding the
 determinant of the $(I - 1) \times (I - 1)$ Jacobian $\mJ$ given by
 
 \begin{align}
-    J_{ik} &= \frac{\partial \xi_i}{\partial \tau_i} = \sum_j^{I} \frac{\partial x_i}{\partial \pi_j}\frac{\partial \pi_j}{\partial \tau_k} \nonumber\\
+    J_{ik} &= \frac{\partial \xi_i}{\partial a_i} = \sum_j^{I} \frac{\partial x_i}{\partial \pi_j}\frac{\partial \pi_j}{\partial a_k} \nonumber\\
     &= \delta_{ik}\rvx_i - \rvx_i\rvx_k + \rvx_i\rvx_I =  \rvx_i(\delta_{ik} - (\rvx_k - \rvx_I))
 \end{align}
 

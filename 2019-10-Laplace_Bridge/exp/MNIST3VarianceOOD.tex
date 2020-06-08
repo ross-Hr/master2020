@@ -1,0 +1,47 @@
+% This file was created by tikzplotlib v0.8.2.
+\begin{tikzpicture}
+
+\begin{axis}[
+height=\figheight,
+legend cell align={left},
+legend pos=north west,
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=both,
+width=\figwidth,
+x grid style={white!69.01960784313725!black},
+xlabel={MNIST Class},
+xmin=-0.45, xmax=9.45,
+xtick align=outside,
+xtick pos=left,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={Mean Variance},
+ymin=-0.00546239636314567, ymax=0.12091085826687,
+ytick align=outside,
+ytick pos=left,
+ytick style={color=black},
+ytick={-0.02,0,0.02,0.04,0.06,0.08,0.1,0.12,0.14},
+yticklabels={−0.02,0.00,0.02,0.04,0.06,0.08,0.10,0.12,0.14}
+]
+\addplot [semithick, red, mark=*, mark size=3, mark options={solid}, only marks]
+table {%
+0 0.000485597585793585
+1 0.00123227143194526
+2 0.000281842483673245
+};
+\addlegendentry{In Dist}
+\addplot [semithick, blue, mark=*, mark size=3, mark options={solid}, only marks]
+table {%
+3 0.0408942848443985
+4 0.115166619420052
+5 0.0661759749054909
+6 0.0397674925625324
+7 0.0582835488021374
+8 0.0391143336892128
+9 0.0806220844388008
+};
+\addlegendentry{Out Dist}
+\end{axis}
+
+\end{tikzpicture}

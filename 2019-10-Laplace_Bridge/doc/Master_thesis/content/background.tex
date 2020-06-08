@@ -21,7 +21,7 @@ The Dirichlet distribution, which has the density function
     \mathrm{Dir}(\vpi | \valpha) := \frac{\Gamma \left( \sum_{k=1}^K \alpha_k \right)}{\prod_{k=1}^K \Gamma(\alpha_k)} \prod_{k=1}^K \pi_k^{\alpha_k-1} \, ,
 \end{equation}
 %
-is defined on the probability simplex and can be multimodal in the sense that the maxima of the distribution lie at the boundary of the simplex when $\alpha_k < 1$, for all $k = 1, \dots, K$. Both issues preclude a Laplace approximation, at least in the na\"ive form described above. However, \citet{MacKay1998} noted that both can be fixed, elegantly, by a change of variable. Details of the following argument can be found in the supplements. Consider the $K$-dimensional variable $\vpi \sim \mathrm{Dir}(\vpi | \valpha)$ defined as the softmax of $\vz\in\mathbb{R}^K$:
+is defined on the probability simplex and can be multimodal in the sense that the maxima of the distribution lie at the boundary of the simplex when $\alpha_k < 1$, for all $k = 1, \dots, K$. Both issues preclude a Laplace approximation, at least in the na\"ive form described above. However, \citet{MacKay1998} noted that both can be fixed, elegantly, by a change of variable. Details of the following argument can be found in the appendix. Consider the $K$-dimensional variable $\vpi \sim \mathrm{Dir}(\vpi | \valpha)$ defined as the softmax of $\vz\in\mathbb{R}^K$:
 \begin{equation}
     \pi_k(\vz) := \frac{\exp(z_k)}{\sum_{l=1}^K \exp(z_l)} \, ,
 \end{equation}

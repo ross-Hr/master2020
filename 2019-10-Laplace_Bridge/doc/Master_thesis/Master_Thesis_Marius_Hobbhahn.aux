@@ -38,6 +38,9 @@
 \newlabel{fig:LPbridge_sMAP@cref}{{[figure][1][1]1.1}{10}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Monte Carlo}}}{10}{subfigure.1.1}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Laplace Bridge}}}{10}{subfigure.1.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Visualization of the modification of BNNs through the Laplace Bridge. The \textit  {Parameter space} part is representative for any method that yields a Gaussian predictive posterior in the logit space. \textbf  {Top:} The softmax function is applied to samples drawn from the posterior predictive Gaussian. The result is a distribution represented by samples. \textbf  {Bottom:} The Laplace Bridge is applied to the posterior predictive Gaussian. The result is a parameterized Dirichlet distribution over the outputs.\relax }}{11}{figure.caption.6}}
+\newlabel{fig:LaplaceBridge_intuition}{{1.2}{11}{Visualization of the modification of BNNs through the Laplace Bridge. The \textit {Parameter space} part is representative for any method that yields a Gaussian predictive posterior in the logit space. \textbf {Top:} The softmax function is applied to samples drawn from the posterior predictive Gaussian. The result is a distribution represented by samples. \textbf {Bottom:} The Laplace Bridge is applied to the posterior predictive Gaussian. The result is a parameterized Dirichlet distribution over the outputs.\relax }{figure.caption.6}{}}
+\newlabel{fig:LaplaceBridge_intuition@cref}{{[figure][2][1]1.2}{11}}
 \citation{KernelTopicModels2012}
 \citation{KernelTopicModels2012}
 \citation{MacKay1998}
@@ -48,8 +51,8 @@
 \@writefile{loa}{\addvspace {10\p@ }}
 \newlabel{chap:background}{{2}{13}{The Laplace Bridge}{chapter.2}{}}
 \newlabel{chap:background@cref}{{[chapter][2][]2}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces (Adapted from \citet  {KernelTopicModels2012}). Visualization of the Laplace Bridge for the Beta distribution (special 1D case of the Dirichlet). \textbf  {Left:} ``Generic'' Laplace approximations of standard Beta distributions by Gaussians. Note that the Beta Distribution (red curve) does not even have a valid approximation because the Hessian is not positive semi-definite. \textbf  {Middle:} Laplace approximation to the same distributions after basis transformation through the softmax \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:dirichlet_softmax}\unskip \@@italiccorr )}}. The transformation makes the distributions ``more Gaussian'' (i.e.\nobreakspace  {}uni-modal, bell-shaped, with support on the real line) compared to the standard basis, thus making the Laplace approximation more accurate. \textbf  {Right:} The same Beta distributions, with the back-transformation of the Laplace approximations from the middle figure to the simplex, yielding a much improved approximate distribution. In particular, in contrast to the left-most image, the dashed lines now actually are probability distributions (they integrate to $1$ on the simplex).\relax }}{13}{figure.caption.6}}
-\newlabel{fig:1D_Laplace_bridge}{{2.1}{13}{(Adapted from \citet {KernelTopicModels2012}). Visualization of the Laplace Bridge for the Beta distribution (special 1D case of the Dirichlet). \textbf {Left:} ``Generic'' Laplace approximations of standard Beta distributions by Gaussians. Note that the Beta Distribution (red curve) does not even have a valid approximation because the Hessian is not positive semi-definite. \textbf {Middle:} Laplace approximation to the same distributions after basis transformation through the softmax \eqref {eq:dirichlet_softmax}. The transformation makes the distributions ``more Gaussian'' (i.e.~uni-modal, bell-shaped, with support on the real line) compared to the standard basis, thus making the Laplace approximation more accurate. \textbf {Right:} The same Beta distributions, with the back-transformation of the Laplace approximations from the middle figure to the simplex, yielding a much improved approximate distribution. In particular, in contrast to the left-most image, the dashed lines now actually are probability distributions (they integrate to $1$ on the simplex).\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces (Adapted from \citet  {KernelTopicModels2012}). Visualization of the Laplace Bridge for the Beta distribution (special 1D case of the Dirichlet). \textbf  {Left:} ``Generic'' Laplace approximations of standard Beta distributions by Gaussians. Note that the Beta Distribution (red curve) does not even have a valid approximation because the Hessian is not positive semi-definite. \textbf  {Middle:} Laplace approximation to the same distributions after basis transformation through the softmax \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:dirichlet_softmax}\unskip \@@italiccorr )}}. The transformation makes the distributions ``more Gaussian'' (i.e.\nobreakspace  {}uni-modal, bell-shaped, with support on the real line) compared to the standard basis, thus making the Laplace approximation more accurate. \textbf  {Right:} The same Beta distributions, with the back-transformation of the Laplace approximations from the middle figure to the simplex, yielding a much improved approximate distribution. In particular, in contrast to the left-most image, the dashed lines now actually are probability distributions (they integrate to $1$ on the simplex).\relax }}{13}{figure.caption.7}}
+\newlabel{fig:1D_Laplace_bridge}{{2.1}{13}{(Adapted from \citet {KernelTopicModels2012}). Visualization of the Laplace Bridge for the Beta distribution (special 1D case of the Dirichlet). \textbf {Left:} ``Generic'' Laplace approximations of standard Beta distributions by Gaussians. Note that the Beta Distribution (red curve) does not even have a valid approximation because the Hessian is not positive semi-definite. \textbf {Middle:} Laplace approximation to the same distributions after basis transformation through the softmax \eqref {eq:dirichlet_softmax}. The transformation makes the distributions ``more Gaussian'' (i.e.~uni-modal, bell-shaped, with support on the real line) compared to the standard basis, thus making the Laplace approximation more accurate. \textbf {Right:} The same Beta distributions, with the back-transformation of the Laplace approximations from the middle figure to the simplex, yielding a much improved approximate distribution. In particular, in contrast to the left-most image, the dashed lines now actually are probability distributions (they integrate to $1$ on the simplex).\relax }{figure.caption.7}{}}
 \newlabel{fig:1D_Laplace_bridge@cref}{{[figure][1][2]2.1}{13}}
 \newlabel{eq:dirichlet}{{2.1}{13}{The Laplace Bridge}{equation.2.0.1}{}}
 \newlabel{eq:dirichlet@cref}{{[equation][1][2]2.1}{13}}
@@ -62,14 +65,14 @@
 \newlabel{eq:Sigmabridge@cref}{{[equation][6][2]2.6}{14}}
 \newlabel{eq:alpha_transform}{{2.7}{15}{The Laplace Bridge}{equation.2.0.7}{}}
 \newlabel{eq:alpha_transform@cref}{{[equation][7][2]2.7}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces As in Figure \ref  {fig:LPbridge_sMAP}, more densities of the true distribution (top) arising from mapping a Gaussian random variable through the softmax, and the corresponding Dirichlet pdf produced by the Laplace Bridge (bottom). The Dirichlet approximation, with its reduced parameter-space, captures most of the features of the ground-truth distribution.\relax }}{15}{figure.caption.7}}
-\newlabel{fig:LPbridge_3samples}{{2.2}{15}{As in Figure \ref {fig:LPbridge_sMAP}, more densities of the true distribution (top) arising from mapping a Gaussian random variable through the softmax, and the corresponding Dirichlet pdf produced by the Laplace Bridge (bottom). The Dirichlet approximation, with its reduced parameter-space, captures most of the features of the ground-truth distribution.\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces As in Figure \ref  {fig:LPbridge_sMAP}, more densities of the true distribution (top) arising from mapping a Gaussian random variable through the softmax, and the corresponding Dirichlet pdf produced by the Laplace Bridge (bottom). The Dirichlet approximation, with its reduced parameter-space, captures most of the features of the ground-truth distribution.\relax }}{15}{figure.caption.8}}
+\newlabel{fig:LPbridge_3samples}{{2.2}{15}{As in Figure \ref {fig:LPbridge_sMAP}, more densities of the true distribution (top) arising from mapping a Gaussian random variable through the softmax, and the corresponding Dirichlet pdf produced by the Laplace Bridge (bottom). The Dirichlet approximation, with its reduced parameter-space, captures most of the features of the ground-truth distribution.\relax }{figure.caption.8}{}}
 \newlabel{fig:LPbridge_3samples@cref}{{[figure][2][2]2.2}{15}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{15}{subfigure.2.1}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{15}{subfigure.2.2}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{15}{subfigure.2.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces The densities (via histograms) of the true predictive distribution (top) arising from a Gaussian random variable and the corresponding densities approximated via the Laplace Bridge (bottom). \relax }}{16}{figure.caption.8}}
-\newlabel{fig:LPbridge_uncertainty}{{2.3}{16}{The densities (via histograms) of the true predictive distribution (top) arising from a Gaussian random variable and the corresponding densities approximated via the Laplace Bridge (bottom). \relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces The densities (via histograms) of the true predictive distribution (top) arising from a Gaussian random variable and the corresponding densities approximated via the Laplace Bridge (bottom). \relax }}{16}{figure.caption.9}}
+\newlabel{fig:LPbridge_uncertainty}{{2.3}{16}{The densities (via histograms) of the true predictive distribution (top) arising from a Gaussian random variable and the corresponding densities approximated via the Laplace Bridge (bottom). \relax }{figure.caption.9}{}}
 \newlabel{fig:LPbridge_uncertainty@cref}{{[figure][3][2]2.3}{16}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {High uncertainty}}}{16}{subfigure.3.1}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Med. uncertainty}}}{16}{subfigure.3.2}}
@@ -102,9 +105,12 @@
 \citation{spiegelhalter1990sequential,mackay1992evidence}
 \citation{michalis2016one}
 \citation{ahmed2007tight,braun2010variational}
+\citation{DeterministicVI2018}
+\citation{haussmann2019BEDLwithPAC}
 \citation{NIPS2018PriorNetworks,NIPS2019PriorNetworks_improved,NIPS2018EvidentialDL}
 \citation{Graves2011VB,Blundell2015WeightUI,louizos_structured_2016,sun_learning_2017}
 \citation{NIPS2018PriorNetworks,NIPS2019PriorNetworks_improved,NIPS2018EvidentialDL}
+\citation{NIPS2018PriorNetworks,NIPS2019PriorNetworks_improved}
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}Related Work}{21}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -122,20 +128,20 @@
 \newlabel{chap:experiments}{{5}{23}{Experiments}{chapter.5}{}}
 \newlabel{chap:experiments@cref}{{[chapter][5][]5}{23}}
 \citation{dangel2020backpack}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Average variance of the Dirichlet distributions of each MNIST class. The in-distribution uncertainty (variance) is nearly nil, while out-of-distribution variance is high.\relax }}{24}{figure.caption.9}}
-\newlabel{subfig:MNIST_uncertainty}{{5.1}{24}{Average variance of the Dirichlet distributions of each MNIST class. The in-distribution uncertainty (variance) is nearly nil, while out-of-distribution variance is high.\relax }{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Average variance of the Dirichlet distributions of each MNIST class. The in-distribution uncertainty (variance) is nearly nil, while out-of-distribution variance is high.\relax }}{24}{figure.caption.10}}
+\newlabel{subfig:MNIST_uncertainty}{{5.1}{24}{Average variance of the Dirichlet distributions of each MNIST class. The in-distribution uncertainty (variance) is nearly nil, while out-of-distribution variance is high.\relax }{figure.caption.10}{}}
 \newlabel{subfig:MNIST_uncertainty@cref}{{[figure][1][5]5.1}{24}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.1}Uncertainty estimates on MNIST}{24}{section.5.1}}
 \newlabel{subsec:exp1_MNIST}{{5.1}{24}{Uncertainty estimates on MNIST}{section.5.1}{}}
 \newlabel{subsec:exp1_MNIST@cref}{{[section][1][5]5.1}{24}}
 \citation{HendycksOODBaseline}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces \textbf  {Top:} In-distribution pdfs. All probability mass is concentrated in the corner of the respective correct class. \textbf  {Bottom:} Out-of-distribution pdfs. The probability mass is distributed more equally since the networks' uncertainty about is higher.\relax }}{25}{figure.caption.10}}
-\newlabel{fig:MNIST_ID_OOD}{{5.2}{25}{\textbf {Top:} In-distribution pdfs. All probability mass is concentrated in the corner of the respective correct class. \textbf {Bottom:} Out-of-distribution pdfs. The probability mass is distributed more equally since the networks' uncertainty about is higher.\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces \textbf  {Top:} In-distribution pdfs. All probability mass is concentrated in the corner of the respective correct class. \textbf  {Bottom:} Out-of-distribution pdfs. The probability mass is distributed more equally since the networks' uncertainty about is higher.\relax }}{25}{figure.caption.11}}
+\newlabel{fig:MNIST_ID_OOD}{{5.2}{25}{\textbf {Top:} In-distribution pdfs. All probability mass is concentrated in the corner of the respective correct class. \textbf {Bottom:} Out-of-distribution pdfs. The probability mass is distributed more equally since the networks' uncertainty about is higher.\relax }{figure.caption.11}{}}
 \newlabel{fig:MNIST_ID_OOD@cref}{{[figure][2][5]5.2}{25}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {In-distribution predictions}}}{25}{subfigure.2.4}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces {Out-of-distribution predictions}}}{25}{subfigure.2.8}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces OOD detection results. Optimally, the MMC for OOD data is low and the AUROC is high. While there is arguable no clear winner when it comes to discriminating in- and out-distribution data w.r.t. both metrics, the Laplace Bridge is around 400 times faster on average. Time is measured in seconds. Five runs with different seeds per experiment were conducted. 1000 samples were drawn from the Gaussian over the outputs. The (F-, K-, not-)MNIST experiments were done with a Laplace approximation of the entire network while the others only used the last layer.\relax }}{25}{table.caption.11}}
-\newlabel{tab:experiments_table}{{5.1}{25}{OOD detection results. Optimally, the MMC for OOD data is low and the AUROC is high. While there is arguable no clear winner when it comes to discriminating in- and out-distribution data w.r.t. both metrics, the Laplace Bridge is around 400 times faster on average. Time is measured in seconds. Five runs with different seeds per experiment were conducted. 1000 samples were drawn from the Gaussian over the outputs. The (F-, K-, not-)MNIST experiments were done with a Laplace approximation of the entire network while the others only used the last layer.\relax }{table.caption.11}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces OOD detection results. Optimally, the MMC for OOD data is low and the AUROC is high. While there is arguable no clear winner when it comes to discriminating in- and out-distribution data w.r.t. both metrics, the Laplace Bridge is around 400 times faster on average. Time is measured in seconds. Five runs with different seeds per experiment were conducted. 1000 samples were drawn from the Gaussian over the outputs. The (F-, K-, not-)MNIST experiments were done with a Laplace approximation of the entire network while the others only used the last layer.\relax }}{25}{table.caption.12}}
+\newlabel{tab:experiments_table}{{5.1}{25}{OOD detection results. Optimally, the MMC for OOD data is low and the AUROC is high. While there is arguable no clear winner when it comes to discriminating in- and out-distribution data w.r.t. both metrics, the Laplace Bridge is around 400 times faster on average. Time is measured in seconds. Five runs with different seeds per experiment were conducted. 1000 samples were drawn from the Gaussian over the outputs. The (F-, K-, not-)MNIST experiments were done with a Laplace approximation of the entire network while the others only used the last layer.\relax }{table.caption.12}{}}
 \newlabel{tab:experiments_table@cref}{{[table][1][5]5.1}{25}}
 \citation{FMNIST2017}
 \citation{notMNIST2011}
@@ -150,25 +156,25 @@
 \@writefile{toc}{\contentsline {section}{\numberline {5.3}Time comparison}{27}{section.5.3}}
 \newlabel{subsec:exp3_time}{{5.3}{27}{Time comparison}{section.5.3}{}}
 \newlabel{subsec:exp3_time@cref}{{[section][3][5]5.3}{27}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces KL-divergence plotted against the number of samples (top) and wall-clock time (bottom). Monte Carlo density estimation becomes as good as the Laplace Bridge after around $750$ to $10000$ samples and takes at least $100$ times longer. The three lines represent three different samples.\relax }}{28}{figure.caption.12}}
-\newlabel{fig:KL_div_samples}{{5.3}{28}{KL-divergence plotted against the number of samples (top) and wall-clock time (bottom). Monte Carlo density estimation becomes as good as the Laplace Bridge after around $750$ to $10000$ samples and takes at least $100$ times longer. The three lines represent three different samples.\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces KL-divergence plotted against the number of samples (top) and wall-clock time (bottom). Monte Carlo density estimation becomes as good as the Laplace Bridge after around $750$ to $10000$ samples and takes at least $100$ times longer. The three lines represent three different samples.\relax }}{28}{figure.caption.13}}
+\newlabel{fig:KL_div_samples}{{5.3}{28}{KL-divergence plotted against the number of samples (top) and wall-clock time (bottom). Monte Carlo density estimation becomes as good as the Laplace Bridge after around $750$ to $10000$ samples and takes at least $100$ times longer. The three lines represent three different samples.\relax }{figure.caption.13}{}}
 \newlabel{fig:KL_div_samples@cref}{{[figure][3][5]5.3}{28}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.4}Toy dataset}{28}{section.5.4}}
 \newlabel{subsec:exp4_toy_dataset}{{5.4}{28}{Toy dataset}{section.5.4}{}}
 \newlabel{subsec:exp4_toy_dataset@cref}{{[section][4][5]5.4}{28}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces \textbf  {Left:} Entropy of the MAP estimate, a diagonal approximation of the Hessian, a Kronecker-factorized approximation, and the exact Hessian. \textbf  {Right:} MAP prediction of the Dirichlet coming from the Laplace Bridge, its predictive entropy, the variance of the Dirichlet, and a MAP estimate weighed by its variance. We find that the Laplace Bridge entropy and variance are only marginally better than the MAP estimate but the reweighed version improves it.\relax }}{30}{figure.caption.13}}
-\newlabel{fig:toy_data}{{5.4}{30}{\textbf {Left:} Entropy of the MAP estimate, a diagonal approximation of the Hessian, a Kronecker-factorized approximation, and the exact Hessian. \textbf {Right:} MAP prediction of the Dirichlet coming from the Laplace Bridge, its predictive entropy, the variance of the Dirichlet, and a MAP estimate weighed by its variance. We find that the Laplace Bridge entropy and variance are only marginally better than the MAP estimate but the reweighed version improves it.\relax }{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces \textbf  {Left:} Entropy of the MAP estimate, a diagonal approximation of the Hessian, a Kronecker-factorized approximation, and the exact Hessian. \textbf  {Right:} MAP prediction of the Dirichlet coming from the Laplace Bridge, its predictive entropy, the variance of the Dirichlet, and a MAP estimate weighed by its variance. We find that the Laplace Bridge entropy and variance are only marginally better than the MAP estimate but the reweighed version improves it.\relax }}{30}{figure.caption.14}}
+\newlabel{fig:toy_data}{{5.4}{30}{\textbf {Left:} Entropy of the MAP estimate, a diagonal approximation of the Hessian, a Kronecker-factorized approximation, and the exact Hessian. \textbf {Right:} MAP prediction of the Dirichlet coming from the Laplace Bridge, its predictive entropy, the variance of the Dirichlet, and a MAP estimate weighed by its variance. We find that the Laplace Bridge entropy and variance are only marginally better than the MAP estimate but the reweighed version improves it.\relax }{figure.caption.14}{}}
 \newlabel{fig:toy_data@cref}{{[figure][4][5]5.4}{30}}
 \citation{nickerson2000null}
 \citation{BayesianAltTTest2011}
 \@writefile{toc}{\contentsline {section}{\numberline {5.5}Uncertainty-aware output ranking on ImageNet}{31}{section.5.5}}
 \newlabel{subsec:exp5_imagenet}{{5.5}{31}{Uncertainty-aware output ranking on ImageNet}{section.5.5}{}}
 \newlabel{subsec:exp5_imagenet@cref}{{[section][5][5]5.5}{31}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces \textbf  {Upper row:} images from the ``laptop'' class of ImageNet. \textbf  {Bottom row:} Beta marginal distributions of the top-$k$ predictions for the respective image. In the first column, the overlap between the marginal of all classes is large, signifying high uncertainty, i.e. the prediction is ``I do not know''. In the column, ``notebook'' and ``laptop'' have confident, yet overlapping marginal densities and we, therefore, have a top-$2$ prediction: ``either a notebook or a laptop''. In the third column ``desktop computer'', ``screen'' and ``monitor'' have overlapping marginal densities, yielding a top-$3$ estimate. The last case shows a top-$1$ estimate: the network is confident that ``laptop'' is the only correct label. \relax }}{32}{figure.caption.14}}
-\newlabel{fig:imagenet_betas}{{5.5}{32}{\textbf {Upper row:} images from the ``laptop'' class of ImageNet. \textbf {Bottom row:} Beta marginal distributions of the top-$k$ predictions for the respective image. In the first column, the overlap between the marginal of all classes is large, signifying high uncertainty, i.e. the prediction is ``I do not know''. In the column, ``notebook'' and ``laptop'' have confident, yet overlapping marginal densities and we, therefore, have a top-$2$ prediction: ``either a notebook or a laptop''. In the third column ``desktop computer'', ``screen'' and ``monitor'' have overlapping marginal densities, yielding a top-$3$ estimate. The last case shows a top-$1$ estimate: the network is confident that ``laptop'' is the only correct label. \relax }{figure.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces \textbf  {Upper row:} images from the ``laptop'' class of ImageNet. \textbf  {Bottom row:} Beta marginal distributions of the top-$k$ predictions for the respective image. In the first column, the overlap between the marginal of all classes is large, signifying high uncertainty, i.e. the prediction is ``I do not know''. In the column, ``notebook'' and ``laptop'' have confident, yet overlapping marginal densities and we, therefore, have a top-$2$ prediction: ``either a notebook or a laptop''. In the third column ``desktop computer'', ``screen'' and ``monitor'' have overlapping marginal densities, yielding a top-$3$ estimate. The last case shows a top-$1$ estimate: the network is confident that ``laptop'' is the only correct label. \relax }}{32}{figure.caption.15}}
+\newlabel{fig:imagenet_betas}{{5.5}{32}{\textbf {Upper row:} images from the ``laptop'' class of ImageNet. \textbf {Bottom row:} Beta marginal distributions of the top-$k$ predictions for the respective image. In the first column, the overlap between the marginal of all classes is large, signifying high uncertainty, i.e. the prediction is ``I do not know''. In the column, ``notebook'' and ``laptop'' have confident, yet overlapping marginal densities and we, therefore, have a top-$2$ prediction: ``either a notebook or a laptop''. In the third column ``desktop computer'', ``screen'' and ``monitor'' have overlapping marginal densities, yielding a top-$3$ estimate. The last case shows a top-$1$ estimate: the network is confident that ``laptop'' is the only correct label. \relax }{figure.caption.15}{}}
 \newlabel{fig:imagenet_betas@cref}{{[figure][5][5]5.5}{32}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces A histogram of ImageNet predictions' length using the proposed uncertainty-aware top-$k$. Most test images are a top-$1$ prediction, indicating high confidence. There are some top-$2$, top-$3$, and top-$10$ predictions, showing an increasing uncertainty.\relax }}{33}{figure.caption.15}}
-\newlabel{fig:imagenet_counts}{{5.6}{33}{A histogram of ImageNet predictions' length using the proposed uncertainty-aware top-$k$. Most test images are a top-$1$ prediction, indicating high confidence. There are some top-$2$, top-$3$, and top-$10$ predictions, showing an increasing uncertainty.\relax }{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces A histogram of ImageNet predictions' length using the proposed uncertainty-aware top-$k$. Most test images are a top-$1$ prediction, indicating high confidence. There are some top-$2$, top-$3$, and top-$10$ predictions, showing an increasing uncertainty.\relax }}{33}{figure.caption.16}}
+\newlabel{fig:imagenet_counts}{{5.6}{33}{A histogram of ImageNet predictions' length using the proposed uncertainty-aware top-$k$. Most test images are a top-$1$ prediction, indicating high confidence. There are some top-$2$, top-$3$, and top-$10$ predictions, showing an increasing uncertainty.\relax }{figure.caption.16}{}}
 \newlabel{fig:imagenet_counts@cref}{{[figure][6][5]5.6}{33}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Uncertainty-aware top-$k$\relax }}{33}{algorithm.1}}
 \newlabel{alg:ua-top-k}{{1}{33}{Uncertainty-aware top-$k$\relax }{algorithm.1}{}}
@@ -187,12 +193,12 @@
 \@writefile{loa}{\addvspace {10\p@ }}
 \newlabel{chap:appendix}{{7}{37}{Appendix}{chapter.7}{}}
 \newlabel{chap:appendix@cref}{{[chapter][7][]7}{37}}
-\newlabel{sec:appendix_A}{{7}{37}{Appendix A: Background and Proofs}{section*.16}{}}
+\newlabel{sec:appendix_A}{{7}{37}{Appendix A: Background and Proofs}{section*.17}{}}
 \newlabel{sec:appendix_A@cref}{{[chapter][7][]7}{37}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.1}{\ignorespaces \relax }}{38}{table.caption.20}}
-\newlabel{tab:conditions_table}{{7.1}{38}{\relax }{table.caption.20}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.1}{\ignorespaces \relax }}{38}{table.caption.21}}
+\newlabel{tab:conditions_table}{{7.1}{38}{\relax }{table.caption.21}{}}
 \newlabel{tab:conditions_table@cref}{{[table][1][7]7.1}{38}}
-\newlabel{sec:LADirichlet}{{7}{38}{Appendix B: Laplace Approximation of the Dirichlet}{section*.21}{}}
+\newlabel{sec:LADirichlet}{{7}{38}{Appendix B: Laplace Approximation of the Dirichlet}{section*.22}{}}
 \newlabel{sec:LADirichlet@cref}{{[chapter][7][]7}{38}}
 \newlabel{eq:dirichlet}{{7.2}{38}{Appendix B: Laplace Approximation of the Dirichlet}{equation.7.0.2}{}}
 \newlabel{eq:dirichlet@cref}{{[equation][2][7]7.2}{38}}
@@ -201,7 +207,7 @@
 \newlabel{eq:dirichlet_softmax}{{7.4}{39}{Appendix B: Laplace Approximation of the Dirichlet}{equation.7.0.4}{}}
 \newlabel{eq:dirichlet_softmax@cref}{{[equation][4][7]7.4}{39}}
 \citation{Hennig2010}
-\newlabel{sec:InversionLADirichlet}{{7}{40}{Appendix C: Inverting the Laplace Approximation of the Dirichlet}{section*.22}{}}
+\newlabel{sec:InversionLADirichlet}{{7}{40}{Appendix C: Inverting the Laplace Approximation of the Dirichlet}{section*.23}{}}
 \newlabel{sec:InversionLADirichlet@cref}{{[chapter][7][]7}{40}}
 \newlabel{eq:mu_k}{{7.13}{41}{Appendix C: Inverting the Laplace Approximation of the Dirichlet}{equation.7.0.13}{}}
 \newlabel{eq:mu_k@cref}{{[equation][13][7]7.13}{41}}
@@ -211,14 +217,14 @@
 \newlabel{eq:reform_mu_k@cref}{{[equation][27][7]7.27}{43}}
 \newlabel{eq:mapping_alpha}{{7.29}{43}{Appendix C: Inverting the Laplace Approximation of the Dirichlet}{equation.7.0.29}{}}
 \newlabel{eq:mapping_alpha@cref}{{[equation][29][7]7.29}{43}}
-\newlabel{sec:expDetails}{{7}{44}{Appendix D: Experiments Details}{section*.23}{}}
+\newlabel{sec:expDetails}{{7}{44}{Appendix D: Experiments Details}{section*.24}{}}
 \newlabel{sec:expDetails@cref}{{[chapter][7][]7}{44}}
 \bibdata{bibliography_LPB}
-\@writefile{lot}{\contentsline {table}{\numberline {7.2}{\ignorespaces Out-of-distribution detection results. A network has been trained on the data set in the \textbf  {train} column and is tested on the \textbf  {test} column. Optimally, the MMC for out of distribution data is low and the AUROC is high. There is no clear winner when it comes to discriminating in and OOD w.r.t. both metrics. However, the Laplace Bridge is around 400 times faster on average. Time is measured in seconds. Five runs with different seeds per experiment were conducted. 1000 samples were drawn from the Gaussian over the outputs. The (F-, K-, not-)MNIST experiments were done with a Laplace approximation of the entire network while the others only used the last layer.\relax }}{45}{table.caption.26}}
-\newlabel{tab:experiments_table_KFAC_1000}{{7.2}{45}{Out-of-distribution detection results. A network has been trained on the data set in the \textbf {train} column and is tested on the \textbf {test} column. Optimally, the MMC for out of distribution data is low and the AUROC is high. There is no clear winner when it comes to discriminating in and OOD w.r.t. both metrics. However, the Laplace Bridge is around 400 times faster on average. Time is measured in seconds. Five runs with different seeds per experiment were conducted. 1000 samples were drawn from the Gaussian over the outputs. The (F-, K-, not-)MNIST experiments were done with a Laplace approximation of the entire network while the others only used the last layer.\relax }{table.caption.26}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.2}{\ignorespaces Out-of-distribution detection results. A network has been trained on the data set in the \textbf  {train} column and is tested on the \textbf  {test} column. Optimally, the MMC for out of distribution data is low and the AUROC is high. There is no clear winner when it comes to discriminating in and OOD w.r.t. both metrics. However, the Laplace Bridge is around 400 times faster on average. Time is measured in seconds. Five runs with different seeds per experiment were conducted. 1000 samples were drawn from the Gaussian over the outputs. The (F-, K-, not-)MNIST experiments were done with a Laplace approximation of the entire network while the others only used the last layer.\relax }}{45}{table.caption.27}}
+\newlabel{tab:experiments_table_KFAC_1000}{{7.2}{45}{Out-of-distribution detection results. A network has been trained on the data set in the \textbf {train} column and is tested on the \textbf {test} column. Optimally, the MMC for out of distribution data is low and the AUROC is high. There is no clear winner when it comes to discriminating in and OOD w.r.t. both metrics. However, the Laplace Bridge is around 400 times faster on average. Time is measured in seconds. Five runs with different seeds per experiment were conducted. 1000 samples were drawn from the Gaussian over the outputs. The (F-, K-, not-)MNIST experiments were done with a Laplace approximation of the entire network while the others only used the last layer.\relax }{table.caption.27}{}}
 \newlabel{tab:experiments_table_KFAC_1000@cref}{{[table][2][7]7.2}{45}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.3}{\ignorespaces Results for sampling from all weights instead of the last layer. Number of samples was 100. Time is measured in seconds.\relax }}{45}{table.caption.27}}
-\newlabel{tab:experiments_table_sample_full}{{7.3}{45}{Results for sampling from all weights instead of the last layer. Number of samples was 100. Time is measured in seconds.\relax }{table.caption.27}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.3}{\ignorespaces Results for sampling from all weights instead of the last layer. Number of samples was 100. Time is measured in seconds.\relax }}{45}{table.caption.28}}
+\newlabel{tab:experiments_table_sample_full}{{7.3}{45}{Results for sampling from all weights instead of the last layer. Number of samples was 100. Time is measured in seconds.\relax }{table.caption.28}{}}
 \newlabel{tab:experiments_table_sample_full@cref}{{[table][3][7]7.3}{45}}
 \bibcite{ahmed2007tight}{{1}{2007}{{Ahmed, Xing}}{{A.~Ahmed, E.~Xing}}}
 \bibcite{UIinMedicine}{{2}{2019}{{Begoli et~al.}}{{E.~Begoli, T.~Bhattacharya, D.~Kusnezov}}}
@@ -229,35 +235,37 @@
 \bibcite{KMNIST2018}{{7}{2018}{{Clanuwat et~al.}}{{T.~Clanuwat, M.~Bober{-}Irizar, A.~Kitamoto, A.~Lamb, K.~Yamamoto, D.~Ha}}}
 \bibcite{dangel2020backpack}{{8}{2019}{{Dangel et~al.}}{{F.~Dangel, F.~Kunstner, P.~Hennig}}}
 \bibcite{Graves2011VB}{{9}{2011}{{Graves}}{{A.~Graves}}}
-\bibcite{2015_ResNet}{{10}{2016}{{He et~al.}}{{K.~He, X.~Zhang, S.~Ren, J.~Sun}}}
-\bibcite{Hein_2019_CVPR}{{11}{2019}{{Hein et~al.}}{{M.~Hein, M.~Andriushchenko, J.~Bitterwolf}}}
-\bibcite{HendycksOODBaseline}{{12}{2016}{{Hendrycks, Gimpel}}{{D.~Hendrycks, K.~Gimpel}}}
-\bibcite{Hennig2010}{{13}{2010}{{Hennig}}{{P.~Hennig}}}
-\bibcite{KernelTopicModels2012}{{14}{2012}{{Hennig et~al.}}{{P.~Hennig, D.~Stern, R.~Herbrich, T.~Graepel}}}
-\bibcite{CIFAR2009}{{15}{2009}{{Krizhevsky}}{{A.~Krizhevsky}}}
-\bibcite{MNIST2010}{{16}{2010}{{LeCun, Cortes}}{{Y.~LeCun, C.~Cortes}}}
-\bibcite{louizos_structured_2016}{{17}{2016}{{Louizos, Welling}}{{C.~Louizos, M.~Welling}}}
-\bibcite{MacKay1992}{{18}{1992{a}}{{MacKay}}{{D.~J.~C. MacKay}}}
-\bibcite{mackay1992evidence}{{19}{1992{b}}{{MacKay}}{{D.~J. MacKay}}}
-\bibcite{MacKay1998}{{20}{1998}{{MacKay}}{{D.~J. MacKay}}}
-\bibcite{McKay1995NetworkBayesReview}{{21}{1995}{{Mackay}}{{D.~J.~C. Mackay}}}
-\bibcite{NIPS2018PriorNetworks}{{22}{2018}{{Malinin, Gales}}{{A.~Malinin, M.~Gales}}}
-\bibcite{NIPS2019PriorNetworks_improved}{{23}{2019}{{Malinin, Gales}}{{A.~Malinin, M.~Gales}}}
-\bibcite{martens2015optimizing}{{24}{2015}{{Martens, Grosse}}{{J.~Martens, R.~Grosse}}}
-\bibcite{BayesianAltTTest2011}{{25}{2011}{{Masson}}{{M.~E.~J. Masson}}}
-\bibcite{McAllister2017ConcretePF}{{26}{2017}{{McAllister et~al.}}{{R.~McAllister, Y.~Gal, A.~Kendall, M.~van~der Wilk, A.~Shah, R.~Cipolla, A.~Weller}}}
-\bibcite{AutoDrivingBayes}{{27}{2018}{{Michelmore et~al.}}{{R.~Michelmore, M.~Kwiatkowska, Y.~Gal}}}
-\bibcite{SVHN2011}{{28}{2011}{{Netzer et~al.}}{{Y.~Netzer, T.~Wang, A.~Coates, A.~Bissacco, B.~Wu, A.~Y. Ng}}}
-\bibcite{nguyen2015deep}{{29}{2015}{{Nguyen et~al.}}{{A.~Nguyen, J.~Yosinski, J.~Clune}}}
-\bibcite{nickerson2000null}{{30}{2000}{{Nickerson}}{{R.~S. Nickerson}}}
-\bibcite{ritter2018a}{{31}{2018}{{Ritter et~al.}}{{H.~Ritter, A.~Botev, D.~Barber}}}
-\bibcite{ImageNet2015}{{32}{2014}{{Russakovsky et~al.}}{{O.~Russakovsky, J.~Deng, H.~Su, J.~Krause, S.~Satheesh, S.~Ma, Z.~Huang, A.~Karpathy, A.~Khosla, M.~S. Bernstein, A.~C. Berg, F.~Li}}}
-\bibcite{NIPS2018EvidentialDL}{{33}{2018}{{Sensoy et~al.}}{{M.~Sensoy, L.~Kaplan, M.~Kandemir}}}
-\bibcite{ScalableBayesianOptimizationDNNs2015}{{34}{2015}{{Snoek et~al.}}{{J.~Snoek, O.~Rippel, K.~Swersky, R.~Kiros, N.~Satish, N.~Sundaram, M.~Patwary, M.~Prabhat, R.~Adams}}}
-\bibcite{spiegelhalter1990sequential}{{35}{1990}{{Spiegelhalter, Lauritzen}}{{D.~J. Spiegelhalter, S.~L. Lauritzen}}}
-\bibcite{sun_learning_2017}{{36}{2017}{{Sun et~al.}}{{S.~Sun, C.~Chen, L.~Carin}}}
-\bibcite{michalis2016one}{{37}{2016}{{Titsias}}{{M.~Titsias}}}
-\bibcite{2016DeepKernelLearning}{{38}{2016}{{Wilson et~al.}}{{A.~G. Wilson, Z.~Hu, R.~Salakhutdinov, E.~P. Xing}}}
-\bibcite{FMNIST2017}{{39}{2017}{{Xiao et~al.}}{{H.~Xiao, K.~Rasul, R.~Vollgraf}}}
+\bibcite{haussmann2019BEDLwithPAC}{{10}{2019}{{Haussmann et~al.}}{{M.~Haussmann, S.~Gerwinn, M.~Kandemir}}}
+\bibcite{2015_ResNet}{{11}{2016}{{He et~al.}}{{K.~He, X.~Zhang, S.~Ren, J.~Sun}}}
+\bibcite{Hein_2019_CVPR}{{12}{2019}{{Hein et~al.}}{{M.~Hein, M.~Andriushchenko, J.~Bitterwolf}}}
+\bibcite{HendycksOODBaseline}{{13}{2016}{{Hendrycks, Gimpel}}{{D.~Hendrycks, K.~Gimpel}}}
+\bibcite{Hennig2010}{{14}{2010}{{Hennig}}{{P.~Hennig}}}
+\bibcite{KernelTopicModels2012}{{15}{2012}{{Hennig et~al.}}{{P.~Hennig, D.~Stern, R.~Herbrich, T.~Graepel}}}
+\bibcite{CIFAR2009}{{16}{2009}{{Krizhevsky}}{{A.~Krizhevsky}}}
+\bibcite{MNIST2010}{{17}{2010}{{LeCun, Cortes}}{{Y.~LeCun, C.~Cortes}}}
+\bibcite{louizos_structured_2016}{{18}{2016}{{Louizos, Welling}}{{C.~Louizos, M.~Welling}}}
+\bibcite{MacKay1992}{{19}{1992{a}}{{MacKay}}{{D.~J.~C. MacKay}}}
+\bibcite{mackay1992evidence}{{20}{1992{b}}{{MacKay}}{{D.~J. MacKay}}}
+\bibcite{MacKay1998}{{21}{1998}{{MacKay}}{{D.~J. MacKay}}}
+\bibcite{McKay1995NetworkBayesReview}{{22}{1995}{{Mackay}}{{D.~J.~C. Mackay}}}
+\bibcite{NIPS2018PriorNetworks}{{23}{2018}{{Malinin, Gales}}{{A.~Malinin, M.~Gales}}}
+\bibcite{NIPS2019PriorNetworks_improved}{{24}{2019}{{Malinin, Gales}}{{A.~Malinin, M.~Gales}}}
+\bibcite{martens2015optimizing}{{25}{2015}{{Martens, Grosse}}{{J.~Martens, R.~Grosse}}}
+\bibcite{BayesianAltTTest2011}{{26}{2011}{{Masson}}{{M.~E.~J. Masson}}}
+\bibcite{McAllister2017ConcretePF}{{27}{2017}{{McAllister et~al.}}{{R.~McAllister, Y.~Gal, A.~Kendall, M.~van~der Wilk, A.~Shah, R.~Cipolla, A.~Weller}}}
+\bibcite{AutoDrivingBayes}{{28}{2018}{{Michelmore et~al.}}{{R.~Michelmore, M.~Kwiatkowska, Y.~Gal}}}
+\bibcite{SVHN2011}{{29}{2011}{{Netzer et~al.}}{{Y.~Netzer, T.~Wang, A.~Coates, A.~Bissacco, B.~Wu, A.~Y. Ng}}}
+\bibcite{nguyen2015deep}{{30}{2015}{{Nguyen et~al.}}{{A.~Nguyen, J.~Yosinski, J.~Clune}}}
+\bibcite{nickerson2000null}{{31}{2000}{{Nickerson}}{{R.~S. Nickerson}}}
+\bibcite{ritter2018a}{{32}{2018}{{Ritter et~al.}}{{H.~Ritter, A.~Botev, D.~Barber}}}
+\bibcite{ImageNet2015}{{33}{2014}{{Russakovsky et~al.}}{{O.~Russakovsky, J.~Deng, H.~Su, J.~Krause, S.~Satheesh, S.~Ma, Z.~Huang, A.~Karpathy, A.~Khosla, M.~S. Bernstein, A.~C. Berg, F.~Li}}}
+\bibcite{NIPS2018EvidentialDL}{{34}{2018}{{Sensoy et~al.}}{{M.~Sensoy, L.~Kaplan, M.~Kandemir}}}
+\bibcite{ScalableBayesianOptimizationDNNs2015}{{35}{2015}{{Snoek et~al.}}{{J.~Snoek, O.~Rippel, K.~Swersky, R.~Kiros, N.~Satish, N.~Sundaram, M.~Patwary, M.~Prabhat, R.~Adams}}}
+\bibcite{spiegelhalter1990sequential}{{36}{1990}{{Spiegelhalter, Lauritzen}}{{D.~J. Spiegelhalter, S.~L. Lauritzen}}}
+\bibcite{sun_learning_2017}{{37}{2017}{{Sun et~al.}}{{S.~Sun, C.~Chen, L.~Carin}}}
+\bibcite{michalis2016one}{{38}{2016}{{Titsias}}{{M.~Titsias}}}
+\bibcite{2016DeepKernelLearning}{{39}{2016}{{Wilson et~al.}}{{A.~G. Wilson, Z.~Hu, R.~Salakhutdinov, E.~P. Xing}}}
+\bibcite{DeterministicVI2018}{{40}{2018}{{Wu et~al.}}{{A.~Wu, S.~Nowozin, E.~Meeds, R.~E. Turner, J.~M. Hern{\'{a}}ndez{-}Lobato, A.~L. Gaunt}}}
+\bibcite{FMNIST2017}{{41}{2017}{{Xiao et~al.}}{{H.~Xiao, K.~Rasul, R.~Vollgraf}}}
 \global\@namedef{scr@dte@chapter@lastmaxnumwidth}{10.46811pt}
 \global\@namedef{scr@dte@section@lastmaxnumwidth}{18.0674pt}

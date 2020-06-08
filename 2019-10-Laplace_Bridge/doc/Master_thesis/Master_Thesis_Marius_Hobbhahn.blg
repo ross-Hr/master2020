@@ -37,45 +37,45 @@ Warning--empty pages in SVHN2011
 Warning--empty pages in nguyen2015deep
 Warning--empty pages in ritter2018a
 Warning--empty pages in michalis2016one
-You've used 39 entries,
+You've used 41 entries,
             1755 wiz_defined-function locations,
-            655 strings with 10197 characters,
-and the built_in function-call counts, 16477 in all, are:
-= -- 1343
-> -- 1014
+            665 strings with 10670 characters,
+and the built_in function-call counts, 17307 in all, are:
+= -- 1400
+> -- 1090
 < -- 29
-+ -- 397
-- -- 351
-* -- 1518
-:= -- 3044
-add.period$ -- 158
-call.type$ -- 39
++ -- 426
+- -- 378
+* -- 1597
+:= -- 3210
+add.period$ -- 165
+call.type$ -- 41
 change.case$ -- 0
-chr.to.int$ -- 38
-cite$ -- 61
-duplicate$ -- 674
-empty$ -- 1216
-format.name$ -- 408
-if$ -- 3220
+chr.to.int$ -- 40
+cite$ -- 63
+duplicate$ -- 701
+empty$ -- 1269
+format.name$ -- 437
+if$ -- 3374
 int.to.chr$ -- 2
 int.to.str$ -- 1
 missing$ -- 0
-newline$ -- 166
-num.names$ -- 156
-pop$ -- 245
+newline$ -- 174
+num.names$ -- 164
+pop$ -- 266
 preamble$ -- 1
-purify$ -- 234
+purify$ -- 249
 quote$ -- 0
-skip$ -- 501
+skip$ -- 521
 stack$ -- 0
-substring$ -- 781
-swap$ -- 146
+substring$ -- 793
+swap$ -- 149
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 117
+type$ -- 123
 warning$ -- 22
-while$ -- 158
+while$ -- 164
 width$ -- 0
-write$ -- 428
+write$ -- 449
 (There were 3 error messages)

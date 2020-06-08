@@ -5,10 +5,10 @@ In principle, the Gaussian over the weights required by the Laplace Bridge for B
 Given a dataset $\D := \{ (\vx_i, t_i) \}_{i=1}^D$ and a prior $p(\vtheta)$, let
 %
 \begin{equation}
-    p(\vtheta | \D) \propto p(\vtheta) p(\D | \vtheta) = p(\vtheta) \prod_{(\vx, t) \in \D} p(y = t | \theta) \, ,
+    p(\vtheta | \D) \propto p(\vtheta) p(\D | \vtheta) = p(\vtheta) \prod_{(\vx, t) \in \D} p(y = t | \vtheta) \, ,
 \end{equation}
 %
-be the posterior over the parameter $\vtheta$ of an $L$-layer network $f_\vtheta$. Then we can get an approximation of the posterior $p(\vtheta | \D)$ by fitting a Gaussian $\N(\vtheta | \vmu_\vtheta, \mSigma_\vtheta)$ where
+be the posterior over the parameters $\vtheta$ of an $L$-layer network $f_\vtheta$. Then we can get an approximation of the posterior $p(\vtheta | \D)$ by fitting a Gaussian $\N(\vtheta | \vmu_\vtheta, \mSigma_\vtheta)$ where
 %
 \begin{align*}
     \vmu_\vtheta &= \vtheta_\text{MAP} \, , \\

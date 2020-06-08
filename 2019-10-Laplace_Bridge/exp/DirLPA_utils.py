@@ -304,8 +304,8 @@ def predict_LB(model, test_loader, M_W_post, M_b_post, C_W_post, C_b_post, verbo
     if timing:
         time_sum = 0
 
-    max_len = int(np.ceil(len(test_loader.dataset)/len(test_loader)))
-
+    max_len = len(test_loader)
+    
     for batch_idx, (x, y) in enumerate(test_loader):
         
         if cuda:
@@ -315,6 +315,39 @@ def predict_LB(model, test_loader, M_W_post, M_b_post, C_W_post, C_b_post, verbo
 
         mu_pred, Cov_pred = get_Gaussian_output(phi, M_W_post, M_b_post, C_W_post, C_b_post)
         
+        t0 = time.time()
+        alpha = get_alpha_from_Normal(mu_pred, Cov_pred).detach()
+        t1 = time.time()
+        if timing:
+            time_sum += (t1-t0)
+
+        alphas.append(alpha)
+
+        if verbose:
+            print("Batch: {}/{}".format(batch_idx, max_len))
+
+    if timing:
+        print("total time used for transform: {:.05f}".format(time_sum))
+    
+    return(torch.cat(alphas, dim = 0))
+    
+
+def predict_LB_KFAC(model, test_loader, M_W_post, M_b_post, U_post, V_post, B_post, timing=False, verbose=False, cuda=False):
+    alphas = []
+    max_len = len(test_loader)
+    if timing:
+        time_sum = 0
+
+    for batch_idx, (x, y) in enumerate(test_loader):
+
+        if cuda:
+            x, y = x.cuda(), y.cuda()
+
+        phi = model.features(x)
+
+        mu_pred = phi @ M_W_post + M_b_post
+        Cov_pred = torch.diag(phi @ U_post @ phi.t()).reshape(-1, 1, 1) * V_post.unsqueeze(0) + B_post.unsqueeze(0)
+
         t0 = time.time()
         alpha = get_alpha_from_Normal(mu_pred, Cov_pred).detach()
         t1 = time.time()

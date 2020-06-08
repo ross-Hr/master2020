@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.6)  22 MAY 2020 09:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.6)  25 MAY 2020 10:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1314,7 +1314,7 @@ LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 207.
 )
 LaTeX Font Info:    Overwriting math alphabet `\mathsfit' in version `bold'
-(Font)                  T1/pxss/m/sl --> T1/pxss/bx/n on input line 323.
+(Font)                  T1/pxss/m/sl --> T1/pxss/bx/n on input line 324.
 )
 (./Master_Thesis_Marius_Hobbhahn.aux
 
@@ -1691,24 +1691,50 @@ Package pdftex.def Info: figures/sMAP/sMAP_Dirichlet_coolwarm_1.png  used on in
 put line 16. on input line 16.
 Package pdftex.def Info: Requested size: 167.2989pt x 106.81346pt on input line
  16.
- [9])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+ [9]
+<figures/GaussNN_classic.pdf, id=185, pagebox=cropbox, 568.04218pt x 243.79079p
+t>
+File: figures/GaussNN_classic.pdf Graphic file (type pdf)
+<use figures/GaussNN_classic.pdf>
+Package pdftex.def Info: figures/GaussNN_classic.pdf  used on input line 27. on
+ input line 27.
+Package pdftex.def Info: Requested size: 334.60422pt x 143.60468pt on input lin
+e 27.
+<figures/GaussNN_LaplaceBridge.pdf, id=186, pagebox=cropbox, 568.04218pt x 243.
+79079pt>
+File: figures/GaussNN_LaplaceBridge.pdf Graphic file (type pdf)
+<use figures/GaussNN_LaplaceBridge.pdf>
+Package pdftex.def Info: figures/GaussNN_LaplaceBridge.pdf  used on input line 
+28. on input line 28.
+Package pdftex.def Info: Requested size: 334.60422pt x 143.60468pt on input lin
+e 28.
+LaTeX Font Info:    Font shape `T1/pxss/m/it' in size <10> not available
+(Font)              Font shape `T1/pxss/m/sl' tried instead on input line 29.
  [10pdfTeX warning (ext4): destination with the same identifier (name{subfigure
 .1.1.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.42 
+l.34 
      pdfTeX warning (ext4): destination with the same identifier (name{subfigur
 e.1.1.2}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.42 
+l.34 
       <./figures/sMAP/sMAP_Gaussian_coolwarm_0.png> <./figures/sMAP/sMAP_Dirich
 let_coolwarm_0.png> <./figures/sMAP/sMAP_Gaussian_coolwarm_1.png> <./figures/sM
-AP/sMAP_Dirichlet_coolwarm_1.png>] [11] [12
+AP/sMAP_Dirichlet_coolwarm_1.png>]) [11 <./figures/GaussNN_classic.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/GaussNN_classic.pdf): PDF inc
+lusion: invalid other resource which is no dict (key 'ProcSets', type <array>);
+ ignored.
+> <./figures/GaussNN_LaplaceBridge.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/GaussNN_LaplaceBridge.pdf): P
+DF inclusion: invalid other resource which is no dict (key 'ProcSets', type <ar
+ray>); ignored.
+>] [12
 
 
 ]
@@ -3744,7 +3770,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-<figures/3samples/3samples_Gaussian_coolwarm_0.png, id=250, 391.4625pt x 249.93
+<figures/3samples/3samples_Gaussian_coolwarm_0.png, id=294, 391.4625pt x 249.93
 375pt>
 File: figures/3samples/3samples_Gaussian_coolwarm_0.png Graphic file (type png)
 
@@ -3753,7 +3779,7 @@ Package pdftex.def Info: figures/3samples/3samples_Gaussian_coolwarm_0.png  use
 d on input line 55. on input line 55.
 Package pdftex.def Info: Requested size: 125.47737pt x 80.11009pt on input line
  55.
-<figures/3samples/3samples_Gaussian_coolwarm_1.png, id=251, 391.4625pt x 249.93
+<figures/3samples/3samples_Gaussian_coolwarm_1.png, id=295, 391.4625pt x 249.93
 375pt>
 File: figures/3samples/3samples_Gaussian_coolwarm_1.png Graphic file (type png)
 
@@ -3762,7 +3788,7 @@ Package pdftex.def Info: figures/3samples/3samples_Gaussian_coolwarm_1.png  use
 d on input line 56. on input line 56.
 Package pdftex.def Info: Requested size: 125.47737pt x 80.11009pt on input line
  56.
-<figures/3samples/3samples_Gaussian_coolwarm_2.png, id=252, 391.4625pt x 249.93
+<figures/3samples/3samples_Gaussian_coolwarm_2.png, id=296, 391.4625pt x 249.93
 375pt>
 File: figures/3samples/3samples_Gaussian_coolwarm_2.png Graphic file (type png)
 
@@ -3771,7 +3797,7 @@ Package pdftex.def Info: figures/3samples/3samples_Gaussian_coolwarm_2.png  use
 d on input line 57. on input line 57.
 Package pdftex.def Info: Requested size: 125.47737pt x 80.11009pt on input line
  57.
-<figures/3samples/3samples_Dirichlet_coolwarm_0.png, id=253, 391.4625pt x 249.9
+<figures/3samples/3samples_Dirichlet_coolwarm_0.png, id=297, 391.4625pt x 249.9
 3375pt>
 File: figures/3samples/3samples_Dirichlet_coolwarm_0.png Graphic file (type png
 )
@@ -3780,7 +3806,7 @@ Package pdftex.def Info: figures/3samples/3samples_Dirichlet_coolwarm_0.png  us
 ed on input line 62. on input line 62.
 Package pdftex.def Info: Requested size: 125.47737pt x 80.11009pt on input line
  62.
-<figures/3samples/3samples_Dirichlet_coolwarm_1.png, id=254, 391.4625pt x 249.9
+<figures/3samples/3samples_Dirichlet_coolwarm_1.png, id=298, 391.4625pt x 249.9
 3375pt>
 File: figures/3samples/3samples_Dirichlet_coolwarm_1.png Graphic file (type png
 )
@@ -3789,7 +3815,7 @@ Package pdftex.def Info: figures/3samples/3samples_Dirichlet_coolwarm_1.png  us
 ed on input line 63. on input line 63.
 Package pdftex.def Info: Requested size: 125.47737pt x 80.11009pt on input line
  63.
-<figures/3samples/3samples_Dirichlet_coolwarm_2.png, id=255, 391.4625pt x 249.9
+<figures/3samples/3samples_Dirichlet_coolwarm_2.png, id=299, 391.4625pt x 249.9
 3375pt>
 File: figures/3samples/3samples_Dirichlet_coolwarm_2.png Graphic file (type png
 )
@@ -3798,7 +3824,7 @@ Package pdftex.def Info: figures/3samples/3samples_Dirichlet_coolwarm_2.png  us
 ed on input line 64. on input line 64.
 Package pdftex.def Info: Requested size: 125.47737pt x 80.11009pt on input line
  64.
-<figures/Uncertainty/Uncertainty_Gaussian_coolwarm_0.png, id=258, 391.4625pt x 
+<figures/Uncertainty/Uncertainty_Gaussian_coolwarm_0.png, id=302, 391.4625pt x 
 249.93375pt>
 File: figures/Uncertainty/Uncertainty_Gaussian_coolwarm_0.png Graphic file (typ
 e png)
@@ -3807,7 +3833,7 @@ Package pdftex.def Info: figures/Uncertainty/Uncertainty_Gaussian_coolwarm_0.pn
 g  used on input line 76. on input line 76.
 Package pdftex.def Info: Requested size: 125.47737pt x 80.11009pt on input line
  76.
-<figures/Uncertainty/Uncertainty_Gaussian_coolwarm_1.png, id=259, 391.4625pt x 
+<figures/Uncertainty/Uncertainty_Gaussian_coolwarm_1.png, id=303, 391.4625pt x 
 249.93375pt>
 File: figures/Uncertainty/Uncertainty_Gaussian_coolwarm_1.png Graphic file (typ
 e png)
@@ -3816,7 +3842,7 @@ Package pdftex.def Info: figures/Uncertainty/Uncertainty_Gaussian_coolwarm_1.pn
 g  used on input line 77. on input line 77.
 Package pdftex.def Info: Requested size: 125.47737pt x 80.11009pt on input line
  77.
-<figures/Uncertainty/Uncertainty_Gaussian_coolwarm_2.png, id=260, 391.4625pt x 
+<figures/Uncertainty/Uncertainty_Gaussian_coolwarm_2.png, id=304, 391.4625pt x 
 249.93375pt>
 File: figures/Uncertainty/Uncertainty_Gaussian_coolwarm_2.png Graphic file (typ
 e png)
@@ -3825,7 +3851,7 @@ Package pdftex.def Info: figures/Uncertainty/Uncertainty_Gaussian_coolwarm_2.pn
 g  used on input line 78. on input line 78.
 Package pdftex.def Info: Requested size: 125.47737pt x 80.11009pt on input line
  78.
-<figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_0.png, id=261, 391.4625pt x
+<figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_0.png, id=305, 391.4625pt x
  249.93375pt>
 File: figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_0.png Graphic file (ty
 pe png)
@@ -3834,7 +3860,7 @@ Package pdftex.def Info: figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_0.p
 ng  used on input line 83. on input line 83.
 Package pdftex.def Info: Requested size: 125.47737pt x 80.11009pt on input line
  83.
-<figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_1.png, id=262, 391.4625pt x
+<figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_1.png, id=306, 391.4625pt x
  249.93375pt>
 File: figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_1.png Graphic file (ty
 pe png)
@@ -3843,7 +3869,7 @@ Package pdftex.def Info: figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_1.p
 ng  used on input line 84. on input line 84.
 Package pdftex.def Info: Requested size: 125.47737pt x 80.11009pt on input line
  84.
-<figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_2.png, id=263, 391.4625pt x
+<figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_2.png, id=307, 391.4625pt x
  249.93375pt>
 File: figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_2.png Graphic file (ty
 pe png)
@@ -3923,7 +3949,7 @@ chapter 4.
 ]
 chapter 5.
 (./content/experiments.tex (./figures/MNIST3VarianceOOD.tex) [23]
-<figures/MNIST_cool/MNIST_3Classes_in_dist_coolwarm_0.png, id=428, 388.45125pt 
+<figures/MNIST_cool/MNIST_3Classes_in_dist_coolwarm_0.png, id=483, 388.45125pt 
 x 249.93375pt>
 File: figures/MNIST_cool/MNIST_3Classes_in_dist_coolwarm_0.png Graphic file (ty
 pe png)
@@ -3932,7 +3958,7 @@ Package pdftex.def Info: figures/MNIST_cool/MNIST_3Classes_in_dist_coolwarm_0.p
 ng  used on input line 39. on input line 39.
 Package pdftex.def Info: Requested size: 125.47737pt x 80.73172pt on input line
  39.
-<figures/MNIST_cool/MNIST_3Classes_in_dist_coolwarm_1.png, id=429, 411.5375pt x
+<figures/MNIST_cool/MNIST_3Classes_in_dist_coolwarm_1.png, id=484, 411.5375pt x
  266.9975pt>
 File: figures/MNIST_cool/MNIST_3Classes_in_dist_coolwarm_1.png Graphic file (ty
 pe png)
@@ -3941,7 +3967,7 @@ Package pdftex.def Info: figures/MNIST_cool/MNIST_3Classes_in_dist_coolwarm_1.p
 ng  used on input line 39. on input line 39.
 Package pdftex.def Info: Requested size: 125.47737pt x 81.40762pt on input line
  39.
-<figures/MNIST_cool/MNIST_3Classes_in_dist_coolwarm_2.png, id=430, 411.5375pt x
+<figures/MNIST_cool/MNIST_3Classes_in_dist_coolwarm_2.png, id=485, 411.5375pt x
  266.9975pt>
 File: figures/MNIST_cool/MNIST_3Classes_in_dist_coolwarm_2.png Graphic file (ty
 pe png)
@@ -3950,7 +3976,7 @@ Package pdftex.def Info: figures/MNIST_cool/MNIST_3Classes_in_dist_coolwarm_2.p
 ng  used on input line 39. on input line 39.
 Package pdftex.def Info: Requested size: 125.47737pt x 81.40762pt on input line
  39.
-<figures/MNIST_cool/MNIST_3Classes_out_dist_coolwarm_0.png, id=431, 388.45125pt
+<figures/MNIST_cool/MNIST_3Classes_out_dist_coolwarm_0.png, id=486, 388.45125pt
  x 249.93375pt>
 File: figures/MNIST_cool/MNIST_3Classes_out_dist_coolwarm_0.png Graphic file (t
 ype png)
@@ -3959,7 +3985,7 @@ Package pdftex.def Info: figures/MNIST_cool/MNIST_3Classes_out_dist_coolwarm_0.
 png  used on input line 47. on input line 47.
 Package pdftex.def Info: Requested size: 125.47737pt x 80.73172pt on input line
  47.
-<figures/MNIST_cool/MNIST_3Classes_out_dist_coolwarm_1.png, id=432, 411.5375pt 
+<figures/MNIST_cool/MNIST_3Classes_out_dist_coolwarm_1.png, id=487, 411.5375pt 
 x 266.9975pt>
 File: figures/MNIST_cool/MNIST_3Classes_out_dist_coolwarm_1.png Graphic file (t
 ype png)
@@ -3968,7 +3994,7 @@ Package pdftex.def Info: figures/MNIST_cool/MNIST_3Classes_out_dist_coolwarm_1.
 png  used on input line 47. on input line 47.
 Package pdftex.def Info: Requested size: 125.47737pt x 81.40762pt on input line
  47.
-<figures/MNIST_cool/MNIST_3Classes_out_dist_coolwarm_2.png, id=433, 411.5375pt 
+<figures/MNIST_cool/MNIST_3Classes_out_dist_coolwarm_2.png, id=488, 411.5375pt 
 x 266.9975pt>
 File: figures/MNIST_cool/MNIST_3Classes_out_dist_coolwarm_2.png Graphic file (t
 ype png)
@@ -4032,7 +4058,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<figures/toy_data/ent_toy_2d_nn_multiclass_map.pdf, id=511, pagebox=cropbox, 36
+<figures/toy_data/ent_toy_2d_nn_multiclass_map.pdf, id=565, pagebox=cropbox, 36
 1.35pt x 361.35pt>
 File: figures/toy_data/ent_toy_2d_nn_multiclass_map.pdf Graphic file (type pdf)
 
@@ -4041,7 +4067,7 @@ Package pdftex.def Info: figures/toy_data/ent_toy_2d_nn_multiclass_map.pdf  use
 d on input line 171. on input line 171.
 Package pdftex.def Info: Requested size: 167.2989pt x 167.2982pt on input line 
 171.
-<figures/toy_data/ent_toy_2d_nn_multiclass_LPB_alpha_max.pdf, id=512, pagebox=c
+<figures/toy_data/ent_toy_2d_nn_multiclass_LPB_alpha_max.pdf, id=566, pagebox=c
 ropbox, 361.35pt x 361.35pt>
 File: figures/toy_data/ent_toy_2d_nn_multiclass_LPB_alpha_max.pdf Graphic file 
 (type pdf)
@@ -4050,7 +4076,7 @@ Package pdftex.def Info: figures/toy_data/ent_toy_2d_nn_multiclass_LPB_alpha_ma
 x.pdf  used on input line 172. on input line 172.
 Package pdftex.def Info: Requested size: 167.2989pt x 167.2982pt on input line 
 172.
-<figures/toy_data/ent_toy_2d_nn_multiclass_laplace_diag.pdf, id=513, pagebox=cr
+<figures/toy_data/ent_toy_2d_nn_multiclass_laplace_diag.pdf, id=567, pagebox=cr
 opbox, 361.35pt x 361.35pt>
 File: figures/toy_data/ent_toy_2d_nn_multiclass_laplace_diag.pdf Graphic file (
 type pdf)
@@ -4059,7 +4085,7 @@ Package pdftex.def Info: figures/toy_data/ent_toy_2d_nn_multiclass_laplace_diag
 .pdf  used on input line 173. on input line 173.
 Package pdftex.def Info: Requested size: 167.2989pt x 167.2982pt on input line 
 173.
-<figures/toy_data/ent_toy_2d_nn_multiclass_LPB_entropy_mode.pdf, id=514, pagebo
+<figures/toy_data/ent_toy_2d_nn_multiclass_LPB_entropy_mode.pdf, id=568, pagebo
 x=cropbox, 361.35pt x 361.35pt>
 File: figures/toy_data/ent_toy_2d_nn_multiclass_LPB_entropy_mode.pdf Graphic fi
 le (type pdf)
@@ -4068,7 +4094,7 @@ Package pdftex.def Info: figures/toy_data/ent_toy_2d_nn_multiclass_LPB_entropy_
 mode.pdf  used on input line 174. on input line 174.
 Package pdftex.def Info: Requested size: 167.2989pt x 167.2982pt on input line 
 174.
-<figures/toy_data/ent_toy_2d_nn_multiclass_laplace_kf.pdf, id=515, pagebox=crop
+<figures/toy_data/ent_toy_2d_nn_multiclass_laplace_kf.pdf, id=569, pagebox=crop
 box, 361.35pt x 361.35pt>
 File: figures/toy_data/ent_toy_2d_nn_multiclass_laplace_kf.pdf Graphic file (ty
 pe pdf)
@@ -4077,7 +4103,7 @@ Package pdftex.def Info: figures/toy_data/ent_toy_2d_nn_multiclass_laplace_kf.p
 df  used on input line 175. on input line 175.
 Package pdftex.def Info: Requested size: 167.2989pt x 167.2982pt on input line 
 175.
-<figures/toy_data/ent_toy_2d_nn_multiclass_LPB_variance_norm_dir.pdf, id=516, p
+<figures/toy_data/ent_toy_2d_nn_multiclass_LPB_variance_norm_dir.pdf, id=570, p
 agebox=cropbox, 361.35pt x 361.35pt>
 File: figures/toy_data/ent_toy_2d_nn_multiclass_LPB_variance_norm_dir.pdf Graph
 ic file (type pdf)
@@ -4086,7 +4112,7 @@ Package pdftex.def Info: figures/toy_data/ent_toy_2d_nn_multiclass_LPB_variance
 _norm_dir.pdf  used on input line 176. on input line 176.
 Package pdftex.def Info: Requested size: 167.2989pt x 167.2982pt on input line 
 176.
-<figures/toy_data/ent_toy_2d_nn_multiclass_laplace_exact.pdf, id=517, pagebox=c
+<figures/toy_data/ent_toy_2d_nn_multiclass_laplace_exact.pdf, id=571, pagebox=c
 ropbox, 361.35pt x 361.35pt>
 File: figures/toy_data/ent_toy_2d_nn_multiclass_laplace_exact.pdf Graphic file 
 (type pdf)
@@ -4096,7 +4122,7 @@ t.pdf  used on input line 177. on input line 177.
 Package pdftex.def Info: Requested size: 167.2989pt x 167.2982pt on input line 
 177.
 <figures/toy_data/ent_toy_2d_nn_multiclass_LPB_variance_alphas_norm_dir.pdf, id
-=518, pagebox=cropbox, 361.35pt x 361.35pt>
+=572, pagebox=cropbox, 361.35pt x 361.35pt>
 File: figures/toy_data/ent_toy_2d_nn_multiclass_LPB_variance_alphas_norm_dir.pd
 f Graphic file (type pdf)
 <use figures/toy_data/ent_toy_2d_nn_multiclass_LPB_variance_alphas_norm_dir.pdf
@@ -4147,14 +4173,14 @@ pdfTeX warning: /usr/bin/pdflatex (file ./figures/toy_data/ent_toy_2d_nn_multic
 lass_LPB_variance_alphas_norm_dir.pdf): PDF inclusion: multiple pdfs with page 
 group included in a single page
 >]
-<figures/imagenet_images.pdf, id=598, pagebox=cropbox, 1734.48pt x 433.62pt>
+<figures/imagenet_images.pdf, id=653, pagebox=cropbox, 1734.48pt x 433.62pt>
 File: figures/imagenet_images.pdf Graphic file (type pdf)
 <use figures/imagenet_images.pdf>
 Package pdftex.def Info: figures/imagenet_images.pdf  used on input line 195. o
 n input line 195.
 Package pdftex.def Info: Requested size: 418.24219pt x 106.4661pt on input line
  195.
-<figures/imagenet_marginal_betas.pdf, id=599, pagebox=cropbox, 1734.48pt x 433.
+<figures/imagenet_marginal_betas.pdf, id=654, pagebox=cropbox, 1734.48pt x 433.
 62pt>
 File: figures/imagenet_marginal_betas.pdf Graphic file (type pdf)
 <use figures/imagenet_marginal_betas.pdf>
@@ -4375,7 +4401,7 @@ chapter 6.
 ]
 chapter 7.
 (./content/appendix.tex [37]) (./content/LaplaceApproximation.tex [38]
-Underfull \vbox (badness 5119) has occurred while \output is active []
+Underfull \vbox (badness 5133) has occurred while \output is active []
 
  [39])
 (./content/Inversion.tex [40]
@@ -4415,11 +4441,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
  ) 
 Here is how much of TeX's memory you used:
- 40569 strings out of 492995
- 891974 string characters out of 6135074
- 2390904 words of memory out of 5000000
- 42593 multiletter control sequences out of 15000+600000
- 119553 words of font info for 571 fonts, out of 8000000 for 9000
+ 40624 strings out of 492995
+ 892999 string characters out of 6135074
+ 2391774 words of memory out of 5000000
+ 42614 multiletter control sequences out of 15000+600000
+ 124223 words of font info for 591 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,21n,128p,8840b,2534s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
@@ -4448,14 +4474,14 @@ ublic/pxfonts/rpxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pxfon
 ts/rpxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/font
-s/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8
-a.pfb>
-Output written on Master_Thesis_Marius_Hobbhahn.pdf (49 pages, 2194977 bytes).
+mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/upl
+ri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on Master_Thesis_Marius_Hobbhahn.pdf (49 pages, 2306320 bytes).
 PDF statistics:
- 904 PDF objects out of 1000 (max. 8388607)
- 718 compressed objects within 8 object streams
- 223 named destinations out of 1000 (max. 500000)
- 77082 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 961 PDF objects out of 1000 (max. 8388607)
+ 760 compressed objects within 8 object streams
+ 226 named destinations out of 1000 (max. 500000)
+ 83236 words of extra memory for PDF output out of 89155 (max. 10000000)
 

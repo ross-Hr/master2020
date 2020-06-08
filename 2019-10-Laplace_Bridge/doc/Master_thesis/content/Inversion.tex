@@ -4,12 +4,12 @@
 Note that the following section is a copy of \cite{Hennig2010} derivation. We don't claim any new contribution but merely want to give an overview of the content. 
 
 %soft identifiability constraint
-For a given $\rvy$, all $\rvy'$ satisfying $\rvy' = \rvy + c \mathbf{1}$ share the same value $\sigma(\rvy')$ for any $c \in \mathbb{R}$ with $\mathbf{1} = [1,1, ..., 1]^\top$. Since the Laplace Bridge is a map between a Gaussian and a Dirichlet distribution we must ensure that the Dirichlet is in fact a distribution, i.e. that multiple values don't map to the same result. To solve this ambiguity we introduce a soft constrain $r = \exp[-\frac{\tau}{2}(\mathbf{1}^\top \rvy)^2]$ which can be interpreted as a soft projection of the subspaces forming parallel lines to $\mathbf{1}$ onto their intersection with the hyperplane defined by $\mathbf{1}^\top \rvy = 0$. 
+For a given $\rvz$, all $\rvz'$ satisfying $\rvz' = \rvz + c \mathbf{1}$ share the same value $\sigma(\rvz')$ for any $c \in \mathbb{R}$ with $\mathbf{1} = [1,1, ..., 1]^\top$. Since the Laplace Bridge is a map between a Gaussian and a Dirichlet distribution we must ensure that the Dirichlet is in fact a distribution, i.e. that multiple values don't map to the same result. To solve this ambiguity we introduce a soft constrain $r = \exp[-\frac{\tau}{2}(\mathbf{1}^\top \rvz)^2]$ which can be interpreted as a soft projection of the subspaces forming parallel lines to $\mathbf{1}$ onto their intersection with the hyperplane defined by $\mathbf{1}^\top \rvz = 0$. 
 
 When $r \rightarrow \infty$, where the constraint becomes a Dirac distribution, we can again use a reformulation of the parameter space, using $K-1$ parameters $\rva$ defined through
 
 \begin{equation}
-	y_k = \begin{cases}
+	z_k = \begin{cases}
 		a_k \qquad \qquad \text{if } k = 1,2, ..., K-1 \\
 		- \sum_{k=1}^{K-1} a_k \quad \text{if } k = K
 	\end{cases}
@@ -25,7 +25,7 @@ Through the figures of the 1D Dirichlet approximation in the main thesis, we hav
 Calculating the covariance matrix $\vSigma$ is more complicated but layed out in the following. The logarithm of the Dirichlet is, up to additive constants
 
 \begin{equation}
-    \log p_y(y|\alpha) = \sum_k \alpha_k \pi_k - \frac{\tau}{2} \mathbf{1}^\top \rvy
+    \log p_y(y|\alpha) = \sum_k \alpha_k \pi_k - \frac{\tau}{2} \mathbf{1}^\top \rvz
 \end{equation}
 
 Using $\pi_k$ as the softmax of $\vy$ as shown in Equation \ref{eq:softmax} we can find the elements of the Hessian $\vL$
@@ -106,7 +106,7 @@ we can now project this back to $\mathbb{R}^{K\times K}$ and get
     L_{kl}^{-1} = \delta_{kl} \frac{1}{\alpha_k} - \frac{1}{K} \left[\frac{1}{\alpha_k} + \frac{1}{\alpha_l} - \frac{1}{K}\left( \frac{1}{\tau} + \sum_u^K \frac{1}{\alpha_u}\right) \right]
 \end{equation}
 
-because the inverse is defined for all positive values of $\tau$, we can now safely take the limit of $\tau \rightarrow \infty$, which hardens the constraint on the subspace $\mathbf{1}^\top \rvy$.
+because the inverse is defined for all positive values of $\tau$, we can now safely take the limit of $\tau \rightarrow \infty$, which hardens the constraint on the subspace $\mathbf{1}^\top \rvz$.
 
 We are mostly interested in the diagonal elements since we desire a sparse encoding for computational reasons and we otherwise needed to map a $K \times K$ covariance matrix to a $K\times 1$ Dirichlet parameter vector which would be a very overdetermined mapping. Note that $K$ is a scalar, not a matrix. The diagonal elements of $\vSigma = \vL^{-1}$ can be calculated as
 

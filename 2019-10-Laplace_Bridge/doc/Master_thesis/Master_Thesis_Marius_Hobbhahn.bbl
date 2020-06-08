@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{41}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\EM}{\em}
 \providecommand{\RNtxt}{\relax}
@@ -58,6 +58,11 @@ notMNIST dataset.
 \newblock Practical Variational Inference for Neural Networks
   \allowbreak\newblock// Advances in Neural Information Processing Systems 24.
   2011.  2348--2356.
+
+\bibitem[Haussmann et~al.(2019)M.~Haussmann, S.~Gerwinn,
+  M.~Kandemir]{haussmann2019BEDLwithPAC}
+{\EM Haussmann Manuel, Gerwinn Sebastian, Kandemir Melih}.
+\newblock Bayesian Evidential Deep Learning with PAC Regularization. 2019.
 
 \bibitem[He et~al.(2016)K.~He, X.~Zhang, S.~Ren, J.~Sun]{2015_ResNet}
 {\EM He~Kaiming, Zhang Xiangyu, Ren Shaoqing, Sun Jian}.
@@ -236,6 +241,13 @@ Learning Multiple Layers of Features from Tiny Images.
   International Conference on Artificial Intelligence and Statistics.  51.
   Cadiz, Spain: PMLR, 09--11 May 2016.  370--378.
 \newblock (Proceedings of Machine Learning Research).
+
+\bibitem[Wu et~al.(2018)A.~Wu, S.~Nowozin, E.~Meeds, R.~E. Turner, J.~M.
+  Hern{\'{a}}ndez{-}Lobato, A.~L. Gaunt]{DeterministicVI2018}
+{\EM Wu~Anqi, Nowozin Sebastian, Meeds Edward, Turner Richard~E.,
+  Hern{\'{a}}ndez{-}Lobato Jos{\'{e}}~Miguel, Gaunt Alexander~L.}
+\newblock Fixing Variational Bayes: Deterministic Variational Inference for
+  Bayesian Neural Networks \allowbreak\newblock// CoRR. 2018. abs/1810.03958.
 
 \bibitem[Xiao et~al.(2017)H.~Xiao, K.~Rasul, R.~Vollgraf]{FMNIST2017}
 {\EM Xiao Han, Rasul Kashif, Vollgraf Roland}.
