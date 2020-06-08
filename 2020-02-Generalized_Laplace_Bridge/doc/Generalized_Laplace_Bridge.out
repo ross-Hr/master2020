@@ -1,0 +1,60 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Background}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Change of Variable for Probability Density Function}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Laplace Approximation}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Exponential Family}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Chi2 <-> Normal}{section.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.4.1}{A generalization to matrices}{subsection.2.4}% 7
+\BOOKMARK [1][-]{section.3}{Generalized Laplace Bridge}{}% 8
+\BOOKMARK [1][-]{section.4}{General overview}{}% 9
+\BOOKMARK [1][-]{section.5}{Exponential Distribution}{}% 10
+\BOOKMARK [2][-]{subsection.5.1}{Standard Exponential Distribution}{section.5}% 11
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Laplace Approximation of the Exponential Distribution}{subsection.5.1}% 12
+\BOOKMARK [2][-]{subsection.5.2}{Log-transformed Exponential Distribution}{section.5}% 13
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Laplace Approximation of the log-transformed Exponential Distribution}{subsection.5.2}% 14
+\BOOKMARK [2][-]{subsection.5.3}{The Bridge}{section.5}% 15
+\BOOKMARK [1][-]{section.6}{Gamma Distribution}{}% 16
+\BOOKMARK [2][-]{subsection.6.1}{Standard Gamma Distribution}{section.6}% 17
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Laplace Approximation of the Gamma Distribution}{subsection.6.1}% 18
+\BOOKMARK [2][-]{subsection.6.2}{Sqrt-Transform of the Gamma Distribution}{section.6}% 19
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Sqrt-Transformation}{subsection.6.2}% 20
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Laplace Approximation of the sqrt-transformed Gamma Distribution}{subsection.6.2}% 21
+\BOOKMARK [3][-]{subsubsection.6.2.3}{The bridge for the sqrt-transformation}{subsection.6.2}% 22
+\BOOKMARK [2][-]{subsection.6.3}{Log-Transform of the Gamma Distribution}{section.6}% 23
+\BOOKMARK [3][-]{subsubsection.6.3.1}{Log-Transformation}{subsection.6.3}% 24
+\BOOKMARK [3][-]{subsubsection.6.3.2}{Laplace Approximation of the log-transformed Gamma Distribution}{subsection.6.3}% 25
+\BOOKMARK [3][-]{subsubsection.6.3.3}{The bridge for the log-transformation}{subsection.6.3}% 26
+\BOOKMARK [1][-]{section.7}{Inverse Gamma Distribution}{}% 27
+\BOOKMARK [2][-]{subsection.7.1}{Standard Inverse Gamma Distribution}{section.7}% 28
+\BOOKMARK [3][-]{subsubsection.7.1.1}{Laplace Approximation of the standard inverse gamma distribution}{subsection.7.1}% 29
+\BOOKMARK [2][-]{subsection.7.2}{Log-Transform of the inverse gamma distribution}{section.7}% 30
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Laplace Approximation of the log-transformed Inverse Gamma Distribution}{subsection.7.2}% 31
+\BOOKMARK [3][-]{subsubsection.7.2.2}{The Bridge for the log-transformed Inverse Gamma Distribution}{subsection.7.2}% 32
+\BOOKMARK [1][-]{section.8}{Chi-squared Distribution}{}% 33
+\BOOKMARK [2][-]{subsection.8.1}{Standard Chi-squared distribution}{section.8}% 34
+\BOOKMARK [3][-]{subsubsection.8.1.1}{Laplace approximation of the standard Chi-squared distribution}{subsection.8.1}% 35
+\BOOKMARK [2][-]{subsection.8.2}{Log-Transformed Chi-squared distribution}{section.8}% 36
+\BOOKMARK [3][-]{subsubsection.8.2.1}{Laplace approximation of the log-transformed Chi-squared distribution}{subsection.8.2}% 37
+\BOOKMARK [3][-]{subsubsection.8.2.2}{The Bridge for log-transform}{subsection.8.2}% 38
+\BOOKMARK [2][-]{subsection.8.3}{Sqrt-Transformed Chi-squared distribution}{section.8}% 39
+\BOOKMARK [3][-]{subsubsection.8.3.1}{Laplace approximation of the sqrt-transformed Chi-squared distribution}{subsection.8.3}% 40
+\BOOKMARK [3][-]{subsubsection.8.3.2}{The Bridge for sqrt-transform}{subsection.8.3}% 41
+\BOOKMARK [1][-]{section.9}{Beta Distribution}{}% 42
+\BOOKMARK [2][-]{subsection.9.1}{Standard Beta Distribution}{section.9}% 43
+\BOOKMARK [3][-]{subsubsection.9.1.1}{Laplace approximation of the standard Beta distribution}{subsection.9.1}% 44
+\BOOKMARK [2][-]{subsection.9.2}{Logit-Transform of the Beta distribution}{section.9}% 45
+\BOOKMARK [3][-]{subsubsection.9.2.1}{Laplace approximation of the logit transformed Beta distribution}{subsection.9.2}% 46
+\BOOKMARK [3][-]{subsubsection.9.2.2}{The Bridge for the logit transformation}{subsection.9.2}% 47
+\BOOKMARK [1][-]{section.10}{Dirichlet Distribution}{}% 48
+\BOOKMARK [1][-]{section.11}{Wishart Distribution}{}% 49
+\BOOKMARK [2][-]{subsection.11.1}{Standard Wishart distribution}{section.11}% 50
+\BOOKMARK [3][-]{subsubsection.11.1.1}{Laplace Approximation of the standard Wishart distribution}{subsection.11.1}% 51
+\BOOKMARK [2][-]{subsection.11.2}{Sqrtm-Transformed Wishart distribution}{section.11}% 52
+\BOOKMARK [3][-]{subsubsection.11.2.1}{Laplace Approximation of the sqrtm-transformed Wishart distribution}{subsection.11.2}% 53
+\BOOKMARK [3][-]{subsubsection.11.2.2}{The Bridge for sqrtm-tranform}{subsection.11.2}% 54
+\BOOKMARK [1][-]{section.12}{Inverse Wishart Distribution}{}% 55
+\BOOKMARK [2][-]{subsection.12.1}{Standard Inverse Wishart distribution}{section.12}% 56
+\BOOKMARK [3][-]{subsubsection.12.1.1}{Laplace Approximation of the standard inverse Wishart distribution}{subsection.12.1}% 57
+\BOOKMARK [2][-]{subsection.12.2}{Sqrtm-Transformed inverse Wishart distribution}{section.12}% 58
+\BOOKMARK [2][-]{subsection.12.3}{Laplace Approximation of the sqrtm-transformed inverse Wishart distribution}{section.12}% 59
+\BOOKMARK [1][-]{section.13}{Math}{}% 60

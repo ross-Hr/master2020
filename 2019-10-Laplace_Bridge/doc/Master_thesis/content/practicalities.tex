@@ -1,0 +1,57 @@
+%!TEX root = ../Laplace_bridge_for_NNs.tex
+
+In principle, the Gaussian over the weights required by the Laplace Bridge for BNNs (see Equation \ref{eq:logit_dist}) can be constructed by any Gaussian approximate Bayesian methods such as variational Bayes \citep{Graves2011VB,Blundell2015WeightUI} and Laplace approximations for neural networks \citep{MacKay1992,ritter2018a}. We will focus on the Laplace approximation, which uses the same principle as the Laplace Bridge. However, in the Laplace approximation for neural networks, the posterior distribution over the weights of a network is the one that is approximated as a Gaussian, instead of a Dirichlet distribution over the outputs as in the Laplace Bridge.
+
+Given a dataset $\D := \{ (\vx_i, t_i) \}_{i=1}^D$ and a prior $p(\vtheta)$, let
+%
+\begin{equation}
+    p(\vtheta | \D) \propto p(\vtheta) p(\D | \vtheta) = p(\vtheta) \prod_{(\vx, t) \in \D} p(y = t | \vtheta) \, ,
+\end{equation}
+%
+be the posterior over the parameters $\vtheta$ of an $L$-layer network $f_\vtheta$. Then we can get an approximation of the posterior $p(\vtheta | \D)$ by fitting a Gaussian $\N(\vtheta | \vmu_\vtheta, \mSigma_\vtheta)$ where
+%
+\begin{align*}
+    \vmu_\vtheta &= \vtheta_\text{MAP} \, , \\
+    \mSigma_\vtheta &= (-\nabla^2 \vert_{\vtheta_\text{MAP}} \log p(\vtheta | \D))^\inv =: \mH_\vtheta^\inv \, .
+\end{align*}
+%
+That is, we fit a Gaussian centered at the mode $\vtheta_\text{MAP}$ of $p(\vtheta | \D)$ with the covariance determined by the curvature at that point. We assume that the prior $p(\vtheta)$ is a zero-mean isotropic Gaussian $\N(\vtheta | \b{0}, \sigma^2 \mI)$ and the likelihood function is the Categorical density
+%
+\begin{equation*}
+    p(\D | \vtheta) = \prod_{(\vx, t) \in \D} \mathrm{Cat}(y = t | \mathrm{softmax}(f_\vtheta(\vx))) \, .
+\end{equation*}
+%
+For various applications in Deep Learning, the approximation in \eqref{eq:logit_dist} is often computationally too expensive. Indeed, for each input $\vx \in \R^N$, one has to do $K$ backward passes to compute the Jacobian $\mJ(\vx)$. Moreover, it requires an $\mathcal{O}(PK)$ storage which is also expensive since $P$ is often in the order of millions. A cheaper alternative is to fix all but the last layer of $f_\vtheta$ and only apply the Laplace approximation on $\mW_L$, the last layer's weight matrix. This scheme has been used successfully by \citet{ScalableBayesianOptimizationDNNs2015,2016DeepKernelLearning}, etc. and has been shown empirically to be effective in uncertainty quantification tasks \citep{brosse2020last}. In this case, given the approximate last-layer posterior
+%
+\begin{equation}
+    p(\mW^L | \D) \approx \N(\vec(\mW^L) | \vec(\mW^L_\text{MAP}), \mH_{\mW^L}^\inv) \, ,
+\end{equation}
+%
+one can efficiently compute the distribution over the logits. That is, let $\vphi: \R^N \to \R^{Q}$ be the first $L-1$ layers of $f_\vtheta$, seen as a feature map. Then, for each $\vx \in \R^N$, the induced distribution over the logit $\mW^L \vphi(\vx) =: \vz$ is given by
+%
+\begin{equation}
+    p(\vz | \vx) = \N(\vz | \mW^L_\text{MAP} \vphi(\vx), (\vphi(\vx)^\top \otimes \mI) \mH_{\mW^L}^\inv (\vphi(\vx) \otimes \mI)) \, ,
+\end{equation}
+%
+where $\otimes$ denotes the Kronecker product.
+
+An even more efficient last-layer approximation can be obtained using a Kronecker-factored matrix normal distribution \citep{louizos_structured_2016,sun_learning_2017,ritter2018a}. That is, we assume the posterior distribution to be
+%
+\begin{equation}
+    p(\mW^L | \D) \approx \MN(\mW^L | \mW^L_\text{MAP}, \mU, \mV) \, ,
+\end{equation}
+%
+where $\mU \in \R^{K \times K}$ and $\mV \in \R^{Q \times Q}$ are the Kronecker factorization of the inverse Hessian matrix $\mH_{\mW^L}^\inv$ \citep{martens2015optimizing}. In this case, for any $\vx \in \R^N$, one can easily show that the distribution over logits is given by
+%
+\begin{equation}
+    p(\vz | \vx) = \N(\vz | \mW^L_\text{MAP} \vphi(\vx), (\vphi(\vx)^\top \mV \vphi(\vx))\mU) \, ,
+\end{equation}
+%
+which is easy to implement and computationally cheap. Finally, and even more efficient, is a last-layer approximation scheme with a diagonal Gaussian approximate posterior, i.e. the so-called mean-field approximation. In this case, we assume the posterior distribution to be
+%
+\begin{equation}
+    p(\mW^L | \D) \approx \N(\vec(\mW^L) | \vec(\mW^L_\text{MAP}), \diag{\vsigma^2}) \, ,
+\end{equation}
+%
+where $\vsigma^2$ is obtained via the diagonal of the Hessian of the log-posterior w.r.t. $\vec(\mW^L)$ at $\vec(\mW^L_\text{MAP})$.
+

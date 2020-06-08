@@ -1,13 +1,12 @@
 import torch
 import torchvision
-#from torch import nn, optim, autograd
-#from torch.nn import functional as F
 from torch.distributions.multivariate_normal import MultivariateNormal
 import numpy as np
 from backpack import backpack, extend
 from backpack.extensions import KFAC, DiagHessian, DiagGGNMC
 from sklearn.metrics import roc_auc_score
-
+import matplotlib.pyplot as plt
+import time
 
 """####### general utils #########"""
 
@@ -16,62 +15,13 @@ def get_accuracy(output, targets):
     predictions = output.argmax(dim=1, keepdim=True).view_as(targets)
     return predictions.eq(targets).float().mean().item()
 
-"""####### Functions related to the Dirichlet Laplace transform ###########"""
+def imshow(img):
+    #img = img / 2 + 0.5     # unnormalize
+    npimg = img.numpy()
+    plt.imshow(np.transpose(npimg, (1, 2, 0)))
+    plt.show()
 
-def get_mu_from_Dirichlet(alpha):
-    K = len(alpha)
-    mu = torch.zeros(K)
-    for i in range(K):
-        mu_i = torch.log(alpha[i]) - 1/K * torch.sum(torch.log(alpha))
-        mu[i] = mu_i
-
-    return(torch.Tensor(mu))
-
-def get_Sigma_from_Dirichlet(alpha):
-    K = len(alpha)
-    sum_of_inv = 1/K * torch.sum(1/alpha)
-    Sigma = torch.zeros((K,K))
-    for k in range(K):
-        for l in range(K):
-            delta = 1 if k==l else 0
-            Sigma[k][l] = delta * 1/alpha[k] - 1/K*(1/alpha[k] + 1/alpha[l] - sum_of_inv)
-
-    return(torch.Tensor(Sigma))
-
-
-def get_alpha_from_Normal(mu, Sigma):
-    batch_size, K = mu.size(0), mu.size(-1)
-    alpha = torch.zeros(batch_size, K)
-    sum_exp = torch.sum(torch.exp(-1*torch.Tensor(mu)), dim=1)
-    for j in range(batch_size):
-        for k in range(K):
-            alpha[j][k] = 1/(Sigma[j][k][k] + 10e-8)*(1 - 2/K + torch.exp(mu[j][k])/K**2 * sum_exp[j])
-
-    return(torch.Tensor(alpha))
-
-
-def get_Gaussian_output_old(x, mu_w, mu_b, sigma_w, sigma_b):
-    #get the distributions per class
-    batch_size = x.size(0)
-    num_classes = len(mu_b)
-    #print("batch_size, num_classes: ", batch_size, num_classes)
-    mu_batch = torch.zeros(batch_size, num_classes)
-    sigma_batch = torch.zeros(batch_size, num_classes, num_classes)
-    for i in range(batch_size):
-        per_class_sigmas = torch.zeros(num_classes)
-        for j in range(num_classes):
-            #create a diagonal Hessian
-            hess = torch.diag(sigma_w[j])
-            #b = x[i] @ hess @ x[i].t()
-            #a = sigma_b[i]
-            per_class_sigmas[j] = x[i] @ hess @ x[i].t() + sigma_b[j]
-
-        #print("sizes: ", mu_w.size(), x[i].size(), mu_b.size())
-        per_class_mus = x[i] @ mu_w + mu_b
-        mu_batch[i] = per_class_mus
-        sigma_batch[i] = torch.diag(per_class_sigmas)
-
-    return(mu_batch, sigma_batch)
+"""####### Functions related to the Laplace Bridge transform ###########"""
 
 def get_Gaussian_output(x, mu_w, mu_b, sigma_w, sigma_b):
     #get the distributions per class
@@ -95,12 +45,81 @@ def get_Gaussian_output(x, mu_w, mu_b, sigma_w, sigma_b):
         
     sigma_batch = torch.stack([torch.diag(x) for x in sigmas_diag])
 
-    
     return(mu_batch, sigma_batch)
 
+def get_alpha_from_Normal(mu, Sigma):
+    batch_size, K = mu.size(0), mu.size(-1)
+    Sigma_d = torch.diagonal(Sigma, dim1=1, dim2=2)
+    sum_exp = torch.sum(torch.exp(-1*mu), dim=1).view(-1,1)
+    alpha = 1/Sigma_d * (1 - 2/K + torch.exp(mu)/K**2 * sum_exp)
+    
+    return(alpha)
 
 
 """########## Functions related to the acquisition of second order information ###########"""
+
+###########Diag-Hessian
+
+def Diag_second_order(model, train_loader, prec0 = 10, device='cpu'):
+
+    W = list(model.parameters())[-2]
+    b = list(model.parameters())[-1]
+    m, n = W.shape
+    print("n: {} inputs to linear layer with m: {} classes".format(n, m))
+    lossfunc = torch.nn.CrossEntropyLoss()
+
+    var0 = 1/prec0
+
+    extend(lossfunc, debug=False)
+    extend(model.linear, debug=False)
+
+    with backpack(DiagHessian()):
+
+        max_len = len(train_loader)
+        weights_cov = torch.zeros(max_len, m, n, device=device)
+        biases_cov = torch.zeros(max_len, m, device=device)
+
+        for batch_idx, (x, y) in enumerate(train_loader):
+
+            if device == 'cuda':
+                x, y = x.cuda(), y.cuda()
+
+            model.zero_grad()
+            lossfunc(model(x), y).backward()
+
+            with torch.no_grad():
+                # Hessian of weight
+                W_ = W.diag_h
+                b_ = b.diag_h
+
+                #add_prior: since it will be flattened later we can just add the prior like that
+                W_ += var0 * torch.ones(W_.size(), device=device)
+                b_ += var0 * torch.ones(b_.size(), device=device)
+
+
+            weights_cov[batch_idx] = W_
+            biases_cov[batch_idx] = b_
+
+            print("Batch: {}/{}".format(batch_idx, max_len))
+
+        print(len(weights_cov))
+        C_W = torch.mean(weights_cov, dim=0)
+        C_b = torch.mean(biases_cov, dim=0)
+
+    # Predictive distribution
+    with torch.no_grad():
+        M_W_post = W.t()
+        M_b_post = b
+
+        C_W_post = C_W
+        C_b_post = C_b
+        
+    print("M_W_post size: ", M_W_post.size())
+    print("M_b_post size: ", M_b_post.size())
+    print("C_W_post size: ", C_W_post.size())
+    print("C_b_post size: ", C_b_post.size())
+
+    return(M_W_post, M_b_post, C_W_post, C_b_post)
 
 ###########Laplace-KF
 #=============================================================================================
@@ -115,7 +134,7 @@ def KFLP_second_order(model, batch_size, train_loader, var0 = 10, device='cpu'):
     tau = 1/var0
 
     extend(lossfunc, debug=False)
-    extend(model.fc, debug=False)
+    extend(model.linear, debug=False)
 
     with backpack(KFAC()):
         U, V = torch.zeros(m, m, device=device), torch.zeros(n, n, device=device)
@@ -158,76 +177,17 @@ def KFLP_second_order(model, batch_size, train_loader, var0 = 10, device='cpu'):
         V_post = torch.inverse(U)
         B_post = torch.inverse(B)
 
+    print("M_W_post size: ", M_W_post.size())
+    print("M_b_post size: ", M_b_post.size())
+    print("U_post size: ", U_post.size())
+    print("V_post size: ", V_post.size())
+    print("B_post size: ", B_post.size())
+
     return(M_W_post, M_b_post, U_post, V_post, B_post)
-
-
-###### Different way of getting the normal distribution over the outputs
-###### we just assume everything to be independent everywhere
-###########Laplace-KF
-#=============================================================================================
-
-def Diag_second_order(model, batch_size, train_loader, var0 = 10, device='cpu'):
-
-    W = list(model.parameters())[-2]
-    b = list(model.parameters())[-1]
-    m, n = W.shape
-    print("n: {} inputs to linear layer with m: {} classes".format(n, m))
-    lossfunc = torch.nn.CrossEntropyLoss()
-
-    tau = 1/var0
-
-    extend(lossfunc, debug=False)
-    extend(model.fc, debug=False)
-
-    with backpack(DiagHessian()):
-
-        max_len = int(np.ceil(len(train_loader.dataset)/batch_size))
-        weights_cov = torch.zeros(max_len, m, n, device=device)
-        biases_cov = torch.zeros(max_len, m, device=device)
-
-        for batch_idx, (x, y) in enumerate(train_loader):
-
-            if device == 'cuda':
-                x, y = x.cuda(), y.cuda()
-
-            model.zero_grad()
-            lossfunc(model(x), y).backward()
-
-            with torch.no_grad():
-                # Hessian of weight
-                W_ = W.diag_h
-                b_ = b.diag_h
-
-                #add_prior: since it will be flattened later we can just add the prior like that
-                W_ += tau * torch.ones(W_.size(), device=device)
-                b_ += tau * torch.ones(b_.size(), device=device)
-
-
-            weights_cov[batch_idx] = W_
-            biases_cov[batch_idx] = b_
-
-            print("Batch: {}/{}".format(batch_idx, max_len))
-
-        print(len(weights_cov))
-        C_W = torch.mean(weights_cov, dim=0)
-        C_b = torch.mean(biases_cov, dim=0)
-
-    # Predictive distribution
-    with torch.no_grad():
-        M_W_post = W.t()
-        M_b_post = b
-
-        C_W_post = C_W
-        C_b_post = C_b
-
-    return(M_W_post, M_b_post, C_W_post, C_b_post)
-
-
 
 """########## Functions related to predicting the distribution over the outputs ############"""
 
-
-
+#non-Bayesian estimate
 @torch.no_grad()
 def predict_MAP(model, test_loader, num_samples=1, cuda=False):
     py = []
@@ -247,17 +207,64 @@ def predict_MAP(model, test_loader, num_samples=1, cuda=False):
     return torch.cat(py, dim=0)
 
 
+#diagonal sampling of last-layer
 @torch.no_grad()
-def predict_KFAC_sampling(model, test_loader, M_W_post, M_b_post, U_post, V_post, B_post, n_samples, verbose=False, cuda=False):
+def predict_diagonal_sampling(model, test_loader, M_W_post, M_b_post, C_W_post, C_b_post, n_samples, verbose=False, cuda=False, timing=False):
     py = []
-    max_len = int(np.ceil(len(test_loader.dataset)/len(test_loader)))
+    max_len = len(test_loader)
+    if timing:
+        time_sum = 0
 
     for batch_idx, (x, y) in enumerate(test_loader):
 
         if cuda:
             x, y = x.cuda(), y.cuda()
 
-        phi = model.phi(x)
+        phi = model.features(x)
+
+        mu, Sigma = get_Gaussian_output(phi, M_W_post, M_b_post, C_W_post, C_b_post)
+        #print("mu size: ", mu.size())
+        #print("sigma size: ", Sigma.size())
+
+        post_pred = MultivariateNormal(mu, Sigma)
+
+        # MC-integral
+        t0 = time.time()
+        py_ = 0
+
+        for _ in range(n_samples):
+            f_s = post_pred.rsample()
+            py_ += torch.softmax(f_s, 1)
+
+        py_ /= n_samples
+        py_ = py_.detach()
+
+        py.append(py_)
+        t1 = time.time()
+        if timing:
+            time_sum += (t1 - t0)
+
+        if verbose:
+            print("Batch: {}/{}".format(batch_idx, max_len))
+
+    if timing: print("time used for sampling with {} samples: {}".format(n_samples, time_sum))
+    
+    return torch.cat(py, dim=0)
+
+#KFAC sampling of last-layer
+@torch.no_grad()
+def predict_KFAC_sampling(model, test_loader, M_W_post, M_b_post, U_post, V_post, B_post, n_samples, timing=False, verbose=False, cuda=False):
+    py = []
+    max_len = len(test_loader)
+    if timing:
+        time_sum = 0
+
+    for batch_idx, (x, y) in enumerate(test_loader):
+
+        if cuda:
+            x, y = x.cuda(), y.cuda()
+
+        phi = model.features(x)
 
         mu_pred = phi @ M_W_post + M_b_post
         Cov_pred = torch.diag(phi @ U_post @ phi.t()).reshape(-1, 1, 1) * V_post.unsqueeze(0) + B_post.unsqueeze(0)
@@ -265,41 +272,7 @@ def predict_KFAC_sampling(model, test_loader, M_W_post, M_b_post, U_post, V_post
         post_pred = MultivariateNormal(mu_pred, Cov_pred)
 
         # MC-integral
-        py_ = 0
-
-        for _ in range(n_samples):
-            f_s = post_pred.rsample()
-            py_ += torch.softmax(f_s, 1)
-
-
-        py_ /= n_samples
-        py_ = py_.detach()
-
-        py.append(py_)
-
-        if verbose:
-            print("Batch: {}/{}".format(batch_idx, max_len))
-
-    return torch.cat(py, dim=0)
-
-
-@torch.no_grad()
-def predict_diagonal_sampling(model, test_loader, M_W_post, M_b_post, C_W_post, C_b_post, n_samples, verbose=False, cuda=False):
-    py = []
-    max_len = len(test_loader)
-
-    for batch_idx, (x, y) in enumerate(test_loader):
-
-        if cuda:
-            x, y = x.cuda(), y.cuda()
-
-        phi = model.phi(x)
-
-        mu, Sigma = get_Gaussian_output(phi, M_W_post, M_b_post, C_W_post, C_b_post)
-
-        post_pred = MultivariateNormal(mu, Sigma)
-
-        # MC-integral
+        t0 = time.time()
         py_ = 0
 
         for _ in range(n_samples):
@@ -310,75 +283,85 @@ def predict_diagonal_sampling(model, test_loader, M_W_post, M_b_post, C_W_post, 
         py_ = py_.detach()
 
         py.append(py_)
+        t1 = time.time()
+        if timing:
+            time_sum += (t1 - t0)
+
 
         if verbose:
             print("Batch: {}/{}".format(batch_idx, max_len))
+            
+    if timing: print("time used for sampling with {} samples: {}".format(n_samples, time_sum))
 
     return torch.cat(py, dim=0)
 
 
+
+
 @torch.no_grad()
-def predict_DIR_LPA(model, test_loader, M_W_post, M_b_post, U_post, V_post, B_post, verbose=False, cuda=False):
+def predict_LB(model, test_loader, M_W_post, M_b_post, C_W_post, C_b_post, verbose=False, cuda=False, timing=False):
     alphas = []
+    if timing:
+        time_sum = 0
 
     max_len = len(test_loader)
-
+    
     for batch_idx, (x, y) in enumerate(test_loader):
         
         if cuda:
             x, y = x.cuda(), y.cuda()
 
-        phi = model.phi(x)
+        phi = model.features(x)
+
+        mu_pred, Cov_pred = get_Gaussian_output(phi, M_W_post, M_b_post, C_W_post, C_b_post)
+        
+        t0 = time.time()
+        alpha = get_alpha_from_Normal(mu_pred, Cov_pred).detach()
+        t1 = time.time()
+        if timing:
+            time_sum += (t1-t0)
+
+        alphas.append(alpha)
+
+        if verbose:
+            print("Batch: {}/{}".format(batch_idx, max_len))
+
+    if timing:
+        print("total time used for transform: {:.05f}".format(time_sum))
+    
+    return(torch.cat(alphas, dim = 0))
+    
+
+def predict_LB_KFAC(model, test_loader, M_W_post, M_b_post, U_post, V_post, B_post, timing=False, verbose=False, cuda=False):
+    alphas = []
+    max_len = len(test_loader)
+    if timing:
+        time_sum = 0
+
+    for batch_idx, (x, y) in enumerate(test_loader):
+
+        if cuda:
+            x, y = x.cuda(), y.cuda()
+
+        phi = model.features(x)
 
         mu_pred = phi @ M_W_post + M_b_post
         Cov_pred = torch.diag(phi @ U_post @ phi.t()).reshape(-1, 1, 1) * V_post.unsqueeze(0) + B_post.unsqueeze(0)
 
-        alpha = get_alpha_from_Normal(mu_pred, Cov_pred)
-        #print(alpha)
-        #alpha = get_alpha_from_Normal(mu_pred.view(10), Cov_pred.view(10,10))
-        alpha /= alpha.sum(dim=1).view(-1,1).detach()
-        alpha = alpha.detach()
-
-        #assert(torch.sum(alpha.sum(dim=1) - torch.ones(len(x))). == pytest.approx(0, 10e-5))
-
-        alphas.append(alpha)
-
-
-        if verbose:
-            print("Batch: {}/{}".format(batch_idx, max_len))
-
-    return(torch.cat(alphas, dim = 0))
-
-
-@torch.no_grad()
-def predict_DIR_LPA_diag(model, test_loader, M_W_post, M_b_post, C_W_post, C_b_post, verbose=False):
-    #num_classes = M_b_post.size(0)
-    #alphas = torch.zeros(10000, num_classes) #i need to automate the 10000
-    alphas = []
-
-    max_len = len(test_loader)
-    for batch_idx, (x, y) in enumerate(test_loader):
-
-        phi = model.phi(x)
-
-        mu, Sigma = get_Gaussian_output(phi, M_W_post, M_b_post, C_W_post, C_b_post)
-        #print("mu, sigma size: ", mu.size(), Sigma.size())
-
-        alpha = get_alpha_from_Normal(mu, Sigma)
-        #print(alpha)
-        #alpha = get_alpha_from_Normal(mu_pred.view(10), Cov_pred.view(10,10))
-        alpha /= alpha.sum(dim=1).view(-1,1).detach()
-        alpha = alpha.detach()
-        #print(alpha)
-
-
-        #assert(torch.sum(alpha.sum(dim=1) - torch.ones(len(x))). == pytest.approx(0, 10e-5))
+        t0 = time.time()
+        alpha = get_alpha_from_Normal(mu_pred, Cov_pred).detach()
+        t1 = time.time()
+        if timing:
+            time_sum += (t1-t0)
 
         alphas.append(alpha)
 
         if verbose:
             print("Batch: {}/{}".format(batch_idx, max_len))
 
+    if timing:
+        print("total time used for transform: {:.05f}".format(time_sum))
+    
     return(torch.cat(alphas, dim = 0))
 
 
@@ -388,7 +371,7 @@ def predict_DIR_LPA_diag(model, test_loader, M_W_post, M_b_post, C_W_post, C_b_p
 
 def get_in_dist_values(py_in, targets):
     acc_in = np.mean(np.argmax(py_in, 1) == targets)
-    prob_correct = np.choose(targets, py_in.T).mean()
+    prob_correct = py_in[targets].mean()
     average_entropy = -np.sum(py_in*np.log(py_in+1e-8), axis=1).mean()
     MMC = py_in.max(1).mean()
     return(acc_in, prob_correct, average_entropy, MMC)
@@ -399,7 +382,7 @@ def get_out_dist_values(py_in, py_out, targets):
     if max(targets) > len(py_in[0]):
         targets = np.array(targets)
         targets[targets >= len(py_in[0])] = 0
-    prob_correct = np.choose(targets, py_out.T).mean()
+    prob_correct = py_out[targets].mean()
     labels = np.zeros(len(py_in)+len(py_out), dtype='int32')
     labels[:len(py_in)] = 1
     examples = np.concatenate([py_in.max(1), py_out.max(1)])

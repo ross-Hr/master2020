@@ -1,0 +1,37 @@
+%!TEX root = ../Laplace_bridge_for_NNs.tex
+
+Let $f_\vtheta: \R^N \to \R^K$ be an $L$-layer neural network parametrized by $\vtheta \in \R^P$, with a Gaussian approximate posterior $\N(\vtheta | \vmu_\vtheta, \mSigma_\vtheta)$. For any input $\vx \in \R^N$, one way to obtain an approximate Gaussian distribution on the pre-softmax output (logit vector) $f_\vtheta(\vx) =: \vz$ is as
+%
+\begin{equation} \label{eq:logit_dist}
+    q(\vz \vert \vx) \approx \N(\vz | \vmu_\vtheta^\top \vx, \mJ(\vx)^\top \mSigma_\vtheta \mJ(\vx)) \, ,
+\end{equation}
+%
+where $\mJ(\vx)$ is the $P \times K$ Jacobian matrix representing the derivative $\frac{\partial \vz}{\partial \vtheta}$ \citep{McKay1995NetworkBayesReview}. Approximating the density of the softmax of this Gaussian random variable as a Dirichlet, using the Laplace Bridge, \emph{analytically} approximates the predictive distribution in a single step, as opposed to many samples. From Eq.~\eqref{eq:alpha_transform}, this requires $\mathcal{O}(K)$ computations to construct the $K$ parameters $\alpha_k$ of the Dirichlet. In contrast, MC-integration has computational costs of $\mathcal{O}(MJ)$, where $M$ is the number of samples and $J$ is the cost of sampling from $q(\vz \vert \vx)$ (typically $J$ is of order $K^2$ after an initial $\mathcal{O}(K^3)$ operation for a matrix decomposition of the covariance). The Monte Carlo approximation has the usual sampling error of $\mathcal{O}(1/\sqrt{M})$, while the Laplace Bridge has a fixed but small error (empirical comparison in \Cref{subsec:exp3_time}).
+
+We now discuss several qualitative properties of the Laplace Bridge relevant for the uncertainty quantification use case in Deep Learning. For output classes of ``comparably high'' probability (as defined below), the variance $\mathrm{Var}(\pi_k | \valpha)$ under the Laplace Bridge increases with the variance of the underlying Gaussian. In this sense, the Laplace Bridge approximates the uncertainty information encoded in the output of a BNN.
+
+
+\begin{proposition}[proof in supplements] \label{prop:dir_var_from_gaussian}
+    Let $\mathrm{Dir}(\vpi | \valpha)$ be obtained via the Laplace Bridge from a Gaussian distribution $\N(\vz | \vmu, \mSigma)$ over $\R^K$. Then, for each $k = 1, \dots, K$, letting $\alpha_{\neq k} := \sum_{l \neq k} \alpha_l$, if
+    %
+    \begin{equation*}
+        \alpha_k > \frac{1}{4} \left(\sqrt{9\alpha_{\neq k}^2 + 10\alpha_{\neq k} + 1} - \alpha_{\neq k} - 1\right) \, ,
+    \end{equation*}
+    %
+    then the variance $\mathrm{Var}(\pi_k | \valpha)$ of the $k$-th component of $\vpi$ is increasing in $\mSigma_{kk}$.
+\end{proposition}
+
+Intuitively, this result describes the condition that needs to be fulfilled such that the variance of the resulting Dirichlet scales with the variance of the k-th component of the Gaussian. It can be seen as a proxy for a high quality approximation. An empirical evaluation testing the frequency of the condition being fulfilled can be found in the appendix.
+%I'm not happy with this text yet
+
+Further benefits of this approximation arise from the convenient analytical properties of the Dirichlet exponential family. For example, a point estimate of the posterior predictive distribution is directly given by the Dirichlet's mean,
+%
+\begin{equation}\label{eq:dirichlet_mean}
+    \E\vpi = \left( \frac{\alpha_1}{\sum_{l=1}^K \alpha_l}, \dots, \frac{\alpha_K}{\sum_{l=1}^K \alpha_l} \right)^\top \, ,
+\end{equation}
+%
+which can be seen in the second image of Figure \ref{fig:1D_Laplace_bridge}. Further, Dirichlets have Dirichlet marginals: If $p(\vpi) = \mathrm{Dir}(\vpi | \valpha)$, then
+\begin{equation} \label{eq:dirichlet_marginal}
+     p([\pi_1,\pi_2,\dots,\pi_j,\sum_{k>j}\pi_k]^\top) = \mathrm{Dir}(\alpha_1,\alpha_2,\dots,\alpha_j,\sum_{k>j}\alpha_k) \, .
+\end{equation}
+An additional benefit of the Laplace Bridge for BNNs is that it is more flexible than a MC-integral. If we let $p(\vpi)$ be the distribution over $\vpi := \mathrm{softmax}(\vz) := [e^{z_1}/\sum_{l} e^{z_l}, \dots, e^{z_K}/\sum_{l} e^{z_l}]^\top$, then the MC-integral can be seen as a ``point-estimate'' of this distribution since it approximates $\mathbb{E}\vpi$. In contrast, the Dirichlet distribution $\mathrm{Dir}(\vpi | \valpha)$ approximates the distribution $p(\vpi)$. Thus, the Laplace Bridge enables tasks that can be done only with a distribution but not a point estimate. For instance, one could ask ``what is the distribution of the first $L$ classes?'' when one is dealing with $K$-class ($L < K$) classification. Since the marginal distribution can be computed analytically \eqref{eq:dirichlet_marginal}, the Laplace Bridge provides a convenient yet cheap way of answering this question.

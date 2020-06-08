@@ -1,0 +1,257 @@
+\begin{thebibliography}{41}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\EM}{\em}
+\providecommand{\RNtxt}{\relax}
+\RNtxt{}
+
+\bibitem[Ahmed, Xing(2007)A.~Ahmed, E.~Xing]{ahmed2007tight}
+{\EM Ahmed Amr, Xing Eric}.
+\newblock On tight approximate inference of the logistic-normal topic admixture
+  model \allowbreak\newblock// Proceedings of the 11th Tenth International
+  Workshop on Artificial Intelligence and Statistics. 2007.
+
+\bibitem[Begoli et~al.(2019)E.~Begoli, T.~Bhattacharya,
+  D.~Kusnezov]{UIinMedicine}
+{\EM Begoli E., Bhattacharya T., Kusnezov D.}
+\newblock The need for uncertainty quantification in machine-assisted medical
+  decision making \allowbreak\newblock// Nat Mach Intell. 2019. 1. 20–23.
+
+\bibitem[Blundell et~al.(2015)C.~Blundell, J.~Cornebise, K.~Kavukcuoglu,
+  D.~Wierstra]{Blundell2015WeightUI}
+{\EM Blundell Charles, Cornebise Julien, Kavukcuoglu Koray, Wierstra Daan}.
+\newblock Weight Uncertainty in Neural Networks \allowbreak\newblock// ArXiv.
+  2015.
+
+\bibitem[Braun, McAuliffe(2010)M.~Braun, J.~McAuliffe]{braun2010variational}
+{\EM Braun Michael, McAuliffe Jon}.
+\newblock Variational inference for large-scale models of discrete choice
+  \allowbreak\newblock// Journal of the American Statistical Association. 2010.
+  105, 489. 324--335.
+
+\bibitem[Brosse et~al.(2020)N.~Brosse, C.~Riquelme, A.~Martin, S.~Gelly,
+  {\'E}.~Moulines]{brosse2020last}
+{\EM Brosse Nicolas, Riquelme Carlos, Martin Alice, Gelly Sylvain, Moulines
+  {\'E}ric}.
+\newblock On Last-Layer Algorithms for Classification: Decoupling
+  Representation from Uncertainty Estimation \allowbreak\newblock// arXiv
+  preprint arXiv:2001.08049. 2020.
+
+\bibitem[Bulatov(2011)Y.~Bulatov]{notMNIST2011}
+notMNIST dataset.
+\newblock  \allowbreak\newblock// . 2011.
+
+\bibitem[Clanuwat et~al.(2018)T.~Clanuwat, M.~Bober{-}Irizar, A.~Kitamoto,
+  A.~Lamb, K.~Yamamoto, D.~Ha]{KMNIST2018}
+{\EM Clanuwat Tarin, Bober{-}Irizar Mikel, Kitamoto Asanobu, Lamb Alex,
+  Yamamoto Kazuaki, Ha~David}.
+\newblock Deep Learning for Classical Japanese Literature
+  \allowbreak\newblock// CoRR. 2018. abs/1812.01718.
+
+\bibitem[Dangel et~al.(2019)F.~Dangel, F.~Kunstner,
+  P.~Hennig]{dangel2020backpack}
+{\EM Dangel Felix, Kunstner Frederik, Hennig Philipp}.
+\newblock BackPACK: Packing more into backprop \allowbreak\newblock// arXiv
+  preprint arXiv:1912.10985. 2019.
+
+\bibitem[Graves(2011)A.~Graves]{Graves2011VB}
+{\EM Graves Alex}.
+\newblock Practical Variational Inference for Neural Networks
+  \allowbreak\newblock// Advances in Neural Information Processing Systems 24.
+  2011.  2348--2356.
+
+\bibitem[Haussmann et~al.(2019)M.~Haussmann, S.~Gerwinn,
+  M.~Kandemir]{haussmann2019BEDLwithPAC}
+{\EM Haussmann Manuel, Gerwinn Sebastian, Kandemir Melih}.
+\newblock Bayesian Evidential Deep Learning with PAC Regularization. 2019.
+
+\bibitem[He et~al.(2016)K.~He, X.~Zhang, S.~Ren, J.~Sun]{2015_ResNet}
+{\EM He~Kaiming, Zhang Xiangyu, Ren Shaoqing, Sun Jian}.
+\newblock Deep residual learning for image recognition \allowbreak\newblock//
+  Proceedings of the IEEE conference on computer vision and pattern
+  recognition. 2016.  770--778.
+
+\bibitem[Hein et~al.(2019)M.~Hein, M.~Andriushchenko,
+  J.~Bitterwolf]{Hein_2019_CVPR}
+{\EM Hein Matthias, Andriushchenko Maksym, Bitterwolf Julian}.
+\newblock Why ReLU Networks Yield High-Confidence Predictions Far Away From the
+  Training Data and How to Mitigate the Problem \allowbreak\newblock// The IEEE
+  Conference on Computer Vision and Pattern Recognition (CVPR). June 2019.
+
+\bibitem[Hendrycks, Gimpel(2016)D.~Hendrycks, K.~Gimpel]{HendycksOODBaseline}
+{\EM Hendrycks Dan, Gimpel Kevin}.
+\newblock A Baseline for Detecting Misclassified and Out-of-Distribution
+  Examples in Neural Networks \allowbreak\newblock// CoRR. 2016.
+  abs/1610.02136.
+
+\bibitem[Hennig(2010)P.~Hennig]{Hennig2010}
+{\EM Hennig P.}
+\newblock Approximate Inference in Graphical Models. XI 2010.
+
+\bibitem[Hennig et~al.(2012)P.~Hennig, D.~Stern, R.~Herbrich,
+  T.~Graepel]{KernelTopicModels2012}
+{\EM Hennig P., Stern D., Herbrich R., Graepel T.}
+\newblock Kernel Topic Models \allowbreak\newblock// Fifteenth International
+  Conference on Artificial Intelligence and Statistics.  22. 2012.  511--519.
+\newblock (JMLR Proceedings).
+
+\bibitem[Krizhevsky(2009)A.~Krizhevsky]{CIFAR2009}
+Learning Multiple Layers of Features from Tiny Images.
+\newblock  \allowbreak\newblock// . 2009.
+
+\bibitem[LeCun, Cortes(2010)Y.~LeCun, C.~Cortes]{MNIST2010}
+{MNIST} handwritten digit database.
+\newblock  \allowbreak\newblock// . 2010.
+
+\bibitem[Louizos, Welling(2016)C.~Louizos, M.~Welling]{louizos_structured_2016}
+{\EM Louizos Christos, Welling Max}.
+\newblock Structured and efficient variational deep learning with matrix
+  gaussian posteriors \allowbreak\newblock// ICML. 2016.
+
+\bibitem[MacKay(1992{\natexlab{a}})D.~J.~C. MacKay]{MacKay1992}
+{\EM MacKay David J.~C.}
+\newblock A Practical Bayesian Framework for Backpropagation Networks
+  \allowbreak\newblock// Neural Comput. V 1992{\natexlab{a}}. 4, 3. 448–472.
+
+\bibitem[MacKay(1992{\natexlab{b}})D.~J. MacKay]{mackay1992evidence}
+{\EM MacKay David~JC}.
+\newblock The evidence framework applied to classification networks
+  \allowbreak\newblock// Neural computation. 1992{\natexlab{b}}. 4, 5.
+  720--736.
+
+\bibitem[MacKay(1998)D.~J. MacKay]{MacKay1998}
+{\EM MacKay David~J.C.}
+\newblock Choice of Basis for Laplace Approximation \allowbreak\newblock//
+  Machine Learning. Oct 1998. 33, 1. 77--86.
+
+\bibitem[Mackay(1995)D.~J.~C. Mackay]{McKay1995NetworkBayesReview}
+{\EM Mackay David J~C}.
+\newblock Probable networks and plausible predictions — a review of practical
+  Bayesian methods for supervised neural networks \allowbreak\newblock//
+  Network: Computation in Neural Systems. 1995. 6, 3. 469--505.
+
+\bibitem[Malinin, Gales(2018)A.~Malinin, M.~Gales]{NIPS2018PriorNetworks}
+{\EM Malinin Andrey, Gales Mark}.
+\newblock Predictive uncertainty estimation via prior networks
+  \allowbreak\newblock// Advances in Neural Information Processing Systems.
+  2018.  7047--7058.
+
+\bibitem[Malinin, Gales(2019)A.~Malinin,
+  M.~Gales]{NIPS2019PriorNetworks_improved}
+{\EM Malinin Andrey, Gales Mark}.
+\newblock Reverse kl-divergence training of prior networks: Improved
+  uncertainty and adversarial robustness \allowbreak\newblock// Advances in
+  Neural Information Processing Systems. 2019.  14520--14531.
+
+\bibitem[Martens, Grosse(2015)J.~Martens, R.~Grosse]{martens2015optimizing}
+{\EM Martens James, Grosse Roger}.
+\newblock Optimizing neural networks with {K}ronecker-factored approximate
+  curvature \allowbreak\newblock// ICML. 2015.
+
+\bibitem[Masson(2011)M.~E.~J. Masson]{BayesianAltTTest2011}
+{\EM Masson Michael E.~J.}
+\newblock A tutorial on a practical Bayesian alternative to null-hypothesis
+  significance testing \allowbreak\newblock// Behavior Research Methods. Sep
+  2011. 43, 3. 679--690.
+
+\bibitem[McAllister et~al.(2017)R.~McAllister, Y.~Gal, A.~Kendall, M.~van~der
+  Wilk, A.~Shah, R.~Cipolla, A.~Weller]{McAllister2017ConcretePF}
+{\EM McAllister Rowan, Gal Yarin, Kendall Alex, Wilk Mark van~der, Shah Amar,
+  Cipolla Roberto, Weller Adrian}.
+\newblock Concrete Problems for Autonomous Vehicle Safety: Advantages of
+  Bayesian Deep Learning \allowbreak\newblock// IJCAI. 2017.
+
+\bibitem[Michelmore et~al.(2018)R.~Michelmore, M.~Kwiatkowska,
+  Y.~Gal]{AutoDrivingBayes}
+{\EM Michelmore Rhiannon, Kwiatkowska Marta, Gal Yarin}.
+\newblock Evaluating Uncertainty Quantification in End-to-End Autonomous
+  Driving Control \allowbreak\newblock// CoRR. 2018. abs/1811.06817.
+
+\bibitem[Netzer et~al.(2011)Y.~Netzer, T.~Wang, A.~Coates, A.~Bissacco, B.~Wu,
+  A.~Y. Ng]{SVHN2011}
+{\EM Netzer Yuval, Wang Tao, Coates Adam, Bissacco Alessandro, Wu~Bo,
+  Ng~Andrew~Y.}
+\newblock Reading Digits in Natural Images with Unsupervised Feature Learning
+  \allowbreak\newblock// NIPS Workshop on Deep Learning and Unsupervised
+  Feature Learning 2011. 2011.
+
+\bibitem[Nguyen et~al.(2015)A.~Nguyen, J.~Yosinski, J.~Clune]{nguyen2015deep}
+{\EM Nguyen Anh, Yosinski Jason, Clune Jeff}.
+\newblock Deep neural networks are easily fooled: High confidence predictions
+  for unrecognizable images \allowbreak\newblock// CVPR. 2015.
+
+\bibitem[Nickerson(2000)R.~S. Nickerson]{nickerson2000null}
+{\EM Nickerson Raymond~S}.
+\newblock Null hypothesis significance testing: a review of an old and
+  continuing controversy. \allowbreak\newblock// Psychological methods. 2000.
+  5, 2. 241.
+
+\bibitem[Ritter et~al.(2018)H.~Ritter, A.~Botev, D.~Barber]{ritter2018a}
+{\EM Ritter Hippolyt, Botev Aleksandar, Barber David}.
+\newblock A Scalable Laplace Approximation for Neural Networks
+  \allowbreak\newblock// International Conference on Learning Representations.
+  2018.
+
+\bibitem[Russakovsky et~al.(2014)O.~Russakovsky, J.~Deng, H.~Su, J.~Krause,
+  S.~Satheesh, S.~Ma, Z.~Huang, A.~Karpathy, A.~Khosla, M.~S. Bernstein, A.~C.
+  Berg, F.~Li]{ImageNet2015}
+{\EM Russakovsky Olga, Deng Jia, Su~Hao, Krause Jonathan, Satheesh Sanjeev,
+  Ma~Sean, Huang Zhiheng, Karpathy Andrej, Khosla Aditya, Bernstein Michael~S.,
+  Berg Alexander~C., Li~Fei{-}Fei}.
+\newblock ImageNet Large Scale Visual Recognition Challenge
+  \allowbreak\newblock// CoRR. 2014. abs/1409.0575.
+
+\bibitem[Sensoy et~al.(2018)M.~Sensoy, L.~Kaplan,
+  M.~Kandemir]{NIPS2018EvidentialDL}
+{\EM Sensoy Murat, Kaplan Lance, Kandemir Melih}.
+\newblock Evidential deep learning to quantify classification uncertainty
+  \allowbreak\newblock// Advances in Neural Information Processing Systems.
+  2018.  3179--3189.
+
+\bibitem[Snoek et~al.(2015)J.~Snoek, O.~Rippel, K.~Swersky, R.~Kiros,
+  N.~Satish, N.~Sundaram, M.~Patwary, M.~Prabhat,
+  R.~Adams]{ScalableBayesianOptimizationDNNs2015}
+{\EM Snoek Jasper, Rippel Oren, Swersky Kevin, Kiros Ryan, Satish Nadathur,
+  Sundaram Narayanan, Patwary Mostofa, Prabhat Mr, Adams Ryan}.
+\newblock Scalable Bayesian Optimization Using Deep Neural Networks
+  \allowbreak\newblock// Proceedings of the 32nd International Conference on
+  Machine Learning.  37. Lille, France: PMLR, 07--09 Jul 2015.  2171--2180.
+\newblock (Proceedings of Machine Learning Research).
+
+\bibitem[Spiegelhalter, Lauritzen(1990)D.~J. Spiegelhalter, S.~L.
+  Lauritzen]{spiegelhalter1990sequential}
+{\EM Spiegelhalter David~J, Lauritzen Steffen~L}.
+\newblock Sequential updating of conditional probabilities on directed
+  graphical structures \allowbreak\newblock// Networks. 1990. 20, 5. 579--605.
+
+\bibitem[Sun et~al.(2017)S.~Sun, C.~Chen, L.~Carin]{sun_learning_2017}
+{\EM Sun Shengyang, Chen Changyou, Carin Lawrence}.
+\newblock Learning structured weight uncertainty in {B}ayesian neural networks
+  \allowbreak\newblock// Artificial {Intelligence} and {Statistics}. 2017.
+  1283--1292.
+
+\bibitem[Titsias(2016)M.~Titsias]{michalis2016one}
+{\EM Titsias Michalis}.
+\newblock One-vs-each approximation to softmax for scalable estimation of
+  probabilities \allowbreak\newblock// NIPS. 2016.
+
+\bibitem[Wilson et~al.(2016)A.~G. Wilson, Z.~Hu, R.~Salakhutdinov, E.~P.
+  Xing]{2016DeepKernelLearning}
+{\EM Wilson Andrew~Gordon, Hu~Zhiting, Salakhutdinov Ruslan, Xing Eric~P.}
+\newblock Deep Kernel Learning \allowbreak\newblock// Proceedings of the 19th
+  International Conference on Artificial Intelligence and Statistics.  51.
+  Cadiz, Spain: PMLR, 09--11 May 2016.  370--378.
+\newblock (Proceedings of Machine Learning Research).
+
+\bibitem[Wu et~al.(2018)A.~Wu, S.~Nowozin, E.~Meeds, R.~E. Turner, J.~M.
+  Hern{\'{a}}ndez{-}Lobato, A.~L. Gaunt]{DeterministicVI2018}
+{\EM Wu~Anqi, Nowozin Sebastian, Meeds Edward, Turner Richard~E.,
+  Hern{\'{a}}ndez{-}Lobato Jos{\'{e}}~Miguel, Gaunt Alexander~L.}
+\newblock Fixing Variational Bayes: Deterministic Variational Inference for
+  Bayesian Neural Networks \allowbreak\newblock// CoRR. 2018. abs/1810.03958.
+
+\bibitem[Xiao et~al.(2017)H.~Xiao, K.~Rasul, R.~Vollgraf]{FMNIST2017}
+{\EM Xiao Han, Rasul Kashif, Vollgraf Roland}.
+\newblock Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine
+  Learning Algorithms \allowbreak\newblock// CoRR. 2017. abs/1708.07747.
+
+\end{thebibliography}

@@ -1,0 +1,81 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Master_Thesis_Marius_Hobbhahn.aux
+The style file: rusnat.bst
+Database file #1: bibliography_LPB.bib
+Warning--empty pages in ahmed2007tight
+Warning--need volume or number in Blundell2015WeightUI
+Warning--empty pages in Blundell2015WeightUI
+Warning--need volume or number in brosse2020last
+Warning--empty pages in brosse2020last
+Warning--need volume or number in notMNIST2011
+Warning--empty pages in notMNIST2011
+ptr=1, stack=
+{\EM Bulatov Yaroslav}
+---the literal stack isn't empty for entry notMNIST2011
+while executing---line 884 of file rusnat.bst
+Warning--need volume or number in dangel2020backpack
+Warning--empty pages in dangel2020backpack
+Warning--empty pages in Hein_2019_CVPR
+Warning--empty pages in Hennig2010
+Warning--need volume or number in CIFAR2009
+Warning--empty pages in CIFAR2009
+ptr=1, stack=
+{\EM Krizhevsky Alex}
+---the literal stack isn't empty for entry CIFAR2009
+while executing---line 884 of file rusnat.bst
+Warning--need volume or number in MNIST2010
+Warning--empty pages in MNIST2010
+ptr=1, stack=
+{\EM LeCun Yann, Cortes Corinna}
+---the literal stack isn't empty for entry MNIST2010
+while executing---line 884 of file rusnat.bst
+Warning--empty pages in louizos_structured_2016
+Warning--empty pages in martens2015optimizing
+Warning--empty pages in McAllister2017ConcretePF
+Warning--empty pages in SVHN2011
+Warning--empty pages in nguyen2015deep
+Warning--empty pages in ritter2018a
+Warning--empty pages in michalis2016one
+You've used 41 entries,
+            1755 wiz_defined-function locations,
+            665 strings with 10670 characters,
+and the built_in function-call counts, 17307 in all, are:
+= -- 1400
+> -- 1090
+< -- 29
++ -- 426
+- -- 378
+* -- 1597
+:= -- 3210
+add.period$ -- 165
+call.type$ -- 41
+change.case$ -- 0
+chr.to.int$ -- 40
+cite$ -- 63
+duplicate$ -- 701
+empty$ -- 1269
+format.name$ -- 437
+if$ -- 3374
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 174
+num.names$ -- 164
+pop$ -- 266
+preamble$ -- 1
+purify$ -- 249
+quote$ -- 0
+skip$ -- 521
+stack$ -- 0
+substring$ -- 793
+swap$ -- 149
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 123
+warning$ -- 22
+while$ -- 164
+width$ -- 0
+write$ -- 449
+(There were 3 error messages)

@@ -1,0 +1,68 @@
+\section*{Appendix A: Background and Proofs}
+\label{sec:appendix_A}
+
+\subsection*{Change of Variable for pdf} 
+Let $\rvx$ be an $n$-dimensional continuous random variable with joint density function $p_\rvx$. If $\rvy = G(\rvx)$, where $G$ is a differentiable function, then $\rvy$ has density $p_\rvy$:
+\begin{equation}
+g(\mathbf{y}) = f\Big(G^{-1}(\mathbf{y})\Big)\left\vert \det\left[\frac{dG^{-1}(\mathbf{z})}{d\mathbf{z}}\Bigg \vert_{\mathbf{z}=\mathbf{y}}\right]\right \vert
+\end{equation}
+where the differential is the Jacobian of the inverse of $G$ evaluated at $\rvy$. This procedure, also known as `change of basis', is at the core of the Laplace bridge since it is used to transform the Dirichlet into the softmax basis.
+
+\subsection*{Proof for Proposition}
+\begin{proof}
+    Considering that $\alpha_k$ is a decreasing function of $\mSigma_{kk}$ by definition \eqref{eq:mapping_alpha}, it is sufficient to show that under the hypothesis, the derivative of $\frac{\partial}{\partial \alpha_k}\mathrm{Var}(\pi_k| \valpha)$ is negative.
+
+    By definition, the variance $\mathrm{Var}(\pi_k | \valpha)$ is
+    %
+    \begin{equation*}
+        \mathrm{Var}(\pi_k | \valpha) = \frac{\frac{\alpha_k}{\alpha_k + \alpha_{\neq k}} - \frac{\alpha_k^2}{(\alpha_k + \alpha_{\neq k})^2}}{\alpha_k + \alpha_{\neq k} + 1} \, .
+    \end{equation*}
+    %
+    The derivative is therefore
+    %
+    \begin{align*}
+        \frac{\partial}{\partial \alpha_k}\mathrm{Var}&(\pi_k | \valpha) = \\
+            &\frac{\alpha_{\neq k} (\alpha_{\neq k}^2 - \alpha_{\neq k} \alpha_k + \alpha_{\neq k} - \alpha_k (2 \alpha_k + 1))}{(\alpha_k + \alpha_{\neq k})^3 (\alpha_k + \alpha_{\neq k} + 1)^2} \, .
+    \end{align*}
+    %
+    Solving $\frac{\partial}{\partial \alpha_k}\mathrm{Var}(\pi_k| \valpha) < 0$ for $\alpha_k$ yields
+    %
+    \begin{equation*}
+        \alpha_k > \frac{1}{4} \left(\sqrt{9\alpha_{\neq k}^2 + 10\alpha_{\neq k} + 1} - \alpha_{\neq k} - 1\right) \, .
+    \end{equation*}
+    %
+    Therefore, under this hypothesis, $\mathrm{Var}(\pi_k| \valpha)$ is a decreasing function of $\alpha_k$.
+\end{proof}
+
+\subsection*{Experimental Evaluation of the Proposition}
+
+To test how often the condition is fulfilled we count its frequency. The fact that the condition is fulfilled implies a good approximation. The fact that the condition is not fulfilled does not automatically imply a bad approximation.
+
+\begin{table}[h!]
+	\scriptsize
+    \centering
+    \begin{tabularx}{\textwidth}{@{}XX|| X@{}}%{l  l || c}
+	     \toprule
+         & & frequency \\
+         \midrule
+         MNIST & MNIST & - \\
+         MNIST & FMNIST & -\\
+         MNIST & notMNIST & -\\
+         MNIST & KMNIST & - \\
+         \midrule
+         CIFAR-10 & CIFAR-10  & 0.998 \\
+         CIFAR-10 & CIFAR-100 & 0.925 \\
+         CIFAR-10 & SVHN      & 0.832 \\
+         \midrule
+         SVHN & SVHN       &  0.999 \\
+         SVHN & CIFAR-100  &  0.668 \\
+         SVHN & CIFAR-10   &  0.653 \\
+         \midrule
+         CIFAR-100 & CIFAR-100 &  0.662 \\
+         CIFAR-100 & CIFAR-10  &  0.214\\
+         CIFAR-100 & SVHN      &  0.166\\
+         \bottomrule
+    \end{tabularx}
+    \caption{}
+    \label{tab:conditions_table}
+\end{table}

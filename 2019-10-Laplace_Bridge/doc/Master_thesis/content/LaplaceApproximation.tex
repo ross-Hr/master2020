@@ -1,0 +1,65 @@
+\section*{Appendix B: Laplace Approximation of the Dirichlet}
+\label{sec:LADirichlet}
+
+%Notation
+% vector p: axis in the standard basis == z
+% vector a: axis in the transformed basis == \pi
+% vector q: == \varrho
+% vector b: == a
+
+
+Assume we have a Dirichlet in the standard basis with parameter vector $\valpha$ and probability density function:
+
+\begin{equation}\label{eq:dirichlet}
+    \mathrm{Dir}(\vpi | \valpha) := \frac{\Gamma \left( \sum_{k=1}^K \alpha_k \right)}{\prod_{k=1}^K \Gamma(\alpha_k)} \prod_{k=1}^K \pi_k^{\alpha_k-1} \, ,
+\end{equation}
+
+We aim to transform the basis of this distribution via the softmax transform to be in the new base $\pi$:
+
+\begin{equation}\label{eq:softmax}
+    \pi_k(\vz) := \frac{\exp(z_k)}{\sum_{l=1}^K \exp(z_l)} \, ,
+\end{equation}
+
+Usually, to transform the basis we would need the inverse transformation $H^{-1}(\vz)$ as described in the main paper. However, the softmax does not have an analytic inverse. Therefore David JC MacKay uses the following trick. Assume we know that the distribution in the transformed basis is:
+
+\begin{equation}\label{eq:dirichlet_softmax}
+    \mathrm{Dir}_{\vz}(\vpi(\vz) | \valpha) := \frac{\Gamma \left( \sum_{k=1}^K \alpha_k \right)}{\prod_{k=1}^K \Gamma(\alpha_k)} \prod_{k=1}^K \pi_k(\vz)^{\alpha_k} \, ,
+\end{equation}
+
+then we can show that the original distribution is the result of the basis transform by the softmax. 
+
+\textbf{The Dirichlet in the softmax basis: } We show that the density over $\vpi$ shown in Equation \ref{eq:dirichlet_softmax} transforms into the Dirichlet over $\vz$. First, we consider the special case where $\vpi$ is confined to a $I-1$ dimensional subspace satisfying $\sum_i \vpi_i = c$. In this subspace we can represent $\vpi$ by an $I - 1$ dimensional vector $\va$ such that 
+
+\begin{align}
+    \pi_i &= a_i \quad i,...,I-1 \\
+    \pi_I &= c - \sum_i^{I-1} b_i
+\end{align}
+
+and similarly we can represent $\vz$ by an $I-1$ dimensional vector $\vvarrho$:
+
+\begin{align}
+    x_i &= \varrho_i \quad i,...,I-1 \\
+    x_I &= 1 - \sum_i^{I-1}\varrho_i
+\end{align}
+
+then we can find the density over $\vvarrho$ (which is proportional to the required density over $\rz$)
+from the density over $\vpi$ (which is proportional to the given density over $\vpi$) by finding the
+determinant of the $(I - 1) \times (I - 1)$ Jacobian $\mJ$ given by
+
+\begin{align}
+    J_{ik} &= \frac{\partial \xi_i}{\partial a_i} = \sum_j^{I} \frac{\partial x_i}{\partial \pi_j}\frac{\partial \pi_j}{\partial a_k} \nonumber\\
+    &= \delta_{ik}\rvx_i - \rvx_i\rvx_k + \rvx_i\rvx_I =  \rvx_i(\delta_{ik} - (\rvx_k - \rvx_I))
+\end{align}
+
+We define two additional $I-1$ dimensional helper vectors $\rvx_k^+ := \rvx_k - \rvx_I$ and $n_k := 1$, and use $\det(I - xy^T) = 1 - x \cdot y$ from linear algebra. It follows that
+\begin{align}
+    \det J &= \prod_{i=1}^{I-1} \rvx_i \times \det[I-n\rvx^{+^T}] \nonumber \\
+    &= \prod_{i=1}^{I-1} \rvx_i \times (1 - n \cdot \rvx^{+})  \\
+    &= \prod_{i=1}^{I-1} \rvx_i \times \left(1 - \sum_k \rvx_k^{+} \right) = I \prod_{i=1}^I \rvx_i \nonumber
+\end{align}
+
+Therefore, using Equation \ref{eq:dirichlet_softmax} we find that
+\begin{equation}
+    P(\vz) = \frac{P(\vpi)}{|\det \mJ|} \propto \prod_{i=1}^{I} \vz_i^{\alpha_i - 1} 
+\end{equation}
+This result is true for any constant $c$ since it can be put into the normalizing constant. Thereby we make sure that the integral of the distribution is 1 and we have a valid probability distribution.

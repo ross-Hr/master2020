@@ -1,0 +1,13 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{The Laplace Bridge}{}% 2
+\BOOKMARK [0][-]{chapter.3}{The Laplace Bridge for BNNs}{}% 3
+\BOOKMARK [1][-]{section.3.1}{Posterior inference}{chapter.3}% 4
+\BOOKMARK [0][-]{chapter.4}{Related Work}{}% 5
+\BOOKMARK [0][-]{chapter.5}{Experiments}{}% 6
+\BOOKMARK [1][-]{section.5.1}{Uncertainty estimates on MNIST}{chapter.5}% 7
+\BOOKMARK [1][-]{section.5.2}{OOD detection}{chapter.5}% 8
+\BOOKMARK [1][-]{section.5.3}{Time comparison}{chapter.5}% 9
+\BOOKMARK [1][-]{section.5.4}{Toy dataset}{chapter.5}% 10
+\BOOKMARK [1][-]{section.5.5}{Uncertainty-aware output ranking on ImageNet}{chapter.5}% 11
+\BOOKMARK [0][-]{chapter.6}{Discussion}{}% 12
+\BOOKMARK [0][-]{chapter.7}{Appendix}{}% 13

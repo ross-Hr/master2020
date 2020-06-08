@@ -1,0 +1,10 @@
+\section*{Abstract}
+
+In Bayesian Deep Learning, distributions over the output of classification neural networks are approximated by first constructing a Gaussian distribution over the weights, then sampling from it to receive a distribution over the categorical output distribution. This is costly. We reconsider old work to construct a Dirichlet approximation of this output distribution, which yields an analytic map between Gaussian distributions in logit space and Dirichlet distributions (the conjugate prior to the categorical) in the output space. We argue that the resulting Dirichlet distribution has theoretical and practical advantages, in particular more efficient computation of the uncertainty estimate, scaling to large datasets and networks like ImageNet and DenseNet. We demonstrate the use of this Dirichlet approximation by using it to construct a lightweight uncertainty-aware output ranking for the ImageNet setup. 
+
+
+
+\newpage
+\section*{Zusammenfassung}
+Im Bayesian Deep Learning werden Verteilungen über die Ausgaben von neuronalen Netzen dadurch erzeugt, dass zunächst eine Gaussverteilung über die Gewichte konstruiert wird und aus dieser dann samples gezogen werden, welche, nach Anwendung der softmax Funktion, eine kategorische Verteilung darstellen. Das ist aufwendig. Wir nutzen altes, aber nützliches, Wissen um eine Dirichlet Approximation der Ausgabeverteilung zu konstruieren. Diese Brücke stellt eine analytische Abbildung zwischen einer Normalverteilung im logit-Raum und einer Dirichletverteilung (dem conjugate prior der Kategorischen Verteilung) im Ausgaberaum dar. Wir argumentieren, dass die resultierende Dirichletverteilung theoretische und praktische Vorteile hat. Die Berechnung der Unsicherheit bezüglich der Ausgabeverteilung ist beispielsweise wesentlich effizienter und die Methode lässt sich einfach auf große Datensätze und Netzwerke, wie ImageNet und DenseNet, hochskalieren. Wir demonstrieren diesen Fakt mit einem Unsicherheits-bewussten Ausgaberanking für ImageNet. 
+
