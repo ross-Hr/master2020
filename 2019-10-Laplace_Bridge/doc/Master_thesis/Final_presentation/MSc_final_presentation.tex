@@ -1,0 +1,459 @@
+% \documentclass[10pt,usepdftitle=false,aspectratio=169]{beamer}
+\documentclass[10pt,usepdftitle=false,aspectratio=169,handout]{beamer}
+\usepackage{subfig}
+\usepackage{graphicx}
+\input{preamble_talk}
+% \input{../preamble_slides}
+\usepackage{tcolorbox}
+\usepackage{changepage}
+
+
+% Assets included in preamble
+\newcommand{\assetsDIR}{../figures}
+
+% Add speaker notes to talk
+% \setbeameroption{hide notes} % Only slides
+%\setbeameroption{show only notes} % Only notes
+% \setbeameroption{show notes on second screen}
+
+\usetikzlibrary{external}
+% \tikzexternalize[mode=list and make]
+% use  make -j 4 -f talk.makefile to compile with 8 parallel threads (this is what it takes to max out the machine, depsite it having 4 cores)
+\tikzset{external/force remake=false}
+\tikzsetexternalprefix{external/}
+
+\input{math_commands}
+\newtheorem{proposition}{Proposition}
+
+
+\begin{document}
+
+\tikzexternaldisable
+\begin{frame}
+  \title{{\bf Master Presentation Marius Hobbhahn}\newline {\color{dgra}  Start: 14:30 \newline Fast Predictive Uncertainty for Classification with Bayesian Deep Networks}
+  \vspace*{-.7cm}}
+  \author{Marius Hobbhahn \vspace{-1cm}} \date{30 June 2020}
+
+  \vspace{-1.5cm}
+  \maketitle 
+  \vspace{-1.0cm}
+
+  \begin{columns} 
+    \column{0.45\textwidth}
+    \includegraphics[width=\textwidth]{\assetsDIR/UT_WBMW_Rot_RGB.pdf}\hfill
+    % \column{.45\textwidth}
+    \column{0.45\textwidth}
+    \dre{Faculty of Science\\
+    Department of Computer Science\\
+    {\small Chair for the Methods of Machine Learning}}
+    % \includegraphics[width=.8\textwidth]{\assetsDIR/MPI-IS-WortBildMarke.png}\\
+    % \includegraphics[width=.8\textwidth]{\assetsDIR/imprs-is-logo.pdf}\\
+    % \parbox[c]{.2\textwidth}{\centering\includegraphics[height=1.2cm]{\assetsDIR/ERC.png}}
+    % \parbox{.75\textwidth}{\scriptsize \color{ERC_ora}some of the presented work is supported\newline by the European Research Council.}
+  \end{columns}
+
+  \thispagestyle{empty}
+  \setcounter{framenumber}{0}
+
+  %%%%%%%%%%%%%%%% ANIMATED LOGO %%%%%%%%%%%%%%%%
+  % \tikzifexternalizing{}{%
+  % \begin{tikzpicture}[remember picture,overlay]
+  % \node[anchor=south,yshift=-5mm] at (current page.south) 
+  % {\animategraphics[width=0.9995\paperwidth,autoplay,loop]{36}{\assetsDIR/logo_TU_169_}{0}{39}};
+  %   \end{tikzpicture}%
+  % }%
+  %%%%%%%%%%%%%% END OF ANIMATED LOGO %%%%%%%%%%%
+
+  %%%%%%%%%%%%%%%% STATIC LOGO %%%%%%%%%%%%%%%%%%
+  \tikzifexternalizing{}{%
+  \begin{tikzpicture}[remember picture,overlay]
+   \node[anchor=south,yshift=-5mm] at (current page.south)
+  {\includegraphics[width=0.9995\paperwidth]{\assetsDIR/logo_TU_169_1.pdf}};
+  \end{tikzpicture}%
+  }%
+  %%%%%%%%%%%%%% END OF STATIC LOGO %%%%%%%%%%%%%
+
+\end{frame}
+\tikzexternalenable
+
+\setlength{\figurewidth}{.9\textwidth}
+\setlength{\figureheight}{.6\textheight}
+
+
+%%%%%%%%%%%%%%%%
+%   0 - Motivation and context
+%%%%%%%%%%%%%%%%
+\begin{frame}\frametitle{Motivation}
+    \framesubtitle{Why do we need fast uncertainty in neural networks?}
+    \begin{columns}
+    	\column{0.55\textwidth}
+		\begin{itemize}
+			\item safety-critical applications e.g. self-driving cars
+			\item trade-off between accuracy and speed
+			\item out-of-distribution detection
+		\end{itemize}
+    	\column{0.45\textwidth}
+    	\includegraphics[width=\textwidth]{../figures/self-driving_car.jpg}
+    \end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%
+
+\begin{frame}\frametitle{Context}
+	\framesubtitle{What's our new contribution?}
+	\begin{figure}
+		\centering
+		\includegraphics[height=0.4\textheight]{../figures/GaussNN_classic_slim.pdf}\\
+		\vspace{4pt}
+		\includegraphics[height=0.4\textheight]{../figures/GaussNN_LaplaceBridge_slim.pdf}
+	\end{figure}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Theory
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\blackslidetext{\center{\large\textbf{Theory}}}
+
+\begin{frame}\frametitle{Background}
+    \framesubtitle{Change of variable for PDFs}
+	\subsection*{Change of Variable for pdf} 
+	Let $\rvx$ be an $n$-dimensional continuous random variable with joint density function $p_\rvx$. If $\rvy = g(\rvx)$, where $g$ is a differentiable function, then $\rvy$ has density $p_\rvy$:
+	\begin{equation}
+	p_\rvy(\mathbf{y}) = p_\rvx\left(g^{-1}(\mathbf{\rvy})\right)\left\vert \det\left[\frac{dg^{-1}(\mathbf{\rvy})}{d\mathbf{\rvy}} \right]\right \vert
+	\end{equation}
+	where the differential is the Jacobian of the inverse of $g$ evaluated at $\rvy$. 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}\frametitle{A new basis for the Dirichlet}
+	\framesubtitle{The math}
+	\begin{itemize}
+		\item \begin{equation}\label{eq:dirichlet}
+		\mathrm{Dir}(\vpi | \valpha) := \frac{1}{B(\alpha)}\prod_{k=1}^K \pi_k^{\alpha_k-1}
+		\end{equation}
+		\item \begin{equation}
+		\pi_k(\vz) := \frac{\exp(z_k)}{\sum_{l=1}^K \exp(z_l)} \, ,
+		\end{equation}
+		\item \begin{equation}\label{eq:dirichlet_softmax}
+		\mathrm{Dir}_{\vz}(\vpi(\vz) | \valpha) := \frac{1}{B(\alpha)}\prod_{k=1}^K \pi_k(\vz)^{\alpha_k} \, ,
+		\end{equation}
+	\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\figwidth}{0.33\textwidth}
+\setlength{\figheight}{0.7\textheight}
+
+\begin{frame}\frametitle{A new basis for the Dirichlet}
+	\framesubtitle{In pictures}
+	\begin{figure}
+		\centering
+		\scriptsize
+		\input{../figures/BetaVizTransformation_new}
+	\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}\frametitle{The Laplace Bridge}
+	\framesubtitle{A bridge between the parameters of the Dirichlet and Gaussian}
+	\begin{align}
+	\alpha_k &= \frac{1}{\Sigma_{kk}}\left(1 - \frac{2}{K} + \frac{e^{\mu_k}}{K^2}\sum_l^K e^{-\mu_l} \right)
+	\label{eq:alpha_transform}
+	\\
+	\mu_k &= \log \alpha_k  - \frac{1}{K} \sum_{l=1}^{K} \log \alpha_l
+	\\
+	\Sigma_{kl} &= \delta_{kl} \frac{1}{\alpha_k} - \frac{1}{K} \left[\frac{1}{\alpha_k} + \frac{1}{\alpha_l} - \frac{1}{K} \sum_{u=1}^{K} \frac{1}{\alpha_u}\right]
+	\end{align}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}\frametitle{The Laplace Bridge}
+	\framesubtitle{Summary}
+	\begin{figure}
+		\includegraphics[width=0.7\textwidth]{../figures/Laplace_Bridge_sketch.pdf}
+	\end{figure}
+	\begin{itemize}
+		\item The Dirichlet in the inverse softmax basis approximates a Gaussian
+		\item Via the Laplace approximation in the transformed basis we can create a closed-form transformation $\alpha \rightarrow (\mu, \Sigma)$.
+		\item We can also construct an inverse of this transformation $(\mu, \Sigma) \rightarrow \alpha$
+		\item In total, we have a \textbf{fast} way to transform between the parameters of a Dirichlet and a Gaussian
+	\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}\frametitle{The Laplace Bridge}
+	\framesubtitle{Application to Neural Networks}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{../figures/GaussNN_LaplaceBridge.pdf}
+	\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Experiments
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\blackslidetext{\center{\large\textbf{Experiments}}}
+
+\begin{frame}\frametitle{A sanity check}
+	\framesubtitle{Samples from a 3D Gaussian + Softmax vs. Dirichlet}
+	\begin{figure}
+		\centering
+		\subfloat{\includegraphics[width=0.18\textwidth]{../figures/sMAP/sMAP_Gaussian_coolwarm_0.png}}
+		\subfloat{\includegraphics[width=0.18\textwidth]{../figures/sMAP/sMAP_Gaussian_coolwarm_1.png}}
+		\subfloat{\includegraphics[width=0.18\textwidth]{../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_0.png}}
+		\subfloat{\includegraphics[width=0.18\textwidth]{../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_1.png}}
+		\subfloat{\includegraphics[width=0.18\textwidth]{../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_2.png}}
+		
+		\vspace{10pt}
+		\setcounter{subfigure}{0}
+		
+		\subfloat{\includegraphics[width=0.18\textwidth]{../figures/sMAP/sMAP_Dirichlet_coolwarm_0.png}}
+		\subfloat{\includegraphics[width=0.18\textwidth]{../figures/sMAP/sMAP_Dirichlet_coolwarm_1.png}}
+		\subfloat{\includegraphics[width=0.18\textwidth]{../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_0.png}}
+		\subfloat{\includegraphics[width=0.18\textwidth]{../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_1.png}}
+		\subfloat{\includegraphics[width=0.18\textwidth]{../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_2.png}}
+	\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\figwidth}{0.9\textwidth}
+\setlength{\figheight}{0.7\textheight}
+
+\begin{frame}\frametitle{MNIST}
+	\framesubtitle{Train on 0,1,2; test on 0-9}
+	\begin{figure}
+		%\includegraphics[width=0.9\textwidth]{imagefile}
+		\input{../figures/MNIST3VarianceOOD}
+	\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}\frametitle{Speedtest - I}
+	\framesubtitle{KL divergence vs. number of samples}
+	\begin{figure}
+		%\includegraphics[width=0.9\textwidth]{imagefile}
+		\input{../figures/KLDivSamples}
+	\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}\frametitle{Speedtest - II}
+	\framesubtitle{KL divergence vs. wall-clock time}
+	\begin{figure}
+		%\includegraphics[width=0.9\textwidth]{imagefile}
+		\input{../figures/KLDivTime}
+	\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\figwidth}{0.95\textwidth}
+\setlength{\figheight}{0.34\textheight}
+
+\begin{frame}\frametitle{Imagenet}
+	\framesubtitle{Using the properties of the Dirichlet - The marginal of a Dirichlet is a Dirichlet}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\figwidth,height=\figheight]{../figures/imagenet_images.pdf} \\
+		\includegraphics[width=\figwidth,height=\figheight]{../figures/imagenet_marginal_betas.pdf}
+	\end{figure}
+	We can use the overlap of the distributions to create an uncertainty-aware top-k ranking.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\figwidth}{0.95\textwidth}
+\setlength{\figheight}{0.6\textheight}
+
+\begin{frame}\frametitle{Imagenet - II}
+	\framesubtitle{How good is the flexible top-k ranking?}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\figwidth,height=\figheight]{../figures/output-figure4.pdf} 
+	\end{figure}
+	\begin{itemize}
+		\item The original top-$1$ accuracy of DenseNet on ImageNet is $0.744$ and top-$5$ accuracy is $0.919$
+		\item The uncertainty-aware top-$k$ accuracy is $0.797$, where $k$ is on average $1.688$
+	\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}\frametitle{Out-of-distribution Detection}
+	\framesubtitle{Looking at the numbers}
+	\resizebox{\textwidth}{!}{% use resizebox with textwidth
+		\begin{tabular}{l  l || c c c c | c  c  c  c | c c}
+			\toprule
+			& & \multicolumn{2}{c}{\textbf{Diag Sampling}} & \multicolumn{2}{c}{\textbf{Diag LB}} &\multicolumn{2}{c}{\textbf{KFAC Sampling}} &  \multicolumn{2}{c}{\textbf{KFAC LB}} & \multicolumn{2}{c}{\textbf{Time in s} $\downarrow$} \\
+			\textbf{Train} & \textbf{Test} & \textbf{MMC} $\downarrow$ & \textbf{AUROC} $\uparrow$& \textbf{MMC} $\downarrow$ & \textbf{AUROC} $\uparrow$& \textbf{MMC} $\downarrow$& \textbf{AUROC} $\uparrow$& \textbf{MMC}$\downarrow$ & \textbf{AUROC} $\uparrow$& \textbf{Sampling} & \textbf{LB} \\
+			\midrule
+			MNIST & MNIST & 0.942 $\pm$ 0.007 & - &  \textbf{0.987} $\pm$ 0.000 & -  & - & - & - & - & 26.8 & \textbf{0.062}\\
+			MNIST & FMNIST & 0.397 $\pm$ 0.001 & 0.992 $\pm$ 0.000 & \textbf{0.363} $\pm$ 0.000 & \textbf{0.996} $\pm$ 0.000 & - & - & - & - & 26.8 & \textbf{0.062}\\
+			MNIST & notMNIST & \textbf{0.543} $\pm$ 0.000 & 0.960 $\pm$ 0.000 & 0.649 $\pm$ 0.000 & \textbf{0.961} $\pm$ 0.000 & - & - & - & - & 50.3 & \textbf{0.117}\\
+			MNIST & KMNIST & \textbf{0.513} $\pm$ 0.001 & \textbf{0.974} $\pm$ 0.000 & 0.637 $\pm$ 0.000 & 0.973 $\pm$ 0.000 & - & - & - & - & 26.9 & \textbf{0.062}\\
+			\midrule
+			CIFAR-10 & CIFAR-10  & 0.948 $\pm$ 0.000 & -     & \textbf{0.966} $\pm$ 0.000 & -  & 0.857 $\pm$ 0.003 & - & \textbf{0.966} $\pm$ 0.000 & - & 6.58 & \textbf{0.017}\\
+			CIFAR-10 & CIFAR-100 & \textbf{0.708} $\pm$ 0.000 & \textbf{0.889} $\pm$ 0.000 & 0.742 $\pm$ 0.000 & 0.866 $\pm$ 0.000 & \textbf{0.562} $\pm$ 0.003 & \textbf{0.880} $\pm$ 0.012 & 0.741 $\pm$ 0.000 & 0.866 $\pm$ 0.000 & 6.59 & \textbf{0.016}\\
+			CIFAR-10 & SVHN      & \textbf{0.643}$\pm$ 0.000 & 0.933 $\pm$ 0.000 & 0.647 $\pm$ 0.000 & \textbf{0.934} $\pm$ 0.000& \textbf{0.484} $\pm$ 0.004 & \textbf{0.939} $\pm$ 0.001 & 0.648 $\pm$ 0.003 & 0.934 $\pm$ 0.001 & 17.0 & \textbf{0.040}\\
+			\midrule
+			SVHN & SVHN       & 0.986 $\pm$ 0.000 &   -   &  \textbf{0.993} $\pm$ 0.000& -     & 0.947 $\pm$ 0.002 & -             & \textbf{0.993}   $\pm$ 0.000          & -     & 17.1 & \textbf{0.042}\\
+			SVHN & CIFAR-100  & 0.595 $\pm$ 0.000 & 0.984 $\pm$ 0.000 &  \textbf{0.526} $\pm$ 0.000 & \textbf{0.985} $\pm$ 0.000& \textbf{0.460} $\pm$ 0.004  & \textbf{0.986} $\pm$ 0.001 & 0.527 $\pm$ 0.002 & 0.985 $\pm$ 0.000 & 6.62 & \textbf{0.017}\\
+			SVHN & CIFAR-10   & 0.593 $\pm$ 0.000 & 0.984 $\pm$ 0.000&  \textbf{0.520} $\pm$ 0.000 & \textbf{0.987} $\pm$ 0.000 & \textbf{0.458} $\pm$ 0.004  & 0.986 $\pm$ 0.001 & 0.520 $\pm$ 0.002 & \textbf{0.987} $\pm$ 0.000 & 6.62 & \textbf{0.017}\\
+			\midrule
+			CIFAR-100 & CIFAR-100 & \textbf{0.762} $\pm$ 0.000& - & 0.590 $\pm$ 0.000& - &  0.404 $\pm$ 0.000& - & \textbf{0.593} $\pm$ 0.000& - & 6.76 & \textbf{0.016}\\
+			CIFAR-100 & CIFAR-10  & 0.467 $\pm$ 0.000& 0.788 $\pm$ 0.000& \textbf{0.206} $\pm$ 0.000& \textbf{0.791} $\pm$ 0.000& 0.213 $\pm$ 0.000& 0.788 $\pm$ 0.000& \textbf{0.209} $\pm$ 0.000& \textbf{0.791} $\pm$ 0.000 & 6.71 & \textbf{0.017}\\
+			CIFAR-100 & SVHN      & 0.461 $\pm$ 0.000& 0.795 $\pm$ 0.000& \textbf{0.170} $\pm$ 0.000& \textbf{0.815} $\pm$ 0.000& 0.180 $\pm$ 0.001 & \textbf{0.838} $\pm$ 0.001 & \textbf{0.173} $\pm$ 0.000 & 0.815 $\pm$ 0.000 & 17.3 & \textbf{0.041}\\
+			\bottomrule
+		\end{tabular}
+	}
+	\begin{itemize}
+		\item The Laplace Bridge seems to be have better MMC and AUROC compared to sampling from a diagonal Gaussian approximation
+		\item The Laplace Bridge is as good as a KFAC approximation
+		\item The Laplace Bridge is around 400 times faster on average
+	\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}\frametitle{Conclusions}
+	\framesubtitle{What can or can't the Laplace Bridge achieve in the context of BNNs?}
+	\begin{itemize}
+		\item The Laplace Bridge improves an important part of Bayesian Neural Network inference for classification (fast \& non-invasive)
+		\item The Dirichlet distribution has some additional interesting use cases (e.g. the top-k ranking)
+		\item It will not revolutionize BNNs; it is just one piece in the larger puzzle
+	\end{itemize}
+\end{frame}
+
+\blackslidetext{\center{\large\textbf{Questions?}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Future 
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\blackslidetext{\center{\large\textbf{Future}}}
+
+\begin{frame}\frametitle{The generalized Laplace Bridge}
+	\framesubtitle{Looking at the larger pattern}
+	\begin{itemize}
+		\item Similar ``Bridges'' can be found for all exponential families.
+		\item Develop a general theoretically grounded framework for the general Laplace Bridge
+		\item Compute KL-divergences in the different basis
+	\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}\frametitle{The generalized Laplace Bridge}
+	\framesubtitle{So what?}
+	\textbf{Implications:} (with a small error)
+	\begin{itemize}
+		\item All exponential families can be transformed to Gaussians
+		\item All exponential families can be transformed to each other
+		\item All exponential families are conjugate priors for each other
+	\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Backup
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\blackslidetext{\center{\textbf{Backup}}}
+
+\begin{frame}\frametitle{Backup}
+	\framesubtitle{Laplace approximations of a neural network}
+	\begin{equation}
+	p(c | x) = \mathcal{N}(x; f(x,w_\text{MAP}), J(x)^T H^{-1} J(x))
+	\label{eq:LANN}
+	\end{equation}
+	\begin{itemize}
+		\item $f(x; w_\text{MAP})$ is the network output induced by the MAP estimate $w_\text{MAP}$.
+		\item $J(x) = \frac{\partial f(x, w_{\text{MAP}})}{\partial w} \in \mathbb{R}^{K\times P}$ is the Jacobian of the network 
+		\item $H_{ij} = \frac{\partial^2 \mathcal{L}(f(x), y)}{\partial w_i \partial w_j} \in \mathbb{R}^{P \times P}$ its Hessian. 
+		\item $K, P$ are the number of classes and parameters of the network respectively.
+	\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}\frametitle{Backup}
+	\framesubtitle{A theoretical bound for the transformation}
+	\begin{proposition} \label{prop:dir_var_from_gaussian}
+		Let $\mathrm{Dir}(\vpi | \valpha)$ be obtained via the Laplace Bridge from a Gaussian distribution $\N(\vz | \vmu, \mSigma)$ over $\R^K$. Then, for each $k = 1, \dots, K$, letting $\alpha_{\neq k} := \sum_{l \neq k} \alpha_l$, if
+		%
+		\begin{equation*}
+		\alpha_k > \frac{1}{4} \left(\sqrt{9\alpha_{\neq k}^2 + 10\alpha_{\neq k} + 1} - \alpha_{\neq k} - 1\right) \, ,
+		\end{equation*}
+		%
+		then the variance $\mathrm{Var}(\pi_k | \valpha)$ of the $k$-th component of $\vpi$ is increasing in $\mSigma_{kk}$.
+	\end{proposition}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}\frametitle{Backup}
+	\framesubtitle{Computing the Hessian}
+	First, we consider the special case where $\vpi$ is confined to a $I-1$ dimensional subspace satisfying $\sum_i \vpi_i = c$. In this subspace we can represent $\vpi$ by an $I - 1$ dimensional vector $\va$ such that 
+	
+	\begin{align}
+	\pi_i &= a_i \quad i,...,I-1 \\
+	\pi_I &= c - \sum_i^{I-1} a_i
+	\end{align}
+	
+	and similarly we can represent $\vz$ by an $I-1$ dimensional vector $\vvarrho$:
+	
+	\begin{align}
+	z_i &= \varrho_i \quad i,...,I-1 \\
+	z_I &= 1 - \sum_i^{I-1}\varrho_i
+	\end{align}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}\frametitle{Backup}
+	\framesubtitle{Computing the Hessian - II}
+	then we can find the density over $\vvarrho$ (which is proportional to the required density over $\rz$)
+	from the density over $\vpi$ (which is proportional to the given density over $\vpi$) by finding the
+	determinant of the $(I - 1) \times (I - 1)$ Jacobian $\mJ$ given by
+	
+	\begin{align}
+	J_{ik} &= \frac{\partial \varrho_i}{\partial a_i} = \sum_j^{I} \frac{\partial z_i}{\partial \pi_j}\frac{\partial \pi_j}{\partial a_k} \\
+	&= \delta_{ik}\rvz_i - \rvz_i\rvz_k + \rvz_i\rvz_I =  \rvz_i(\delta_{ik} - (\rvz_k - \rvz_I))
+	\end{align}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}\frametitle{Backup}
+	\framesubtitle{Computing the Hessian - III}
+	We define two additional $I-1$ dimensional helper vectors $\rvz_k^+ := \rvz_k - \rvz_I$ and $n_k := 1$, and use $\det(I - xy^T) = 1 - x \cdot y$ from linear algebra. It follows that
+	\begin{align}
+	\det J &= \prod_{i=1}^{I-1} \rvz_i \times \det[I-n\rvz^{+^T}]  \\
+	&= \prod_{i=1}^{I-1} \rvz_i \times (1 - n \cdot \rvz^{+})  \\
+	&= \prod_{i=1}^{I-1} \rvz_i \times \left(1 - \sum_k \rvz_k^{+} \right) = I \prod_{i=1}^I \rvz_i 
+	\end{align}
+	
+\end{frame}
+
+
+% \begin{frame}\frametitle{Theory question}
+%     \framesubtitle{$P(B\mid A)\ge P(B)$}
+% \begin{block}{Block title}
+% a block
+% \end{block}
+% \note{Note on second screen}
+% \note[item]{Another note}
+
+% \ribbon{a ribbon across the page (for big takeaways).}
+% \end{frame}
+
+
+\end{document}
+

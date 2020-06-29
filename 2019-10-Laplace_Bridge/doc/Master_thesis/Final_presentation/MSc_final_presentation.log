@@ -1,0 +1,4133 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.6)  27 JUN 2020 14:38
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**MSc_final_presentation.tex
+(./MSc_final_presentation.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
+Document Class: beamer 2017/01/23 v3.41 A class for typesetting presentations
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count79
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+\beamer@tempbox=\box26
+\beamer@tempcount=\count80
+\c@beamerpauses=\count81
+
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
+\beamer@slideinframe=\count82
+\beamer@minimum=\count83
+)
+\beamer@commentbox=\box27
+\beamer@modecount=\count84
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+\headheight=\dimen102
+\headdp=\dimen103
+\footheight=\dimen104
+\sidebarheight=\dimen105
+\beamer@tempdim=\dimen106
+\beamer@finalheight=\dimen107
+\beamer@animht=\dimen108
+\beamer@animdp=\dimen109
+\beamer@animwd=\dimen110
+\beamer@leftmargin=\dimen111
+\beamer@rightmargin=\dimen112
+\beamer@leftsidebar=\dimen113
+\beamer@rightsidebar=\dimen114
+\beamer@boxsize=\dimen115
+\beamer@vboxoffset=\dimen116
+\beamer@descdefault=\dimen117
+\beamer@descriptionwidth=\dimen118
+\beamer@lastskip=\skip41
+\beamer@areabox=\box28
+\beamer@animcurrent=\box29
+\beamer@animshowbox=\box30
+\beamer@sectionbox=\box31
+\beamer@logobox=\box32
+\beamer@linebox=\box33
+\beamer@sectioncount=\count85
+\beamer@subsubsectionmax=\count86
+\beamer@subsectionmax=\count87
+\beamer@sectionmax=\count88
+\beamer@totalheads=\count89
+\beamer@headcounter=\count90
+\beamer@partstartpage=\count91
+\beamer@sectionstartpage=\count92
+\beamer@subsectionstartpage=\count93
+\beamer@animationtempa=\count94
+\beamer@animationtempb=\count95
+\beamer@xpos=\count96
+\beamer@ypos=\count97
+\beamer@showpartnumber=\count98
+\beamer@currentsubsection=\count99
+\beamer@coveringdepth=\count100
+\beamer@sectionadjust=\count101
+\beamer@tocsectionnumber=\count102
+
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+))
+\beamer@paperwidth=\skip42
+\beamer@paperheight=\skip43
+
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count103
+\Gm@cntv=\count104
+\c@Gm@tempcnt=\count105
+\Gm@bindingoffset=\dimen119
+\Gm@wd@mp=\dimen120
+\Gm@odd@mp=\dimen121
+\Gm@even@mp=\dimen122
+\Gm@layoutwidth=\dimen123
+\Gm@layoutheight=\dimen124
+\Gm@layouthoffset=\dimen125
+\Gm@layoutvoffset=\dimen126
+\Gm@dimlist=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/13 v1.2b Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/06/17 v1.0e Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen127
+\Gin@req@width=\dimen128
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks16
+\pgfutil@tempdima=\dimen129
+\pgfutil@tempdimb=\dimen130
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box34
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks17
+\pgfkeys@temptoks=\toks18
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks19
+))
+\pgf@x=\dimen131
+\pgf@y=\dimen132
+\pgf@xa=\dimen133
+\pgf@ya=\dimen134
+\pgf@xb=\dimen135
+\pgf@yb=\dimen136
+\pgf@xc=\dimen137
+\pgf@yc=\dimen138
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count106
+\c@pgf@countb=\count107
+\c@pgf@countc=\count108
+\c@pgf@countd=\count109
+\t@pgf@toka=\toks20
+\t@pgf@tokb=\toks21
+\t@pgf@tokc=\toks22
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count110
+\pgfsyssoftpath@bigbuffer@items=\count111
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen139
+\pgfmath@count=\count112
+\pgfmath@box=\box35
+\pgfmath@toks=\toks23
+\pgfmath@stack@operand=\toks24
+\pgfmath@stack@operation=\toks25
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count113
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen140
+\pgf@picmaxx=\dimen141
+\pgf@picminy=\dimen142
+\pgf@picmaxy=\dimen143
+\pgf@pathminx=\dimen144
+\pgf@pathmaxx=\dimen145
+\pgf@pathminy=\dimen146
+\pgf@pathmaxy=\dimen147
+\pgf@xx=\dimen148
+\pgf@xy=\dimen149
+\pgf@yx=\dimen150
+\pgf@yy=\dimen151
+\pgf@zx=\dimen152
+\pgf@zy=\dimen153
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen154
+\pgf@path@lasty=\dimen155
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+\pgf@shorten@end@additional=\dimen156
+\pgf@shorten@start@additional=\dimen157
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box36
+\pgf@hbox=\box37
+\pgf@layerbox@main=\box38
+\pgf@picture@serial@count=\count114
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen158
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+\pgf@pt@x=\dimen159
+\pgf@pt@y=\dimen160
+\pgf@pt@temp=\dimen161
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen162
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen163
+\pgf@sys@shading@range@num=\count115
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box39
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+))) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
+Package: xxcolor 2003/10/24 ver 0.1
+\XC@nummixins=\count116
+\XC@countmixins=\count117
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package hobsub Info: Skipping package `atbegshi' (already loaded).
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen164
+\Hy@linkcounter=\count118
+\Hy@pagecounter=\count119
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count120
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 4374.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4374.
+Package hyperref Info: Option `implicit' set `false' on input line 4374.
+Package hyperref Info: Hyper figures OFF on input line 4498.
+Package hyperref Info: Link nesting OFF on input line 4503.
+Package hyperref Info: Hyper index ON on input line 4506.
+Package hyperref Info: Plain pages OFF on input line 4513.
+Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
+Package hyperref Info: Bookmarks ON on input line 4751.
+\c@Hy@tempcnt=\count121
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5104.
+\XeTeXLinkMargin=\dimen165
+\Fld@menulength=\count122
+\Field@Width=\dimen166
+\Fld@charsize=\dimen167
+Package hyperref Info: Hyper figures OFF on input line 6358.
+Package hyperref Info: Link nesting OFF on input line 6363.
+Package hyperref Info: Hyper index ON on input line 6366.
+Package hyperref Info: backreferencing OFF on input line 6373.
+Package hyperref Info: Link coloring OFF on input line 6378.
+Package hyperref Info: Link coloring with OCG OFF on input line 6383.
+Package hyperref Info: PDF/A mode OFF on input line 6388.
+LaTeX Info: Redefining \ref on input line 6428.
+LaTeX Info: Redefining \pageref on input line 6432.
+\Hy@abspage=\count123
+
+
+Package hyperref Message: Stopped early.
+
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+\Fld@listcount=\count124
+\c@bookmark@seq@number=\count125
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecompatibility.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks26
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+Package: sansmathaccent 2013/03/28
+
+(/usr/share/texlive/texmf-dist/tex/latex/filehook/filehook.sty
+Package: filehook 2011/10/12 v0.5d Hooks for input files
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/translator.sty
+Package: translator 2010/06/12 ver 1.10
+
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/translator-language-
+mappings.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemisc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
+\beamer@argscount=\count126
+\beamer@lastskipcover=\skip44
+\beamer@trivlistdepth=\count127
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetitle.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasesection.sty
+\c@lecture=\count128
+\c@part=\count129
+\c@section=\count130
+\c@subsection=\count131
+\c@subsubsection=\count132
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
+\beamer@framebox=\box40
+\beamer@frametitlebox=\box41
+\beamer@zoombox=\box42
+\beamer@zoomcount=\count133
+\beamer@zoomframecount=\count134
+\beamer@frametextheight=\dimen168
+\c@subsectionslide=\count135
+\beamer@frametopskip=\skip45
+\beamer@framebottomskip=\skip46
+\beamer@frametopskipautobreak=\skip47
+\beamer@framebottomskipautobreak=\skip48
+\beamer@envbody=\toks27
+\framewidth=\dimen169
+\c@framenumber=\count136
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
+\beamer@verbatimfileout=\write4
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
+\beamer@splitbox=\box43
+\beamer@autobreakcount=\count137
+\beamer@autobreaklastheight=\dimen170
+\beamer@frametitletoks=\toks28
+\beamer@framesubtitletoks=\toks29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.sty
+\beamer@footins=\box44
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
+\beamer@frameboxcopy=\box45
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetoc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+\beamer@sbttoks=\toks30
+
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
+\bmb@box=\box46
+\bmb@colorbox=\box47
+\bmb@boxshadow=\box48
+\bmb@boxshadowball=\box49
+\bmb@boxshadowballlarge=\box50
+\bmb@temp=\dimen171
+\bmb@dima=\dimen172
+\bmb@dimb=\dimen173
+\bmb@prevheight=\dimen174
+)
+\beamer@blockheadheight=\dimen175
+))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks31
+)
+\c@figure=\count138
+\c@table=\count139
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+\beamer@section@min@dim=\dimen176
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks32
+\ex@=\dimen177
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen178
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count140
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count141
+\leftroot@=\count142
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count143
+\DOTSCASE@=\count144
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+\big@size=\dimen179
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count145
+\c@MaxMatrixCols=\count146
+\dotsspace@=\muskip11
+\c@parentequation=\count147
+\dspbrk@lvl=\count148
+\tag@help=\toks33
+\row@=\count149
+\column@=\count150
+\maxfields@=\count151
+\andhelp@=\toks34
+\eqnshift@=\dimen180
+\alignsep@=\dimen181
+\tagshift@=\dimen182
+\tagwidth@=\dimen183
+\totwidth@=\dimen184
+\lineht@=\dimen185
+\@envbody=\toks35
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks36
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks37
+\thm@bodyfont=\toks38
+\thm@headfont=\toks39
+\thm@notefont=\toks40
+\thm@headpunct=\toks41
+\thm@preskip=\skip54
+\thm@postskip=\skip55
+\thm@headsep=\skip56
+\dth@everypar=\toks42
+)
+\c@theorem=\count152
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasethemes.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/theme/beamerthemedefault
+.sty
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/font/beamerfontthemedefa
+ult.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemede
+fault.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/inner/beamerinnerthemede
+fault.sty
+\beamer@dima=\dimen186
+\beamer@dimb=\dimen187
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemede
+fault.sty))) (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen188
+\captionmargin@=\dimen189
+\captionwidth=\dimen190
+\caption@tempdima=\dimen191
+\caption@indent=\dimen192
+\caption@parindent=\dimen193
+\caption@hangindent=\dimen194
+)
+\c@ContinuedFloat=\count153
+Package caption Info: beamer document class.
+Package caption Info: hyperref package is loaded.
+Package caption Info: Hyperref support is turned off
+(caption)             because hyperref has stopped early.
+)
+\c@KVtest=\count154
+\sf@farskip=\skip57
+\sf@captopadj=\dimen195
+\sf@capskip=\skip58
+\sf@nearskip=\skip59
+\c@subfigure=\count155
+\c@subfigure@save=\count156
+\c@depth=\count157
+\c@subtable=\count158
+\c@subtable@save=\count159
+\sf@top=\skip60
+\sf@bottom=\skip61
+)
+(./preamble_talk.tex
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/font/beamerfontthemeseri
+f.sty) (/usr/share/texlive/texmf-dist/tex/latex/animate/animate.sty
+Package: animate 2017/05/18 PDF animations from files and inline graphics
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks43
+\XKV@tempa@toks=\toks44
+)
+\XKV@depth=\count160
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/ifdraft.sty
+Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count161
+\calc@Bcount=\count162
+\calc@Adimen=\dimen196
+\calc@Bdimen=\dimen197
+\calc@Askip=\skip62
+\calc@Bskip=\skip63
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count163
+\calc@Cskip=\skip64
+)
+(/usr/share/texlive/texmf-dist/tex/latex/media9/pdfbase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2017/05/29 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2017/05/29 L3 programming layer (code)
+\c_max_int=\count164
+\l_tmpa_int=\count165
+\l_tmpb_int=\count166
+\g_tmpa_int=\count167
+\g_tmpb_int=\count168
+\g__intarray_font_int=\count169
+\g__prg_map_int=\count170
+\c_log_iow=\count171
+\l_iow_line_count_int=\count172
+\l__iow_line_target_int=\count173
+\l__iow_one_indent_int=\count174
+\l__iow_indent_int=\count175
+\c_zero_dim=\dimen198
+\c_max_dim=\dimen199
+\l_tmpa_dim=\dimen256
+\l_tmpb_dim=\dimen257
+\g_tmpa_dim=\dimen258
+\g_tmpb_dim=\dimen259
+\c_zero_skip=\skip65
+\c_max_skip=\skip66
+\l_tmpa_skip=\skip67
+\l_tmpb_skip=\skip68
+\g_tmpa_skip=\skip69
+\g_tmpb_skip=\skip70
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+\l_keys_choice_int=\count176
+\c__fp_leading_shift_int=\count177
+\c__fp_middle_shift_int=\count178
+\c__fp_trailing_shift_int=\count179
+\c__fp_big_leading_shift_int=\count180
+\c__fp_big_middle_shift_int=\count181
+\c__fp_big_trailing_shift_int=\count182
+\c__fp_Bigg_leading_shift_int=\count183
+\c__fp_Bigg_middle_shift_int=\count184
+\c__fp_Bigg_trailing_shift_int=\count185
+\c__fp_rand_size_int=\count186
+\c__fp_rand_four_int=\count187
+\c__fp_rand_eight_int=\count188
+\l__sort_length_int=\count189
+\l__sort_min_int=\count190
+\l__sort_top_int=\count191
+\l__sort_max_int=\count192
+\l__sort_true_max_int=\count193
+\l__sort_block_int=\count194
+\l__sort_begin_int=\count195
+\l__sort_end_int=\count196
+\l__sort_A_int=\count197
+\l__sort_B_int=\count198
+\l__sort_C_int=\count199
+\l__tl_build_start_index_int=\count266
+\l__tl_build_index_int=\count267
+\l__tl_analysis_normal_int=\count268
+\l__tl_analysis_index_int=\count269
+\l__tl_analysis_nesting_int=\count270
+\l__tl_analysis_type_int=\count271
+\l__regex_internal_a_int=\count272
+\l__regex_internal_b_int=\count273
+\l__regex_internal_c_int=\count274
+\l__regex_balance_int=\count275
+\l__regex_group_level_int=\count276
+\l__regex_mode_int=\count277
+\c__regex_cs_in_class_mode_int=\count278
+\c__regex_cs_mode_int=\count279
+\l__regex_catcodes_int=\count280
+\l__regex_default_catcodes_int=\count281
+\c__regex_catcode_D_int=\count282
+\c__regex_catcode_S_int=\count283
+\c__regex_catcode_L_int=\count284
+\c__regex_catcode_O_int=\count285
+\c__regex_catcode_A_int=\count286
+\c__regex_all_catcodes_int=\count287
+\l__regex_show_lines_int=\count288
+\l__regex_min_state_int=\count289
+\l__regex_max_state_int=\count290
+\l__regex_left_state_int=\count291
+\l__regex_right_state_int=\count292
+\l__regex_capturing_group_int=\count293
+\l__regex_min_pos_int=\count294
+\l__regex_max_pos_int=\count295
+\l__regex_current_pos_int=\count296
+\l__regex_start_pos_int=\count297
+\l__regex_success_pos_int=\count298
+\l__regex_current_char_int=\count299
+\l__regex_current_catcode_int=\count300
+\l__regex_last_char_int=\count301
+\l__regex_case_changed_char_int=\count302
+\l__regex_current_state_int=\count303
+\l__regex_step_int=\count304
+\l__regex_min_active_int=\count305
+\l__regex_max_active_int=\count306
+\l__regex_replacement_csnames_int=\count307
+\l__regex_match_count_int=\count308
+\l__regex_min_submatch_int=\count309
+\l__regex_submatch_int=\count310
+\l__regex_zeroth_submatch_int=\count311
+\c_empty_box=\box53
+\l_tmpa_box=\box54
+\l_tmpb_box=\box55
+\g_tmpa_box=\box56
+\g_tmpb_box=\box57
+\l__box_top_dim=\dimen260
+\l__box_bottom_dim=\dimen261
+\l__box_left_dim=\dimen262
+\l__box_right_dim=\dimen263
+\l__box_top_new_dim=\dimen264
+\l__box_bottom_new_dim=\dimen265
+\l__box_left_new_dim=\dimen266
+\l__box_right_new_dim=\dimen267
+\l__box_internal_box=\box58
+\l__coffin_internal_box=\box59
+\l__coffin_internal_dim=\dimen268
+\l__coffin_offset_x_dim=\dimen269
+\l__coffin_offset_y_dim=\dimen270
+\l__coffin_x_dim=\dimen271
+\l__coffin_y_dim=\dimen272
+\l__coffin_x_prime_dim=\dimen273
+\l__coffin_y_prime_dim=\dimen274
+\c_empty_coffin=\box60
+\l__coffin_aligned_coffin=\box61
+\l__coffin_aligned_internal_coffin=\box62
+\l_tmpa_coffin=\box63
+\l_tmpb_coffin=\box64
+\l__coffin_display_coffin=\box65
+\l__coffin_display_coord_coffin=\box66
+\l__coffin_display_pole_coffin=\box67
+\l__coffin_display_offset_dim=\dimen275
+\l__coffin_display_x_dim=\dimen276
+\l__coffin_display_y_dim=\dimen277
+\l__coffin_bounding_shift_dim=\dimen278
+\l__coffin_left_corner_dim=\dimen279
+\l__coffin_right_corner_dim=\dimen280
+\l__coffin_bottom_corner_dim=\dimen281
+\l__coffin_top_corner_dim=\dimen282
+\l__coffin_scaled_total_height_dim=\dimen283
+\l__coffin_scaled_width_dim=\dimen284
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count312
+\l__driver_tmp_box=\box68
+))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2017/05/29 LaTeX2e option processing using LaTeX3 keys
+)
+Package: pdfbase 2017/03/23 v0.14 driver independent access to low-level PDF fe
+atures
+\g_pbs_page_int=\count313
+\g_pbs_oc_int=\count314
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ocgx2/ocgbase.sty
+Package: ocgbase 2017/03/30 v0.10 support package for ocgx2.sty
+)
+\@anim@box=\box69
+\@anim@measbox=\box70
+\@anim@tmpdima=\dimen285
+\@anim@tmpdimb=\dimen286
+\@anim@num=\count315
+\@anim@curframe=\count316
+\@anim@curframe@zb=\count317
+\@anim@resizeflags=\count318
+\@anim@skipfram=\count319
+\@anim@mulframecnt=\count320
+\@anim@@tmlnfile=\read2
+\@anim@tmpcnt=\count321
+\c@@anim@ltxcnt=\count322
+\@anim@curlayer=\count323
+\@anim@lineno=\count324
+\@anim@curfield=\count325
+\@anim@@resizeflags=\count326
+)
+(/usr/share/texlive/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/marvosym/marvosym.sty
+Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
+)
+(/usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen287
+\lightrulewidth=\dimen288
+\cmidrulewidth=\dimen289
+\belowrulesep=\dimen290
+\belowbottomsep=\dimen291
+\aboverulesep=\dimen292
+\abovetopsep=\dimen293
+\cmidrulesep=\dimen294
+\cmidrulekern=\dimen295
+\defaultaddspace=\dimen296
+\@cmidla=\count327
+\@cmidlb=\count328
+\@aboverulesep=\dimen297
+\@belowrulesep=\dimen298
+\@thisruleclass=\count329
+\@lastruleclass=\count330
+\@thisrulewidth=\dimen299
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen300
+\extrarowheight=\dimen301
+\NC@list=\toks45
+\extratabsurround=\skip71
+\backup@length=\skip72
+)
+\everycr=\toks46
+\minrowclearance=\skip73
+)
+(/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip74
+\L@UnitsRaiseTextstyle=\skip75
+\L@UnitsRaiseScriptstyle=\skip76
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ifsym/ifsym.sty
+Package: ifsym 2000/04/18 I.Kloeckl
+\c@ifsymcnt=\count331
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fourier/fourier-orns.sty
+Package: fourier-orns 2004/01/30 1.1 fourier-ornaments package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/colonequals.sty
+Package: colonequals 2016/05/16 v1.1 Colon equals symbols (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2017/05/24 v1.19 mathematical typesetting tools
+
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count332
+\l_MT_multwidth_dim=\dimen302
+\origjot=\skip77
+\l_MT_shortvdotswithinadjustabove_dim=\dimen303
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen304
+\l_MT_above_intertext_sep=\dimen305
+\l_MT_below_intertext_sep=\dimen306
+\l_MT_above_shortintertext_sep=\dimen307
+\l_MT_below_shortintertext_sep=\dimen308
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box71
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen309
+\pgf@nodesepend=\dimen310
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen311
+\pgffor@skip=\dimen312
+\pgffor@stack=\toks47
+\pgffor@toks=\toks48
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count333
+\pgfplotmarksize=\dimen313
+)
+\tikz@lastx=\dimen314
+\tikz@lasty=\dimen315
+\tikz@lastxsaved=\dimen316
+\tikz@lastysaved=\dimen317
+\tikzleveldistance=\dimen318
+\tikzsiblingdistance=\dimen319
+\tikz@figbox=\box72
+\tikz@figbox@bg=\box73
+\tikz@tempbox=\box74
+\tikz@tempbox@bg=\box75
+\tikztreelevel=\count334
+\tikznumberofchildren=\count335
+\tikznumberofcurrentchild=\count336
+\tikz@fig@count=\count337
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count338
+\pgfmatrixcurrentcolumn=\count339
+\pgf@matrix@numberofcolumns=\count340
+)
+\tikz@expandcount=\count341
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2017/06/05 v1.15 Data Visualization (1.15)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks49
+\t@pgfplots@tokb=\toks50
+\t@pgfplots@tokc=\toks51
+\pgfplots@tmpa=\dimen320
+\c@pgfplots@coordindex=\count342
+\c@pgfplots@scanlineindex=\count343
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+)
+Package pgfplots: loading complementary arithmetics for your pgf version...
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgflibraryfpu.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count344
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex
+\c@pgfplotsarray@tmp=\count345
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex
+\c@pgfplotstable@counta=\count346
+\t@pgfplotstable@a=\toks52
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+\c@pgfplotslibrarysurf@no=\count347
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex
+\pgfdecoratedcompleteddistance=\dimen321
+\pgfdecoratedremainingdistance=\dimen322
+\pgfdecoratedinputsegmentcompleteddistance=\dimen323
+\pgfdecoratedinputsegmentremainingdistance=\dimen324
+\pgf@decorate@distancetomove=\dimen325
+\pgf@decorate@repeatstate=\count348
+\pgfdecorationsegmentamplitude=\dimen326
+\pgfdecorationsegmentlength=\dimen327
+)
+\tikz@lib@dec@box=\box76
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count349
+\pgfplots@xmin@reg=\dimen328
+\pgfplots@xmax@reg=\dimen329
+\pgfplots@ymin@reg=\dimen330
+\pgfplots@ymax@reg=\dimen331
+\pgfplots@zmin@reg=\dimen332
+\pgfplots@zmax@reg=\dimen333
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex
+File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
+))) (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplotstable.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplotstable 2017/06/05 v1.15 Table typesetting and Pretty-printing (
+1.15)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.code
+.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.colt
+ype.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/standalone/standalone.sty
+Package: standalone 2015/07/15 v1.2 Package to include TeX sub-files with pream
+bles
+
+(/usr/share/texlive/texmf-dist/tex/latex/currfile/currfile.sty
+Package: currfile 2015/04/23 v0.7c Provides the file path elements of the curre
+nt input file
+\c@currfiledepth=\count350
+)
+(/usr/share/texlive/texmf-dist/tex/latex/gincltex/gincltex.sty
+(/usr/share/texlive/texmf-dist/tex/latex/svn-prov/svn-prov.sty
+Package: svn-prov 2010/04/24 v3.1862 Package Date/Version from SVN Keywords
+)
+Package: gincltex 2011/09/04 v0.3 Include external LaTeX files like graphics
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box77
+)
+\tc@llx=\dimen334
+\tc@lly=\dimen335
+\tc@urx=\dimen336
+\tc@ury=\dimen337
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen338
+\adjbox@Height=\dimen339
+\adjbox@Depth=\dimen340
+\adjbox@Totalheight=\dimen341
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count351
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box78
+\sift@deathcycles=\count352
+\@vwid@loff=\dimen342
+\@vwid@roff=\dimen343
+))
+\gincltex@box=\box79
+)
+(/usr/share/texlive/texmf-dist/tex/latex/filemod/filemod-expmin.sty
+Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times
+ (expandable; minimal)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip78
+\multirow@cntb=\count353
+\multirow@dima=\skip79
+\bigstrutjot=\dimen344
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
+\c@tracingmulticols=\count354
+\mult@box=\box80
+\multicol@leftmargin=\dimen345
+\c@unbalance=\count355
+\c@collectmore=\count356
+\doublecol@number=\count357
+\multicoltolerance=\count358
+\multicolpretolerance=\count359
+\full@width=\dimen346
+\page@free=\dimen347
+\premulticols=\dimen348
+\postmulticols=\dimen349
+\multicolsep=\skip80
+\multicolbaselineskip=\skip81
+\partial@page=\box81
+\last@line=\box82
+\maxbalancingoverflow=\dimen350
+\mult@rightbox=\box83
+\mult@grightbox=\box84
+\mult@gfirstbox=\box85
+\mult@firstbox=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\c@columnbadness=\count360
+\c@finalcolumnbadness=\count361
+\last@try=\dimen351
+\multicolovershoot=\dimen352
+\multicolundershoot=\dimen353
+\mult@nat@firstbox=\box104
+\colbreak@box=\box105
+\mc@col@check@num=\count362
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/multido/multido.sty
+Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/multido/multido.tex
+ v1.42, 2010/05/14 <tvz>
+\multido@count=\count363
+\multidocount=\count364
+\multido@stuff=\toks53
+)
+File: multido.tex 2010/05/14 v1.42 `multido' (tvz,hv)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2016/05/14 v2.6a Micro-typographical refinements (RS)
+\MT@toks=\toks54
+\MT@count=\count365
+LaTeX Info: Redefining \textls on input line 774.
+\MT@outer@kern=\dimen354
+LaTeX Info: Redefining \textmicrotypecontext on input line 1310.
+\MT@listname@count=\count366
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2016/05/14 v2.6a Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 916.
+LaTeX Info: Redefining \lslig on input line 916.
+\MT@outer@space=\skip82
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2016/05/14 v2.6a microtype main configuration file (RS)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks55
+\inpenc@posthook=\toks56
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+))
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucs.sty
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count367
+\uc@combtoks=\toks57
+\uc@combtoksb=\toks58
+\uc@temptokena=\toks59
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
+tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
+\arrowsize=\dimen355
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.1a (rcs-revision 1.1)
+
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2013/07/18 v3.0.1a (rcs-revision 1.5)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2013/09/11 v3.0.1a (rcs-revision 1.6)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2008/06/26 v3.0.1a (rcs-revision 1.1)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.callouts.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.callouts.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
+
+\pgfnodepartlowerbox=\box106
+\pgfnodeparttwobox=\box107
+\pgfnodepartthreebox=\box108
+\pgfnodepartfourbox=\box109
+\pgfnodeparttwentybox=\box110
+\pgfnodepartnineteenbox=\box111
+\pgfnodeparteighteenbox=\box112
+\pgfnodepartseventeenbox=\box113
+\pgfnodepartsixteenbox=\box114
+\pgfnodepartfifteenbox=\box115
+\pgfnodepartfourteenbox=\box116
+\pgfnodepartthirteenbox=\box117
+\pgfnodeparttwelvebox=\box118
+\pgfnodepartelevenbox=\box119
+\pgfnodeparttenbox=\box120
+\pgfnodepartninebox=\box121
+\pgfnodeparteightbox=\box122
+\pgfnodepartsevenbox=\box123
+\pgfnodepartsixbox=\box124
+\pgfnodepartfivebox=\box125
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.4)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2013/07/18 v3.0.1a (rcs-revision 1.3)
+\pgf@layerbox@background=\box126
+\pgf@layerboxsaved@background=\box127
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.1a (rcs-revision 1.2)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code
+.tex
+File: pgflibraryfadings.code.tex 2008/02/07 v3.0.1a (rcs-revision 1.3)
+))
+\symstmry=\mathgroup6
+LaTeX Font Info:    Redeclaring math symbol \otimes on input line 463.
+LaTeX Font Info:    Redeclaring math symbol \ominus on input line 464.
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
+lormaps.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.gr
+oupplots.code.tex
+\pgfplots@group@current@plot=\count368
+\pgfplots@group@current@row=\count369
+\pgfplots@group@current@column=\count370
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibraryfillb
+etween.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryintersections.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersection
+s.code.tex
+\pgf@intersect@solutions=\count371
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibrarydecor
+ations.softclip.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfcontrib/pgflibraryfillbe
+tween.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2008/01/15 v3.0.1a (rcs-revision 1.2)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.cod
+e.tex
+File: pgflibrarypatterns.code.tex 2008/03/03 v3.0.1a (rcs-revision 1.13)
+))
+\c@defi=\count372
+\figureheight=\skip83
+\figurewidth=\skip84
+\figheight=\skip85
+\figwidth=\skip86
+ (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count373
+\float@exts=\toks60
+\float@box=\box128
+\@float@everytoks=\toks61
+\@floatcapt=\box129
+)
+\@float@every@algorithm=\toks62
+\c@algorithm=\count374
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count375
+\c@ALG@rem=\count376
+\c@ALG@nested=\count377
+\ALG@tlm=\skip87
+\ALG@thistlm=\skip88
+\c@ALG@Lnr=\count378
+\c@ALG@blocknr=\count379
+\c@ALG@storecount=\count380
+\c@ALG@tmpcounter=\count381
+\ALG@tmplength=\skip89
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+\therules=\toks63
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2017/04/25 version 4.03 text color boxes
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks64
+\verbatim@line=\toks65
+\verbatim@in@stream=\read3
+)
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box130
+\tcb@upperbox=\box131
+\tcb@lowerbox=\box132
+\tcb@phantombox=\box133
+\c@tcbbreakpart=\count382
+\c@tcblayer=\count383
+\tcolorbox@number=\count384
+\tcb@temp=\box134
+\tcb@temp=\box135
+\tcb@temp=\box136
+\tcb@temp=\box137
+\tcb@out=\write5
+\tcb@record@out=\write6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count385
+\cp@tempcnt=\count386
+LaTeX Info: Redefining \checkoddpage on input line 59.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibrar
+yexternal.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zexternalshared.code.tex)) (./math_commands.tex
+(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup7
+\symboldletters=\mathgroup8
+\symboldsymbols=\mathgroup9
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+)
+LaTeX Font Info:    Overwriting math alphabet `\mathsfit' in version `bold'
+(Font)                  T1/cmss/m/sl --> T1/cmss/bx/n on input line 324.
+)
+\c@proposition=\count387
+
+(./MSc_final_presentation.aux)
+\openout1 = `MSc_final_presentation.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(28.45274pt, 398.3386pt, 28.45274pt)
+* v-part:(T,H,B)=(0.0pt, 256.0748pt, 0.0pt)
+* \paperwidth=455.24408pt
+* \paperheight=256.0748pt
+* \textwidth=398.3386pt
+* \textheight=227.62207pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-72.26999pt
+* \headheight=14.22636pt
+* \headsep=0.0pt
+* \topskip=10.0pt
+* \footskip=14.22636pt
+* \marginparwidth=3.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count388
+\scratchdimen=\dimen356
+\scratchbox=\box138
+\nofMPsegments=\count389
+\nofMParguments=\count390
+\everyMPshowfont=\toks66
+\MPscratchCnt=\count391
+\MPscratchDim=\dimen357
+\MPnumerator=\count392
+\makeMPintoPDFobject=\count393
+\everyMPtoPDFconversion=\toks67
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box139
+Package hyperref Info: Link coloring OFF on input line 29.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count394
+)
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+LaTeX Info: Redefining \nameref on input line 29.
+
+(./MSc_final_presentation.out) (./MSc_final_presentation.out)
+\@outlinefile=\write7
+\openout7 = `MSc_final_presentation.out'.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bas
+ic-dictionary/translator-basic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bib
+liography-dictionary/translator-bibliography-dictionary-English.dict
+Dictionary: translator-bibliography-dictionary, Language: English 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-env
+ironment-dictionary/translator-environment-dictionary-English.dict
+Dictionary: translator-environment-dictionary, Language: English 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-mon
+ths-dictionary/translator-months-dictionary-English.dict
+Dictionary: translator-months-dictionary, Language: English 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-num
+bers-dictionary/translator-numbers-dictionary-English.dict
+Dictionary: translator-numbers-dictionary, Language: English 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-the
+orem-dictionary/translator-theorem-dictionary-English.dict
+Dictionary: translator-theorem-dictionary, Language: English 
+)
+LaTeX Info: Redefining \includegraphics on input line 29.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
+
+LaTeX Info: Redefining \microtypecontext on input line 29.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `cmss' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+(./MSc_final_presentation.nav)
+<../figures/UT_WBMW_Rot_RGB.pdf, id=40, pagebox=cropbox, 554.82881pt x 142.2634
+9pt>
+File: ../figures/UT_WBMW_Rot_RGB.pdf Graphic file (type pdf)
+<use ../figures/UT_WBMW_Rot_RGB.pdf>
+Package pdftex.def Info: ../figures/UT_WBMW_Rot_RGB.pdf  used on input line 76.
+ on input line 76.
+Package pdftex.def Info: Requested size: 179.25114pt x 45.96156pt on input line
+ 76.
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 76.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 76.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+stmry on input line 76.
+
+(/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+<../figures/logo_TU_169_1.pdf, id=41, pagebox=cropbox, 454.59035pt x 60.5733pt>
+
+File: ../figures/logo_TU_169_1.pdf Graphic file (type pdf)
+<use ../figures/logo_TU_169_1.pdf>
+Package pdftex.def Info: ../figures/logo_TU_169_1.pdf  used on input line 76. o
+n input line 76.
+Package pdftex.def Info: Requested size: 455.01483pt x 60.63321pt on input line
+ 76.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../figures/UT_WBMW_Rot_RGB
+.pdf> <../figures/logo_TU_169_1.pdf>]
+LaTeX Font Info:    Try loading font information for U+futs on input line 98.
+ (/usr/share/texlive/texmf-dist/tex/latex/fourier/ufuts.fd
+File: ufuts.fd 2004/03/26 Fontinst v1.926 font definitions for U/futs.
+)
+<../figures/self-driving_car.jpg, id=75, 323.70938pt x 176.91093pt>
+File: ../figures/self-driving_car.jpg Graphic file (type jpg)
+<use ../figures/self-driving_car.jpg>
+Package pdftex.def Info: ../figures/self-driving_car.jpg  used on input line 98
+. on input line 98.
+Package pdftex.def Info: Requested size: 179.25114pt x 97.96266pt on input line
+ 98.
+
+
+LaTeX Font Warning: Font shape `T1/cmss/m/n' in size <4> not available
+(Font)              size <5> substituted on input line 98.
+
+[2
+
+ <../figures/self-driving_car.jpg>]
+<../figures/GaussNN_classic_slim.pdf, id=84, pagebox=cropbox, 568.04218pt x 185
+.73389pt>
+File: ../figures/GaussNN_classic_slim.pdf Graphic file (type pdf)
+<use ../figures/GaussNN_classic_slim.pdf>
+Package pdftex.def Info: ../figures/GaussNN_classic_slim.pdf  used on input lin
+e 110. on input line 110.
+Package pdftex.def Info: Requested size: 297.6112pt x 97.30835pt on input line 
+110.
+<../figures/GaussNN_LaplaceBridge_slim.pdf, id=85, pagebox=cropbox, 568.04218pt
+ x 185.73389pt>
+File: ../figures/GaussNN_LaplaceBridge_slim.pdf Graphic file (type pdf)
+<use ../figures/GaussNN_LaplaceBridge_slim.pdf>
+Package pdftex.def Info: ../figures/GaussNN_LaplaceBridge_slim.pdf  used on inp
+ut line 110. on input line 110.
+Package pdftex.def Info: Requested size: 297.6112pt x 97.30835pt on input line 
+110.
+
+Overfull \vbox (8.33212pt too high) detected at line 110
+ []
+
+[3
+
+ <../figures/GaussNN_classic_slim.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ../figures/GaussNN_classic_slim.pdf): P
+DF inclusion: invalid other resource which is no dict (key 'ProcSets', type <ar
+ray>); ignored.
+> <../figures/GaussNN_LaplaceBridge_slim.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ../figures/GaussNN_LaplaceBridge_slim.p
+df): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', ty
+pe <array>); ignored.
+>] [4
+
+] [5
+
+] [6
+
+] (../figures/BetaVizTransformation_new.tex
+NOTE: coordinate (1,inf) has been dropped because it is unbounded (in y). (see 
+also unbounded coords=jump). 
+NOTE: coordinate (0.001,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.002,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.003,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.004,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.005,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.006,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.007,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.008,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.009,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.01,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.011,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.012,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.013,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.014,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.015,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.016,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.017,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.018,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.019,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.02,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.021,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.022,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.023,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.024,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.025,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.026,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.027,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.028,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.029,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.03,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.031,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.032,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.033,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.034,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.035,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.036,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.037,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.038,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.039,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.04,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.041,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.042,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.043,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.044,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.045,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.046,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.047,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.048,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.049,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.05,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.051,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.052,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.053,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.054,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.055,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.056,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.057,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.058,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.059,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.06,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.061,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.062,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.063,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.064,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.065,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.066,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.067,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.068,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.069,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.07,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.071,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.072,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.073,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.074,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.075,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.076,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.077,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.078,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.079,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.08,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.081,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.082,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.083,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.084,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.085,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.086,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.087,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.088,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.089,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.09,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.091,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.092,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.093,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.094,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.095,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.096,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.097,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.098,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.099,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.1,nan) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+NOTE: coordinate (0.101,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.102,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.103,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.104,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.105,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.106,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.107,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.108,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.109,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.11,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.111,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.112,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.113,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.114,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.115,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.116,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.117,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.118,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.119,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.12,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.121,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.122,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.123,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.124,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.125,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.126,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.127,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.128,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.129,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.13,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.131,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.132,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.133,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.134,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.135,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.136,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.137,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.138,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.139,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.14,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.141,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.142,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.143,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.144,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.145,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.146,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.147,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.148,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.149,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.15,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.151,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.152,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.153,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.154,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.155,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.156,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.157,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.158,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.159,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.16,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.161,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.162,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.163,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.164,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.165,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.166,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.167,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.168,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.169,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.17,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.171,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.172,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.173,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.174,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.175,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.176,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.177,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.178,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.179,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.18,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.181,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.182,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.183,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.184,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.185,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.186,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.187,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.188,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.189,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.19,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.191,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.192,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.193,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.194,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.195,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.196,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.197,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.198,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.199,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.2,nan) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+NOTE: coordinate (0.201,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.202,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.203,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.204,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.205,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.206,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.207,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.208,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.209,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.21,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.211,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.212,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.213,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.214,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.215,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.216,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.217,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.218,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.219,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.22,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.221,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.222,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.223,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.224,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.225,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.226,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.227,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.228,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.229,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.23,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.231,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.232,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.233,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.234,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.235,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.236,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.237,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.238,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.239,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.24,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.241,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.242,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.243,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.244,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.245,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.246,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.247,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.248,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.249,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.25,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.251,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.252,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.253,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.254,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.255,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.256,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.257,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.258,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.259,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.26,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.261,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.262,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.263,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.264,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.265,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.266,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.267,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.268,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.269,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.27,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.271,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.272,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.273,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.274,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.275,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.276,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.277,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.278,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.279,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.28,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.281,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.282,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.283,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.284,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.285,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.286,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.287,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.288,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.289,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.29,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.291,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.292,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.293,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.294,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.295,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.296,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.297,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.298,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.299,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.3,nan) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+NOTE: coordinate (0.301,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.302,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.303,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.304,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.305,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.306,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.307,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.308,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.309,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.31,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.311,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.312,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.313,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.314,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.315,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.316,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.317,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.318,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.319,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.32,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.321,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.322,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.323,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.324,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.325,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.326,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.327,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.328,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.329,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.33,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.331,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.332,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.333,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.334,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.335,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.336,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.337,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.338,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.339,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.34,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.341,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.342,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.343,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.344,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.345,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.346,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.347,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.348,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.349,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.35,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.351,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.352,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.353,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.354,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.355,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.356,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.357,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.358,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.359,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.36,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.361,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.362,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.363,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.364,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.365,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.366,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.367,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.368,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.369,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.37,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.371,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.372,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.373,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.374,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.375,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.376,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.377,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.378,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.379,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.38,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.381,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.382,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.383,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.384,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.385,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.386,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.387,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.388,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.389,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.39,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.391,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.392,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.393,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.394,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.395,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.396,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.397,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.398,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.399,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.4,nan) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+NOTE: coordinate (0.401,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.402,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.403,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.404,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.405,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.406,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.407,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.408,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.409,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.41,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.411,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.412,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.413,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.414,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.415,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.416,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.417,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.418,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.419,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.42,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.421,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.422,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.423,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.424,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.425,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.426,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.427,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.428,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.429,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.43,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.431,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.432,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.433,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.434,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.435,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.436,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.437,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.438,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.439,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.44,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.441,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.442,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.443,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.444,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.445,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.446,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.447,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.448,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.449,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.45,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.451,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.452,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.453,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.454,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.455,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.456,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.457,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.458,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.459,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.46,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.461,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.462,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.463,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.464,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.465,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.466,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.467,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.468,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.469,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.47,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.471,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.472,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.473,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.474,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.475,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.476,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.477,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.478,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.479,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.48,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.481,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.482,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.483,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.484,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.485,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.486,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.487,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.488,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.489,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.49,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.491,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.492,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.493,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.494,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.495,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.496,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.497,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.498,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.499,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.5,nan) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+NOTE: coordinate (0.501,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.502,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.503,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.504,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.505,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.506,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.507,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.508,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.509,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.51,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.511,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.512,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.513,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.514,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.515,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.516,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.517,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.518,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.519,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.52,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.521,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.522,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.523,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.524,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.525,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.526,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.527,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.528,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.529,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.53,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.531,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.532,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.533,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.534,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.535,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.536,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.537,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.538,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.539,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.54,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.541,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.542,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.543,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.544,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.545,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.546,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.547,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.548,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.549,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.55,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.551,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.552,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.553,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.554,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.555,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.556,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.557,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.558,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.559,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.56,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.561,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.562,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.563,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.564,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.565,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.566,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.567,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.568,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.569,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.57,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.571,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.572,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.573,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.574,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.575,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.576,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.577,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.578,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.579,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.58,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.581,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.582,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.583,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.584,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.585,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.586,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.587,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.588,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.589,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.59,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.591,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.592,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.593,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.594,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.595,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.596,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.597,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.598,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.599,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.6,nan) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+NOTE: coordinate (0.601,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.602,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.603,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.604,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.605,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.606,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.607,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.608,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.609,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.61,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.611,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.612,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.613,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.614,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.615,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.616,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.617,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.618,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.619,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.62,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.621,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.622,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.623,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.624,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.625,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.626,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.627,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.628,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.629,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.63,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.631,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.632,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.633,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.634,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.635,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.636,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.637,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.638,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.639,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.64,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.641,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.642,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.643,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.644,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.645,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.646,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.647,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.648,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.649,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.65,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.651,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.652,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.653,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.654,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.655,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.656,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.657,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.658,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.659,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.66,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.661,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.662,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.663,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.664,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.665,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.666,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.667,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.668,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.669,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.67,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.671,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.672,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.673,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.674,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.675,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.676,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.677,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.678,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.679,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.68,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.681,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.682,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.683,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.684,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.685,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.686,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.687,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.688,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.689,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.69,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.691,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.692,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.693,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.694,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.695,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.696,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.697,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.698,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.699,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.7,nan) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+NOTE: coordinate (0.701,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.702,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.703,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.704,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.705,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.706,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.707,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.708,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.709,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.71,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.711,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.712,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.713,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.714,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.715,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.716,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.717,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.718,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.719,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.72,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.721,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.722,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.723,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.724,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.725,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.726,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.727,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.728,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.729,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.73,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.731,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.732,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.733,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.734,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.735,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.736,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.737,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.738,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.739,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.74,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.741,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.742,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.743,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.744,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.745,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.746,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.747,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.748,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.749,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.75,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.751,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.752,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.753,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.754,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.755,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.756,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.757,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.758,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.759,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.76,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.761,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.762,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.763,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.764,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.765,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.766,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.767,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.768,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.769,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.77,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.771,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.772,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.773,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.774,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.775,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.776,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.777,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.778,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.779,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.78,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.781,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.782,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.783,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.784,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.785,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.786,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.787,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.788,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.789,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.79,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.791,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.792,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.793,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.794,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.795,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.796,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.797,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.798,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.799,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.8,nan) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+NOTE: coordinate (0.801,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.802,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.803,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.804,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.805,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.806,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.807,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.808,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.809,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.81,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.811,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.812,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.813,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.814,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.815,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.816,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.817,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.818,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.819,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.82,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.821,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.822,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.823,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.824,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.825,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.826,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.827,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.828,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.829,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.83,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.831,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.832,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.833,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.834,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.835,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.836,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.837,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.838,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.839,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.84,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.841,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.842,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.843,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.844,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.845,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.846,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.847,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.848,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.849,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.85,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.851,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.852,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.853,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.854,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.855,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.856,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.857,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.858,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.859,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.86,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.861,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.862,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.863,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.864,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.865,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.866,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.867,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.868,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.869,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.87,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.871,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.872,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.873,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.874,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.875,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.876,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.877,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.878,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.879,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.88,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.881,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.882,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.883,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.884,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.885,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.886,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.887,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.888,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.889,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.89,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.891,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.892,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.893,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.894,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.895,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.896,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.897,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.898,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.899,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.9,nan) has been dropped because it is unbounded (in y). (se
+e also unbounded coords=jump). 
+NOTE: coordinate (0.901,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.902,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.903,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.904,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.905,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.906,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.907,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.908,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.909,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.91,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.911,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.912,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.913,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.914,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.915,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.916,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.917,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.918,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.919,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.92,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.921,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.922,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.923,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.924,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.925,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.926,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.927,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.928,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.929,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.93,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.931,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.932,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.933,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.934,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.935,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.936,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.937,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.938,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.939,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.94,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.941,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.942,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.943,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.944,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.945,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.946,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.947,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.948,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.949,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.95,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.951,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.952,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.953,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.954,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.955,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.956,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.957,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.958,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.959,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.96,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.961,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.962,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.963,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.964,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.965,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.966,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.967,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.968,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.969,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.97,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.971,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.972,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.973,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.974,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.975,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.976,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.977,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.978,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.979,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.98,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.981,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.982,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.983,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.984,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.985,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.986,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.987,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.988,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.989,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.99,nan) has been dropped because it is unbounded (in y). (s
+ee also unbounded coords=jump). 
+NOTE: coordinate (0.991,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.992,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.993,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.994,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.995,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.996,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.997,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.998,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (0.999,nan) has been dropped because it is unbounded (in y). (
+see also unbounded coords=jump). 
+NOTE: coordinate (1,nan) has been dropped because it is unbounded (in y). (see 
+also unbounded coords=jump). 
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 4043.
+
+ [warning /pgfplots/warning/plot without coordinates]
+NOTE: coordinate (1,inf) has been dropped because it is unbounded (in y). (see 
+also unbounded coords=jump). 
+NOTE: coordinate (1,nan) has been dropped because it is unbounded (in y). (see 
+also unbounded coords=jump). 
+NOTE: coordinate (1,nan) has been dropped because it is unbounded (in y). (see 
+also unbounded coords=jump). 
+NOTE: coordinate (1,nan) has been dropped because it is unbounded (in y). (see 
+also unbounded coords=jump). 
+) [7
+
+] [8
+
+]
+<../figures/Laplace_Bridge_sketch.pdf, id=186, pagebox=cropbox, 299.19778pt x 5
+1.0708pt>
+File: ../figures/Laplace_Bridge_sketch.pdf Graphic file (type pdf)
+<use ../figures/Laplace_Bridge_sketch.pdf>
+Package pdftex.def Info: ../figures/Laplace_Bridge_sketch.pdf  used on input li
+ne 186. on input line 186.
+Package pdftex.def Info: Requested size: 278.83578pt x 47.59663pt on input line
+ 186.
+ [9
+
+ <../figures/Laplace_Bridge_sketch.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ../figures/Laplace_Bridge_sketch.pdf): 
+PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <a
+rray>); ignored.
+>]
+<../figures/GaussNN_LaplaceBridge.pdf, id=218, pagebox=cropbox, 568.04218pt x 2
+43.79079pt>
+File: ../figures/GaussNN_LaplaceBridge.pdf Graphic file (type pdf)
+<use ../figures/GaussNN_LaplaceBridge.pdf>
+Package pdftex.def Info: ../figures/GaussNN_LaplaceBridge.pdf  used on input li
+ne 195. on input line 195.
+Package pdftex.def Info: Requested size: 398.3386pt x 170.95741pt on input line
+ 195.
+ [10
+
+ <../figures/GaussNN_LaplaceBridge.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ../figures/GaussNN_LaplaceBridge.pdf): 
+PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <a
+rray>); ignored.
+>] [11
+
+]
+<../figures/sMAP/sMAP_Gaussian_coolwarm_0.png, id=246, 391.4625pt x 249.93375pt
+>
+File: ../figures/sMAP/sMAP_Gaussian_coolwarm_0.png Graphic file (type png)
+<use ../figures/sMAP/sMAP_Gaussian_coolwarm_0.png>
+Package pdftex.def Info: ../figures/sMAP/sMAP_Gaussian_coolwarm_0.png  used on 
+input line 221. on input line 221.
+Package pdftex.def Info: Requested size: 71.69803pt x 45.77556pt on input line 
+221.
+<../figures/sMAP/sMAP_Gaussian_coolwarm_1.png, id=248, 391.4625pt x 249.93375pt
+>
+File: ../figures/sMAP/sMAP_Gaussian_coolwarm_1.png Graphic file (type png)
+<use ../figures/sMAP/sMAP_Gaussian_coolwarm_1.png>
+Package pdftex.def Info: ../figures/sMAP/sMAP_Gaussian_coolwarm_1.png  used on 
+input line 221. on input line 221.
+Package pdftex.def Info: Requested size: 71.69803pt x 45.77556pt on input line 
+221.
+<../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_0.png, id=249, 391.4625pt
+ x 249.93375pt>
+File: ../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_0.png Graphic file (
+type png)
+<use ../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_0.png>
+Package pdftex.def Info: ../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_0
+.png  used on input line 221. on input line 221.
+Package pdftex.def Info: Requested size: 71.69803pt x 45.77556pt on input line 
+221.
+<../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_1.png, id=250, 391.4625pt
+ x 249.93375pt>
+File: ../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_1.png Graphic file (
+type png)
+<use ../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_1.png>
+Package pdftex.def Info: ../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_1
+.png  used on input line 221. on input line 221.
+Package pdftex.def Info: Requested size: 71.69803pt x 45.77556pt on input line 
+221.
+<../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_2.png, id=251, 391.4625pt
+ x 249.93375pt>
+File: ../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_2.png Graphic file (
+type png)
+<use ../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_2.png>
+Package pdftex.def Info: ../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_2
+.png  used on input line 221. on input line 221.
+Package pdftex.def Info: Requested size: 71.69803pt x 45.77556pt on input line 
+221.
+<../figures/sMAP/sMAP_Dirichlet_coolwarm_0.png, id=252, 391.4625pt x 249.93375p
+t>
+File: ../figures/sMAP/sMAP_Dirichlet_coolwarm_0.png Graphic file (type png)
+<use ../figures/sMAP/sMAP_Dirichlet_coolwarm_0.png>
+Package pdftex.def Info: ../figures/sMAP/sMAP_Dirichlet_coolwarm_0.png  used on
+ input line 221. on input line 221.
+Package pdftex.def Info: Requested size: 71.69803pt x 45.77556pt on input line 
+221.
+<../figures/sMAP/sMAP_Dirichlet_coolwarm_1.png, id=253, 391.4625pt x 249.93375p
+t>
+File: ../figures/sMAP/sMAP_Dirichlet_coolwarm_1.png Graphic file (type png)
+<use ../figures/sMAP/sMAP_Dirichlet_coolwarm_1.png>
+Package pdftex.def Info: ../figures/sMAP/sMAP_Dirichlet_coolwarm_1.png  used on
+ input line 221. on input line 221.
+Package pdftex.def Info: Requested size: 71.69803pt x 45.77556pt on input line 
+221.
+<../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_0.png, id=254, 391.4625p
+t x 249.93375pt>
+File: ../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_0.png Graphic file 
+(type png)
+<use ../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_0.png>
+Package pdftex.def Info: ../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_
+0.png  used on input line 221. on input line 221.
+Package pdftex.def Info: Requested size: 71.69803pt x 45.77556pt on input line 
+221.
+<../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_1.png, id=255, 391.4625p
+t x 249.93375pt>
+File: ../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_1.png Graphic file 
+(type png)
+<use ../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_1.png>
+Package pdftex.def Info: ../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_
+1.png  used on input line 221. on input line 221.
+Package pdftex.def Info: Requested size: 71.69803pt x 45.77556pt on input line 
+221.
+<../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_2.png, id=256, 391.4625p
+t x 249.93375pt>
+File: ../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_2.png Graphic file 
+(type png)
+<use ../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_2.png>
+Package pdftex.def Info: ../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_
+2.png  used on input line 221. on input line 221.
+Package pdftex.def Info: Requested size: 71.69803pt x 45.77556pt on input line 
+221.
+ [12
+
+ <../figures/sMAP/sMAP_Gaussian_coolwarm_0.png> <../figures/sMAP/sMAP_Gaussian_
+coolwarm_1.png> <../figures/Uncertainty/Uncertainty_Gaussian_coolwarm_0.png> <.
+./figures/Uncertainty/Uncertainty_Gaussian_coolwarm_1.png> <../figures/Uncertai
+nty/Uncertainty_Gaussian_coolwarm_2.png> <../figures/sMAP/sMAP_Dirichlet_coolwa
+rm_0.png> <../figures/sMAP/sMAP_Dirichlet_coolwarm_1.png> <../figures/Uncertain
+ty/Uncertainty_Dirichlet_coolwarm_0.png> <../figures/Uncertainty/Uncertainty_Di
+richlet_coolwarm_1.png> <../figures/Uncertainty/Uncertainty_Dirichlet_coolwarm_
+2.png>] (../figures/MNIST3VarianceOOD.tex) [13
+
+]
+(../figures/KLDivSamples.tex
+Package pgfplots info on input line 31: Using 'lua backend=false' for axis: xmo
+de=log unsupported (yet).
+) [14
+
+] (../figures/KLDivTime.tex
+Package pgfplots info on input line 31: Using 'lua backend=false' for axis: xmo
+de=log unsupported (yet).
+) [15
+
+]
+<../figures/imagenet_images.pdf, id=288, pagebox=cropbox, 1734.48pt x 433.62pt>
+
+File: ../figures/imagenet_images.pdf Graphic file (type pdf)
+<use ../figures/imagenet_images.pdf>
+Package pdftex.def Info: ../figures/imagenet_images.pdf  used on input line 269
+. on input line 269.
+Package pdftex.def Info: Requested size: 378.41086pt x 82.70624pt on input line
+ 269.
+<../figures/imagenet_marginal_betas.pdf, id=289, pagebox=cropbox, 1734.48pt x 4
+33.62pt>
+File: ../figures/imagenet_marginal_betas.pdf Graphic file (type pdf)
+<use ../figures/imagenet_marginal_betas.pdf>
+Package pdftex.def Info: ../figures/imagenet_marginal_betas.pdf  used on input 
+line 269. on input line 269.
+Package pdftex.def Info: Requested size: 378.41086pt x 82.70624pt on input line
+ 269.
+ [16
+
+ <../figures/imagenet_images.pdf> <../figures/imagenet_marginal_betas.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ../figures/imagenet_marginal_betas.pdf)
+: PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<../figures/output-figure4.pdf, id=316, pagebox=cropbox, 213.50967pt x 85.37697
+pt>
+File: ../figures/output-figure4.pdf Graphic file (type pdf)
+<use ../figures/output-figure4.pdf>
+Package pdftex.def Info: ../figures/output-figure4.pdf  used on input line 286.
+ on input line 286.
+Package pdftex.def Info: Requested size: 378.4366pt x 145.96873pt on input line
+ 286.
+ [17
+
+ <../figures/output-figure4.pdf>] [18
+
+] [19
+
+] [20
+
+] [21
+
+] [22
+
+] [23
+
+] [24
+
+]
+[25
+
+] [26
+
+] [27
+
+] [28
+
+] [29
+
+]
+\tf@nav=\write8
+\openout8 = `MSc_final_presentation.nav'.
+
+\tf@toc=\write9
+\openout9 = `MSc_final_presentation.toc'.
+
+\tf@snm=\write10
+\openout10 = `MSc_final_presentation.snm'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 458.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 458.
+ (./MSc_final_presentation.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 458.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 458.
+Package rerunfilecheck Info: File `MSc_final_presentation.out' has not changed.
+
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 51404 strings out of 492995
+ 1190643 string characters out of 6135074
+ 2704693 words of memory out of 5000000
+ 53856 multiletter control sequences out of 15000+600000
+ 546369 words of font info for 74 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 79i,18n,131p,10497b,2468s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/fourier/fourier-orns.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sfsi1000.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfss0500.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0700.pfb></usr
+/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf/fonts/t
+ype1/public/cm-super/sfss0900.pfb></usr/share/texmf/fonts/type1/public/cm-super
+/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/
+share/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/ty
+pe1/public/cm-super/sfsx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/
+sfsx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1440.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on MSc_final_presentation.pdf (29 pages, 1786362 bytes).
+PDF statistics:
+ 502 PDF objects out of 1000 (max. 8388607)
+ 353 compressed objects within 4 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 18171 words of extra memory for PDF output out of 20736 (max. 10000000)
+
