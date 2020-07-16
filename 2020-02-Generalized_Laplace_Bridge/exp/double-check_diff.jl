@@ -53,14 +53,6 @@ cond2 = kron(X_, Y_) * my_box(Matrix{Int}(I, p, p) , Matrix{Int}(I, p, p)) == my
 println("my box working: ", cond2)
 
 
-#test zone
-sum = my_box(Matrix{Int}(I, p, p) , Y_) + my_box(Y_ , Matrix{Int}(I, p, p))
-test = my_box(Y_, Y_)
-println("sum: ", sum)
-println("test: ", test)
-println("same?: ", sum == test)
-
-
 #matric inverse
 f(X) = inv(X)
 df(X) = - kron(inv(X)', inv(X))
@@ -83,7 +75,7 @@ println("dX tr(X^2) ~ 2X.T: ", cond) # true
 
 # setup some random matrices
 
-n = 5
+n = 3
 p = 2
 
 A = rand(p,p)
@@ -268,23 +260,187 @@ println("Hessian of the log pdf Wishart in sqrtm basis TWO: ", cond) #True
 #both
 d2_log_f_W_sqrtm(X) = -(n-p) * my_box(inv(X), inv(X)) - 1/2 * (my_box(inv(V_spd), Matrix{Int}(I, p, p)) + my_box(Matrix{Int}(I, p, p), inv(V_spd)))
 cond = d2_log_f_W_sqrtm(X_spd) ≈ ForwardDiff.hessian(log_f_W_sqrtm, X_spd) 
-println("Hessian of the log pdf Wishart in sqrtm basis: ", cond) #false
-"""
+println("Hessian of the log pdf Wishart in sqrtm basis: ", cond) #True
+
 
 #verify the Laplace approximation of the inverse Wishart in the normal basis
 
+log_f_IW(X) = -(n+p+1)/2 * logdet(X) - tr(V_spd * inv(X))/2
+log_f_IW_one(X) = -(n+p+1)/2 * logdet(X) 
+log_f_IW_two(X) = -tr(V_spd * inv(X))/2
+
+
 ####first derivative
+
+### part one
+d_log_f_IW_one(X) =  -(n+p+1)/2 * inv(X)' 
+cond = d_log_f_IW_one(X_spd) ≈ ForwardDiff.gradient(log_f_IW_one, X_spd)
+println("first derivative of the log pdf inverse Wishart ONE: ", cond) #True
+
+### part two
+d_log_f_IW_two(X) = 1/2 * (inv(X) * V_spd * inv(X))'
+cond = d_log_f_IW_two(X_spd) ≈ ForwardDiff.gradient(log_f_IW_two, X_spd)
+println("first derivative of the log pdf inverse Wishart TWO: ", cond) #True
+
+### the entirety
+d_log_f_IW(X) =  -(n+p+1)/2 * inv(X)' + 1/2 * (inv(X) * V_spd * inv(X))'
+cond = d_log_f_IW(X_spd) ≈ ForwardDiff.gradient(log_f_IW, X_spd)
+println("first derivative of the log pdf inverse Wishart: ", cond) #True
 
 
 ####second derivative
+
+#some tests
+
+function der_XBX1(X, B)
+	d = size(B)[1]
+	K = zeros((d^2, d^2))
+	for i in 1:d
+		for j in 1:d
+			for k in 1:d
+				for l in 1:d
+					if l == j
+						K[(i-1) .* d .+ j, (k-1) .* d .+ l] = (B*X)[k, i]
+					else
+						K[(i-1) .* d .+ j, (k-1) .* d .+ l] = 0
+					end
+				end
+			end
+		end
+	end
+	return(K)
+end
+
+function der_XBX2(X, B)
+	d = size(B)[1]
+	K = zeros((d^2, d^2))
+	for i in 1:d
+		for j in 1:d
+			for k in 1:d
+				for l in 1:d
+					if k == i
+						K[(i-1) .* d .+ j, (k-1) .* d .+ l] = (X*B)[j, l]
+					else
+						K[(i-1) .* d .+ j, (k-1) .* d .+ l] = 0
+					end
+				end
+			end
+		end
+	end
+	return(K)
+end
+
+f_test(X) = X*V_spd*X
+#d_f(X) = my_kron(V_spd*X, Matrix{Int}(I, p, p)) + my_kron(Matrix{Int}(I, p, p), X*V_spd)
+d_f(X) = der_XBX1(X_spd, V_spd) + der_XBX2(X_spd, V_spd)
+cond = d_f(X_spd) ≈ ForwardDiff.jacobian(f_test, X_spd)
+println("test XBX: ", cond) #True
+
+println("same? XBX1: ", der_XBX1(X_spd, V_spd) == my_kron(X_spd*V_spd, Matrix{Int}(I, p, p))) #true
+println("same? XBX2: ", der_XBX2(X_spd, V_spd) == my_kron(Matrix{Int}(I, p, p), X_spd*V_spd)) #true
+
+f_test2(X) = (X*V_spd*X)'
+d_f2(X) = (my_box(X*V_spd, Matrix{Int}(I, p, p)) + my_box(Matrix{Int}(I, p, p), X*V_spd))
+cond = d_f2(X_spd) ≈ ForwardDiff.jacobian(f_test2, X_spd)
+println("test (XBX).T: ", cond) #True
+
+#part one
+d2_log_f_IW_one(X) = (n+p+1)/2 * my_box(inv(X), inv(X))
+cond = d2_log_f_IW_one(X_spd) ≈ ForwardDiff.jacobian(d_log_f_IW_one, X_spd)
+println("Hessian of the log pdf inverse Wishart TWO: ", cond) #True
+
+#part two 
+d2_log_f_IW_two(X) = -1/2 * (my_box(inv(X)*V_spd, Matrix{Int}(I, p, p)) + my_box(Matrix{Int}(I, p, p), inv(X)*V_spd)) * my_kron(inv(X), inv(X))
+cond = d2_log_f_IW_two(X_spd) ≈ ForwardDiff.jacobian(d_log_f_IW_two, X_spd)
+println("Hessian of the log pdf inverse Wishart TWO: ", cond) #True
+
+#the actual Hessian
+d2_log_f_IW(X) = (n+p+1)/2 * my_box(inv(X), inv(X)) - 1/2 * (my_box(inv(X)*V_spd, Matrix{Int}(I, p, p)) + my_box(Matrix{Int}(I, p, p), inv(X)*V_spd)) * my_kron(inv(X), inv(X))
+cond = d2_log_f_IW(X_spd) ≈ ForwardDiff.hessian(log_f_IW, X_spd)
+println("Hessian of the log pdf inverse Wishart: ", cond) #True
 
 
 #verify the LA of the inverse Wishart in the sqrtm basis
 
+log_f_IW_sqrtm(X) = -(n+p) * logdet(X) - tr(V_spd * inv(X)^2)/2
+log_f_IW_sqrtm_one(X) = -(n+p) * logdet(X)
+log_f_IW_sqrtm_two(X) = -tr(V_spd * inv(X)^2)/2
+
 ####first derivative
+
+## part one
+d_f_IW_sqrtm_one(X) = -(n+p) * inv(X)'
+cond = d_f_IW_sqrtm_one(X_spd) ≈ ForwardDiff.gradient(log_f_IW_sqrtm_one, X_spd)
+println("Jacobian of the Inverse Hessian in the sqrtm basis ONE: ", cond) #True
+
+## tests
+#f1(X) = tr(V_spd * X^2)
+#d_f1(X) = (X*V_spd + V_spd*X)'
+#cond = d_f1(X_spd) ≈ ForwardDiff.gradient(f1, X_spd)
+#println("Test1: ", cond) 
+
+#println("same square: ", X_spd * X_spd == X_spd^2)
+#println("same traces? 1 ", tr(V_spd * inv(X_spd)^2) == tr(inv(X_spd)^2 * V_spd))
+#println("same traces? 2 ", tr(V_spd * inv(X_spd)^2) ≈ tr(inv(X_spd) * V_spd * inv(X_spd)))
+#println("same traces? 3 ", tr(V_spd * inv(X_spd)^2) ≈ tr(inv((X_spd * inv(V_spd) * X_spd))))
+#println("same traces? 4 ", tr(V_spd * inv(X_spd)^2) ≈ tr(inv(X_spd^2 * inv(V_spd))))
+
+
+#f2(X) = tr(inv(X' * V_spd *X))
+#f2(X) = tr(inv(X) * V_spd * inv(X))
+#d_f2(X) = -2 * (V_spd * X * inv(X' * V_spd * X)) * inv(X' * V_spd * X)
+#d_f2(X) = -(inv(X) * V_spd * inv(X) * inv(X))' - (inv(X) * inv(X) * V_spd * inv(X))' 
+#cond = d_f2(X_spd) ≈ ForwardDiff.gradient(f2, X_spd)
+#println("Test2: ", cond) 
+
+## part two
+d_f_IW_sqrtm_two(X) = 1/2 * ((inv(X) * V_spd * inv(X) * inv(X))' + (inv(X) * inv(X) * V_spd * inv(X))')
+cond = d_f_IW_sqrtm_two(X_spd) ≈ ForwardDiff.gradient(log_f_IW_sqrtm_two, X_spd)
+println("Jacobian of the Inverse Hessian in the sqrtm basis TWO: ", cond) #True
+
+d_f_IW_sqrtm(X) = -(n+p) * inv(X)' + 1/2 * ((inv(X) * V_spd * inv(X) * inv(X))' + (inv(X) * inv(X) * V_spd * inv(X))')
+cond = d_f_IW_sqrtm(X_spd) ≈ ForwardDiff.gradient(log_f_IW_sqrtm, X_spd)
+println("Jacobian of the Inverse Hessian in the sqrtm basis: ", cond)
 
 
 ####second derivative
+
+
+### tests
+f1(X) = X * V_spd * X * X
+
+function d_f1(X)
+	d = size(B)[1]
+	K = zeros((d^2, d^2))
+	for i in 1:d
+		for j in 1:d
+			for k in 1:d
+				for l in 1:d
+					one = (V_spd * X^2)[j,l]
+					two = (X * V_spd)[k,i] * (X)[j,l]
+					three = (X * V_spd * X)[k,i]
+					K[(i-1) .* d .+ j, (k-1) .* d .+ l] = one + two + three
+				end
+			end
+		end
+	end
+	return(K)
+end
+
+cond = d_f1(X_spd) ≈ ForwardDiff.jacobian(f1, X_spd)
+println("test1: ", cond)
+"""
+
+############## verification of the derivatives in the logm basis
+
+log_f_W_logm(X) = (n-p)/2 * logdet(exp(X)) - 1/2 * tr(inv(V_spd) * expm(X))
+
+###
+
+d_log_f_W_logm(X) = (n-p)/2 * Matrix{Int}(I, p, p) - 1/2 * inv(V_spd) * exp(X)'
+cond = d_log_f_W_logm(X_spd) ≈ ForwardDiff.gradient(log_f_W_logm, X_spd)
+println("Gradient for the Wishart in the logm basis: ", cond) #False
+
 
 
 

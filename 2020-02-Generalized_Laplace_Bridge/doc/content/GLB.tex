@@ -1,10 +1,12 @@
-\section{Generalized Laplace Bridge}
+\section{Laplace Propagation}
 \label{sec:GLB}
 
-Define the GLB clearly
 
-\begin{itemize}
-	\item h(x) must be 1
-	\item the distribution must have 2 sufficient statistics
-	\item the sufficient statistics must include an $x$ or $x^2$ when the original variable is used. 
-\end{itemize}
+If we have a distribution $p(x)$ in the `standard base' $x$, i.e. as we usually use it, we can transform this distribution to another basis $y$ via the change of variable for PDF formula. The resulting distribution is $p_y(x(y))$ where $x(y)$ is the inverse transform of denoted as $g^{-1}(x)$. 
+
+We define Laplace Propagation as the procedure of finding a different base $y$ for $p(x)$ in which $p_y(x(y))$ is as close to a Gaussian as possible. In this base a Laplace approximation is performed to yield a Gaussian $q(y)$. The mean $\mu$ for $q$ is computed by setting the first derivative $\frac{\partial p_y(x(y))}{\partial y}$ to 0 and solving for $y$. The covariance matrix $\Sigma$ is computed by inverting the Hessian $H = \frac{\partial^2 p(x(y))}{\partial^2 y}$, multiplying it with $-1$ and inserting the mode $\mu$. Lastly, a `Bridge' is created that transforms the parameters $\theta$ of $p_(x(y))$ to the parameters $\mu, \Sigma$ of $q(x(y))$.
+
+TODO: the part above should stand out in some way. Maybe we should put a fancy box around it 
+
+While there are no restrictions for the choice of the basis transform (e.g. could be done by a Neural Network), in this paper we choose transforms that fulfill the following desiderata as much as possible: a) the new space of the distribution is $\mathbb{R}$ (or the $d-$dimensional equivalent) since this implies that the resultung Gaussian from the Laplace approximation is well-defined. b) The sufficient statistics in the new basis are either $x$ in the first entry or $x^2$ in the second entry since the sufficient statistics of the Gaussian are $(x, x^2)$ and it is therefore likely closer to the Normal distribution. c) The base measure $h(x)$ is 1 since this implies that there are no resctrictions on the parameters $\theta$ of the distribution in the new base. In the standard basis the Beta distribution's parameters $\alpha,\beta$ have to be larger than 1 to yield a uni-modal distribution. Multi-modal distributions yield bad or no valid Laplace approximations and we would therefore prefer $h(x) = 1$. d) Lastly, all `Bridges' should be available in closed-form because it often implies fast computation. 
+

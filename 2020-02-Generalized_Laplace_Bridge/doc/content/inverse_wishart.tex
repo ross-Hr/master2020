@@ -54,6 +54,63 @@ we can get the covariance matrix by inverting the Hessian and multiplying with -
 
 where $I_{n}$ and $I_n^2$ are the identity matrix of size $n$ and $n^2$ respectively. We can also ignore the transpose since we are dealing with symmetric positive definite matrices when it comes to the inverse Wishart distribution.
 
+\subsection{Logm-Transformed inverse Wishart distribution}
+
+we transform the distribution with $g(X) = \text{logm}(X)$, i.e. $g^{-1}(X) = \text{expm}(X)$, where $\operatorname{expm}(X)$ is the matrix exponential. The new pdf becomes 
+
+\begin{align}
+	W_{logm}({\mathbf X}; {\mathbf \Psi}, \nu) &= \frac{\left|{\mathbf\Psi}\right|^{\nu/2}}{2^{\nu p/2}\Gamma_p(\frac \nu 2)} \left|\operatorname{expm}\mathbf{X}\right|^{-(\nu+p+1)/2} e^{-\frac{1}{2}\operatorname{tr}(\mathbf\Psi(\operatorname{expm}\mathbf{X})^{-1})} \cdot |\operatorname{expm}(\mathbf{X})|\\
+	&=  \frac{\left|{\mathbf\Psi}\right|^{\nu/2}}{2^{\nu p/2}\Gamma_p(\frac \nu 2)} \left|\operatorname{expm}\mathbf{X}\right|^{-(\nu+p-1)/2} e^{-\frac{1}{2}\operatorname{tr}(\mathbf\Psi(\operatorname{expm}\mathbf{X})^{-1})} \\
+	&= \exp\left[C - (\nu+p-1)/2\log  \left|\operatorname{expm}\mathbf{X}\right| - -\frac{1}{2}\operatorname{tr}(\mathbf\Psi\operatorname{expm}(\mathbf{-X}))\right]
+\end{align}
+
+with expfam stats blablabla. 
+
+\subsubsection{Laplace Approximation of the logm-transformed inverse Wishart distribution}
+
+For the first derivative we use the same ideas as for the Wishart (TODO:link). 
+
+\begin{align}
+	\frac{\partial \log W_{logm}}{\partial X} &= \frac{\partial}{\partial X}- (\nu+p-1)/2\log  \left|\operatorname{expm}\mathbf{X}\right| - -\frac{1}{2}\operatorname{tr}(\mathbf\Psi\operatorname{expm}(\mathbf{-X}))\\
+	&= -\frac{(\nu+p-1)}{2} + \frac{1}{2}\mathbf\Psi\operatorname{expm}(\mathbf{-X})
+\end{align}
+
+which yields the mode by setting it to zero and solving for $X$.
+
+\begin{align}
+	0 &= -\frac{(\nu+p-1)}{2} + \frac{1}{2}\mathbf\Psi\operatorname{expm}(\mathbf{-X}) \\
+	\Leftrightarrow (\nu+p-1) I_p &=  \mathbf\Psi(\operatorname{expm}(\mathbf{X}))^{-1} \\
+	\Leftrightarrow X &= \operatorname{logm}\left(\frac{\mathbf\Psi}{n+p-1}\right)
+\end{align}
+
+For the second derivative we also use the same ideas as for the Wishart (TODO: link + rewrite). 
+
+\begin{align}
+	\frac{\partial^2 \log W_{sqrt}}{\partial^2 X} &= \frac{\partial }{\partial X} \left[-\frac{(\nu+p-1)}{2} + \frac{1}{2}\mathbf\Psi\operatorname{expm}(\mathbf{-X}) \right] \\
+	&= -\frac{1}{2}\left[\mathbf\Psi\operatorname{expm}(\mathbf{X})^{-1} \otimes I_p\right] \\
+	&\overset{\text{mode}}{\Rightarrow} -\frac{1}{2}\left[\mathbf\Psi\frac{\mathbf\Psi^{-1}}{(\nu+p-1)} \otimes I_p\right] \\
+	&= -\frac{1}{2(\nu+p-1)} I_{p\times p} \\
+	\Leftrightarrow \Sigma &= 2(\nu+p-1) I_{p\times p}
+\end{align}
+
+\subsubsection{The Bridge for the logm-transformed inverse Wishart distribution}
+
+We get $\mu$ and $\Psi$ from the Laplace approximation and determine $V$ by inverting $\mu$
+
+\begin{align}
+	\mu = \operatorname{logm}\left(\frac{\mathbf\Psi}{n+p-1}\right) \Leftrightarrow \operatorname{expm}(\mu) = \frac{\mathbf\Psi}{n+p-1} \Leftrightarrow \mathbf\Psi = \operatorname{expm}(\mu)(n+p-1)
+\end{align}
+
+In summary: 
+
+\begin{align}
+	\mu &= \operatorname{logm}\left(\frac{\mathbf\Psi}{n+p-1}\right) \\
+	\Sigma &= 2(\nu+p-1) I_{p\times p} \\
+	\mathbf{\Psi} &=  (n+p-1)\operatorname{expm}(\mu)
+\end{align}
+
+where $\mathbf{\Psi}$ is reshaped to a $p \times p$ matrix. 
+
 \subsection{Sqrtm-Transformed inverse Wishart distribution}
 
 we transform the distribution with $g(X) = \text{sqrtm}(X) = X^{\frac{1}{2}}$, i.e. $g^{-1}(X) = X^2$, where $\text{sqrtm}(X)$ is the square root of the matrix. The new pdf becomes 
@@ -73,7 +130,7 @@ which can be rewritten as
 
 with $T = (\log(|X|), X^{-2}), \nu = (-(\nu + p), \Psi)$ and $A = ...$. 
 
-\subsection{Laplace Approximation of the sqrtm-transformed inverse Wishart distribution}
+\subsubsection{Laplace Approximation of the sqrtm-transformed inverse Wishart distribution}
 
 Using 
 
@@ -130,3 +187,6 @@ we can calculate the covariance matrix by inverting the Hessian and multiplying 
 \end{align*}
 
 TODO: add inversion for second part. 
+
+
+\subsubsection{The Bridge for the sqrtm-transformed inverse Wishart distribution}

@@ -5,7 +5,7 @@
 The pdf of the inverse gamma is 
 
 \begin{equation}
-	f(x, \alpha, \lambda) = \frac{\lambda^{\alpha}}{\Gamma(\alpha)} x^{-\alpha-1} \exp(-\frac{\lambda}{\alpha})
+	f(x, \alpha, \lambda) = \frac{\lambda^{\alpha}}{\Gamma(\alpha)} x^{-\alpha-1} \exp(-\frac{\lambda}{x})
 	\label{eq:pdf_inverse_gamma}
 \end{equation}
 
@@ -29,7 +29,31 @@ where $T=(\log(x), x), \eta= (-\alpha-1, -\lambda)$ and $A(\alpha,\lambda) = \lo
 \text{invert and times -1: }&\sigma^2 = \frac{\lambda^2}{(\alpha +1)^3}
 \end{align*}
 
-\subsection{Log-Transform of the inverse gamma distribution}
+\subsection{Sqrt-Transform of the inverse Gamma distribution}
+
+TODO: Double-Check this whole sqrt business.
+
+\subsubsection{Laplace Approximation of the sqrt-transformed Inverse Gamma Distribution}
+
+\begin{align*}
+\text{log-pdf: } &-2\alpha\log(x) - \frac{\lambda}{x^2} + \alpha \log \lambda - \log\Lambda(\alpha) \\
+\text{1st derivative: }& -\frac{2\alpha}{x^2} + 2\frac{\lambda}{x^3} \\
+\text{mode: }&  x = \sqrt{\frac{\lambda}{\alpha}}\\
+\text{2nd derivative: }&  \frac{2\alpha}{x^2} - 6\frac{\lambda}{x^4}\\
+\text{insert mode: }&  -4\frac{\alpha^2}{\lambda}\\
+\text{invert and times -1: }&\sigma^2 = \frac{\lambda}{4 \alpha^2}
+\end{align*}
+
+\subsubsection{The Bridge for the sqrt-transformed Inverse Gamma Distribution}
+
+\begin{align}
+\mu &= \sqrt\frac{\lambda}{\alpha} \\
+\sigma^2 &= \frac{\lambda}{4\alpha^2} \\
+\alpha &= \frac{\mu^2}{4\sigma^2}\\
+\lambda &= \frac{\mu^4}{4\sigma^2}\\
+\end{align}
+
+\subsection{Log-Transform of the inverse Gamma distribution}
 
 We choose $g(x) = \log(x)$, and thereby $g^{-1}(x) = \exp(x)$. It follows that the new pdf is 
 
@@ -61,10 +85,10 @@ with $T=(x, 1/\exp(x)), \eta(-\alpha, \lambda)$ and $A(\alpha, \lambda) = \log\G
 \subsubsection{The Bridge for the log-transformed Inverse Gamma Distribution}
 
 \begin{align}
-	\mu &= \log(\lambda/\alpha) \\
-	\sigma^2 &= 1/\alpha \\
-	\lambda &= \exp(\mu) \sigma^2 \\
-	\alpha &= 1/\sigma^2
+	\mu &= \log\left(\frac{\lambda}{\alpha}\right) \\
+	\sigma^2 &= \frac{1}{\alpha} \\
+	\alpha &= \frac{1}{\sigma^2}\\
+	\lambda &= \frac{\exp(\mu)}{\sigma^2}\\
 \end{align}
 
 \begin{figure}

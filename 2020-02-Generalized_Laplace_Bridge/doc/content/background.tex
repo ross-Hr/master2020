@@ -29,14 +29,11 @@ where $c$ is a constant, $\mu = \hat{\theta}$ and $\sigma^2 = \{-q''(\hat{\theta
 
 \subsection{Exponential Family}
 
-exponential family form
-
-\begin{equation}
- f(x|\theta) = h(x)\exp[\eta(\theta) t(x) - A(\theta)]
- \label{eq:exp_family}
-\end{equation}
-
-for sufficient statistics $t:X \rightarrow \mathbb{R}$, natural parameters $\eta: \Theta \rightarrow \mathbb{R}$, and functions $A: \Theta \rightarrow \mathbb{R}$ and $h: X \rightarrow \mathbb{R}_+$
+A pdf that can be written in the form 
+\begin{equation*}\label{EF}
+p(x \vert w) = h(x)\cdot \exp\left(\phi(x)^\top w - \log Z(w) \right), \qquad\text{where}\qquad Z(w):= \int_{\mathbf{X}} \exp\left(\phi(x)^\top w\right) \,dh(x)
+\end{equation*}
+is called an exponential family where $\phi(x): \mathbb{X} \rightarrow \mathbb{R}^d$ is called sufficient statistics, $w \in \mathbb{R}^d$: natural parameters, $\log Z(w): \mathbb{R}^d \rightarrow \mathbb{R}$: (log) partition function (normalization constant), and $h(x): \mathbb{X} \rightarrow \mathbb{R}_{+}$: base measure.
 
 \subsection{Chi2 <-> Normal}
 \label{subsec:chi2-normal}
@@ -56,7 +53,7 @@ Applying Equation \ref{eq:1D_variable_transform} we can transform a normal distr
 
 The 'trick' was to split up the variable transformation in two parts to adjust for the fact that the space of the chi-squared and the Normal are different. We can reverse the same procedure to get from a chi-squared to a normal distribution. We keep the variable names from before. Let $X = \sqrt{Y}$ and therefore $h(x) = \sqrt{x}$. Then $h_1^{-1}: \mathbb{R} \rightarrow (-\infty, 0)$ by $h_1^{-1}(x) = -x^2$ and $h_2^{-1}: \mathbb{R} \rightarrow [0, \infty)$ by $h_2^{-1}(x) = x^2$. Then
 
-$$\left\vert\frac{\partial h_i^{-1}(y)}{\partial y} \right\vert = \vert 2x \vert $$
+$$\left\vert\frac{\partial h_i^{-1}(y)}{\partial y} \right\vert = \vert 2y \vert $$
 
 and
  

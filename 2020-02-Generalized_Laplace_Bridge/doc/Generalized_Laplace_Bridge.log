@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.6)  31 MAY 2020 13:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.6)  16 JUL 2020 10:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -724,52 +724,70 @@ Package: amsthm 2015/03/04 v2.20.2
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip67
+\multirow@cntb=\count131
+\multirow@dima=\skip68
+\bigstrutjot=\dimen157
+)
 (/usr/share/texlive/texmf-dist/tex/latex/arydshln/arydshln.sty
 Package: arydshln 2016/04/28 v1.73 
-\dashlinedash=\dimen157
-\dashlinegap=\dimen158
+\dashlinedash=\dimen158
+\dashlinegap=\dimen159
 \adl@box=\box28
-\adl@height=\dimen159
-\adl@heightsave=\dimen160
-\adl@depth=\dimen161
-\adl@depthsave=\dimen162
-\adl@finaldepth=\dimen163
-\adl@columns=\count131
-\adl@ncol=\count132
-\adl@currentcolumn=\count133
-\adl@currentcolumnsave=\count134
-\adl@totalheight=\count135
-\adl@totalheightsave=\count136
-\adl@dash=\count137
-\adl@gap=\count138
-\adl@cla=\count139
-\adl@clb=\count140
+\adl@height=\dimen160
+\adl@heightsave=\dimen161
+\adl@depth=\dimen162
+\adl@depthsave=\dimen163
+\adl@finaldepth=\dimen164
+\adl@columns=\count132
+\adl@ncol=\count133
+\adl@currentcolumn=\count134
+\adl@currentcolumnsave=\count135
+\adl@totalheight=\count136
+\adl@totalheightsave=\count137
+\adl@dash=\count138
+\adl@gap=\count139
+\adl@cla=\count140
+\adl@clb=\count141
 \adl@everyvbox=\toks31
-\adl@LTpagetotal=\dimen164
+\adl@LTpagetotal=\dimen165
 )
 (/usr/share/texlive/texmf-dist/tex/latex/changepage/chngpage.sty
 Package: chngpage 2009/10/20 v1.2b change page layout
-\c@cp@cnt=\count141
-\c@cp@tempcnt=\count142
+\c@cp@cnt=\count142
+\c@cp@tempcnt=\count143
+)
+(./math_commands.tex (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+)
+LaTeX Font Info:    Overwriting math alphabet `\mathsfit' in version `bold'
+(Font)                  T1/phv/m/sl --> T1/phv/bx/n on input line 323.
 )
 (./Generalized_Laplace_Bridge.aux)
 \openout1 = `Generalized_Laplace_Bridge.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 80.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 83.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -841,24 +859,24 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 80.
+Package hyperref Info: Link coloring OFF on input line 83.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count143
+\c@section@level=\count144
 )
-LaTeX Info: Redefining \ref on input line 80.
-LaTeX Info: Redefining \pageref on input line 80.
-LaTeX Info: Redefining \nameref on input line 80.
+LaTeX Info: Redefining \ref on input line 83.
+LaTeX Info: Redefining \pageref on input line 83.
+LaTeX Info: Redefining \nameref on input line 83.
 
 (./Generalized_Laplace_Bridge.out) (./Generalized_Laplace_Bridge.out)
 \@outlinefile=\write3
 \openout3 = `Generalized_Laplace_Bridge.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 80.
+LaTeX Info: Redefining \microtypecontext on input line 83.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -874,16 +892,16 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count144
-\scratchdimen=\dimen165
+\scratchcounter=\count145
+\scratchdimen=\dimen166
 \scratchbox=\box30
-\nofMPsegments=\count145
-\nofMParguments=\count146
+\nofMPsegments=\count146
+\nofMParguments=\count147
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count147
-\MPscratchDim=\dimen166
-\MPnumerator=\count148
-\makeMPintoPDFobject=\count149
+\MPscratchCnt=\count148
+\MPscratchDim=\dimen167
+\MPnumerator=\count149
+\makeMPintoPDFobject=\count150
 \everyMPtoPDFconversion=\toks33
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -906,13 +924,13 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 86.
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 83.
+LaTeX Font Info:    Try loading font information for U+msa on input line 86.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -920,7 +938,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 83.
+LaTeX Font Info:    Try loading font information for U+msb on input line 86.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -929,8 +947,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 83.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 83.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 86.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 86.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -940,7 +958,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 84.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 88.
 
 (./content/background.tex [1
 
@@ -949,15 +967,8 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3])
-(./content/GLB.tex
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 7.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
-)
-LaTeX Font Info:    Try loading font information for T1+phv on input line 96.
+(./content/GLB.tex [4])
+LaTeX Font Info:    Try loading font information for T1+phv on input line 100.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
@@ -967,56 +978,82 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 96.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 100.
 
-(./content/exponential.tex [4] [5]
-<figures/exponential_playground.pdf, id=297, pagebox=cropbox, 1879.02pt x 433.6
-2pt>
-File: figures/exponential_playground.pdf Graphic file (type pdf)
-<use figures/exponential_playground.pdf>
-Package pdftex.def Info: figures/exponential_playground.pdf  used on input line
- 74. on input line 74.
-Package pdftex.def Info: Requested size: 397.48499pt x 91.72453pt on input line
- 74.
-) (./content/gamma.tex [6 <./figures/exponential_playground.pdf>]
-Overfull \hbox (43.19185pt too wide) in paragraph at lines 50--50
-[] 
+Overfull \hbox (96.2421pt too wide) in paragraph at lines 101--120
+ [][] 
+ []
+
+
+Overfull \hbox (87.97398pt too wide) in paragraph at lines 129--173
+ [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7]
-<figures/gamma_playground_sqrt.pdf, id=352, pagebox=cropbox, 1662.21pt x 433.62
+ [5]
+(./content/exponential.tex [6] [7]
+<figures/exponential_playground.pdf, id=386, pagebox=cropbox, 1879.02pt x 433.6
+2pt>
+File: figures/exponential_playground.pdf Graphic file (type pdf)
+<use figures/exponential_playground.pdf>
+Package pdftex.def Info: figures/exponential_playground.pdf  used on input line
+ 67. on input line 67.
+Package pdftex.def Info: Requested size: 397.48499pt x 91.72453pt on input line
+ 67.
+) (./content/gamma.tex [8 <./figures/exponential_playground.pdf>]
+Overfull \hbox (11.72604pt too wide) in paragraph at lines 46--46
+[] 
+ []
+
+[9]
+<figures/gamma_playground_log.pdf, id=441, pagebox=cropbox, 1662.21pt x 433.62p
+t>
+File: figures/gamma_playground_log.pdf Graphic file (type pdf)
+<use figures/gamma_playground_log.pdf>
+Package pdftex.def Info: figures/gamma_playground_log.pdf  used on input line 7
+9. on input line 79.
+Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
+e 79.
+
+Overfull \hbox (71.16142pt too wide) in paragraph at lines 95--95
+[] 
+ []
+
+
+Underfull \vbox (badness 1158) has occurred while \output is active []
+
+ [10 <./figures/gamma_playground_log.pdf>]
+<figures/gamma_playground_sqrt.pdf, id=487, pagebox=cropbox, 1662.21pt x 433.62
 pt>
 File: figures/gamma_playground_sqrt.pdf Graphic file (type pdf)
 <use figures/gamma_playground_sqrt.pdf>
 Package pdftex.def Info: figures/gamma_playground_sqrt.pdf  used on input line 
-84. on input line 84.
+127. on input line 127.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
-e 84.
-
-[8 <./figures/gamma_playground_sqrt.pdf>]
-<figures/gamma_playground_log.pdf, id=397, pagebox=cropbox, 1662.21pt x 433.62p
-t>
-File: figures/gamma_playground_log.pdf Graphic file (type pdf)
-<use figures/gamma_playground_log.pdf>
-Package pdftex.def Info: figures/gamma_playground_log.pdf  used on input line 1
-39. on input line 139.
-Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
-e 139.
+e 127.
 ) (./content/inverse_gamma.tex
-[9 <./figures/gamma_playground_log.pdf>] [10]
-<figures/inverse_gamma_playground.pdf, id=450, pagebox=cropbox, 1662.21pt x 433
+Underfull \vbox (badness 1540) has occurred while \output is active []
+
+ [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <./figures/gamma_playground_sqrt.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+<figures/inverse_gamma_playground.pdf, id=550, pagebox=cropbox, 1662.21pt x 433
 .62pt>
 File: figures/inverse_gamma_playground.pdf Graphic file (type pdf)
 <use figures/inverse_gamma_playground.pdf>
 Package pdftex.def Info: figures/inverse_gamma_playground.pdf  used on input li
-ne 72. on input line 72.
+ne 96. on input line 96.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
-e 72.
-) (./content/chi2.tex [11 <./figures/inverse_gamma_playground.pdf>]
-<figures/chi2_playground_log.pdf, id=498, pagebox=cropbox, 1662.21pt x 433.62pt
+e 96.
+)
+(./content/chi2.tex [14 <./figures/inverse_gamma_playground.pdf>]
+<figures/chi2_playground_log.pdf, id=599, pagebox=cropbox, 1662.21pt x 433.62pt
 >
 File: figures/chi2_playground_log.pdf Graphic file (type pdf)
 <use figures/chi2_playground_log.pdf>
@@ -1024,12 +1061,12 @@ Package pdftex.def Info: figures/chi2_playground_log.pdf  used on input line 72
 . on input line 72.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
 e 72.
- [12 <./figures/chi2_playground_log.pdf>]
+ [15]
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
-<figures/chi2_playground_sqrt.pdf, id=546, pagebox=cropbox, 1662.21pt x 433.62p
+<figures/chi2_playground_sqrt.pdf, id=609, pagebox=cropbox, 1662.21pt x 433.62p
 t>
 File: figures/chi2_playground_sqrt.pdf Graphic file (type pdf)
 <use figures/chi2_playground_sqrt.pdf>
@@ -1037,99 +1074,113 @@ Package pdftex.def Info: figures/chi2_playground_sqrt.pdf  used on input line 1
 19. on input line 119.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
 e 119.
-) (./content/beta.tex [13 <./figures/chi2_playground_sqrt.pdf>]
+) (./content/beta.tex
+Underfull \vbox (badness 2435) has occurred while \output is active []
+
+ [16 <./figures/chi2_playground_log.pdf>] [17 <./figures/chi2_playground_sqrt.p
+df>]
 Overfull \hbox (24.74442pt too wide) in paragraph at lines 45--45
 [] 
  []
 
-
-Underfull \vbox (badness 2884) has occurred while \output is active []
-
- [14]
-<figures/beta_playground.pdf, id=601, pagebox=cropbox, 1662.21pt x 433.62pt>
+<figures/beta_playground.pdf, id=699, pagebox=cropbox, 1662.21pt x 433.62pt>
 File: figures/beta_playground.pdf Graphic file (type pdf)
 <use figures/beta_playground.pdf>
 Package pdftex.def Info: figures/beta_playground.pdf  used on input line 71. on
  input line 71.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
 e 71.
-)
-(./content/dirichlet.tex) (./content/wishart.tex [15 <./figures/beta_playground
-.pdf>]
-Overfull \hbox (14.83351pt too wide) detected at line 63
-\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ; \OML/c
-mm/m/it/10 n; p; V\OT1/cmr/m/n/10 ) = [] []
+) (./content/dirichlet.tex [18 <./figures/beta_playground.pdf>] [19] [20]
+[21]
+
+Package natbib Warning: Citation `KernelTopicModels2012' on page 22 undefined o
+n input line 167.
+
+) (./content/wishart.tex [22] [23] [24]
+Underfull \hbox (badness 1152) in paragraph at lines 159--160
+[]\T1/ptm/m/n/10 (+20) THIS IS WHERE SOLV-ING FOR X GETS COM-PLI-CATED. Maybe w
+e can rewrite it
  []
 
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
-
+[25]
+Overfull \hbox (19.11647pt too wide) in paragraph at lines 180--180
+[] 
  []
 
-<figures/wishart_playground_sqrtm.pdf, id=664, pagebox=cropbox, 1662.21pt x 433
+<figures/wishart_playground_sqrtm.pdf, id=856, pagebox=cropbox, 1662.21pt x 433
 .62pt>
 File: figures/wishart_playground_sqrtm.pdf Graphic file (type pdf)
 <use figures/wishart_playground_sqrtm.pdf>
 Package pdftex.def Info: figures/wishart_playground_sqrtm.pdf  used on input li
-ne 115. on input line 115.
+ne 199. on input line 199.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
-e 115.
-) (./content/inverse_wishart.tex [17]
-Underfull \vbox (badness 7814) has occurred while \output is active []
-
- [18 <./figures/wishart_playground_sqrtm.pdf>]
+e 199.
+) (./content/inverse_wishart.tex [26]
 Overfull \hbox (135.83313pt too wide) in paragraph at lines 53--53
 [] 
  []
 
-[19]
-Overfull \hbox (109.28262pt too wide) in paragraph at lines 130--130
+
+Underfull \vbox (badness 2717) has occurred while \output is active []
+
+ [27 <./figures/wishart_playground_sqrtm.pdf>]
+Underfull \vbox (badness 1546) has occurred while \output is active []
+
+ [28]
+[29]
+Overfull \hbox (109.28262pt too wide) in paragraph at lines 187--187
 [] 
  []
 
-[20]) (./content/math_rules.tex)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 138.
- [21]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
+[30]) (./content/math_rules.tex)
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
+[31]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
  (./Generalized_Laplace_Bridge.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
 Package rerunfilecheck Info: File `Generalized_Laplace_Bridge.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: EAF998B5EE900E8D74C18649D15DF8EC;5377.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 138.
+(rerunfilecheck)             Checksum: 3BF05DCE3AD27E998300780472255FB7;7544.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
  ) 
 Here is how much of TeX's memory you used:
- 11394 strings out of 492995
- 173794 string characters out of 6135074
- 307066 words of memory out of 5000000
- 14493 multiletter control sequences out of 15000+600000
- 36759 words of font info for 97 fonts, out of 8000000 for 9000
+ 12123 strings out of 492995
+ 179170 string characters out of 6135074
+ 323644 words of memory out of 5000000
+ 15085 multiletter control sequences out of 15000+600000
+ 39239 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,17n,42p,785b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,18n,42p,1176b,404s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
 fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmbx5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sft
-t1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/times/utmr8a.pfb>
-Output written on Generalized_Laplace_Bridge.pdf (21 pages, 468144 bytes).
+/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmext
+ra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmr8a.pfb>
+Output written on Generalized_Laplace_Bridge.pdf (31 pages, 558466 bytes).
 PDF statistics:
- 829 PDF objects out of 1000 (max. 8388607)
- 537 compressed objects within 6 object streams
- 160 named destinations out of 1000 (max. 500000)
- 19977 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 1075 PDF objects out of 1200 (max. 8388607)
+ 768 compressed objects within 8 object streams
+ 269 named destinations out of 1000 (max. 500000)
+ 20129 words of extra memory for PDF output out of 20736 (max. 10000000)
 

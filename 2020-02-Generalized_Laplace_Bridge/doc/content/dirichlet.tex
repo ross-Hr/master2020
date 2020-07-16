@@ -1,10 +1,171 @@
 \section{Dirichlet Distribution}
 
-TODO:REDO THE BRIDGE IN THE EXPONENTIAL FAMILY SETTING. I thought I had already done that but I did not. 
+\subsection{Standard Dirichlet distribution}
 
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=\textwidth]{dirichlet_playground.pdf}
-%	\caption{Dirichlet comparison}
-%	\label{fig:Dirichlet_comparison}
-%\end{figure}
+The pdf for the Dirichlet distribution in the standard basis (i.e. probability space) is
+
+\begin{align}
+\mathrm{Dir}(\vpi | \valpha) &= \frac{\Gamma \left( \sum_{k=1}^K \alpha_k \right)}{\prod_{k=1}^K \Gamma(\alpha_k)} \prod_{k=1}^K \pi_k^{\alpha_k-1} \\
+&= \frac{1}{B(\alpha)} \prod_{k=1}^K \pi_k^{\alpha_k-1} \\
+&= \exp\left[\sum_k(\alpha_k-1)\log(\pi_k) - \log(B(\alpha))\right] \\
+&= \frac{1}{\prod_k \pi_k} \exp\left[\sum_k\alpha_k\log(\pi_k) - \log(B(\alpha))\right] \\
+\end{align}
+
+with sufficient statistics $\phi(x_i) = \log(x_i)$, natural parameters $w_i=\alpha_i$, base measure $h(x) = \prod_k x_k$, and partition function $Z(w) = \log(B(\alpha))$.
+
+\subsubsection{Laplace approximation of the standard Dirichlet distribution}
+
+\begin{align*}
+\text{log-pdf: } & f = \sum_k\alpha_k\log(\pi_k) - \log(B(\alpha)) \\
+\text{1st derivative: }&  \frac{\partial f}{\partial x_i} =  \frac{\alpha_i-1}{x_i}\\
+\text{mode: }& x_i = \frac{(\alpha_i - 1)}{\sum_k \alpha_k} \\
+\text{2nd derivative: }&  \frac{\partial^2 f}{\partial x_i \partial x_j} = - \delta_{ij} \frac{(\alpha_i - 1)}{x_i^2} \\
+\text{insert mode: }& - \delta_{ij}\frac{(\sum_k \alpha_k)^2}{(\alpha_i - 1)} \\
+\text{invert and times -1: }&\Sigma_{ij} = \delta_{ij} \frac{\alpha_i - 1}{(\sum_k \alpha_k)^2}
+\end{align*}
+
+Which yields a diagonal Covariance matrix for the Laplace approximation.
+
+\subsection{Softmax-Transform of the Dirichlet distribution}
+
+We aim to transform the basis of this distribution from base $\vy$ via the softmax transform to be in the new base $\pi$:
+
+\begin{equation}\label{eq:softmax}
+\pi_k(\vy) := \frac{\exp(y_k)}{\sum_{l=1}^K \exp(y_l)} \, ,
+\end{equation}
+
+%Usually, to transform the basis we would need the inverse transformation $G^{-1}(\vy)$ as described in TODO:sectionhref. However, the softmax does not have an analytic inverse. Therefore, David JC MacKay uses the following trick. Assume we know that the distribution in the transformed basis is:
+
+TODO:David J. MacKay has already done a transformation for the determinant but in a slightly different fashion. 
+
+The softmax transform has no analytic inverse $\pi_k^{-1}(y)$ but it is not necessary for our computation since we assume $\pi(y)$ to be the inverse transformation already (i.e. $g^{-1}(y)$). However, our transformation is from a variable in $\mathbb{R}^d$ (which has $d$ degrees of freedom) to a variable that is in $\mathbb{P}^d$ (which has $d-1$ degrees of freedom). To account for the difference in size of the two spaces we create a helper variable for the transformation as described in the following.
+
+We want to transform $K$ variables $y_i$ from $\mathbb{R}^d$ to $\tau_i = \exp(y_i)$. For $\tau_i$ to be equal to $\pi_i$ we need to ensure that it sums to 1, $u = \sum_i \tau_i = 1$. With the helper-variable $u$ our variable transform $g(\pi, u)$ becomes
+
+\begin{align}
+	p_{y,u}(\pi(y), u) &= p_{\pi, u}(\pi(y), u) |\det g(\pi(y), u)|
+\end{align}
+
+with 
+
+\begin{align}
+	|\det g(\pi(y), u)| &= \left|\det\begin{pmatrix}
+		\frac{\partial \tau_1}{\partial y_1} & \cdots & \frac{\partial \tau_k}{\partial y_1} & \frac{\partial u}{\partial y_1} \\
+		\vdots & \ddots & \vdots & \vdots \\
+		\frac{\partial \tau_1}{\partial y_k} & \cdots & \frac{\partial \tau_k}{\partial y_k} & \frac{\partial u}{\partial y_k} \\
+		\frac{\partial \tau_1}{\partial u} & \cdots & \frac{\partial \tau_k}{\partial u} & \frac{\partial u}{\partial u}
+	\end{pmatrix} \right| \\
+	&= \left|\det\begin{pmatrix}
+	\tau_1 = \exp(y_1) & \cdots & 0 & \tau_1 \\
+	\vdots & \ddots & \vdots & \vdots \\
+	0 & \cdots & \tau_k & \tau_k \\
+	0 & \cdots & 0 & 1
+	\end{pmatrix} \right| \\
+	&= \prod_i^{K} \tau_i 
+\end{align}
+
+To get $p_y(\pi(y))$ we have to integrate out $u$. 
+
+\begin{align}
+	p_y(\pi(y)) &=\int_{-\infty}^{\infty} p_{\pi, u}(\pi(y), u) |\det g(\pi, u)| du \\
+	&= \int_{-\infty}^{\infty} p_{\pi}(\pi(y))  \prod_i^{K} \tau_i  du \\
+	&= p_{\pi}(\pi(y)) \int_{0}^{\infty}  \prod_i^{K} \tau_i \delta(u-1) du \\
+	&= p_{\pi}(\pi(y)) \int_{0}^{\infty}  \prod_i^{K} \tau_i \frac{u}{u} \delta(u-1) du \\
+	&= p_{\pi}(\pi(y)) \int_{0}^{\infty}  \underbrace{\prod_i^{K} \pi_i u}_{f(u)} \delta(u-1) du \\
+	&= p_{\pi}(\pi(y)) \cdot \prod_i^{K} \pi_i(y) \\
+	&= \frac{1}{\prod_k \pi_k(y)} \exp\left[\sum_k\alpha_k\log(\pi_k(y)) - \log(B(\alpha))\right] \prod_k^{K} \pi_k(y) \\
+	&= \exp\left[\sum_k\alpha_k\log(\pi(y_k)) - \log(B(\alpha))\right]
+\end{align}
+
+where we used the fact that $u > 0$ since its a sum of exponentials, $\frac{\tau_i(y)}{u} = \pi_i(y)$, and multiplied with $\delta(u-1)$ since this transformation is only valid if $\sum_i \tau_i = u = 1$ because otherwise it is not a probability space. Additionally, we use
+
+\begin{equation}
+	\int_{-\infty}^{\infty} f(x)\delta(x-t)dx = f(t)
+\end{equation}
+
+which is known as the shifting property or sampling property of the Dirac delta function $\delta$. Using all of the above we get the pdf of the Dirichlet distribution in the new basis $\vy$: 
+
+\begin{align}\label{eq:dirichlet_softmax}
+\mathrm{Dir}_{\vy}(\vpi(\vy) | \valpha) &:= \frac{\Gamma \left( \sum_{k=1}^K \alpha_k \right)}{\prod_{k=1}^K \Gamma(\alpha_k)} \prod_{k=1}^K \pi_k(\vy)^{\alpha_k}  \\
+&= \exp\left[\sum_k\alpha_k\log(\pi(y_k)) - \log(B(\alpha))\right]
+\end{align}
+
+with sufficient statistics $\phi(y_i) = \log(\pi_i(y))$, natural parameters $w_i = \alpha_i$, base measure $h(y) = 1$ and normalizing constant $Z = \log(B(\alpha))$.
+
+\subsubsection{Laplace approximation of the softmax-transformed Dirichlet distribution}
+
+TODO: mention that this has been done by Philipp in his PhD thesis.
+
+Through the figures of the 1D Dirichlet approximation in the main paper we have already established that the mode of the Dirichlet lies at the mean of the Gaussian distribution and therefore $\vpi(\vy) = \frac{\mathbf{\alpha}}{\sum_i \alpha_i}$. Additionally, the elements of $\vy$ must sum to zero. These two constraints combined yield only one possible solution for $\vmu$.
+
+\begin{equation}
+\mu_k = \log \alpha_k  - \frac{1}{K} \sum_{l=1}^{K} \log \alpha_l
+\label{eq:mu_k}
+\end{equation}
+
+Calculating the covariance matrix $\vSigma$ is more complicated but layed out in the following. The logarithm of the Dirichlet is, up to additive constants
+
+\begin{equation}
+\log p_y(y|\alpha) = \sum_k \alpha_k \pi_k 
+\end{equation}
+
+Using $\pi_k$ as the softmax of $\vy$ as shown in Equation \ref{eq:softmax} we can find the elements of the Hessian $\vL$
+
+\begin{equation}
+L_{kl} = \hat{\alpha}(\delta_{kl}\hat{\pi_k} - \hat{\pi_k} \hat{\pi_l})
+\end{equation}
+
+where $\hat{\valpha} := \sum_k \alpha_k$ and $\hat{\vpi} = \frac{\alpha_k}{\hat{\alpha}}$ for the value
+of $\vpi$ at the mode. Analytically inverting $\vL$ is done via a lengthy derivation using the fact that we can write $\vL = \mA + \mX\mB\mX^\top$ and inverting it with the Schur-complement. This process results in the inverse of the Hessian
+
+%TODO: can I just omit so much of the derivation? I mean it's in Philipp Hennigs thesis. People can just download it. 
+
+\begin{equation}
+L_{kl}^{-1} = \delta_{kl} \frac{1}{\alpha_k} - \frac{1}{K} \left[\frac{1}{\alpha_k} + \frac{1}{\alpha_l} - \frac{1}{K}\left(\sum_u^K \frac{1}{\alpha_u}\right) \right]
+\end{equation}
+
+We are mostly interested in the diagonal elements, since we desire a sparse encoding for computational reasons and we otherwise needed to map a $K \times K$ covariance matrix to a $K\times 1$ Dirichlet parameter vector which would be a very overdetermined mapping. Note that $K$ is a scalar not a matrix. The diagonal elements of $\vSigma = \vL^{-1}$ can be calculated as
+
+\begin{equation}
+\label{eq:Hessian_diag}
+\Sigma_{kk} = \frac{1}{\alpha_k} \left(1 - \frac{2}{K}\right)  + \frac{1}{K^2} \sum_{l}^{k} \frac{1}{\alpha_l}.
+\end{equation}
+
+To invert this mapping we transform Equation \ref{eq:mu_k} to 
+
+\begin{equation}
+\label{eq:reform_mu_k}
+\alpha_k = e^{\mu_k} \prod_l^{K} \alpha_l^{1/K}
+\end{equation}
+
+by applying the logarithm and re-ordering some parts. Inserting this into Equation \ref{eq:Hessian_diag} and re-arranging yields
+
+\begin{equation}
+\prod_l^K \alpha_l^{1/K} = \frac{1}{\vSigma_{kk}} \left[e^{-\mu}\left(1 - \frac{2}{K}\right)  + \frac{1}{K^2} \sum_u^K e^{-\mu_u} \right]
+\end{equation}
+
+which can be re-inserted into Equation \ref{eq:reform_mu_k} to give
+
+\begin{equation}
+\label{eq:mapping_alpha}
+\alpha_k = \frac{1}{\Sigma_kk} \left(1 - \frac{2}{K} + \frac{e^{-\mu_k}}{K^2} \sum_l^K e^{-\mu_k} \right)
+\end{equation}
+
+which is the final mapping. With Equations \ref{eq:mu_k} and \ref{eq:Hessian_diag} we are able to map from Dirichlet to Gaussian and with Equation \ref{eq:mapping_alpha} we are able to map the inverse direction. 
+
+\subsubsection{The Bridge for the inverse-softmax transform}
+
+In summary we get the following forward and backward transformations between $\vy \in \mathbb{R}^d$ and $\pi \in \mathbb{P}^d$.
+
+\begin{align}
+	\mu_k &= \log \alpha_k  - \frac{1}{K} \sum_{l=1}^{K} \log \alpha_l \, , \label{eq:mubridge}\\
+	\Sigma_{k\ell} &= \delta_{k\ell}\frac{1}{\alpha_k} - \frac{1}{K}\left[\frac{1}{\alpha_k} + \frac{1}{\alpha_\ell} - \frac{1}{K}\sum_{u=1} ^K \frac{1}{\alpha_u} \right].
+	\label{eq:Sigmabridge} 
+\end{align}
+
+The corresponding derivations require care because the Gaussian parameter space is evidently larger than that of the Dirichlet and not fully identified by the transformation.
+A pseudo-inverse of this map was provided by \citet{KernelTopicModels2012}. It maps the Gaussian parameters to those of the Dirichlet as
+
+\begin{equation} \label{eq:alpha_transform}
+	\alpha_k = \frac{1}{\Sigma_{kk}}\left(1 - \frac{2}{K} + \frac{e^{\mu_k}}{K^2}\sum_{l=1}^K e^{-\mu_l} \right) \,
+\end{equation}

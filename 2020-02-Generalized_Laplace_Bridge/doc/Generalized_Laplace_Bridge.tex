@@ -28,6 +28,7 @@
 \usepackage{graphicx}
 \usepackage{subfig}
 \usepackage{mathtools,amsthm,amssymb,amsfonts}
+\usepackage{multirow}
 
 \usepackage{arydshln} %for dashed lines
 
@@ -77,9 +78,12 @@
   % \texttt{email} \\
 }
 
+\input{math_commands}
+
 \begin{document}
 
 \maketitle
+
 
 \section{Introduction}
 
@@ -93,29 +97,125 @@ normal distributions are the best, lets transform everything to normal
 
 \begin{table}[htb]
 	\centering
-	\caption{Overview}
-	\begin{tabular}{lcccc}
+	\caption{Overview of new bases.}
+	\begin{tabular}{lllcccc}
 		\toprule
-		\textbf{Distribution}	&\textbf{$g(x)$} &\textbf{$g^{-1}(x)$} &\textbf{$T$} & \text{$T$'}	\\
+		\textbf{Distribution}	&\textbf{$g(x)$} &\textbf{$g^{-1}(x)$} & $\phi(x)$ & new $\phi(y)$ & Standard space & New space	\\
 		\midrule
-		Exponential	& log & exp & $x$ & $(x,\exp(x))$ \\
-		Gamma		& log & exp & $(\log(x), x)$ & $(x,\exp(x))$ \\
-		Gamma		& log & exp & $(\log(x), x)$ & $(\log(x),x^2)$ \\
-		Inverse Gamma & log & exp& $(\log(x), x)$ & $(x,\exp(x))$ \\
-		Inverse Gamma & log & exp& $(\log(x), x)$ & $(\log(x),x^2)$ \\
-		Chi2        & log & exp &  $(\log(x), x)$ & $(x,\exp(x))$ \\
-		Chi2        & log & exp &  $(\log(x), x)$ & $(\log(x),x^2)$ \\
-		Beta		& logit & logistic&  $(\log(x),\log(1-x))$ & ? \\
-		Dirichlet 	& - & softmax &  ? & ? \\
-		Wishart	    & mlog & mexp & $(\log(X), X)$ & $(X, \exp(X))$ \\
-		Wishart	    & msqrt & msqr & $(\log(X), X)$ & $(\log(X), X^2)$ \\
-		Inverse Wishart & mlog & mexp & ? & ? \\		
+		Exponential	& log & exp & $x$ & $(y,\exp(y))$ & $\mathbb{R}_{+}$ & $\mathbb{R}$\\
+		Gamma		& log & exp & $(\log(x), x)$ & $(\log(y),y^2)$ & $\mathbb{R}_{+}$ & $\mathbb{R}$\\
+		Gamma		& sqrt & sqr & $(\log(x), x)$ & $(y,\exp(y))$ & $\mathbb{R}_{+}$ & $\mathbb{R}$ \\
+		Inv. Gamma & log & exp& $(\log(x), x)$ & $(\log(y),y^2)$ & $\mathbb{R}_{+}$ & $\mathbb{R}$\\
+		Inv. Gamma & sqrt & sqr& $(\log(x), x)$ & $(y,\exp(y))$ & $\mathbb{R}_{+}$ & $\mathbb{R}$\\
+		Chi2        & log & exp &  $(\log(x), x)$ & $(\log(y),y^2)$ & $\mathbb{R}_{+}$ & $\mathbb{R}$\\
+		Chi2        & sqrt & sqr &  $(\log(x), x)$ & $(y,\exp(y))$ & $\mathbb{R}_{+}$ & $\mathbb{R}$\\
+		Beta		& logit & logistic&  $(\log(x),\log(1-x))$ & $(\log(\sigma(y))), (1-\log(\sigma(y)))$  & $\mathbb{P}$ & $\mathbb{R}$\\
+		Dirichlet 	& - & softmax &  $(\log(x_i))$ & $\log(\pi_i(y))$ & $\mathbb{P}^d$ & $\mathbb{R}^d$\\
+		Wishart	    & logm & expm & $(\operatorname{logm}(X), X)$ & $(Y, \operatorname{expm}(Y))$ &  $\mathbb{R}^{d\times d}_{++}$ & $\mathbb{R}^{d\times d}$\\
+		Wishart	    & sqrtm & sqrm & $(\operatorname{logm}(X), X)$ & $(\operatorname{logm}(Y), Y^2)$ & $\mathbb{R}^{d\times d}_{++}$ & $\mathbb{R}^{d\times d}$\\
+		Inv. Wishart & logm & expm & $(\operatorname{logm}(X), X)$ & $(Y, \operatorname{expm}(Y))$ & $\mathbb{R}^{d\times d}_{++}$ & $\mathbb{R}^{d\times d}$\\
+		Inv. Wishart & sqrtm & sqrm & $(\operatorname{logm}(X), X)$ & $(\operatorname{logm}(Y), Y^2)$ & $\mathbb{R}^{d\times d}_{++}$ & $\mathbb{R}^{d\times d}$\\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
 NOTE:MOST DISTRIBUTIONS ACTUALLY HAVE TWO VALID TRANSFORMS. ONE FOR $X$ AND ONE FOR $X^2$ AS SUFFICIENT STATISTICS
 
+TODO: full table of Bridges:
+
+\begin{table}[htb]
+	\centering
+	\caption{Transformations/Bridges. * means imperfect approximation}
+	\begin{tabular}{llll}
+		\toprule
+		Distribution & Basis & $\theta \rightarrow \mathcal{N}$& $\mathcal{N} \rightarrow \theta$ \\
+		\midrule
+		\multirow{2}{*}{Exponential} & \multirow{2}{*}{log} & $\mu =  \log(\frac{1}{\lambda})$ & $\lambda = \frac{1}{\exp(x)}$ \\
+		& & $\sigma^2 = 1$ &  \\
+		\midrule %GAMMA
+		\multirow{2}{*}{Gamma} & \multirow{2}{*}{log} & $\mu = \log\left(\frac{\alpha}{\lambda}\right)$ & $\alpha = \frac{1}{\sigma^2}$ \\
+		&& $\sigma^2 = \frac{1}{\alpha}$ &	$\lambda =  \frac{1}{\exp(\mu)\sigma^2}$ \\
+		\hdashline
+		\multirow{2}{*}{Gamma} & \multirow{2}{*}{sqrt} & $\mu = \sqrt{\frac{\alpha-0.5}{\lambda}}$ & $\alpha = \frac{\mu^2}{4\sigma^2}-0.5$ \\
+		& & $\sigma^2 = \frac{1}{4\lambda}$ & $\lambda = \frac{4}{\sigma^2}$ \\
+		\midrule %INVERSE GAMMA
+		\multirow{2}{*}{Inv. Gamma} & \multirow{2}{*}{log} & $\mu = \log\left(\frac{\lambda}{\alpha}\right)$ & $\alpha = \frac{1}{\sigma^2}$ \\
+		&& $\sigma^2 = \frac{1}{\alpha}$ &	$\lambda =  \frac{\exp(\mu)}{\sigma^2}$ \\
+		\hdashline
+		\multirow{2}{*}{Inv. Gamma} & \multirow{2}{*}{sqrt} & $\mu = $ & $\alpha = $ \\
+		&& $\sigma^2 = $ &	$\lambda =  $ \\
+		\midrule %CHI-2
+		\multirow{2}{*}{Chi-squared} & \multirow{2}{*}{log} & $\mu = $ & $\alpha = $ \\
+		&& $\sigma^2 = $ &	$\lambda =  $ \\
+		\hdashline
+		\multirow{2}{*}{Chi-squared} & \multirow{2}{*}{sqrt} & $\mu = $ & $\alpha = $ \\
+		&& $\sigma^2 = $ &	$\lambda =  $ \\
+		\midrule %BETA
+		\multirow{2}{*}{Beta} & \multirow{2}{*}{logit} & $\mu = \log(\frac{\alpha}{\beta})$ & $\alpha = \frac{\exp(\mu) + 1}{\sigma^2}$ \\
+		&& $\sigma^2 = \frac{\alpha + \beta}{\alpha\beta}$ &	$\beta = \frac{\exp(-\mu) + 1}{\sigma^2} $ \\
+		\midrule %DIRICHLET
+		\multirow{2}{*}{Dirichlet} & \multirow{2}{*}{softmax$^{-1}$} & $\mu_k = \log \alpha_k  - \frac{1}{K} \sum_{l=1}^{K} \log \alpha_l$ & $\alpha_k = \frac{1}{\Sigma_{kk}}\left(1 - \frac{2}{K} + \frac{e^{\mu_k}}{K^2}\sum_{l=1}^K e^{-\mu_l} \right)$ \\
+		&& $\Sigma_{k\ell} = \delta_{k\ell}\frac{1}{\alpha_k} - \frac{1}{K}\left[\frac{1}{\alpha_k} + \frac{1}{\alpha_\ell} - \frac{1}{K}\sum_{u=1} ^K \frac{1}{\alpha_u} \right]$ & \\
+		\midrule %WISHAST
+		\multirow{2}{*}{Wishart} & \multirow{2}{*}{logm} & $\mu = $ & $V = $ \\
+		&& $\Sigma = $ & \\
+		\hdashline
+		\multirow{2}{*}{Wishart*} & \multirow{2}{*}{sqrtm} & $\mu = $ & $V = $ \\
+		&& $\Sigma = $ & \\
+		\midrule %INVERSE WISHART
+		\multirow{2}{*}{Inv. Wishart} & \multirow{2}{*}{logm} & $\mu = $ & $V = $ \\
+		&& $\Sigma = $ & \\
+		\hdashline
+		\multirow{2}{*}{Inv. Wishart*} & \multirow{2}{*}{sqrtm} & $\mu = $ & $V = $ \\
+		&& $\Sigma = $ & \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+Distances:
+
+\begin{table}[htb]
+	\centering
+	\caption{Distances. MMD and KL div are normed to 1 in the standard basis for better comparison. }
+	\begin{tabular}{llcc}
+		\toprule
+		\textbf{Distribution} & Basis & MMD $\downarrow$& KL divergence $\downarrow$ \\
+		\midrule
+		Exponential	& standard & $\infty$ & $\infty$ \\
+		Exponential	& log & $1$ & $0.157 $ \\ 
+		Exponential	& sqrt & $0.054$ & $1$ \\ 
+		\hdashline
+		Gamma		& standard & $1$ & $1$  \\
+		Gamma		& log & $0.196$ & $0.147$  \\
+		Gamma		& sqrt & $0.031$ & $0.406$ \\
+		\hdashline
+		Inv. Gamma & standard & 1 & 1 \\
+		Inv. Gamma & log & - & - \\
+		Inv. Gamma & sqrt & - & - \\
+		\hdashline
+		Chi2        & standard & 1 & 1 \\
+		Chi2        & log & - & - \\
+		Chi2        & sqrt & - & - \\
+		\hdashline
+		Beta		& standard & 1 & 1 \\
+		Beta		& logit & - & - \\
+		\hdashline
+		Dirichlet 	& standard &  1 & 1 \\		
+		Dirichlet 	& inverse softmax &  - & - \\
+		\hdashline
+		Wishart	    & standard & 1 & 1 \\
+		Wishart	    & logm & - & - \\
+		Wishart	    & sqrtm & - & - \\
+		\hdashline
+		Inv. Wishart & standard & 1 & 1 \\
+		Inv. Wishart & logm & - & - \\
+		Inv. Wishart & sqrtm & - & - \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\pagebreak
 
 \input{content/exponential}
 

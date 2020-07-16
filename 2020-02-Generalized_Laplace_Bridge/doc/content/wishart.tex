@@ -1,102 +1,186 @@
 \section{Wishart Distribution}
 
+\subsection{Interlude: Box-product and Kronecker-product}
+
+Kronecker-product: $A \otimes B \in \mathbb{R}^{(m_1m_2) \times (n_1n_2)}$ is defined by $(A \otimes B)_{(i - 1)m_2+j,(k - 1)n_2+l} = a_{il}b_{jk} = (A \otimes B)_{(ij)(kl)}$.
+
+Box-product: $A \boxtimes B \in \mathbb{R}^{(m_1m_2) \times (n_1n_2)}$ is defined by $(A \boxtimes B)_{(i - 1)m_2+j,(k - 1)n_1+l} = a_{ik}b_{jl} = (A \boxtimes B)_{(ij)(kl)}$.
+
+I found this box-product only in two sources, one of which is this: \url{https://researcher.watson.ibm.com/researcher/files/us-pederao/ADTalk.pdf} but it generally seems to be very helpful for matrix derivations with transposed matrices.
+
 \subsection{Standard Wishart distribution}
 
 the pdf of the Wishart is
 
 \begin{equation}
-	f(x; n,p,V) = \frac{1}{2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right ) }{\left|\mathbf{x}\right|}^{(n-p-1)/2} e^{-(1/2)\operatorname{tr}({\mathbf V}^{-1}\mathbf{x})}
-	\label{eq:wishart_pdf}
+f(X; n,p,V) = \frac{1}{2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right ) }{\left|\mathbf{X}\right|}^{(n-p-1)/2} e^{-(1/2)\operatorname{tr}({\mathbf V}^{-1}\mathbf{X})}
+\label{eq:wishart_pdf}
 \end{equation}
 
 which can be written as
 
 \begin{equation}
-	f(x; n,p,V) = \exp \left[(n-p-1)/2 \log(|x|) -(1/2)\operatorname{tr}({\mathbf V}^{-1}\mathbf{x}) - \log\left(2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right )\right) \right]
+f(X; n,p,V) = \exp \left[(n-p-1)/2 \log(|X|) -(1/2)\operatorname{tr}({\mathbf V}^{-1}\mathbf{X}) - \log\left(2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right )\right) \right]
 \end{equation}
 
-with $T=(\log(x), x), \eta=((n-p-1)/2, V^{-1})$ and $A(n,p,V)=\log\left(2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right )\right)$
+with $T=(\log(X), X), \eta=((n-p-1)/2, V^{-1})$ and $A(n,p,V)=\log\left(2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right )\right)$
 
 \subsubsection{Laplace Approximation of the standard Wishart distribution}
 
 Using $\frac{\partial \det(X)}{\partial X} = \det(X)(X^{-1})^\top$ and $\frac{\partial}{\partial X} Tr(AX^\top) = A$ we can calculate the mode by setting the first derivative of the log-pdf to zero
 
 \begin{align*}
-	\frac{\partial \log f(X; n,p,V)}{\partial X} &= \frac{(n-p-1)\det(X)(X^{-\top})}{2\det(X)} - \frac{V^{-1}}{2} \\
-	 \Rightarrow 0 &= \frac{(n-p-1)X^{-1}}{2} - \frac{V^{-1}}{2} \\
-	\Leftrightarrow  \frac{(n-p-1)X^{-1}}{2} &= \frac{V^{-1}}{2} \\
-	\Leftrightarrow X &= (n-p-1)V
+\frac{\partial \log f(X; n,p,V)}{\partial X} &= \frac{(n-p-1)\det(X)(X^{-\top})}{2\det(X)} - \frac{V^{-1}}{2} \\
+\Rightarrow 0 &= \frac{(n-p-1)X^{-1}}{2} - \frac{V^{-1}}{2} \\
+\Leftrightarrow  \frac{(n-p-1)X^{-1}}{2} &= \frac{V^{-1}}{2} \\
+\Leftrightarrow X &= (n-p-1)V
 \end{align*}
 
-Using the fact that $\frac{\partial A^{-1}}{\partial A} = X^{-1} \otimes X^{-1}$ where $\otimes$ is the Kronecker product we compute the second derivative as
+Using the fact that $\frac{\partial X^{-T}}{\partial X} = X^{-T} \boxtimes X^{-1}$ where $\boxtimes$ is the Box-product we compute the second derivative as
 
 \begin{align*}
-	\frac{\partial^2 \log f(X; n,p,V)}{\partial^2 X} &= -\frac{(n-p-1)}{2} X^{-1} \otimes X^{-1}
+\frac{\partial^2 \log f(X; n,p,V)}{\partial^2 X} &= -\frac{(n-p-1)}{2} X^{-\top} \boxtimes X^{-1}
 \end{align*}
 
-Using $(\alpha A)^{-1} = \alpha^{-1}A^{-1}$, the linearity of the Kronecker product to pull out scalars and $X^{-1} \otimes X^{-1} = (X \otimes X)^{-1}$ to insert the mode and invert we get:
+Using $(\alpha A)^{-1} = \alpha^{-1}A^{-1}$, the linearity of the Kronecker product to pull out scalars and $X^{-1} \boxtimes X^{-1} = (X \boxtimes X)^{-1}$ to insert the mode and invert we get:
 
 \begin{align*}
-	-\frac{(n-p-1)}{2} X^{-1} \otimes X^{-1} &= -\frac{(n-p-1)}{2} \frac{1}{(n-p-1)} V^{-1} \otimes \frac{1}{(n-p-1)} V^{-1} \\
-	&= -\frac{1}{2(n-p-1)}(V \otimes V)^{-1} \\
-	\Rightarrow \Sigma &= 2(n-p-1)(V\otimes V)
+-\frac{(n-p-1)}{2} X^{-1} \boxtimes X^{-1} &= -\frac{(n-p-1)}{2} \frac{1}{(n-p-1)} V^{-1} \otimes \frac{1}{(n-p-1)} V^{-1} \\
+&= -\frac{1}{2(n-p-1)}(V \boxtimes V)^{-1} \\
+\Rightarrow \Sigma &= 2(n-p-1)(V \boxtimes V)
 \end{align*}
 
-In summary, the Laplace approximation of a Wishart distribution in the standard basis is $\mathcal{N}\left(X; (n-p-1)V, 2(n-p-1)(V\otimes V)\right)$, where the representation of the symmetric positive definite matrices has been changed from $\mathbb{R}^{n\times n}$ to $\mathbb{R}^{n^2}$.
+In summary, the Laplace approximation of a Wishart distribution in the standard basis is $\mathcal{N}\left(X; (n-p-1)V, 2(n-p-1)(V \boxtimes V)\right)$, where the representation of the symmetric positive definite matrices has been changed from $\mathbb{R}^{n\times n}$ to $\mathbb{R}^{n^2}$.
 
+\subsection{Logm-Transformed Wishart distribution}
+
+we transform the distribution with $g(X) = \text{logm}(X)$, i.e. $g^{-1}(X) = \text{expm}(X)$, where $\text{expm}(X)$ is the matrix exponential and $\text{logm}(X)$ is the matrix logarithm of $X$. The new pdf becomes
+
+\begin{align*}
+f(X; n, p, V) &= \frac{1}{2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right ) }{\left|\mathbf{\operatorname{expm}X}\right|}^{(n-p-1)/2} e^{-(1/2)\operatorname{tr}({\mathbf V}^{-1}\mathbf{\operatorname{expm}X})} \cdot |\operatorname{expm}X| \\ 
+&= \frac{1}{2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right ) }{\left|\mathbf{\operatorname{expm}X}\right|}^{(n-p+1)/2} e^{-(1/2)\operatorname{tr}({\mathbf V}^{-1}\mathbf{\operatorname{expm}X})} \\ 
+&= \exp \left[C + \frac{(n-p+1)}{2} \log(\left|\mathbf{\operatorname{expm}X}\right|)  - \frac{1}{2}\operatorname{tr}({\mathbf V}^{-1}\mathbf{\operatorname{expm}X}) \right]
+\end{align*}
+
+with blablabla as expfam values. 
+
+\subsubsection{Laplace Approximation of the logm-transformed Wishart distribution}
+
+To compute the first derivative we use the following
+
+\begin{align}
+	\frac{\partial \log(\det(\operatorname{expm}(X)))}{\partial X} 
+	&= \frac{\partial \log(\det(\operatorname{expm}(X)))}{\partial \det(\operatorname{expm}(X))} \cdot \frac{\partial \det(\operatorname{expm}(X))}{\partial \operatorname{expm}(X)} \cdot \frac{\partial \operatorname{expm}(X)}{\partial X} \\
+	&= \frac{1}{\det(\operatorname{expm}(X))} \cdot \det(\operatorname{expm}(X)) \operatorname{expm}(X)^{-\top} \cdot \operatorname{expm}(X) \\
+	&= I_p
+\end{align}
+
+where $I_p$ is the identity matrix of size $p$ and we use the fact that the matrix logaritm of a symmetric matrix is symmetric, implying $\operatorname{expm}(X)^{-\top} = \operatorname{expm}(X)^{-1}$. With this we get the 
+
+\begin{align}
+	\frac{\partial \log W_{log}}{\partial X} &= \frac{\partial}{\partial X} \left[C + \frac{(n-p+1)}{2} \log(\left|\mathbf{\operatorname{expm}X}\right|)  - \frac{1}{2}\operatorname{tr}({\mathbf V}^{-1}\mathbf{\operatorname{expm}X}) \right] \\
+	&=  \frac{(n-p+1)}{2} I_p - \frac{1}{2}V^{-1}\mathbf{\operatorname{expm}X} 
+\end{align}
+
+By setting this to zero we get a mode of
+
+\begin{align}
+	0 &=  \frac{(n-p+1)}{2} I_p - \frac{1}{2}V^{-1}\mathbf{\operatorname{expm}X} \\
+	\Leftrightarrow (n-p+1)I_p &= V^{-1}\mathbf{\operatorname{expm}X} \\
+	\Leftrightarrow X &= \operatorname{logm}((n-p+1)V)
+\end{align}
+
+For the second derivative we use the fact that
+
+\begin{align}
+	\frac{\partial (B\operatorname{expm}(X))_{kl}}{\partial X_{ij}} &= ... \\
+	\Leftrightarrow \frac{\partial B\operatorname{expm}(X)}{\partial X} &= \left(B\operatorname{expm}(X) \otimes I_p\right)
+\end{align}
+
+yielding
+
+\begin{align}
+	\frac{\partial^2 \log W_{log}}{\partial^2 X} &= \frac{\partial \log W_{log}}{\partial X}  \frac{(n-p+1)}{2} I_p - \frac{1}{2}V^{-1}\mathbf{\operatorname{expm}X} \\
+	&= -\frac{1}{2}(V^{-1}\mathbf{\operatorname{expm}X} \otimes I_p) \\
+	&\overset{\text{mode}}{\Rightarrow} -\frac{1}{2}((n-p+1)V^{-1}V \otimes I_p) \\
+	&= -\frac{(n-p+1)}{2} (I_p \otimes I_p)\\
+	\Leftrightarrow \Sigma &= \frac{2}{n-p+1} I_{p^2}
+\end{align}
+
+where $I_{p^2}$ is an Identity matrix of size $p^2$. 
+
+\subsubsection{The Bridge for logm-tranform}
+
+$\mu$ and $\Sigma$ are already given by the Laplace approximation. Inverting the mode yields an estimate for $V$. 
+\begin{align}
+	\mu &= \operatorname{logm}((n-p+1)V) \Leftrightarrow \operatorname{expm}(\mu) = (n-p+1)V \Leftrightarrow V = \frac{\operatorname{expm}(\mu)}{(n-p+1)}
+\end{align}
+
+where $\mu$ and $V$ are reshaped to a matrix of size $p\times p$. In summary this yields
+
+\begin{align}
+	\mu &= \operatorname{logm}((n-p+1)V) \\
+	\Sigma &= \frac{2}{n-p+1} I_{p^2} \\
+	V &= \frac{\operatorname{expm}(\mu)}{(n-p+1)}
+\end{align} 
 
 \subsection{Sqrtm-Transformed Wishart distribution}
 
 we transform the distribution with $g(X) = \text{sqrtm}(X) = X^{\frac{1}{2}}$, i.e. $g^{-1}(X) = X^2$, where $\text{sqrtm}(X)$ is the square root of the matrix. The new pdf becomes
 
 \begin{align}
-	f_t(x; n,p,V) &= \frac{1}{2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right ) }{\left|\mathbf{x^2}\right|}^{(n-p-1)/2} e^{-(1/2)\operatorname{tr}({\mathbf V}^{-1}\mathbf{x^2})} \cdot |2x| \\ \nonumber
-	&= \frac{1}{2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right ) }{\left|\mathbf{x}\right|}^{2(n-p-1)/2} e^{-(1/2)\operatorname{tr}({\mathbf V}^{-1}\mathbf{x^2})} \cdot 2^k|x| \\
-	&= \frac{2^k}{2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right ) }{\left|\mathbf{x}\right|}^{(n-p)} e^{-(1/2)\operatorname{tr}({\mathbf V}^{-1}\mathbf{x^2})} \nonumber
-	\label{eq:wishart_trans_sqrtm_pdf}
+f_t(X; n,p,V) &= \frac{1}{2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right ) }{\left|\mathbf{X^2}\right|}^{(n-p-1)/2} e^{-(1/2)\operatorname{tr}({\mathbf V}^{-1}\mathbf{X^2})} \cdot |2X| \\ 
+&= \frac{1}{2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right ) }{\left|\mathbf{X}\right|}^{2(n-p-1)/2} e^{-(1/2)\operatorname{tr}({\mathbf V}^{-1}\mathbf{X^2})} \cdot 2^p|X| \\
+&= \frac{1}{2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right ) }{\left|\mathbf{X}\right|}^{(n-p)} e^{-(1/2)\operatorname{tr}({\mathbf V}^{-1}\mathbf{X^2})} 
+\label{eq:wishart_trans_sqrtm_pdf}
 \end{align}
 
-where $k$ is the dimensionality of $X$. This can be rewritten as 
+where we drop the $2^p$ in line (4) because there are $2^p$ matrices that are a root of $X$ (I have explained this in more detailed in another version of the current draft). This can be rewritten as 
 
 \begin{equation}
-f_t(x; n,p,V) = \exp \left[(n-p) \log(|x|) - (1/2)\operatorname{tr}({\mathbf V}^{-1}\mathbf{x^2}) - \log\left(2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right )\right) + k\log(2) \right]
+f_t(X; n,p,V) = \exp \left[(n-p) \log(|X|) - (1/2)\operatorname{tr}({\mathbf V}^{-1}\mathbf{X^2}) - \log\left(2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right )\right)\right]
 \end{equation}
 
-with $T=(\log(x), x^2), \eta=((n-p), V^{-1})$ and $A(n,p,V)=\log\left(2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right )\right) + k\log(2)$
+with $T=(\log(X), X^2), \eta=((n-p), V^{-1})$ and $A(n,p,V)=\log\left(2^{np/2} \left|{\mathbf V}\right|^{n/2} \Gamma_p\left(\frac {n}{2}\right )\right)$
 
 
 \subsubsection{Laplace Approximation of the sqrtm-transformed Wishart distribution}
 
-Using $\frac{\partial \det(X)}{\partial X} = \det(X)(X^{-1})^\top$ and $\frac{\partial}{\partial X} Tr(AXX) = 2AX$ we can calculate the mode by setting the first derivative of the log-pdf to zero
+Using $\frac{\partial \det(X)}{\partial X} = \det(X)(X^{-1})^\top$ and $\frac{\partial}{\partial X} Tr(AX^2) = (AX + XA)^T$ we can calculate the mode by setting the first derivative of the log-pdf to zero
 
 \begin{align*}
-\frac{\partial \log f_t(X; n,p,V)}{\partial X} &= \frac{(n-p)\det(X)(X^{-\top})}{\det(X)} - \frac{2V^{-1}X}{2} \\
-\Rightarrow 0 &= (n-p)X^{-1} - V^{-1}X \\
-\Leftrightarrow  (n-p)X^{-1} &= V^{-1}X \\
-\Leftrightarrow X^2 &= (n-p)V \\
-\Leftrightarrow X &= \sqrt{(n-1)} V^\frac{1}{2}
+\frac{\partial \log f_t(X; n,p,V)}{\partial X} &= \frac{(n-p)\det(X)(X^{-\top})}{\det(X)} - \frac{(V^{-1}X + XV^{-1})^\top}{2} \\
+\Rightarrow 0 &= (n-p)X^{-\top} - \frac{(V^{-1}X + XV^{-1})^\top}{2} \\
+\Leftrightarrow  (n-p)X^{-\top} &=  \frac{(V^{-1}X + XV^{-1})^\top}{2} \\
+\Leftrightarrow  (n-p)X^{-1} &=  \frac{(V^{-1}X + XV^{-1})}{2} \\
+\Leftrightarrow X &= ???
 \end{align*}
 
-Computing the second derivative entry-wise we get 
+THIS IS WHERE SOLVING FOR X GETS COMPLICATED. Maybe we can rewrite it with Kronecker products and vectorized matrices like for the Sylvester equation and these laws \url{https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Compatibility_with_Kronecker_products}.
+
+So far I have found the following relationships that don't get me any further to the solution of $X$:
 
 \begin{align*}
-\frac{\partial^2 \log f_t(X; n,p,V)_{kl}}{\partial^2 X_{ij}} &= \frac{\partial}{\partial X_{ij}} (n-p)X^{-1} - V^{-1}X \\
-&= - (n-p) \underbrace{(X^{-1})_{ki} (X^{-1})_{jl}}_{I} - \underbrace{\delta_{il}(V^{-1})_{kj}}_{II} \\
+(n-p)X^{-1} &=  \frac{(V^{-1}X + XV^{-1})}{2} \\
+\Leftrightarrow C &= BXX + XBX \\
+\Leftrightarrow C &= (I_p \otimes BX)\vec{X} + (B^TX^T \otimes I_p)\vec{X} \\
+\Leftrightarrow C &= (B^TX^T \oplus BX)\vec{X} \\
+\Leftrightarrow C &= (BX \oplus BX)\vec{X}
 \end{align*}
 
-We realize that $I$ is the Kronecker product $X^{-1} \otimes X^{-1}$ and name $II$ $\tilde{V^{-1}}$. 
-
-Using $(\alpha A)^{-1} = \alpha^{-1}A^{-1}$, the linearity of the Kronecker product to pull out scalars and $X^{-1} \otimes X^{-1} = (X \otimes X)^{-1}$ to insert the mode and invert we get:
+Computing the second derivative by using $\frac{\partial}{\partial X}X^{-1} = -X^{-1} \otimes X^{-1}$, $\frac{\partial}{\partial X} (AX + XA)^\top = I \boxtimes A + A \boxtimes I$:
 
 \begin{align*}
--(n-p) X^{-1} \otimes X^{-1} - V^{-1} &= -(n-p) \frac{1}{n-p}V^{-\frac{1}{2}} \frac{1}{n-p}V^{-\frac{1}{2}} - \tilde{V^{-1}} \\
-&= -\frac{n-p}{n-p}(V \otimes V)^{-\frac{1}{2}} - \tilde{V^{-1}}\\
-\Rightarrow \Sigma &= (V \otimes V)^{\frac{1}{2}} - \tilde{V^{-1}}\\
+\frac{\partial^2 \log f_t(X; n,p,V)}{\partial^2 X} &= \frac{\partial}{\partial X} \left[(n-p)X^{-\top} - \frac{(V^{-1}X + XV^{-1})^\top}{2}\right] \\
+&= -(n-p) (X^{-\top} \otimes X^{-1}) + \frac{1}{2}(I_p \boxtimes V^{-1} + V^{-1} \boxtimes I_p) \\
+&\Rightarrow -(n-p) \left[\sqrt{\frac{1}{(n-p)}}V^{-\frac{1}{2}} \otimes \sqrt{\frac{1}{(n-p)}}V^{-\frac{1}{2}}\right] + \frac{1}{2}\left[I_p \boxtimes V^{-1} + V^{-1} \boxtimes I_p\right] \\
+&= - \left(V^{-\frac{1}{2}} \otimes V^{-1}\right) + \frac{1}{2}\left[I_p \boxtimes V^{-1} + V^{-1} \boxtimes I_p\right] \\
+&\overset{\cdot -1}{\Rightarrow} \left(V^{-\frac{1}{2}} \otimes V^{-\frac{1}{2}}\right) - \frac{1}{2}\left[I_p \boxtimes V^{-1} + V^{-1} \boxtimes I_p\right] \\
+\Rightarrow \Sigma &= \left[V^{-\frac{1}{2}} \otimes V^{-\frac{1}{2}} - \frac{1}{2}\left(I_p \boxtimes V^{-1} + V^{-1} \boxtimes I_p\right)\right]^{-1} \\
 \end{align*}
 
-TODO: SOMETHING IS WRONG HERE: The last inversion is a bit weird but it works exactly as shown here in practice.\\
-
-In summary, the Laplace approximation of a Wishart distribution in the sqrtm-transformed basis is $\mathcal{N}\left(X; \sqrt{(n-p)}V^{\frac{1}{2}}, (V \otimes V)^{\frac{1}{2}} - \tilde{V^{-1}} \right)$, where the representation of the symmetric positive definite matrices has been changed from $\mathbb{R}^{n\times n}$ to $\mathbb{R}^{n^2}$.
+We can assume that $X$ is symmetric because the root of a symmetric positive definite matrix is symmetric. 
+This is the solution if we assume that the mode is given by $X = \sqrt{(n-p)}V^{\frac{1}{2}}$. 
 
 \subsubsection{The Bridge for sqrtm-tranform}
 
