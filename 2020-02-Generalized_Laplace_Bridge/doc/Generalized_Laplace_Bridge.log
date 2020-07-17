@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.6)  16 JUL 2020 10:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.6)  17 JUL 2020 13:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1003,7 +1003,7 @@ Package pdftex.def Info: figures/exponential_playground.pdf  used on input line
 Package pdftex.def Info: Requested size: 397.48499pt x 91.72453pt on input line
  67.
 ) (./content/gamma.tex [8 <./figures/exponential_playground.pdf>]
-Overfull \hbox (11.72604pt too wide) in paragraph at lines 46--46
+Overfull \hbox (11.72604pt too wide) in paragraph at lines 44--44
 [] 
  []
 
@@ -1013,11 +1013,11 @@ t>
 File: figures/gamma_playground_log.pdf Graphic file (type pdf)
 <use figures/gamma_playground_log.pdf>
 Package pdftex.def Info: figures/gamma_playground_log.pdf  used on input line 7
-9. on input line 79.
+7. on input line 77.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
-e 79.
+e 77.
 
-Overfull \hbox (71.16142pt too wide) in paragraph at lines 95--95
+Overfull \hbox (71.16142pt too wide) in paragraph at lines 93--93
 [] 
  []
 
@@ -1030,67 +1030,71 @@ pt>
 File: figures/gamma_playground_sqrt.pdf Graphic file (type pdf)
 <use figures/gamma_playground_sqrt.pdf>
 Package pdftex.def Info: figures/gamma_playground_sqrt.pdf  used on input line 
-127. on input line 127.
+125. on input line 125.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
-e 127.
+e 125.
 ) (./content/inverse_gamma.tex
 Underfull \vbox (badness 1540) has occurred while \output is active []
 
  [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2065) has occurred while \output is active []
 
  [12 <./figures/gamma_playground_sqrt.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
-<figures/inverse_gamma_playground.pdf, id=550, pagebox=cropbox, 1662.21pt x 433
+<figures/inverse_gamma_playground.pdf, id=537, pagebox=cropbox, 1662.21pt x 433
 .62pt>
 File: figures/inverse_gamma_playground.pdf Graphic file (type pdf)
 <use figures/inverse_gamma_playground.pdf>
 Package pdftex.def Info: figures/inverse_gamma_playground.pdf  used on input li
-ne 96. on input line 96.
+ne 69. on input line 69.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
-e 96.
-)
-(./content/chi2.tex [14 <./figures/inverse_gamma_playground.pdf>]
-<figures/chi2_playground_log.pdf, id=599, pagebox=cropbox, 1662.21pt x 433.62pt
+e 69.
+ [13 <./figures/inverse_gamma_playground.pdf>])
+(./content/chi2.tex [14]
+Overfull \hbox (62.09584pt too wide) in paragraph at lines 31--31
+[] 
+ []
+
+<figures/chi2_playground_log.pdf, id=603, pagebox=cropbox, 1662.21pt x 433.62pt
 >
 File: figures/chi2_playground_log.pdf Graphic file (type pdf)
 <use figures/chi2_playground_log.pdf>
-Package pdftex.def Info: figures/chi2_playground_log.pdf  used on input line 72
-. on input line 72.
+Package pdftex.def Info: figures/chi2_playground_log.pdf  used on input line 58
+. on input line 58.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
-e 72.
- [15]
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+e 58.
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-<figures/chi2_playground_sqrt.pdf, id=609, pagebox=cropbox, 1662.21pt x 433.62p
+<figures/chi2_playground_sqrt.pdf, id=613, pagebox=cropbox, 1662.21pt x 433.62p
 t>
 File: figures/chi2_playground_sqrt.pdf Graphic file (type pdf)
 <use figures/chi2_playground_sqrt.pdf>
 Package pdftex.def Info: figures/chi2_playground_sqrt.pdf  used on input line 1
-19. on input line 119.
+01. on input line 101.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
-e 119.
-) (./content/beta.tex
-Underfull \vbox (badness 2435) has occurred while \output is active []
-
- [16 <./figures/chi2_playground_log.pdf>] [17 <./figures/chi2_playground_sqrt.p
-df>]
+e 101.
+) (./content/beta.tex [16 <./figures/chi2_playground_log.pdf>]
 Overfull \hbox (24.74442pt too wide) in paragraph at lines 45--45
 [] 
  []
 
-<figures/beta_playground.pdf, id=699, pagebox=cropbox, 1662.21pt x 433.62pt>
+[17 <./figures/chi2_playground_sqrt.pdf>]
+<figures/beta_playground.pdf, id=705, pagebox=cropbox, 1662.21pt x 433.62pt>
 File: figures/beta_playground.pdf Graphic file (type pdf)
 <use figures/beta_playground.pdf>
 Package pdftex.def Info: figures/beta_playground.pdf  used on input line 71. on
  input line 71.
 Package pdftex.def Info: Requested size: 397.48499pt x 103.68716pt on input lin
 e 71.
-) (./content/dirichlet.tex [18 <./figures/beta_playground.pdf>] [19] [20]
+) (./content/dirichlet.tex [18 <./figures/beta_playground.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+Underfull \vbox (badness 1917) has occurred while \output is active []
+
+ [20]
 [21]
 
 Package natbib Warning: Citation `KernelTopicModels2012' on page 22 undefined o
@@ -1107,7 +1111,7 @@ Overfull \hbox (19.11647pt too wide) in paragraph at lines 180--180
 [] 
  []
 
-<figures/wishart_playground_sqrtm.pdf, id=856, pagebox=cropbox, 1662.21pt x 433
+<figures/wishart_playground_sqrtm.pdf, id=861, pagebox=cropbox, 1662.21pt x 433
 .62pt>
 File: figures/wishart_playground_sqrtm.pdf Graphic file (type pdf)
 <use figures/wishart_playground_sqrtm.pdf>
@@ -1136,23 +1140,23 @@ Overfull \hbox (109.28262pt too wide) in paragraph at lines 187--187
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
 [31]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
  (./Generalized_Laplace_Bridge.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 244.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 244.
 Package rerunfilecheck Info: File `Generalized_Laplace_Bridge.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: 3BF05DCE3AD27E998300780472255FB7;7544.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
+(rerunfilecheck)             Checksum: 45069E844922A6AC6633F15607E4A29B;7543.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 244.
  ) 
 Here is how much of TeX's memory you used:
- 12123 strings out of 492995
- 179170 string characters out of 6135074
- 323644 words of memory out of 5000000
+ 12131 strings out of 492995
+ 179227 string characters out of 6135074
+ 323589 words of memory out of 5000000
  15085 multiletter control sequences out of 15000+600000
- 39239 words of font info for 113 fonts, out of 8000000 for 9000
+ 39369 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,18n,42p,1176b,404s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
@@ -1177,10 +1181,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb>
-Output written on Generalized_Laplace_Bridge.pdf (31 pages, 558466 bytes).
+Output written on Generalized_Laplace_Bridge.pdf (31 pages, 561597 bytes).
 PDF statistics:
- 1075 PDF objects out of 1200 (max. 8388607)
- 768 compressed objects within 8 object streams
- 269 named destinations out of 1000 (max. 500000)
+ 1081 PDF objects out of 1200 (max. 8388607)
+ 774 compressed objects within 8 object streams
+ 274 named destinations out of 1000 (max. 500000)
  20129 words of extra memory for PDF output out of 20736 (max. 10000000)
 

@@ -30,13 +30,13 @@
 \BOOKMARK [1][-]{section.7}{Inverse Gamma Distribution}{}% 30
 \BOOKMARK [2][-]{subsection.7.1}{Standard Inverse Gamma Distribution}{section.7}% 31
 \BOOKMARK [3][-]{subsubsection.7.1.1}{Laplace Approximation of the standard inverse gamma distribution}{subsection.7.1}% 32
-\BOOKMARK [2][-]{subsection.7.2}{Sqrt-Transform of the inverse Gamma distribution}{section.7}% 33
-\BOOKMARK [3][-]{subsubsection.7.2.1}{Laplace Approximation of the sqrt-transformed Inverse Gamma Distribution}{subsection.7.2}% 34
-\BOOKMARK [3][-]{subsubsection.7.2.2}{The Bridge for the sqrt-transformed Inverse Gamma Distribution}{subsection.7.2}% 35
-\BOOKMARK [2][-]{subsection.7.3}{Log-Transform of the inverse Gamma distribution}{section.7}% 36
-\BOOKMARK [3][-]{subsubsection.7.3.1}{Laplace Approximation of the log-transformed Inverse Gamma Distribution}{subsection.7.3}% 37
-\BOOKMARK [3][-]{subsubsection.7.3.2}{The Bridge for the log-transformed Inverse Gamma Distribution}{subsection.7.3}% 38
-\BOOKMARK [1][-]{section.8}{Chi-squared Distribution}{}% 39
+\BOOKMARK [2][-]{subsection.7.2}{Log-Transform of the inverse Gamma distribution}{section.7}% 33
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Laplace Approximation of the log-transformed Inverse Gamma Distribution}{subsection.7.2}% 34
+\BOOKMARK [3][-]{subsubsection.7.2.2}{The Bridge for the log-transformed Inverse Gamma Distribution}{subsection.7.2}% 35
+\BOOKMARK [2][-]{subsection.7.3}{Sqrt-Transform of the inverse Gamma distribution}{section.7}% 36
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Laplace Approximation of the sqrt-transformed Inverse Gamma Distribution}{subsection.7.3}% 37
+\BOOKMARK [3][-]{subsubsection.7.3.2}{The Bridge for the sqrt-transformed Inverse Gamma Distribution}{subsection.7.3}% 38
+\BOOKMARK [1][-]{section.8}{Chi-square Distribution}{}% 39
 \BOOKMARK [2][-]{subsection.8.1}{Standard Chi-squared distribution}{section.8}% 40
 \BOOKMARK [3][-]{subsubsection.8.1.1}{Laplace approximation of the standard Chi-squared distribution}{subsection.8.1}% 41
 \BOOKMARK [2][-]{subsection.8.2}{Log-Transformed Chi-squared distribution}{section.8}% 42
