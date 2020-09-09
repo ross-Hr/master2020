@@ -98,11 +98,13 @@ normal distributions are the best, lets transform everything to normal
 \begin{table}[htb]
 	\centering
 	\caption{Overview of new bases.}
+	\resizebox{\textwidth}{!}{% use resizebox with textwidth
 	\begin{tabular}{lllcccc}
 		\toprule
 		\textbf{Distribution}	&\textbf{$g(x)$} &\textbf{$g^{-1}(x)$} & $\phi(x)$ & new $\phi(y)$ & Standard space & New space	\\
 		\midrule
 		Exponential	& log & exp & $x$ & $(y,\exp(y))$ & $\mathbb{R}_{+}$ & $\mathbb{R}$\\
+		Exponential	& sqrt & sqr & $x$ & $(\log(y), y^2)$ & $\mathbb{R}_{+}$ & $\mathbb{R}$\\
 		Gamma		& log & exp & $(\log(x), x)$ & $(\log(y),y^2)$ & $\mathbb{R}_{+}$ & $\mathbb{R}$\\
 		Gamma		& sqrt & sqr & $(\log(x), x)$ & $(y,\exp(y))$ & $\mathbb{R}_{+}$ & $\mathbb{R}$ \\
 		Inv. Gamma & log & exp& $(\log(x), x)$ & $(\log(y),y^2)$ & $\mathbb{R}_{+}$ & $\mathbb{R}$\\
@@ -117,6 +119,8 @@ normal distributions are the best, lets transform everything to normal
 		Inv. Wishart & sqrtm & sqrm & $(\operatorname{logm}(X), X)$ & $(\operatorname{logm}(Y), Y^2)$ & $\mathbb{R}^{d\times d}_{++}$ & $\mathbb{R}^{d\times d}$\\
 		\bottomrule
 	\end{tabular}
+	} %end resizebox
+	\label{table:basis_overview}
 \end{table}
 
 NOTE:MOST DISTRIBUTIONS ACTUALLY HAVE TWO VALID TRANSFORMS. ONE FOR $X$ AND ONE FOR $X^2$ AS SUFFICIENT STATISTICS
@@ -125,13 +129,17 @@ TODO: full table of Bridges:
 
 \begin{table}[htb]
 	\centering
-	\caption{Transformations/Bridges. * means imperfect approximation}
+	\caption{Transformations/Bridges. * means approximate Inversion}
+	\resizebox{\textwidth}{!}{% use resizebox with textwidth
 	\begin{tabular}{llll}
 		\toprule
 		Distribution & Basis & $\theta \rightarrow \mathcal{N}$& $\mathcal{N} \rightarrow \theta$ \\
-		\midrule
+		\midrule %EXPONENTIAL
 		\multirow{2}{*}{Exponential} & \multirow{2}{*}{log} & $\mu =  \log(\frac{1}{\lambda})$ & $\lambda = \frac{1}{\exp(x)}$ \\
 		& & $\sigma^2 = 1$ &  \\
+		\hdashline
+		\multirow{2}{*}{Exponential} & \multirow{2}{*}{sqrt} & $\mu = \sqrt{\frac{1}{2\lambda}} $ & $\lambda = \frac{1}{2\mu^2}$ \\
+		& & $\sigma^2 = \frac{1}{4\lambda}$ &  \\
 		\midrule %GAMMA
 		\multirow{2}{*}{Gamma} & \multirow{2}{*}{log} & $\mu = \log\left(\frac{\alpha}{\lambda}\right)$ & $\alpha = \frac{1}{\sigma^2}$ \\
 		&& $\sigma^2 = \frac{1}{\alpha}$ &	$\lambda =  \frac{1}{\exp(\mu)\sigma^2}$ \\
@@ -142,8 +150,8 @@ TODO: full table of Bridges:
 		\multirow{2}{*}{Inv. Gamma} & \multirow{2}{*}{log} & $\mu = \log\left(\frac{\lambda}{\alpha}\right)$ & $\alpha = \frac{1}{\sigma^2}$ \\
 		&& $\sigma^2 = \frac{1}{\alpha}$ &	$\lambda =  \frac{\exp(\mu)}{\sigma^2}$ \\
 		\hdashline
-		\multirow{2}{*}{Inv. Gamma} & \multirow{2}{*}{sqrt} & $\mu = $ & $\alpha = $ \\
-		&& $\sigma^2 = $ &	$\lambda =  $ \\
+		\multirow{2}{*}{Inv. Gamma} & \multirow{2}{*}{sqrt} & $\mu = \sqrt{\frac{\lambda}{\alpha}}$ & $\alpha = \frac{\mu^2}{4\sigma^2} - 0.5$ \\
+		&& $\sigma^2 = \frac{\lambda}{4\alpha^2}$ &	$\lambda = \frac{\mu^4}{4\sigma^2} $ \\
 		\midrule %CHI-2
 		\multirow{2}{*}{Chi-squared} & \multirow{2}{*}{log} & $\mu = $ & $\alpha = $ \\
 		&& $\sigma^2 = $ &	$\lambda =  $ \\
@@ -154,22 +162,24 @@ TODO: full table of Bridges:
 		\multirow{2}{*}{Beta} & \multirow{2}{*}{logit} & $\mu = \log(\frac{\alpha}{\beta})$ & $\alpha = \frac{\exp(\mu) + 1}{\sigma^2}$ \\
 		&& $\sigma^2 = \frac{\alpha + \beta}{\alpha\beta}$ &	$\beta = \frac{\exp(-\mu) + 1}{\sigma^2} $ \\
 		\midrule %DIRICHLET
-		\multirow{2}{*}{Dirichlet} & \multirow{2}{*}{softmax$^{-1}$} & $\mu_k = \log \alpha_k  - \frac{1}{K} \sum_{l=1}^{K} \log \alpha_l$ & $\alpha_k = \frac{1}{\Sigma_{kk}}\left(1 - \frac{2}{K} + \frac{e^{\mu_k}}{K^2}\sum_{l=1}^K e^{-\mu_l} \right)$ \\
+		\multirow{2}{*}{Dirichlet*} & \multirow{2}{*}{softmax$^{-1}$} & $\mu_k = \log \alpha_k  - \frac{1}{K} \sum_{l=1}^{K} \log \alpha_l$ & $\alpha_k = \frac{1}{\Sigma_{kk}}\left(1 - \frac{2}{K} + \frac{e^{\mu_k}}{K^2}\sum_{l=1}^K e^{-\mu_l} \right)$ \\
 		&& $\Sigma_{k\ell} = \delta_{k\ell}\frac{1}{\alpha_k} - \frac{1}{K}\left[\frac{1}{\alpha_k} + \frac{1}{\alpha_\ell} - \frac{1}{K}\sum_{u=1} ^K \frac{1}{\alpha_u} \right]$ & \\
 		\midrule %WISHAST
-		\multirow{2}{*}{Wishart} & \multirow{2}{*}{logm} & $\mu = $ & $V = $ \\
-		&& $\Sigma = $ & \\
+		\multirow{2}{*}{Wishart*} & \multirow{2}{*}{logm} & $\mu = $ & $V = $ \\
+		&& $\Sigma = $ & $n=?$\\
 		\hdashline
 		\multirow{2}{*}{Wishart*} & \multirow{2}{*}{sqrtm} & $\mu = $ & $V = $ \\
-		&& $\Sigma = $ & \\
+		&& $\Sigma = $ & $n=?$\\
 		\midrule %INVERSE WISHART
-		\multirow{2}{*}{Inv. Wishart} & \multirow{2}{*}{logm} & $\mu = $ & $V = $ \\
-		&& $\Sigma = $ & \\
+		\multirow{2}{*}{Inv. Wishart*} & \multirow{2}{*}{logm} & $\mu = $ & $V = $ \\
+		&& $\Sigma = $ & $n=?$\\
 		\hdashline
 		\multirow{2}{*}{Inv. Wishart*} & \multirow{2}{*}{sqrtm} & $\mu = $ & $V = $ \\
-		&& $\Sigma = $ & \\
+		&& $\Sigma = $ & $n=?$\\
 		\bottomrule
 	\end{tabular}
+	} %end resizebox
+	\label{table:transformations}
 \end{table}
 
 
@@ -178,41 +188,45 @@ Distances:
 \begin{table}[htb]
 	\centering
 	\caption{Distances. MMD and KL div are normed to 1 in the standard basis for better comparison. }
-	\begin{tabular}{llcc}
+    \resizebox{\textwidth}{!}{% use resizebox with textwidth
+	\begin{tabular}{ll cc cc cc}
 		\toprule
-		\textbf{Distribution} & Basis & MMD $\downarrow$& KL divergence $\downarrow$ \\
+		& & \multicolumn{2}{c}{\textbf{Small} $\theta$} & \multicolumn{2}{c}{\textbf{Medium} $\theta$} &  \multicolumn{2}{c}{\textbf{Large} $\theta$}\\
+		\textbf{Distribution} & \textbf{Basis} & MMD $\downarrow$& KL $\downarrow$ & MMD $\downarrow$& KL $\downarrow$ & MMD $\downarrow$& KL $\downarrow$\\
 		\midrule
-		Exponential	& standard & $\infty$ & $\infty$ \\
-		Exponential	& log & $1$ & $0.157 $ \\ 
-		Exponential	& sqrt & $0.054$ & $1$ \\ 
+		Exponential	& standard & $\infty$ & $\infty$ & $\infty$ & $\infty$ & $\infty$ & $\infty$\\
+		Exponential	& log & $1$ & $0.834$ & $1$ & $0.294$ & $1$ & $0.139$\\ 
+		Exponential	& sqrt & $0.789$ & $1$ & $0.20$ & $1$ & $0.022$ & $1$\\ 
 		\hdashline
-		Gamma		& standard & $1$ & $1$  \\ 
-		Gamma		& log & $0.287$ & $0.147$  \\
-		Gamma		& sqrt & $0.045$ & $0.406$ \\
+		Gamma		& standard & $1$ & $1$ & $1$ & $1$ & $1$ & $1$  \\ 
+		Gamma		& log & & & & & &  \\
+		Gamma		& sqrt & & & & & & \\
 		\hdashline
-		Inv. Gamma & standard & $1$ & $1$ \\
-		Inv. Gamma & log & $0.102$ & $0.078$ \\ 
-		Inv. Gamma & sqrt & $0.34014307$ & $0.801$ \\
+		Inv. Gamma & standard & $1$ & $1$ & $1$ & $1$ & $1$ & $1$  \\ 
+		Inv. Gamma & log & & & & & & \\ 
+		Inv. Gamma & sqrt & & & & & &  \\
 		\hdashline
-		Chi2        & standard & 1 & 1 \\
-		Chi2        & log & - & - \\
-		Chi2        & sqrt & - & - \\
+		Chi2        & standard & $1$ & $1$ & $1$ & $1$ & $1$ & $1$  \\ 
+		Chi2        & log & & & & & & \\
+		Chi2        & sqrt & & & & & &\\
 		\hdashline
-		Beta		& standard & 1 & 1 \\
-		Beta		& logit & - & - \\
+		Beta		& standard & $1$ & $1$ & $1$ & $1$ & $1$ & $1$  \\ 
+		Beta		& logit & & & & & & \\
 		\hdashline
-		Dirichlet 	& standard &  1 & 1 \\		
-		Dirichlet 	& inverse softmax &  - & - \\
+		Dirichlet 	& standard & $1$ & $1$ & $1$ & $1$ & $1$ & $1$  \\ 
+		Dirichlet 	& inverse softmax & & & & & &\\
 		\hdashline
-		Wishart	    & standard & 1 & 1 \\
-		Wishart	    & logm & - & - \\
-		Wishart	    & sqrtm & - & - \\
+		Wishart	    & standard & $1$ & $1$ & $1$ & $1$ & $1$ & $1$  \\ 
+		Wishart	    & logm & & & & & & \\
+		Wishart	    & sqrtm & & & & & & \\
 		\hdashline
-		Inv. Wishart & standard & 1 & 1 \\
-		Inv. Wishart & logm & - & - \\
-		Inv. Wishart & sqrtm & - & - \\
+		Inv. Wishart & standard & $1$ & $1$ & $1$ & $1$ & $1$ & $1$  \\ 
+		Inv. Wishart & logm & & & & & & \\
+		Inv. Wishart & sqrtm & & & & & & \\
 		\bottomrule
 	\end{tabular}
+	} %end resizebox
+	\label{table:distances}
 \end{table}
 
 \pagebreak
@@ -231,12 +245,20 @@ Distances:
 \label{sec:chi2}
 \input{content/chi2}
 
+\section{Beta Distribution}
+\label{sec:beta}
 \input{content/beta}
 
+\section{Dirichlet Distribution}
+\label{sec:dirichlet}
 \input{content/dirichlet}
 
+\section{Wishart Distribution}
+\label{sec:wishart}
 \input{content/wishart}
 
+\section{Inverse Wishart Distribution}
+\label{sec:inverse_wishart}
 \input{content/inverse_wishart}
 
 \input{content/math_rules}
