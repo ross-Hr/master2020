@@ -5,16 +5,14 @@
 \label{subsec:variable_change_pdf}
 
 %TODO reference to book
-\subsubsection*{1D}
+
 Let $X$ have a continuous density $f_X$. Let $g: \mathbb{R} \rightarrow \mathbb{R}$ be piece-wise strictly monotone and continuously differentiable, i.e. there exists intervals $I_1,I_2, ..., I_n$ which partition $\mathbb{R}$ such that $g$ is strictly monotone and continuously differentiable on the interior of each $I_i$. For each $i, g:I_i \rightarrow \mathbb{R}$ is invertible on $g(I_i)$ and let $g_i^{-1}$ be the inverse function. Let $Y = g(X)$ and $\wedge = \{y| y=g(x), x \in \mathbb{R}\}$ be the range $g$. Then the density function $f_Y$ of $Y$ exists and is given by 
 \begin{equation}
 \label{eq:1D_variable_transform}
 f_Y(y) = \sum_{i=1}^{n} f_X(g_i^{-1}(y)) \left\vert\frac{\partial g_i^{-1}(y)}{\partial y} \right\vert \mathbf{1}_\wedge(y) 
 \end{equation}
 
-\subsubsection*{Higher dim}
-TODO: Jacobian. But how do the intervals work?
-
+This is also true for more than one dimension where the absolute value of the derivative becomes the determinant of the Jacobian. 
 
 \subsection{Laplace Approximation}
 
@@ -39,37 +37,44 @@ is called an exponential family where $\phi(x): \mathbb{X} \rightarrow \mathbb{R
 \label{subsec:chi2-normal}
 
 %TODO reference the book where I took it from
-It is already well-known that the Chi-squared distribution describes the sum of independent, standard normal random variables. To introduce a certain 'trick' we show the forward and backward transformation between chi2 and normal.\\
+It is well-known that a Chi-squared distribution with $k$ degrees of freedom describes the sum squares of $k$ independent, standard normal random variables. To introduce a certain `trick' we show the forward and backward transformation between Chi-squared and normal distribution by assuming $k=1$.\\
 Let $X$ be normal with $\mu = 0, \sigma^2 = 1$. Let $Y = X^2$ and therefore $g(x) = x^2$, which is neither monotone nor injective. Take $I_1 = (-\infty, 0)$ and $I_2 = [0, +\infty)$. Then $g$ is monotone and injective on $I_1$ and $I_2$ and $I_1 \cup I_2 = \mathbb{R}$. $g(I_1) = (0, \infty)$ and $g(I_2) = [0, \infty)$. Then $g_1^{-1}: [0, \infty) \rightarrow \mathbb{R}$ by $g_1^{-1}(y) = -\sqrt{y}$ and $g_2^{-1}: [0, \infty) \rightarrow \mathbb{R}$ by $g_2^{-1}(y) = \sqrt{y}$. Then
 $$\left\vert \frac{\partial g_i^{-1}(y)}{\partial y} \right\vert = \left\vert \frac{1}{2 \sqrt{y}} \right\vert = \frac{1}{2 \sqrt{y}}$$
 
 Applying Equation \ref{eq:1D_variable_transform} we can transform a normal distribution to a chi-squared.
 
+\begin{subequations}
 \begin{align}
-	f_Y(y) &= f_X(g_1^{-1}(y))	\left\vert\frac{\partial g_1^{-1}(y)}{\partial y} \right\vert \mathbf{1}_\wedge(y) + f_X(g_2^{-1}(y))	\left\vert\frac{\partial g_2^{-1}(y)}{\partial y} \right\vert \mathbf{1}_\wedge(y) \nonumber\\
+	f_Y(y) &= f_X(g_1^{-1}(y))	\left\vert\frac{\partial g_1^{-1}(y)}{\partial y} \right\vert \mathbf{1}_\wedge(y) + f_X(g_2^{-1}(y))	\left\vert\frac{\partial g_2^{-1}(y)}{\partial y} \right\vert \mathbf{1}_\wedge(y) \\
 	&= \frac{1}{\sqrt{2\pi}} \exp(-\frac{y}{2}) \frac{1}{2\sqrt{y}} + \frac{1}{\sqrt{2\pi}} \exp(-\frac{y}{2}) \frac{1}{2\sqrt{y}} \qquad(y > 0)\\
-	&= \frac{1}{\sqrt{2\pi}} \frac{1}{\sqrt{y}}\exp(-\frac{y}{2}) \nonumber
+	&= \frac{1}{\sqrt{2\pi}} \frac{1}{\sqrt{y}}\exp(-\frac{y}{2}) \\
+	&= \frac{1}{2^{\frac{1}{2}}} \frac{1}{\Gamma(\frac{1}{2})} y^{-\frac{1}{2}} \exp(-\frac{1}{2}) \\
+	&= \chi^2 (1)
 \end{align}
+\end{subequations}
 
-The 'trick' was to split up the variable transformation in two parts to adjust for the fact that the space of the chi-squared and the Normal are different. We can reverse the same procedure to get from a chi-squared to a normal distribution. We keep the variable names from before. Let $X = \sqrt{Y}$ and therefore $h(x) = \sqrt{x}$. Then $h_1^{-1}: \mathbb{R} \rightarrow (-\infty, 0)$ by $h_1^{-1}(x) = -x^2$ and $h_2^{-1}: \mathbb{R} \rightarrow [0, \infty)$ by $h_2^{-1}(x) = x^2$. Then
+The `trick' was to split up the variable transformation in two parts to adjust for the fact that the space of the chi-squared and the Normal are different. We can reverse the same procedure to get from a chi-squared to a normal distribution. We keep the variable names from before. Let $X = \sqrt{Y}$ and therefore $h(x) = \sqrt{x}$. Then $h_1^{-1}: \mathbb{R} \rightarrow (-\infty, 0)$ by $h_1^{-1}(x) = -x^2$ and $h_2^{-1}: \mathbb{R} \rightarrow [0, \infty)$ by $h_2^{-1}(x) = x^2$. Then
 
 $$\left\vert\frac{\partial h_i^{-1}(y)}{\partial y} \right\vert = \vert 2y \vert $$
 
 and
- 
+
+\begin{subequations}
 \begin{align}
 	f_X(x) &= f_y(h_1^{-1}(x)) \left\vert\frac{\partial h_1^{-1}(y)}{\partial y} \right\vert \mathbf{1}_\wedge(y) + f_y(h_2^{-1}(x)) \left\vert\frac{\partial h_2^{-1}(y)}{\partial y} \right\vert \mathbf{1}_\wedge(y) \nonumber \\
 	&= \frac{1}{\sqrt{2\pi}} \frac{1}{2\sqrt{x^2}} \exp(-\frac{x^2}{2}) |2x| \mathbf{1}_{(-\infty, 0)}(x) + \frac{1}{\sqrt{2\pi}} \frac{1}{2\sqrt{x^2}} \exp(-\frac{x^2}{2}) |2x| \mathbf{1}_{[0, \infty)}(x) \\
-	&= \frac{1}{\sqrt{2\pi}} \exp(-\frac{x^2}{2}) \nonumber
+	&= \frac{1}{\sqrt{2\pi}} \exp(-\frac{x^2}{2})  \\
+	&= \mathcal{N}(x; \mu=0, \sigma^2=1)
 \end{align}
+\end{subequations}
 
 which is defined on the entirety of $\mathbb{R}$.
 
 \subsubsection{A generalization to matrices}
 
-"In general, an $n\times n$ matrix with n distinct nonzero eigenvalues has $2^n$ square roots. Such a matrix, $A$, has a decomposition $VDV^{-1}$ where $V$ is the matrix whose columns are eigenvectors of $A$ and $D$ is the diagonal matrix whose diagonal elements are the corresponding $n$ eigenvalues $\lambda_i$. Thus the square roots of $A$ are given by $VD^{\frac{1}{2}} V{-1}$, where $D^\frac{1}{2}$ is any square root matrix of $D$, which, for distinct eigenvalues, must be diagonal with diagonal elements equal to square roots of the diagonal elements of $D$; since there are two possible choices for a square root of each diagonal element of $D$, there are $2^n$ choices for the matrix $D^{\frac{1}{2}}$" - wikipedia. 
+``In general, an $n\times n$ matrix with n distinct nonzero eigenvalues has $2^n$ square roots. Such a matrix, $A$, has a decomposition $VDV^{-1}$ where $V$ is the matrix whose columns are eigenvectors of $A$ and $D$ is the diagonal matrix whose diagonal elements are the corresponding $n$ eigenvalues $\lambda_i$. Thus the square roots of $A$ are given by $VD^{\frac{1}{2}} V{-1}$, where $D^\frac{1}{2}$ is any square root matrix of $D$, which, for distinct eigenvalues, must be diagonal with diagonal elements equal to square roots of the diagonal elements of $D$; since there are two possible choices for a square root of each diagonal element of $D$, there are $2^n$ choices for the matrix $D^{\frac{1}{2}}$'' - \textit{Wikipedia}. 
 
-The Chi-squared distribution can be seen as the 1D special case of the matrix transformation and therefore has $2^1=2$ possible options for $\lambda^{\frac{1}{2}}$, namely $-\lambda^{\frac{1}{2}}$ and $+\lambda^{\frac{1}{2}}$. A higher dimensional functions such as Wishart and inverse Wishart have $2^n$ different possibilities which have to be accounted for within the transformation. 
+The Chi-squared distribution can be seen as the 1D special case of the matrix transformation and therefore has $2^1=2$ possible options for $\lambda^{\frac{1}{2}}$, namely $-\lambda^{\frac{1}{2}}$ and $+\lambda^{\frac{1}{2}}$. Higher dimensional functions such as Wishart and inverse Wishart have $2^n$ different possibilities which have to be accounted for within the transformation. 
 
 \subsection*{An alternative way to see the variable transform}
 

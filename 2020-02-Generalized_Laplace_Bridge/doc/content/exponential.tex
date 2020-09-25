@@ -4,17 +4,13 @@
 
 The PDF of the exponential distribution is
 
-\begin{equation}
-	p(x| \lambda) = \lambda \exp(-\lambda x)
-	\label{eq:exponential_pdf}
-\end{equation}
-
-which can be written as
-
-\begin{equation}
-	p(x|\lambda) = \exp\left[-\lambda x + \log\lambda\right]
-	\label{eq:exponential_exp_family}
-\end{equation}
+\begin{subequations}
+\begin{align}
+	p(x| \lambda) &= \lambda \exp(-\lambda x)
+	\label{eq:exponential_pdf} \\
+	 &= \exp\left[-\lambda x + \log\lambda\right]
+\end{align}
+\end{subequations}
 
 with $h(x) = 1$, $\phi(x)=x$, $w = -\lambda$ and $Z(\lambda) = -\log\lambda$
 
@@ -31,11 +27,13 @@ The Laplace Approximation is not defined since the second derivative is not posi
 
 We choose $X = \log(Y)$ and therefore $g(x) = \log(x)$, and $x(y) = g^{-1}(y) = \exp(y)$. Also, $\left\vert \frac{\partial x(y)}{\partial y}\right\vert = \exp(y)$. It follows that the new pdf is 
 
+\begin{subequations}
 \begin{align}
-	\mathcal{E}_{Y\log}(y; \lambda) &= \lambda \exp(-\lambda x(y)) \cdot \exp(y) \\ \nonumber
+	\mathcal{E}_{Y\log}(y; \lambda) &= \lambda \exp(-\lambda x(y)) \cdot \exp(y) \\ 
 	&= \lambda \exp(-\lambda \exp(y) + y) \\
 	&=  \exp\left[-\lambda \exp(y) + y + \log\lambda\right]
 \end{align}
+\end{subequations}
 
 with $h(y) =1$, $\phi(x) = (y, \exp(y))$, $w = (1, -\lambda)$ and $Z(\lambda)=\log\lambda$
 
@@ -52,31 +50,35 @@ with $h(y) =1$, $\phi(x) = (y, \exp(y))$, $w = (1, -\lambda)$ and $Z(\lambda)=\l
 
 Therefore the Laplace approximation in the transformed basis is given by $\mathcal{N}(y, \log(1/\lambda), 1)$. 
 
-\subsection{The Bridge for the log-transformed Exponential Distribution}
+\subsubsection{The Bridge for the log-transformed Exponential Distribution}
 
 We have already found $\mu$ and $\sigma$. The inverse transformation is easily found through the mode $\mu = \log(1/\lambda) \Leftrightarrow \lambda = 1/\exp(\mu)$. In summary:
 
+\begin{subequations}
 \begin{align}
 	\mu &= \log(1/\lambda) \\
 	\sigma &= 1 \\
 	\lambda &= 1/\exp(\mu)
 \end{align}
+\end{subequations}
 
-\begin{figure}
+\begin{figure}[!htb]
 	\centering
-	\includegraphics[width=\textwidth]{figures/exponential_playground.pdf}
-	\caption{exponential comparison}
-	\label{fig:exponential_comparison}
+	\includegraphics[width=\textwidth]{figures/exponential_log_bridge.pdf}
+	\caption{log-Bridge for the Exponential distribution}
+	\label{fig:exponential_log_bridge}
 \end{figure}
 
 \subsection{Sqrt-transformed Exponential Distribution}
 
 We choose $X = \sqrt{Y}$ and therefore $g(x) = \sqrt{x}$, and $x(y) = g^{-1}(y) = y^2$. Also, $\left\vert \frac{\partial x(y)}{\partial y}\right\vert = 2y$. It follows that the new pdf is 
 
+\begin{subequations}
 \begin{align}
-\mathcal{E}_{Ysqrt}(y; \lambda) &= \lambda \exp(-\lambda y^2) \cdot 2y \\ \nonumber
-&= 2 \cdot \exp\left[\log(y)-\lambda y^2 + \log\lambda\right] \\
+\mathcal{E}_{Ysqrt}(y; \lambda) &= \lambda \exp(-\lambda y^2) \cdot 2y \\
+&= 2 \cdot \exp\left[\log(y)-\lambda y^2 + \log\lambda\right]
 \end{align}
+\end{subequations}
 
 with $h(y)=2$, $\phi(y) = (\log(y), y^2))$, $w = (1, -\lambda)$ and $Z(\lambda)=\log\lambda$
 
@@ -91,10 +93,19 @@ with $h(y)=2$, $\phi(y) = (\log(y), y^2))$, $w = (1, -\lambda)$ and $Z(\lambda)=
 \text{invert \& times -1: }&\sigma^2 = \frac{1}{4\lambda}
 \end{align*}
 
-\subsection{The Bridge for the sqrt-transformed Exponential Distribution}
+\subsubsection{The Bridge for the sqrt-transformed Exponential Distribution}
 
+\begin{subequations}
 \begin{align}
 	\mu &= \sqrt{\frac{1}{2\lambda}} \\
 	\sigma^2 &= \frac{1}{4\lambda} \\
 	\lambda &= \frac{1}{2\mu^2}
 \end{align}
+\end{subequations}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{figures/exponential_sqrt_bridge.pdf}
+	\caption{sqrt-Bridge for the Exponential distribution}
+	\label{fig:exponential_sqrt_bridge}
+\end{figure}

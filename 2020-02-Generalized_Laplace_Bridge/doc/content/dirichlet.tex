@@ -1,15 +1,15 @@
-\section{Dirichlet Distribution}
-
 \subsection{Standard Dirichlet distribution}
 
 The pdf for the Dirichlet distribution in the standard basis (i.e. probability space) is
 
+\begin{subequations}
 \begin{align}
 \mathrm{Dir}(\vpi | \valpha) &= \frac{\Gamma \left( \sum_{k=1}^K \alpha_k \right)}{\prod_{k=1}^K \Gamma(\alpha_k)} \prod_{k=1}^K \pi_k^{\alpha_k-1} \\
 &= \frac{1}{B(\alpha)} \prod_{k=1}^K \pi_k^{\alpha_k-1} \\
 &= \exp\left[\sum_k(\alpha_k-1)\log(\pi_k) - \log(B(\alpha))\right] \\
 &= \frac{1}{\prod_k \pi_k} \exp\left[\sum_k\alpha_k\log(\pi_k) - \log(B(\alpha))\right] \\
 \end{align}
+\end{subequations}
 
 with sufficient statistics $\phi(x_i) = \log(x_i)$, natural parameters $w_i=\alpha_i$, base measure $h(x) = \prod_k x_k$, and partition function $Z(w) = \log(B(\alpha))$.
 
@@ -48,6 +48,7 @@ We want to transform $K$ variables $y_i$ from $\mathbb{R}^d$ to $\tau_i = \exp(y
 
 with 
 
+\begin{subequations}
 \begin{align}
 	|\det g(\pi(y), u)| &= \left|\det\begin{pmatrix}
 		\frac{\partial \tau_1}{\partial y_1} & \cdots & \frac{\partial \tau_k}{\partial y_1} & \frac{\partial u}{\partial y_1} \\
@@ -63,9 +64,11 @@ with
 	\end{pmatrix} \right| \\
 	&= \prod_i^{K} \tau_i 
 \end{align}
+\end{subequations}
 
 To get $p_y(\pi(y))$ we have to integrate out $u$. 
 
+\begin{subequations}
 \begin{align}
 	p_y(\pi(y)) &=\int_{-\infty}^{\infty} p_{\pi, u}(\pi(y), u) |\det g(\pi, u)| du \\
 	&= \int_{-\infty}^{\infty} p_{\pi}(\pi(y))  \prod_i^{K} \tau_i  du \\
@@ -76,6 +79,7 @@ To get $p_y(\pi(y))$ we have to integrate out $u$.
 	&= \frac{1}{\prod_k \pi_k(y)} \exp\left[\sum_k\alpha_k\log(\pi_k(y)) - \log(B(\alpha))\right] \prod_k^{K} \pi_k(y) \\
 	&= \exp\left[\sum_k\alpha_k\log(\pi(y_k)) - \log(B(\alpha))\right]
 \end{align}
+\end{subequations}
 
 where we used the fact that $u > 0$ since its a sum of exponentials, $\frac{\tau_i(y)}{u} = \pi_i(y)$, and multiplied with $\delta(u-1)$ since this transformation is only valid if $\sum_i \tau_i = u = 1$ because otherwise it is not a probability space. Additionally, we use
 
@@ -85,10 +89,12 @@ where we used the fact that $u > 0$ since its a sum of exponentials, $\frac{\tau
 
 which is known as the shifting property or sampling property of the Dirac delta function $\delta$. Using all of the above we get the pdf of the Dirichlet distribution in the new basis $\vy$: 
 
+\begin{subequations}
 \begin{align}\label{eq:dirichlet_softmax}
 \mathrm{Dir}_{\vy}(\vpi(\vy) | \valpha) &:= \frac{\Gamma \left( \sum_{k=1}^K \alpha_k \right)}{\prod_{k=1}^K \Gamma(\alpha_k)} \prod_{k=1}^K \pi_k(\vy)^{\alpha_k}  \\
 &= \exp\left[\sum_k\alpha_k\log(\pi(y_k)) - \log(B(\alpha))\right]
 \end{align}
+\end{subequations}
 
 with sufficient statistics $\phi(y_i) = \log(\pi_i(y))$, natural parameters $w_i = \alpha_i$, base measure $h(y) = 1$ and normalizing constant $Z = \log(B(\alpha))$.
 
@@ -157,11 +163,13 @@ which is the final mapping. With Equations \ref{eq:mu_k} and \ref{eq:Hessian_dia
 
 In summary we get the following forward and backward transformations between $\vy \in \mathbb{R}^d$ and $\pi \in \mathbb{P}^d$.
 
+\begin{subequations}
 \begin{align}
 	\mu_k &= \log \alpha_k  - \frac{1}{K} \sum_{l=1}^{K} \log \alpha_l \, , \label{eq:mubridge}\\
 	\Sigma_{k\ell} &= \delta_{k\ell}\frac{1}{\alpha_k} - \frac{1}{K}\left[\frac{1}{\alpha_k} + \frac{1}{\alpha_\ell} - \frac{1}{K}\sum_{u=1} ^K \frac{1}{\alpha_u} \right].
 	\label{eq:Sigmabridge} 
 \end{align}
+\end{subequations}
 
 The corresponding derivations require care because the Gaussian parameter space is evidently larger than that of the Dirichlet and not fully identified by the transformation.
 A pseudo-inverse of this map was provided by \citet{KernelTopicModels2012}. It maps the Gaussian parameters to those of the Dirichlet as
